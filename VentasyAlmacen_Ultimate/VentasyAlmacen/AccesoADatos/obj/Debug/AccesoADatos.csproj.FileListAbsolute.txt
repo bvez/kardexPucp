@@ -1,0 +1,6 @@
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\bin\Debug\AccesoADatos.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\bin\Debug\AccesoADatos.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.pdb
