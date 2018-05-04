@@ -160,3 +160,4 @@ C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vi
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.exe
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.pdb
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\Resources\logoPrograma.png

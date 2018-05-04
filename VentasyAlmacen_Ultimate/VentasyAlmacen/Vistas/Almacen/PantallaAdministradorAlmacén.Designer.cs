@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaAdministradorAlmacén));
             this.btnActualizarAlmacenes = new System.Windows.Forms.Button();
             this.btnModificarStock = new System.Windows.Forms.Button();
             this.btnAddProducto = new System.Windows.Forms.Button();
@@ -126,6 +127,7 @@
             this.Controls.Add(this.btnAddProducto);
             this.Controls.Add(this.btnModificarStock);
             this.Controls.Add(this.btnActualizarAlmacenes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaAdministradorAlmacén";
             this.Text = "Administrador de Almacén";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaAdministradorAlmacén_FormClosed);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaSeleccionarAlmacen));
             this.DataGridSelectAlmacen = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
@@ -107,6 +108,7 @@
             this.Controls.Add(this.btnSelectAlmacenSgte);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridSelectAlmacen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaSeleccionarAlmacen";
             this.Text = "Seleccionar Almacen";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSelectAlmacen)).EndInit();

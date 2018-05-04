@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaActualizarAlmacenes));
             this.btnInsertAlmacen = new System.Windows.Forms.Button();
             this.btnInhabilitarAlmacen = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(611, 156);
             this.Controls.Add(this.btnInhabilitarAlmacen);
             this.Controls.Add(this.btnInsertAlmacen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaActualizarAlmacenes";
             this.Text = "Actualizar Almacenes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaActualizarAlmacenes_FormClosed);

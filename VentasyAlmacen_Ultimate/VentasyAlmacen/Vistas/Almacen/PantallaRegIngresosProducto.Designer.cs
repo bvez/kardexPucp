@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaRegIngresosProducto));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridStock);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaRegIngresosProducto";
             this.Text = "PantallaRegIngresosProducto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaRegIngresosProducto_FormClosed);

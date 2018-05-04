@@ -40,5 +40,21 @@ namespace FormulariosAlmacenes
         {
 
         }
+
+        private void numStockMin_ValueChanged(object sender, EventArgs e)
+        {
+            if (numStockMin.Value >= numStockMax.Value)
+            {
+                numStockMax.Value = numStockMin.Value;
+            }
+        }
+
+        private void numStockMax_ValueChanged(object sender, EventArgs e)
+        {
+            if(numStockMax.Value <= numStockMin.Value)
+            {
+                numStockMin.Value = numStockMax.Value;
+            }
+        }
     }
 }

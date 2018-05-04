@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaRegSalidaProducto));
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridStock);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaRegSalidaProducto";
             this.Text = "PantallaRegSalidaProducto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaRegSalidaProducto_FormClosed);

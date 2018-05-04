@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaUsuarioAlmacen));
             this.labelBienvenidaUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStock = new System.Windows.Forms.Button();
@@ -126,6 +127,7 @@
             this.Controls.Add(this.buttonStock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelBienvenidaUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaUsuarioAlmacen";
             this.Text = "Inicio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaUsuarioAlmacen_FormClosed);

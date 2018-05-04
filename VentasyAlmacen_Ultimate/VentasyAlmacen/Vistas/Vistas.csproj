@@ -335,5 +335,10 @@
   <ItemGroup>
     <None Include="Resources\logoBuscar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logoPrograma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

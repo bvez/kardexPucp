@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaModificarStock));
             this.dataGridStock = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -239,6 +240,7 @@
             this.Controls.Add(this.NumBoxStock);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridStock);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaModificarStock";
             this.Text = "Modificar Stock";
             this.Load += new System.EventHandler(this.PantallaModificarStock_Load);
