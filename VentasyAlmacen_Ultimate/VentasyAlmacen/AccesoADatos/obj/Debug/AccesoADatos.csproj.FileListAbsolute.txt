@@ -4,3 +4,8 @@ C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\F
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.dll
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\TrabajoLP2\Avance 3\FormulariosAlmacenes\AccesoADatos\obj\Debug\AccesoADatos.pdb
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\AccesoADatos.dll
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\AccesoADatos.pdb
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.dll
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb
