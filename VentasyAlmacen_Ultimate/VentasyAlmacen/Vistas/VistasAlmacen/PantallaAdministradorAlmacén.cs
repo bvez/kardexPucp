@@ -139,7 +139,7 @@ namespace FormulariosAlmacenes
             if(almacenSeleccionado != null)
             {
                 PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado);
-                //pantallaProductos.Owner = this;
+                pantallaProductos.Owner = this;
                 //this.Visible = false;
                 pantallaProductos.ShowDialog();
             }
@@ -170,7 +170,7 @@ namespace FormulariosAlmacenes
         {
             PantallaActualizarAlmacenes pantallaActualizarAlmacenes = new PantallaActualizarAlmacenes();
             pantallaActualizarAlmacenes.Owner = this;
-            this.Visible = false;
+            //this.Visible = false;
             pantallaActualizarAlmacenes.ShowDialog();
         }
 
@@ -221,6 +221,7 @@ namespace FormulariosAlmacenes
             if (almacenSeleccionado != null)
             {
                 PantallaReporteFechas pantallaReporte = new PantallaReporteFechas();
+                pantallaReporte.Owner = this;
                 pantallaReporte.ShowDialog();
             }
         }

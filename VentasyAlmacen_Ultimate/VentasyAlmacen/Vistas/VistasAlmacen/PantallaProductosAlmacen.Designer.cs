@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaProductosAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numStockMax = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numStockMin = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,18 +47,11 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numStockMin = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numStockMax = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProductosAlmacen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaProductosAlmacen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +94,80 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Producto";
             // 
+            // numStockMax
+            // 
+            this.numStockMax.Location = new System.Drawing.Point(246, 124);
+            this.numStockMax.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numStockMax.Name = "numStockMax";
+            this.numStockMax.Size = new System.Drawing.Size(68, 29);
+            this.numStockMax.TabIndex = 10;
+            this.numStockMax.ValueChanged += new System.EventHandler(this.numStockMax_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(126, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "De";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(226, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "a";
+            // 
+            // numStockMin
+            // 
+            this.numStockMin.Location = new System.Drawing.Point(155, 124);
+            this.numStockMin.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numStockMin.Name = "numStockMin";
+            this.numStockMin.Size = new System.Drawing.Size(68, 29);
+            this.numStockMin.TabIndex = 7;
+            this.numStockMin.ValueChanged += new System.EventHandler(this.numStockMin_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(10, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Rango de Stock:";
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxId.Location = new System.Drawing.Point(129, 31);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(177, 29);
+            this.textBoxId.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(100, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Id:";
+            // 
             // textBoxNombre
             // 
             this.textBoxNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -132,14 +206,14 @@
             this.Column2,
             this.Column1,
             this.Column3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaProductosAlmacen.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaProductosAlmacen.DefaultCellStyle = dataGridViewCellStyle1;
             this.tablaProductosAlmacen.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.tablaProductosAlmacen.Location = new System.Drawing.Point(13, 37);
             this.tablaProductosAlmacen.Name = "tablaProductosAlmacen";
@@ -171,80 +245,6 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 60;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(100, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Id:";
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxId.Location = new System.Drawing.Point(129, 31);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(177, 29);
-            this.textBoxId.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(10, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Rango de Stock:";
-            // 
-            // numStockMin
-            // 
-            this.numStockMin.Location = new System.Drawing.Point(155, 124);
-            this.numStockMin.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numStockMin.Name = "numStockMin";
-            this.numStockMin.Size = new System.Drawing.Size(68, 29);
-            this.numStockMin.TabIndex = 7;
-            this.numStockMin.ValueChanged += new System.EventHandler(this.numStockMin_ValueChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(226, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "a";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(126, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "De";
-            // 
-            // numStockMax
-            // 
-            this.numStockMax.Location = new System.Drawing.Point(246, 124);
-            this.numStockMax.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numStockMax.Name = "numStockMax";
-            this.numStockMax.Size = new System.Drawing.Size(68, 29);
-            this.numStockMax.TabIndex = 10;
-            this.numStockMax.ValueChanged += new System.EventHandler(this.numStockMax_ValueChanged);
-            // 
             // PantallaProductosAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,9 +259,9 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProductosAlmacen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaProductosAlmacen)).EndInit();
             this.ResumeLayout(false);
 
         }
