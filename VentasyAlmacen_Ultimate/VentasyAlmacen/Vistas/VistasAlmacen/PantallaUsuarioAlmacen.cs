@@ -35,7 +35,7 @@ namespace FormulariosAlmacenes
         {
             PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(this.almacenUsuario);
             pantallaProductosAlmacen.Owner = this;
-            this.Visible = false;
+            //this.Visible = false;
             pantallaProductosAlmacen.ShowDialog();
         }
 
@@ -48,7 +48,7 @@ namespace FormulariosAlmacenes
         {
             PantallaRegPedidoProduccion newPant = new PantallaRegPedidoProduccion();
             newPant.Owner = this;
-            this.Visible = false;
+            //this.Visible = false;
             newPant.ShowDialog();
         }
 
@@ -56,7 +56,7 @@ namespace FormulariosAlmacenes
         {
             PantallaRegIngresosProducto newPant = new PantallaRegIngresosProducto();
             newPant.Owner = this;
-            this.Visible = false;
+            //this.Visible = false;
             newPant.ShowDialog();
         }
 
@@ -64,7 +64,7 @@ namespace FormulariosAlmacenes
         {
             PantallaRegSalidaProducto newPant = new PantallaRegSalidaProducto();
             newPant.Owner = this;
-            this.Visible = false;
+            //this.Visible = false;
             newPant.ShowDialog();
         }
 
@@ -72,7 +72,7 @@ namespace FormulariosAlmacenes
         {
             PantallaReporteFechas newPant = new PantallaReporteFechas();
             newPant.Owner = this;
-            this.Visible = false;
+            //this.Visible = false;
             newPant.ShowDialog();
         }
     }
