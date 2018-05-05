@@ -203,6 +203,7 @@
             // 
             // buttonAtras
             // 
+            this.buttonAtras.Enabled = false;
             this.buttonAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.buttonAtras.Location = new System.Drawing.Point(371, 13);
             this.buttonAtras.Name = "buttonAtras";
@@ -210,6 +211,7 @@
             this.buttonAtras.TabIndex = 11;
             this.buttonAtras.Text = "Atras";
             this.buttonAtras.UseVisualStyleBackColor = true;
+            this.buttonAtras.Visible = false;
             this.buttonAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonAtras_MouseClick);
             // 
             // groupBox1

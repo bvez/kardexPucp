@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Almacen\PantallaEliminarAlmacenes.cs">
+    <Compile Include="VistasAlmacen\PantallaEliminarAlmacenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaEliminarAlmacenes.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaEliminarAlmacenes.Designer.cs">
       <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaInicio.cs">
@@ -57,76 +58,82 @@
     <Compile Include="PantallaInicio.Designer.cs">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaInsertarAlmacen.cs">
+    <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaInsertarAlmacen.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.Designer.cs">
       <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaModificarStock.cs">
+    <Compile Include="VistasAlmacen\PantallaModificarStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaModificarStock.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaModificarStock.Designer.cs">
       <DependentUpon>PantallaModificarStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaActualizarAlmacenes.cs">
+    <Compile Include="VistasAlmacen\PantallaActualizarAlmacenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaActualizarAlmacenes.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaActualizarAlmacenes.Designer.cs">
       <DependentUpon>PantallaActualizarAlmacenes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaRegIngresosProducto.cs">
+    <Compile Include="VistasAlmacen\PantallaRegIngresosProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaRegIngresosProducto.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaRegIngresosProducto.Designer.cs">
       <DependentUpon>PantallaRegIngresosProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaRegPedidoProduccion.cs">
+    <Compile Include="VistasAlmacen\PantallaRegPedidoProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaRegPedidoProduccion.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaRegPedidoProduccion.Designer.cs">
       <DependentUpon>PantallaRegPedidoProduccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaRegSalidaProducto.cs">
+    <Compile Include="VistasAlmacen\PantallaRegSalidaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaRegSalidaProducto.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaRegSalidaProducto.Designer.cs">
       <DependentUpon>PantallaRegSalidaProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaSeleccionarAlmacen.cs">
+    <Compile Include="VistasAlmacen\PantallaReporteFechas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaSeleccionarAlmacen.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaReporteFechas.Designer.cs">
+      <DependentUpon>PantallaReporteFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarAlmacen.Designer.cs">
       <DependentUpon>PantallaSeleccionarAlmacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaAnadirProducto.cs">
+    <Compile Include="VistasAlmacen\PantallaAnadirProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaAnadirProducto.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaAnadirProducto.Designer.cs">
       <DependentUpon>PantallaAnadirProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaProductosAlmacen.cs">
+    <Compile Include="VistasAlmacen\PantallaProductosAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaProductosAlmacen.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaProductosAlmacen.Designer.cs">
       <DependentUpon>PantallaProductosAlmacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaAdministradorAlmacén.cs">
+    <Compile Include="VistasAlmacen\PantallaAdministradorAlmacén.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaAdministradorAlmacén.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaAdministradorAlmacén.Designer.cs">
       <DependentUpon>PantallaAdministradorAlmacén.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\FormularioPrincipal.cs">
+    <Compile Include="VistasAlmacen\FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\FormularioPrincipal.Designer.cs">
+    <Compile Include="VistasAlmacen\FormularioPrincipal.Designer.cs">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\PantallaUsuarioAlmacen.cs">
+    <Compile Include="VistasAlmacen\PantallaUsuarioAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\PantallaUsuarioAlmacen.Designer.cs">
+    <Compile Include="VistasAlmacen\PantallaUsuarioAlmacen.Designer.cs">
       <DependentUpon>PantallaUsuarioAlmacen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -209,46 +216,55 @@
     <Compile Include="Ventas\MainVentas.Designer.cs">
       <DependentUpon>MainVentas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Almacen\PantallaEliminarAlmacenes.resx">
+    <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.Designer.cs">
+      <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VistasAlmacen\PantallaEliminarAlmacenes.resx">
       <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaInsertarAlmacen.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaInsertarAlmacen.resx">
       <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaModificarStock.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaModificarStock.resx">
       <DependentUpon>PantallaModificarStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\FormularioPrincipal.resx">
+    <EmbeddedResource Include="VistasAlmacen\FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaActualizarAlmacenes.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaActualizarAlmacenes.resx">
       <DependentUpon>PantallaActualizarAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaAdministradorAlmacén.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaAdministradorAlmacén.resx">
       <DependentUpon>PantallaAdministradorAlmacén.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaAnadirProducto.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaAnadirProducto.resx">
       <DependentUpon>PantallaAnadirProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaProductosAlmacen.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaProductosAlmacen.resx">
       <DependentUpon>PantallaProductosAlmacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaRegIngresosProducto.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaRegIngresosProducto.resx">
       <DependentUpon>PantallaRegIngresosProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaRegPedidoProduccion.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaRegPedidoProduccion.resx">
       <DependentUpon>PantallaRegPedidoProduccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaRegSalidaProducto.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaRegSalidaProducto.resx">
       <DependentUpon>PantallaRegSalidaProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaSeleccionarAlmacen.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaReporteFechas.resx">
+      <DependentUpon>PantallaReporteFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaSeleccionarAlmacen.resx">
       <DependentUpon>PantallaSeleccionarAlmacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen\PantallaUsuarioAlmacen.resx">
+    <EmbeddedResource Include="VistasAlmacen\PantallaUsuarioAlmacen.resx">
       <DependentUpon>PantallaUsuarioAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -299,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\MainVentas.resx">
       <DependentUpon>MainVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaVistaPreviaReporte.resx">
+      <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

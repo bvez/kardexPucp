@@ -37,8 +37,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Agregar Almacén";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -115,27 +116,27 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Teléfono del almacén:";
             // 
-            // textBox1
+            // textBoxDireccion
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxDireccion.Location = new System.Drawing.Point(225, 306);
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(187, 20);
+            this.textBoxDireccion.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxTelefono
             // 
-            this.textBox2.Location = new System.Drawing.Point(282, 356);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBoxTelefono.Location = new System.Drawing.Point(282, 356);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(130, 20);
+            this.textBoxTelefono.TabIndex = 6;
             // 
             // PantallaInsertarAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 401);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTelefono);
+            this.Controls.Add(this.textBoxDireccion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -161,7 +162,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDireccion;
+        private System.Windows.Forms.TextBox textBoxTelefono;
     }
 }

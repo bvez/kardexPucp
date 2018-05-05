@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FormulariosAlmacenes
+namespace FormulariosAlmacenes.VistasAlmacen
 {
-    public partial class PantallaInsertarAlmacen : Form
+    public partial class PantallaVistaPreviaReporte : Form
     {
-        public PantallaInsertarAlmacen()
+        public PantallaVistaPreviaReporte()
         {
             InitializeComponent();
-        }
-
-        private void PantallaInsertarAlmacen_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Owner.Visible = true;
         }
     }
 }

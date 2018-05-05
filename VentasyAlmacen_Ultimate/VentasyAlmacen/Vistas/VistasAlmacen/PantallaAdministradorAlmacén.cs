@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using FormulariosAlmacenes.VistasAlmacen;
 
 namespace FormulariosAlmacenes
 {
@@ -129,18 +130,20 @@ namespace FormulariosAlmacenes
             Almacen almacenSeleccionado;
 
             //seleccion de almacen
-            while (true)
-            {
-                pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
-                pantallaAlmacenes.ShowDialog();
-                if (pantallaAlmacenes.AlmacenSeleccionado != null) break;
-            }
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes.ShowDialog();
+
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
 
-            PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado);
-            pantallaProductos.Owner = this;
-            this.Visible = false;
-            pantallaProductos.ShowDialog();
+
+            if(almacenSeleccionado != null)
+            {
+                PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado);
+                //pantallaProductos.Owner = this;
+                //this.Visible = false;
+                pantallaProductos.ShowDialog();
+            }
+            
         }
 
         private void BtnAnadirProducto_MouseClick(object sender, MouseEventArgs e)
@@ -149,18 +152,18 @@ namespace FormulariosAlmacenes
             Almacen almacenSeleccionado;
 
             //seleccion de almacen
-            while (true)
-            {
-                pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
-                pantallaAlmacenes.ShowDialog();
-                if (pantallaAlmacenes.AlmacenSeleccionado != null) break;
-            }
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes.ShowDialog();
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
 
-            PantallaAnadirProducto pantallaAnadirProducto = new PantallaAnadirProducto(almacenSeleccionado.Productos,listaProductosEmpresa);
-            pantallaAnadirProducto.Owner = this;
-            this.Visible = false;
-            pantallaAnadirProducto.ShowDialog();
+            if(almacenSeleccionado!= null)
+            {
+                PantallaAnadirProducto pantallaAnadirProducto = new PantallaAnadirProducto(almacenSeleccionado.Productos, listaProductosEmpresa);
+                //pantallaAnadirProducto.Owner = this;
+                //this.Visible = false;
+                pantallaAnadirProducto.ShowDialog();
+            }
+            
         }
 
         private void btnActualizarAlmacenes_MouseClick(object sender, MouseEventArgs e)
@@ -183,17 +186,16 @@ namespace FormulariosAlmacenes
             Almacen almacenSeleccionado;
 
             //seleccion de almacen
-            while (true)
-            {
-                pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
-                pantallaAlmacenes.ShowDialog();
-                if (pantallaAlmacenes.AlmacenSeleccionado != null) break;
-            }
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes.ShowDialog();
 
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
 
-            PantallaModificarStock pantallaStock = new PantallaModificarStock(almacenSeleccionado);
-            pantallaStock.ShowDialog();
+            if (almacenSeleccionado != null)
+            {
+                PantallaModificarStock pantallaStock = new PantallaModificarStock(almacenSeleccionado);
+                pantallaStock.ShowDialog();
+            }
         }
 
         private void buttonCerrarSesion_MouseClick(object sender, MouseEventArgs e)
@@ -204,6 +206,23 @@ namespace FormulariosAlmacenes
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            PantallaSeleccionarAlmacen pantallaAlmacenes;
+            Almacen almacenSeleccionado;
+
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes.ShowDialog();
+
+            almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
+
+            if (almacenSeleccionado != null)
+            {
+                PantallaReporteFechas pantallaReporte = new PantallaReporteFechas();
+                pantallaReporte.ShowDialog();
+            }
         }
     }
 }

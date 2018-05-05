@@ -30,6 +30,7 @@ namespace FormulariosAlmacenes
                 //productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(NumBoxStock.Value.ToString());
                 dataGridStock.Update();
                 dataGridStock.Refresh();
+                MessageBox.Show("Se registró el egreso correctamente", "Éxito");
             }
         }
 

@@ -93,6 +93,7 @@
             this.dataGridProductosAlmacen.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridProductosAlmacen.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridProductosAlmacen.Location = new System.Drawing.Point(59, 39);
+            this.dataGridProductosAlmacen.MultiSelect = false;
             this.dataGridProductosAlmacen.Name = "dataGridProductosAlmacen";
             this.dataGridProductosAlmacen.ReadOnly = true;
             this.dataGridProductosAlmacen.Size = new System.Drawing.Size(334, 201);
@@ -277,7 +278,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::FormulariosAlmacenes.Properties.Resources.logoBuscar;
             this.pictureBox1.Location = new System.Drawing.Point(253, 31);
@@ -316,6 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(842, 450);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridProductosEmpresa);

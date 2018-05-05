@@ -29,5 +29,10 @@ namespace FormulariosAlmacenes
             }
             
         }
+
+        private void PantallaEliminarAlmacenes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Visible = true;
+        }
     }
 }

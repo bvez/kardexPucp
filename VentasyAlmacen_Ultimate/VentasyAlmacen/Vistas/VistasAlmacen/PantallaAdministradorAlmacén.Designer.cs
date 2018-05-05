@@ -36,6 +36,7 @@
             this.labelBienvenidaAdmin = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // btnModificarStock
             // 
             this.btnModificarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarStock.Location = new System.Drawing.Point(40, 236);
+            this.btnModificarStock.Location = new System.Drawing.Point(40, 204);
             this.btnModificarStock.Name = "btnModificarStock";
             this.btnModificarStock.Size = new System.Drawing.Size(190, 80);
             this.btnModificarStock.TabIndex = 1;
@@ -75,7 +76,7 @@
             // btnProductosDisponibl
             // 
             this.btnProductosDisponibl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnProductosDisponibl.Location = new System.Drawing.Point(275, 236);
+            this.btnProductosDisponibl.Location = new System.Drawing.Point(275, 204);
             this.btnProductosDisponibl.Name = "btnProductosDisponibl";
             this.btnProductosDisponibl.Size = new System.Drawing.Size(190, 80);
             this.btnProductosDisponibl.TabIndex = 3;
@@ -115,11 +116,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button1.Location = new System.Drawing.Point(159, 303);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 83);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Reporte por fechas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            // 
             // PantallaAdministradorAlmacén
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 357);
+            this.ClientSize = new System.Drawing.Size(504, 397);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelBienvenidaAdmin);
@@ -146,5 +159,6 @@
         private System.Windows.Forms.Label labelBienvenidaAdmin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

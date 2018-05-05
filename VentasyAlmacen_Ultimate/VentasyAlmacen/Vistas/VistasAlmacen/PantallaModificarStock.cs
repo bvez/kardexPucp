@@ -46,6 +46,7 @@ namespace FormulariosAlmacenes
             if(resultado == DialogResult.Yes)
             {
                 productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(NumBoxStock.Value.ToString());
+                MessageBox.Show("Se actualizó el stock correctamente", "Éxito");
                 dataGridStock.Update();
                 dataGridStock.Refresh();
             }

@@ -36,6 +36,7 @@
             this.buttonSalidas = new System.Windows.Forms.Button();
             this.buttonRegPedidos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonReporteFechas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             // buttonStock
             // 
             this.buttonStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonStock.Location = new System.Drawing.Point(214, 108);
+            this.buttonStock.Location = new System.Drawing.Point(73, 169);
             this.buttonStock.Name = "buttonStock";
             this.buttonStock.Size = new System.Drawing.Size(189, 74);
             this.buttonStock.TabIndex = 7;
@@ -73,7 +74,7 @@
             // buttonIngreso
             // 
             this.buttonIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonIngreso.Location = new System.Drawing.Point(73, 223);
+            this.buttonIngreso.Location = new System.Drawing.Point(364, 125);
             this.buttonIngreso.Name = "buttonIngreso";
             this.buttonIngreso.Size = new System.Drawing.Size(189, 74);
             this.buttonIngreso.TabIndex = 8;
@@ -84,7 +85,7 @@
             // buttonSalidas
             // 
             this.buttonSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonSalidas.Location = new System.Drawing.Point(214, 338);
+            this.buttonSalidas.Location = new System.Drawing.Point(364, 321);
             this.buttonSalidas.Name = "buttonSalidas";
             this.buttonSalidas.Size = new System.Drawing.Size(189, 74);
             this.buttonSalidas.TabIndex = 9;
@@ -115,11 +116,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
+            // buttonReporteFechas
+            // 
+            this.buttonReporteFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.buttonReporteFechas.Location = new System.Drawing.Point(73, 268);
+            this.buttonReporteFechas.Name = "buttonReporteFechas";
+            this.buttonReporteFechas.Size = new System.Drawing.Size(189, 74);
+            this.buttonReporteFechas.TabIndex = 12;
+            this.buttonReporteFechas.Text = "Reporte por Fechas";
+            this.buttonReporteFechas.UseVisualStyleBackColor = true;
+            this.buttonReporteFechas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonReporteFechas_MouseClick);
+            // 
             // PantallaUsuarioAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 450);
+            this.Controls.Add(this.buttonReporteFechas);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonRegPedidos);
             this.Controls.Add(this.buttonSalidas);
@@ -146,5 +159,6 @@
         private System.Windows.Forms.Button buttonSalidas;
         private System.Windows.Forms.Button buttonRegPedidos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonReporteFechas;
     }
 }

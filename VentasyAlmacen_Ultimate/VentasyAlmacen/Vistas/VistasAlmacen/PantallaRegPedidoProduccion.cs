@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
 
 namespace FormulariosAlmacenes
 {
-    public partial class PantallaRegIngresosProducto : Form
+    public partial class PantallaRegPedidoProduccion : Form
     {
-        public PantallaRegIngresosProducto()
+        public PantallaRegPedidoProduccion()
         {
             InitializeComponent();
         }
@@ -23,18 +22,25 @@ namespace FormulariosAlmacenes
 
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Desea confirmar el ingreso?", "Confirmacion", MessageBoxButtons.YesNo);
+            DialogResult resultado = MessageBox.Show("Desea confirmar la solicitud?", "Confirmacion", MessageBoxButtons.YesNo);
+            
             if (resultado == DialogResult.Yes)
             {
                 //productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(NumBoxStock.Value.ToString());
                 dataGridStock.Update();
                 dataGridStock.Refresh();
+                MessageBox.Show("Se registró el pedido correctamente","Éxito");
             }
         }
 
-        private void PantallaRegIngresosProducto_FormClosed(object sender, FormClosedEventArgs e)
+        private void PantallaRegPedidoProduccion_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Visible = true;
         }

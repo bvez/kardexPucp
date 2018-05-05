@@ -46,6 +46,7 @@ namespace FormulariosAlmacenes
         {
             //DataGridSelectAlmacen
             Almacen almacenSeleccionado = (Almacen)DataGridSelectAlmacen.CurrentRow.DataBoundItem;
+                
             //nombreSelected.Text = almacenSeleccionado.Direccion;
             almacenSelected = almacenSeleccionado;
             this.Visible = false;

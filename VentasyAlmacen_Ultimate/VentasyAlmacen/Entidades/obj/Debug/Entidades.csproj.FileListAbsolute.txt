@@ -9,3 +9,8 @@ C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\En
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.dll
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.pdb
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\bin\Debug\Entidades.dll
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\bin\Debug\Entidades.pdb
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.dll
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.pdb

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using FormulariosAlmacenes.VistasAlmacen;
 
 namespace FormulariosAlmacenes
 {
@@ -62,6 +63,14 @@ namespace FormulariosAlmacenes
         private void buttonSalidas_MouseClick(object sender, MouseEventArgs e)
         {
             PantallaRegSalidaProducto newPant = new PantallaRegSalidaProducto();
+            newPant.Owner = this;
+            this.Visible = false;
+            newPant.ShowDialog();
+        }
+
+        private void buttonReporteFechas_MouseClick(object sender, MouseEventArgs e)
+        {
+            PantallaReporteFechas newPant = new PantallaReporteFechas();
             newPant.Owner = this;
             this.Visible = false;
             newPant.ShowDialog();
