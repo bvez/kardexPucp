@@ -29,59 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(29, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ventas";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.Location = new System.Drawing.Point(147, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 44);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Almacen";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(61, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label1.Location = new System.Drawing.Point(139, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 31);
+            this.label1.Size = new System.Drawing.Size(187, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bienvenido";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(12, 52);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Location = new System.Drawing.Point(11, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.Size = new System.Drawing.Size(276, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Seleccione un área:";
+            this.label2.Text = "Seleccione su área de trabajo:";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::FormulariosAlmacenes.Properties.Resources.IconoAlmacen;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button2.Location = new System.Drawing.Point(229, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(207, 203);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::FormulariosAlmacenes.Properties.Resources.IconoVentas;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.Location = new System.Drawing.Point(16, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(207, 203);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // PantallaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 151);
+            this.ClientSize = new System.Drawing.Size(453, 332);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);

@@ -355,6 +355,8 @@
     <None Include="Resources\logoBuscar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\IconoVentas.png" />
+    <None Include="Resources\IconoAlmacen.png" />
     <Content Include="Resources\logoPrograma.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
