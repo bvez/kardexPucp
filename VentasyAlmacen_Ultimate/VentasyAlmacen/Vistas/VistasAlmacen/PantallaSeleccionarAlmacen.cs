@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaSeleccionarAlmacen : Form
     {
+        private AlmacenesBL logicaAlmacenes;
         public PantallaSeleccionarAlmacen()
         {
             //cargarAlmacenes();
             InitializeComponent();
-            //DataGridSelectAlmacen.DataSource = listaAlmacenes;
+            logicaAlmacenes = new AlmacenesBL();
+            DataGridSelectAlmacen.DataSource = logicaAlmacenes.obtenerAlmacenes();
         }
         public PantallaSeleccionarAlmacen(BindingList<Almacen> listaAlmacenesIn)
         {

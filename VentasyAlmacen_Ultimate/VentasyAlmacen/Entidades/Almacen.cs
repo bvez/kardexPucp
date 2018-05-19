@@ -10,7 +10,6 @@ namespace Entidades
 
         public BindingList<ProductoAlmacen> Productos { get { return _productos; } set { _productos = value; } }
         public string CodigoAlmacen { get { return _codigoAlmacen; } set { _codigoAlmacen = value; } }
-
         public void anadirProducto(Producto newProducto, int stockInicial)
         {
 

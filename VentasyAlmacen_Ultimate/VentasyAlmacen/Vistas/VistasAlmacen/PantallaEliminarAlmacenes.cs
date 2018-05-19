@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaEliminarAlmacenes : Form
     {
+        AlmacenesBL logicaAlmacenes;
         public PantallaEliminarAlmacenes()
         {
+            logicaAlmacenes = new AlmacenesBL();
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = logicaAlmacenes.obtenerAlmacenes();
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)

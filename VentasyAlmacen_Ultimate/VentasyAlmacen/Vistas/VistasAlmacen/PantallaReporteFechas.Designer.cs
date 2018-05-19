@@ -115,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerInicial);
             this.Name = "PantallaReporteFechas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaReporteFechas";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaReporteFechas_FormClosed);
             this.ResumeLayout(false);

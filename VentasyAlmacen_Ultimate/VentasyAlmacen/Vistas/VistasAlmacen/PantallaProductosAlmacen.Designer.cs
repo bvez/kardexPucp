@@ -253,6 +253,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaProductosAlmacen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock de Productos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaProductosAlmacen_FormClosed);
             this.panel1.ResumeLayout(false);

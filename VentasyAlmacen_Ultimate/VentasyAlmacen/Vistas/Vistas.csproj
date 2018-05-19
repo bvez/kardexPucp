@@ -333,13 +333,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AccesoADatos\AccesoADatos.csproj">
-      <Project>{d8308f95-d098-492d-97e7-728a69d69a9f}</Project>
-      <Name>AccesoADatos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{4d894ef6-e461-43cc-8992-e851ea843dd4}</Project>
       <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocios\LogicaNegocios.csproj">
+      <Project>{e0f01ce8-efa5-4a88-836e-2582c3981bff}</Project>
+      <Name>LogicaNegocios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -109,6 +109,7 @@
             this.Controls.Add(this.DataGridSelectAlmacen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaSeleccionarAlmacen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccionar Almacen";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSelectAlmacen)).EndInit();
             this.ResumeLayout(false);

@@ -34,10 +34,7 @@ namespace FormulariosAlmacenes
         private void dataGridStock_SelectionChanged(object sender, EventArgs e)
         {
             productoAlmacenSeleccionado = (ProductoAlmacen)dataGridStock.CurrentRow.DataBoundItem;
-            labelId.Text = productoAlmacenSeleccionado.Id;
-            labelNombre.Text = productoAlmacenSeleccionado.Nombre;
-            labelStock.Text = productoAlmacenSeleccionado.CantidadAlmacenada.ToString();
-            NumBoxStock.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
+            this.actualizarInfoSeleccionado();
         }
 
         private void buttonUpdate_MouseClick(object sender, MouseEventArgs e)
@@ -49,6 +46,7 @@ namespace FormulariosAlmacenes
                 MessageBox.Show("Se actualizó el stock correctamente", "Éxito");
                 dataGridStock.Update();
                 dataGridStock.Refresh();
+                this.actualizarInfoSeleccionado();
             }
             else if(resultado == DialogResult.No)
             {
@@ -56,11 +54,20 @@ namespace FormulariosAlmacenes
             }
         }
 
+        private void actualizarInfoSeleccionado()
+        {
+            labelId.Text = productoAlmacenSeleccionado.Id;
+            labelNombre.Text = productoAlmacenSeleccionado.Nombre;
+            labelStock.Text = productoAlmacenSeleccionado.CantidadAlmacenada.ToString();
+            NumBoxStock.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
+        }
+
         ProductoAlmacen productoAlmacenSeleccionado;
         Almacen almacenModificar;
 
         private void buttonAtras_MouseClick(object sender, MouseEventArgs e)
         {
+
             this.Dispose();
         }
     }

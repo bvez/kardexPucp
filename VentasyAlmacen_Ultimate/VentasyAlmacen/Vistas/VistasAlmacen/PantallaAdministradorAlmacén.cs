@@ -9,109 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using FormulariosAlmacenes.VistasAlmacen;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaAdministradorAlmacén : Form
     {
-        private BindingList<Almacen> listaAlmacenes = new BindingList<Almacen>();
-        BindingList<Producto> listaProductosEmpresa = new BindingList<Producto>();
         public PantallaAdministradorAlmacén()
         {
-            //consultar los datos de productos
-            Producto producto1 = new Producto();
-            producto1.Nombre = "PrimerProducto";
-            producto1.Id = "X111AS";
-            Producto producto2 = new Producto();
-            producto2.Nombre = "Producto2";
-            producto2.Id = "X111adsf";
-
-            ProductoAlmacen pack1 = new ProductoAlmacen();
-            pack1.ProductoAlmacenado = producto1;
-            pack1.CantidadAlmacenada = 10;
-
-            ProductoAlmacen pack2 = new ProductoAlmacen();
-            pack2.ProductoAlmacenado = producto2;
-            pack2.CantidadAlmacenada = 20;
-
-            //listaProductoAlmacen.Add(pack1);
-            //listaProductoAlmacen.Add(pack2);
             InitializeComponent();
         }
         public PantallaAdministradorAlmacén(string nombre)
         {
-            BindingList<ProductoAlmacen> listaProductoAlmacen1 = new BindingList<ProductoAlmacen>();
-            BindingList<ProductoAlmacen> listaProductoAlmacen2 = new BindingList<ProductoAlmacen>();
-            BindingList<ProductoAlmacen> listaProductoAlmacen3= new BindingList<ProductoAlmacen>();
-
-            //consultar los datos de productos
-            Producto producto1 = new Producto();
-            producto1.Nombre = "PrimerProducto";
-            producto1.Id = "X111AS";
-            Producto producto2 = new Producto();
-            producto2.Nombre = "Producto2";
-            producto2.Id = "X222adsf";
-            Producto producto3 = new Producto();
-            producto3.Nombre = "Producto3";
-            producto3.Id = "X333adsf";
-
-            ProductoAlmacen pack1_1 = new ProductoAlmacen();
-            pack1_1.ProductoAlmacenado = producto1;
-            pack1_1.CantidadAlmacenada = 10;
-
-            ProductoAlmacen pack1_2 = new ProductoAlmacen();
-            pack1_2.ProductoAlmacenado = producto2;
-            pack1_2.CantidadAlmacenada = 10;
-
-            ProductoAlmacen pack2_1 = new ProductoAlmacen();
-            pack2_1.ProductoAlmacenado = producto2;
-            pack2_1.CantidadAlmacenada = 20;
-
-            ProductoAlmacen pack2_2 = new ProductoAlmacen();
-            pack2_2.ProductoAlmacenado = producto3;
-            pack2_2.CantidadAlmacenada = 20;
-
-            ProductoAlmacen pack3 = new ProductoAlmacen();
-            pack3.ProductoAlmacenado = producto3;
-            pack3.CantidadAlmacenada = 30;
-
-            listaProductoAlmacen1.Add(pack1_1);
-            listaProductoAlmacen1.Add(pack1_2);
-
-            listaProductoAlmacen2.Add(pack2_1);
-            listaProductoAlmacen2.Add(pack2_2);
-
-            listaProductoAlmacen3.Add(pack3);
-
-            Almacen almacen1 = new Almacen();
-            almacen1.CodigoAlmacen = "ALM01";
-            almacen1.CodigoSucursal = "Sucursal 1";
-            almacen1.Direccion = "Direccion de almacen 1";
-            almacen1.Telefono = "111-1111";
-            almacen1.Productos = listaProductoAlmacen1;
-
-            Almacen almacen2 = new Almacen();
-            almacen2.CodigoAlmacen = "ALM02";
-            almacen2.CodigoSucursal = "Sucursal 2";
-            almacen2.Direccion = "Direccion de almacen 2";
-            almacen2.Telefono = "222-2222";
-            almacen2.Productos = listaProductoAlmacen2;
-
-            Almacen almacen3 = new Almacen();
-            almacen3.CodigoAlmacen = "ALM03";
-            almacen3.CodigoSucursal = "Sucursal 3";
-            almacen3.Direccion = "Direccion de almacen 3";
-            almacen3.Telefono = "333-3333";
-            almacen3.Productos = listaProductoAlmacen3;
-
-            listaAlmacenes.Add(almacen1);
-            listaAlmacenes.Add(almacen2);
-            listaAlmacenes.Add(almacen3);
-
-            listaProductosEmpresa.Add(producto1);
-            listaProductosEmpresa.Add(producto2);
-            listaProductosEmpresa.Add(producto3);
-
             InitializeComponent();
             labelBienvenidaAdmin.Text = "Bienvenido " + nombre;
         }
@@ -130,7 +39,7 @@ namespace FormulariosAlmacenes
             Almacen almacenSeleccionado;
 
             //seleccion de almacen
-            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen();
             pantallaAlmacenes.ShowDialog();
 
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
@@ -152,13 +61,13 @@ namespace FormulariosAlmacenes
             Almacen almacenSeleccionado;
 
             //seleccion de almacen
-            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen();
             pantallaAlmacenes.ShowDialog();
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
 
             if(almacenSeleccionado!= null)
             {
-                PantallaAnadirProducto pantallaAnadirProducto = new PantallaAnadirProducto(almacenSeleccionado.Productos, listaProductosEmpresa);
+                PantallaAnadirProducto pantallaAnadirProducto = new PantallaAnadirProducto(almacenSeleccionado.Productos);
                 //pantallaAnadirProducto.Owner = this;
                 //this.Visible = false;
                 pantallaAnadirProducto.ShowDialog();
@@ -186,7 +95,7 @@ namespace FormulariosAlmacenes
             Almacen almacenSeleccionado;
 
             //seleccion de almacen
-            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen();
             pantallaAlmacenes.ShowDialog();
 
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
@@ -213,7 +122,7 @@ namespace FormulariosAlmacenes
             PantallaSeleccionarAlmacen pantallaAlmacenes;
             Almacen almacenSeleccionado;
 
-            pantallaAlmacenes = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            pantallaAlmacenes = new PantallaSeleccionarAlmacen();
             pantallaAlmacenes.ShowDialog();
 
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;

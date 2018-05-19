@@ -244,6 +244,7 @@
             this.Controls.Add(this.dataGridStock);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaModificarStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Stock";
             this.Load += new System.EventHandler(this.PantallaModificarStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStock)).EndInit();

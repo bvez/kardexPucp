@@ -64,6 +64,7 @@
             this.Controls.Add(this.btnInsertAlmacen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaActualizarAlmacenes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar Almacenes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaActualizarAlmacenes_FormClosed);
             this.ResumeLayout(false);

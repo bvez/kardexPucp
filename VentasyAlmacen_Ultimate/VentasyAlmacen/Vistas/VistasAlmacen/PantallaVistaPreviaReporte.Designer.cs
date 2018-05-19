@@ -58,6 +58,7 @@
             this.ClientSize = new System.Drawing.Size(364, 363);
             this.Controls.Add(this.chart1);
             this.Name = "PantallaVistaPreviaReporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista Previa";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);

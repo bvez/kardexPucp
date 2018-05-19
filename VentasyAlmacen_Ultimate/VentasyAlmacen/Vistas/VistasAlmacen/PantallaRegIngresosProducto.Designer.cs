@@ -225,6 +225,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaRegIngresosProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaRegIngresosProducto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaRegIngresosProducto_FormClosed);
             this.groupBox1.ResumeLayout(false);

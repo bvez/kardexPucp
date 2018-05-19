@@ -144,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaInsertarAlmacen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaInsertarAlmacen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaInsertarAlmacen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

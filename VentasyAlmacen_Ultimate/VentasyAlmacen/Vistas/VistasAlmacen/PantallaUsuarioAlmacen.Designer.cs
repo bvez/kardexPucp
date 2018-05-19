@@ -142,6 +142,7 @@
             this.Controls.Add(this.labelBienvenidaUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaUsuarioAlmacen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaUsuarioAlmacen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

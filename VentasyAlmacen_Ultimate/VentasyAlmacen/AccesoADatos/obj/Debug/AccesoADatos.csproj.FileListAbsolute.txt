@@ -20,3 +20,12 @@ C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp
 C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.dll
 C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\AccesoADatos.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\AccesoADatos.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csproj.CopyComplete

@@ -8,24 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaAnadirProducto : Form
     {
         private Producto productoSeleccionado;
+        private AlmacenProductosBL logicaProductos;
         public PantallaAnadirProducto()
         {
             InitializeComponent();
+            logicaProductos = new AlmacenProductosBL();
         }
 
-        public PantallaAnadirProducto(BindingList<ProductoAlmacen> productosRegistradosAlmacen, BindingList<Producto> productosRegistradosEmpresa)
+        public PantallaAnadirProducto(BindingList<ProductoAlmacen> productosRegistradosAlmacen)
         {
             InitializeComponent();
+            logicaProductos = new AlmacenProductosBL();
+
             dataGridProductosAlmacen.AutoGenerateColumns = false;
             dataGridProductosEmpresa.AutoGenerateColumns = false;
             dataGridProductosAlmacen.DataSource = productosRegistradosAlmacen;
-            dataGridProductosEmpresa.DataSource = productosRegistradosEmpresa;
+            dataGridProductosEmpresa.DataSource = logicaProductos.obtenerProductosEmpresa();
         }
 
         private void btnInsertarProducto_MouseClick(object sender, MouseEventArgs e)

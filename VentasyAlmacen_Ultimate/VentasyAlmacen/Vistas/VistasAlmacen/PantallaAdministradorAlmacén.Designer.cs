@@ -142,6 +142,7 @@
             this.Controls.Add(this.btnActualizarAlmacenes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaAdministradorAlmacén";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador de Almacén";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaAdministradorAlmacén_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

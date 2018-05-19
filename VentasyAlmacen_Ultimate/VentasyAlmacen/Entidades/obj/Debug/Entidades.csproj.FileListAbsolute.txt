@@ -20,3 +20,9 @@ C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp
 C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.dll
 C:\Users\Asus\Documents\2018-1\Sistemas de Información 2\Laboratorio\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\bin\Debug\Entidades.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Entidades\obj\Debug\Entidades.pdb
