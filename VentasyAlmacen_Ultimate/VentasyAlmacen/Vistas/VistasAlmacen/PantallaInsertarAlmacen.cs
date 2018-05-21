@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
@@ -15,6 +16,8 @@ namespace FormulariosAlmacenes
         public PantallaInsertarAlmacen()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = (new AlmacenesBL()).obtenerSucursalesDisponibles();
         }
 
         private void PantallaInsertarAlmacen_FormClosed(object sender, FormClosedEventArgs e)

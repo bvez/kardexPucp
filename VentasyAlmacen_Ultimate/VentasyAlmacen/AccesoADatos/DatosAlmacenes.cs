@@ -5,15 +5,106 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using MySql.Data;
+using MySql.Data.EntityFramework;
+using MySql.Data.EntityFrameworkCore;
+using MySql.Web;
+using MySql.Data.MySqlClient;
+using MySql.Data.Types;
 
 namespace AccesoADatos
 {
     public class DatosAlmacenes
     {
+        private String cadenaConexion;
+        public DatosAlmacenes()
+        {
+            cadenaConexion = "server=localhost;" +
+                "user=root;database=a20151258;" +
+                "port=3306;password=;SslMode=none;";
+        }
         public BindingList<Almacen> obtenerAlmacenes()
         {
+            
             BindingList<Almacen> almacenes = new BindingList<Almacen>();
+            ///*
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT ALM_ALMACEN.IDALMACEN,LOCAL.DIRECCIONLOCAL,LOCAL.TELEFONOLOCAL " +
+                    "FROM ALM_ALMACEN INNER JOIN LOCAL ON ALM_ALMACEN.LOCAL_IDLOCAL = LOCAL.IDLOCAL";
+                comando.Connection = con;
 
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    int idAlmacen = reader.GetInt32("IDALMACEN");//
+                    string telefono = reader.GetString("TELEFONOLOCAL");//
+                    string direccion = reader.GetString("DIRECCIONLOCAL");//
+
+                    Almacen almacen= new Almacen();
+                    almacen.IdAlmacen = idAlmacen;
+                    almacen.Telefono = telefono;
+                    almacen.Direccion = direccion;
+
+                    almacenes.Add(almacen);
+
+                    
+                }
+
+                con.Close();
+            }
+            catch(Exception e)
+            {
+
+            }
+            //*/
+            return almacenes;
+        }
+
+        public BindingList<Sucursal> listarSucursalesDisponible()
+        {
+            BindingList<Sucursal> sucursales = new BindingList<Sucursal>();
+            
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT * FROM LOCAL WHERE IDLOCAL NOT IN (SELECT LOCAL_IDLOCAL FROM ALM_ALMACEN) ";
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int idLocal = reader.GetInt32("IDLOCAL");
+                    string telefono = reader.GetString("TELEFONOLOCAL");
+                    string direccion = reader.GetString("DIRECCIONLOCAL");
+
+                    Sucursal sucursal = new Sucursal();
+                    sucursal.IdLocal = idLocal;
+                    sucursal.Telefono = telefono;
+                    sucursal.Direccion = direccion;
+
+                    sucursales.Add(sucursal);
+                }
+
+                con.Close();
+            }
+            catch(Exception e)
+            {
+
+            }
+
+            return sucursales;
+        }
+
+
+
+        /*
             BindingList<ProductoAlmacen> listaProductoAlmacen1 = new BindingList<ProductoAlmacen>();
             BindingList<ProductoAlmacen> listaProductoAlmacen2 = new BindingList<ProductoAlmacen>();
             BindingList<ProductoAlmacen> listaProductoAlmacen3 = new BindingList<ProductoAlmacen>();
@@ -73,8 +164,7 @@ namespace AccesoADatos
             almacenes.Add(almacen1);
             almacenes.Add(almacen2);
             almacenes.Add(almacen3);
-
-            return almacenes;
-        }
+            
+            */
     }
 }

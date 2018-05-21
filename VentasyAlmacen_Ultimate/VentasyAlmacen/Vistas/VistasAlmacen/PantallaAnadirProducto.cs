@@ -16,27 +16,47 @@ namespace FormulariosAlmacenes
     {
         private Producto productoSeleccionado;
         private AlmacenProductosBL logicaProductos;
+        private int idAlmacen;
         public PantallaAnadirProducto()
         {
             InitializeComponent();
             logicaProductos = new AlmacenProductosBL();
         }
 
-        public PantallaAnadirProducto(BindingList<ProductoAlmacen> productosRegistradosAlmacen)
+        public PantallaAnadirProducto(int idAlmacen)
         {
             InitializeComponent();
             logicaProductos = new AlmacenProductosBL();
-
+            this.idAlmacen = idAlmacen;
             dataGridProductosAlmacen.AutoGenerateColumns = false;
-            dataGridProductosEmpresa.AutoGenerateColumns = false;
-            dataGridProductosAlmacen.DataSource = productosRegistradosAlmacen;
-            dataGridProductosEmpresa.DataSource = logicaProductos.obtenerProductosEmpresa();
+            dataGridProductosRegistrables.AutoGenerateColumns = false;
+            dataGridProductosAlmacen.DataSource = logicaProductos.obtenerProductosAlmacen(this.idAlmacen);
+            dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen);
         }
 
         private void btnInsertarProducto_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("El producto se insertó correctamente","Transaccion Exitosa");
-            //MessageBox.Show("El producto no se pudo insertar correctamente", "Error");
+            Producto productoSeleccionado = (Producto)dataGridProductosRegistrables.CurrentRow.DataBoundItem;
+            DialogResult res = MessageBox.Show("Desea confirmar el registro del producto : " + productoSeleccionado.Id +
+                "   "+productoSeleccionado.CodigoProducto+" "+productoSeleccionado.Nombre + " con stock inicial "+
+                numericUpDown1.Value.ToString() +"?" ,"Confirmacion", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                if (logicaProductos.registrarProductoAlmacen(this.idAlmacen, productoSeleccionado.Id, (int)numericUpDown1.Value))
+                {
+                    BindingList<Producto> productos = (BindingList<Producto>)dataGridProductosRegistrables.DataSource;
+                    productos.Remove(productoSeleccionado);
+                    dataGridProductosRegistrables.DataSource = productos;
+                    dataGridProductosRegistrables.Update();
+                    dataGridProductosRegistrables.Refresh();
+                    MessageBox.Show("El producto se insertó correctamente", "Transaccion Exitosa");
+                }
+                else
+                {
+                    MessageBox.Show("El producto no se pudo insertar correctamente", "Error");
+                }
+            }
+            
         }
 
         private void PantallaAnadirProducto_FormClosed(object sender, FormClosedEventArgs e)
@@ -46,9 +66,9 @@ namespace FormulariosAlmacenes
 
         private void dataGridProductosEmpresa_SelectionChanged(object sender, EventArgs e)
         {
-            productoSeleccionado = (Producto)dataGridProductosEmpresa.CurrentRow.DataBoundItem;
+            productoSeleccionado = (Producto)dataGridProductosRegistrables.CurrentRow.DataBoundItem;
             labelNombre.Text = productoSeleccionado.Nombre;
-            labelCodigo.Text = productoSeleccionado.Id;
+            labelCodigo.Text = productoSeleccionado.Id.ToString() ;
         }
     }
 }

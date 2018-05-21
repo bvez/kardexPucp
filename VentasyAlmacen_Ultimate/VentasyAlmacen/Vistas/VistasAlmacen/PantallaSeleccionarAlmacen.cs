@@ -17,8 +17,8 @@ namespace FormulariosAlmacenes
         private AlmacenesBL logicaAlmacenes;
         public PantallaSeleccionarAlmacen()
         {
-            //cargarAlmacenes();
             InitializeComponent();
+            DataGridSelectAlmacen.AutoGenerateColumns = false;
             logicaAlmacenes = new AlmacenesBL();
             DataGridSelectAlmacen.DataSource = logicaAlmacenes.obtenerAlmacenes();
         }
@@ -28,23 +28,6 @@ namespace FormulariosAlmacenes
             DataGridSelectAlmacen.DataSource = listaAlmacenesIn;
         }
 
-        public void cargarAlmacenes()
-        {
-            Almacen almacen1 = new Almacen();
-            almacen1.CodigoAlmacen = "Almacen 1";
-            almacen1.CodigoSucursal = "Sucursal 1";
-            almacen1.Direccion = "Direccion de almacen 1";
-            almacen1.Telefono = "111-1111";
-
-            Almacen almacen2 = new Almacen();
-            almacen2.CodigoAlmacen = "Almacen 2";
-            almacen2.CodigoSucursal = "Sucursal 2";
-            almacen2.Direccion = "Direccion de almacen 2";
-            almacen2.Telefono = "222-2222";
-
-            //listaAlmacenes.Add(almacen1);
-            //listaAlmacenes.Add(almacen2);
-        }
         private void btnSelectAlmacenSgte_MouseClick(object sender, MouseEventArgs e)
         {
             //DataGridSelectAlmacen

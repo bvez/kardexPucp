@@ -33,10 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStock = new System.Windows.Forms.Button();
             this.buttonIngreso = new System.Windows.Forms.Button();
-            this.buttonSalidas = new System.Windows.Forms.Button();
             this.buttonRegPedidos = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonReporteFechas = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,35 +73,35 @@
             // buttonIngreso
             // 
             this.buttonIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonIngreso.Location = new System.Drawing.Point(364, 125);
+            this.buttonIngreso.Location = new System.Drawing.Point(364, 169);
             this.buttonIngreso.Name = "buttonIngreso";
             this.buttonIngreso.Size = new System.Drawing.Size(189, 74);
             this.buttonIngreso.TabIndex = 8;
-            this.buttonIngreso.Text = "Registrar Ingresos";
+            this.buttonIngreso.Text = "Registrar Ingresos/Salidas";
             this.buttonIngreso.UseVisualStyleBackColor = true;
             this.buttonIngreso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonIngreso_MouseClick);
-            // 
-            // buttonSalidas
-            // 
-            this.buttonSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonSalidas.Location = new System.Drawing.Point(364, 321);
-            this.buttonSalidas.Name = "buttonSalidas";
-            this.buttonSalidas.Size = new System.Drawing.Size(189, 74);
-            this.buttonSalidas.TabIndex = 9;
-            this.buttonSalidas.Text = "Registrar Salidas";
-            this.buttonSalidas.UseVisualStyleBackColor = true;
-            this.buttonSalidas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonSalidas_MouseClick);
             // 
             // buttonRegPedidos
             // 
             this.buttonRegPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonRegPedidos.Location = new System.Drawing.Point(364, 223);
+            this.buttonRegPedidos.Location = new System.Drawing.Point(364, 268);
             this.buttonRegPedidos.Name = "buttonRegPedidos";
             this.buttonRegPedidos.Size = new System.Drawing.Size(189, 74);
             this.buttonRegPedidos.TabIndex = 10;
             this.buttonRegPedidos.Text = "Registrar Pedido a Producción";
             this.buttonRegPedidos.UseVisualStyleBackColor = true;
             this.buttonRegPedidos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonRegPedidos_MouseClick);
+            // 
+            // buttonReporteFechas
+            // 
+            this.buttonReporteFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.buttonReporteFechas.Location = new System.Drawing.Point(73, 268);
+            this.buttonReporteFechas.Name = "buttonReporteFechas";
+            this.buttonReporteFechas.Size = new System.Drawing.Size(189, 74);
+            this.buttonReporteFechas.TabIndex = 12;
+            this.buttonReporteFechas.Text = "Reporte por Fechas";
+            this.buttonReporteFechas.UseVisualStyleBackColor = true;
+            this.buttonReporteFechas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonReporteFechas_MouseClick);
             // 
             // pictureBox1
             // 
@@ -116,17 +115,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
-            // buttonReporteFechas
-            // 
-            this.buttonReporteFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonReporteFechas.Location = new System.Drawing.Point(73, 268);
-            this.buttonReporteFechas.Name = "buttonReporteFechas";
-            this.buttonReporteFechas.Size = new System.Drawing.Size(189, 74);
-            this.buttonReporteFechas.TabIndex = 12;
-            this.buttonReporteFechas.Text = "Reporte por Fechas";
-            this.buttonReporteFechas.UseVisualStyleBackColor = true;
-            this.buttonReporteFechas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonReporteFechas_MouseClick);
-            // 
             // PantallaUsuarioAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,12 +123,13 @@
             this.Controls.Add(this.buttonReporteFechas);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonRegPedidos);
-            this.Controls.Add(this.buttonSalidas);
             this.Controls.Add(this.buttonIngreso);
             this.Controls.Add(this.buttonStock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelBienvenidaUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PantallaUsuarioAlmacen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
@@ -157,7 +146,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStock;
         private System.Windows.Forms.Button buttonIngreso;
-        private System.Windows.Forms.Button buttonSalidas;
         private System.Windows.Forms.Button buttonRegPedidos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonReporteFechas;

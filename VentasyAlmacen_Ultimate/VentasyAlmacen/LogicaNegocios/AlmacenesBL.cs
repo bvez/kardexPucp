@@ -11,12 +11,21 @@ namespace LogicaNegocios
 {
     public class AlmacenesBL
     {
+        private DatosAlmacenes datosAlm;
+        public AlmacenesBL()
+        {
+            datosAlm = new DatosAlmacenes();
+        }
         public BindingList<Almacen> obtenerAlmacenes()
         {
-            DatosAlmacenes datosAlm = new DatosAlmacenes();
             BindingList<Almacen> almacenes = datosAlm.obtenerAlmacenes();
 
             return almacenes;
+        }
+
+        public BindingList<Sucursal> obtenerSucursalesDisponibles()
+        {
+            return datosAlm.listarSucursalesDisponible();
         }
     }
 }

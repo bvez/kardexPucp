@@ -58,6 +58,12 @@
     <Compile Include="PantallaInicio.Designer.cs">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistasAlmacen\PantallaIngresosSalidasProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaIngresosSalidasProducto.Designer.cs">
+      <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="PantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaIngresosSalidasProducto.resx">
+      <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaInsertarAlmacen.resx">
       <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +366,24 @@
   <ItemGroup>
     <None Include="Resources\IconoVentas.png" />
     <None Include="Resources\IconoAlmacen.png" />
+    <None Include="Resources\btn_.png" />
+    <None Include="Resources\btn_advertencia.png" />
+    <None Include="Resources\btn_attach.png" />
+    <None Include="Resources\btn_calendar.png" />
+    <None Include="Resources\btn_Chk.png" />
+    <None Include="Resources\btn_cross.png" />
+    <None Include="Resources\btn_dwnld.png" />
+    <None Include="Resources\btn_etiqueta.png" />
+    <None Include="Resources\btn_list.png" />
+    <None Include="Resources\btn_location.png" />
+    <None Include="Resources\btn_mssg.png" />
+    <None Include="Resources\btn_person.png" />
+    <None Include="Resources\btn_reload.png" />
+    <None Include="Resources\btn_search.png" />
+    <None Include="Resources\btn_settings.png" />
+    <None Include="Resources\btn_trash.png" />
+    <None Include="Resources\btn_Chk_tiny.png" />
+    <None Include="Resources\btn_cross_tiny.png" />
     <Content Include="Resources\logoPrograma.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

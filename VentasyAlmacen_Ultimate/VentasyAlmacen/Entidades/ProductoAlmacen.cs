@@ -13,9 +13,19 @@ namespace Entidades
             get { return productoAlmacenado.Nombre; }
         }
 
-        public string Id
+        public int Id
         {
             get { return productoAlmacenado.Id; }
+        }
+
+        public string Descripcion
+        {
+            get { return productoAlmacenado.Descripcion; }
+        }
+
+        public string CodigoProducto
+        {
+            get { return productoAlmacenado.CodigoProducto; }
         }
     }
 

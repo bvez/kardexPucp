@@ -70,7 +70,6 @@
             this.label4.Size = new System.Drawing.Size(207, 26);
             this.label4.TabIndex = 18;
             this.label4.Text = "Cantidad a Solicitar:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // numericUpDown1
             // 
@@ -89,7 +88,6 @@
             this.label5.Size = new System.Drawing.Size(310, 20);
             this.label5.TabIndex = 21;
             this.label5.Text = "Seleccione el producto que desea solicitar:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // dataGridStock
             // 
@@ -224,7 +222,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridStock);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PantallaRegPedidoProduccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaRegPedidoProduccion";

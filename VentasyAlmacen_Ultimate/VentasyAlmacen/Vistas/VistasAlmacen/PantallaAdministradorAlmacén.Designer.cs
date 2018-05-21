@@ -140,7 +140,9 @@
             this.Controls.Add(this.btnAddProducto);
             this.Controls.Add(this.btnModificarStock);
             this.Controls.Add(this.btnActualizarAlmacenes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PantallaAdministradorAlmacén";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador de Almacén";

@@ -5,6 +5,7 @@ namespace Entidades
     public class Sucursal
     {
         private string _codigoSucursal;
+        private int idLocal;
         private string _direccion;
         private string _telefono;
         private BindingList<Vehiculo> _vehiculos;
@@ -17,6 +18,8 @@ namespace Entidades
         public BindingList<Vehiculo> Vehiculos { get { return _vehiculos; } set { _vehiculos = value; } }
         public BindingList<Cliente> Clientes { get { return _clientes; } set { _clientes = value; } }
         public BindingList<Pedido> Pedidos { get { return _pedidos; } set { _pedidos = value; } }
+
+        public int IdLocal { get => idLocal; set => idLocal = value; }
 
         public void anadirCliente(Cliente newCliente)
         {

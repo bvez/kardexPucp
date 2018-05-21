@@ -14,7 +14,9 @@ namespace FormulariosAlmacenes
 {
     public partial class PantallaUsuarioAlmacen : Form
     {
-        private Almacen almacenUsuario;
+        private int codAlmacen;
+        //atributo objeto Usuario
+        //private Almacen almacenUsuario;
         public PantallaUsuarioAlmacen()
         {
             InitializeComponent();
@@ -24,16 +26,21 @@ namespace FormulariosAlmacenes
             InitializeComponent();
             //al loguarse, se debe hacer una asociacion con el almacén
             labelBienvenidaUsuario.Text = "Bienvenido " + nombre;
+            codAlmacen = Int32.Parse(nombre);
         }
 
+        public void setAlmacen(string codigo)
+        {
+            //codAlmacen = codigo;
+        }
         private void PantallaUsuarioAlmacen_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Visible = true;
         }
-
         private void buttonStock_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(this.almacenUsuario);
+            //para cada pantalla se debe enviar el objeto Usuario
+            PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(codAlmacen);
             pantallaProductosAlmacen.Owner = this;
             //this.Visible = false;
             pantallaProductosAlmacen.ShowDialog();
@@ -41,6 +48,8 @@ namespace FormulariosAlmacenes
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
+            ((FormularioPrincipal)this.Owner).limpiarCampos();
+            MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Close();
         }
 
@@ -54,19 +63,12 @@ namespace FormulariosAlmacenes
 
         private void buttonIngreso_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaRegIngresosProducto newPant = new PantallaRegIngresosProducto();
+            PantallaIngresosSalidasProducto newPant = new PantallaIngresosSalidasProducto();
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();
         }
 
-        private void buttonSalidas_MouseClick(object sender, MouseEventArgs e)
-        {
-            PantallaRegSalidaProducto newPant = new PantallaRegSalidaProducto();
-            newPant.Owner = this;
-            //this.Visible = false;
-            newPant.ShowDialog();
-        }
 
         private void buttonReporteFechas_MouseClick(object sender, MouseEventArgs e)
         {

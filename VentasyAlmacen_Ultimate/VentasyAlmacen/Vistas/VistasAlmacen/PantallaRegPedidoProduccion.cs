@@ -7,24 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaRegPedidoProduccion : Form
     {
+        AlmacenProductosBL productosBL;
+        //atributo del objeto Usuario
+
         public PantallaRegPedidoProduccion()
         {
+            productosBL = new AlmacenProductosBL();
             InitializeComponent();
         }
-
-        private void label5_Click(object sender, EventArgs e)
+        public PantallaRegPedidoProduccion(int idAlmacen)
         {
+            productosBL = new AlmacenProductosBL();
+            InitializeComponent();
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            dataGridStock.AutoGenerateColumns = false;
+            dataGridStock.DataSource = productosBL.obtenerProductosAlmacen(idAlmacen);
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)

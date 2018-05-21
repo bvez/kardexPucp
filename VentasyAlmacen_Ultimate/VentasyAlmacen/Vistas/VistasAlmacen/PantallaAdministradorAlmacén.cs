@@ -47,7 +47,7 @@ namespace FormulariosAlmacenes
 
             if(almacenSeleccionado != null)
             {
-                PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado);
+                PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado.IdAlmacen);
                 pantallaProductos.Owner = this;
                 //this.Visible = false;
                 pantallaProductos.ShowDialog();
@@ -67,7 +67,7 @@ namespace FormulariosAlmacenes
 
             if(almacenSeleccionado!= null)
             {
-                PantallaAnadirProducto pantallaAnadirProducto = new PantallaAnadirProducto(almacenSeleccionado.Productos);
+                PantallaAnadirProducto pantallaAnadirProducto = new PantallaAnadirProducto(almacenSeleccionado.IdAlmacen);
                 //pantallaAnadirProducto.Owner = this;
                 //this.Visible = false;
                 pantallaAnadirProducto.ShowDialog();
@@ -114,6 +114,8 @@ namespace FormulariosAlmacenes
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
+            ((FormularioPrincipal)this.Owner).limpiarCampos();
+            MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Close();
         }
 

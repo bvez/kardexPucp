@@ -26,5 +26,23 @@ namespace LogicaNegocios
 
             return productos;
         }
+        public BindingList<ProductoAlmacen> obtenerProductosAlmacen(int idAlmacen)
+        {
+            return accesoDatosProductos.obtenerProductosAlmacen(idAlmacen);
+        }
+        public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen)
+        {
+            return accesoDatosProductos.obtenerProductosRegistrables(idAlmacen);
+        }
+
+        public bool registrarProductoAlmacen(int idAlmacen,int idProducto,int stockInicial)
+        {
+            return accesoDatosProductos.insertarProductoAlmacen(idAlmacen, idProducto, stockInicial);
+        }
+
+        public bool actualizarStock(int idAlmacen,int idProducto,int nuevoStock)
+        {
+            return accesoDatosProductos.actualizarStock(idAlmacen, idProducto, nuevoStock);
+        }
     }
 }

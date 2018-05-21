@@ -29,3 +29,8 @@ C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlm
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.dll
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.pdb
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csproj.CopyComplete
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\MySql.Data.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\MySQL.Data.EntityFrameworkCore.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\MySql.Web.dll

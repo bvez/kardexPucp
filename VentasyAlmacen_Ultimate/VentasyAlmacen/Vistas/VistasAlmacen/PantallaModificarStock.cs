@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaModificarStock : Form
     {
+        private AlmacenProductosBL productosBL;
+        ProductoAlmacen productoAlmacenSeleccionado;
+        Almacen almacenModificar;
         public PantallaModificarStock()
         {
             InitializeComponent();
@@ -20,15 +24,11 @@ namespace FormulariosAlmacenes
 
         public PantallaModificarStock(Almacen almacenModificar)
         {
+            productosBL = new AlmacenProductosBL();
             this.almacenModificar = almacenModificar;
             InitializeComponent();
             dataGridStock.AutoGenerateColumns = false;
-            dataGridStock.DataSource = almacenModificar.Productos;
-        }
-
-        private void PantallaModificarStock_Load(object sender, EventArgs e)
-        {
-
+            dataGridStock.DataSource = productosBL.obtenerProductosAlmacen(almacenModificar.IdAlmacen);
         }
 
         private void dataGridStock_SelectionChanged(object sender, EventArgs e)
@@ -42,11 +42,19 @@ namespace FormulariosAlmacenes
             DialogResult resultado =  MessageBox.Show("Desea confirmar la actualización?", "Confirmacion", MessageBoxButtons.YesNo);
             if(resultado == DialogResult.Yes)
             {
-                productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(NumBoxStock.Value.ToString());
-                MessageBox.Show("Se actualizó el stock correctamente", "Éxito");
-                dataGridStock.Update();
-                dataGridStock.Refresh();
-                this.actualizarInfoSeleccionado();
+                int nuevoStock = (int)NumBoxStock.Value;
+                if (productosBL.actualizarStock(almacenModificar.IdAlmacen,productoAlmacenSeleccionado.Id,nuevoStock))
+                {
+                    productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(nuevoStock.ToString());
+                    MessageBox.Show("Se actualizó el stock correctamente", "Éxito");
+                    dataGridStock.Update();
+                    dataGridStock.Refresh();
+                    this.actualizarInfoSeleccionado();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al actualizar", "Error");
+                }
             }
             else if(resultado == DialogResult.No)
             {
@@ -56,18 +64,14 @@ namespace FormulariosAlmacenes
 
         private void actualizarInfoSeleccionado()
         {
-            labelId.Text = productoAlmacenSeleccionado.Id;
+            labelId.Text = productoAlmacenSeleccionado.Id.ToString();
             labelNombre.Text = productoAlmacenSeleccionado.Nombre;
             labelStock.Text = productoAlmacenSeleccionado.CantidadAlmacenada.ToString();
             NumBoxStock.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
         }
 
-        ProductoAlmacen productoAlmacenSeleccionado;
-        Almacen almacenModificar;
-
         private void buttonAtras_MouseClick(object sender, MouseEventArgs e)
         {
-
             this.Dispose();
         }
     }

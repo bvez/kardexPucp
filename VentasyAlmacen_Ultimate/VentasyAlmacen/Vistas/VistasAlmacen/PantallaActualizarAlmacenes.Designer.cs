@@ -35,6 +35,8 @@
             // 
             // btnInsertAlmacen
             // 
+            this.btnInsertAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnInsertAlmacen.AutoSize = true;
             this.btnInsertAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnInsertAlmacen.Location = new System.Drawing.Point(50, 38);
             this.btnInsertAlmacen.Name = "btnInsertAlmacen";
@@ -46,6 +48,8 @@
             // 
             // btnInhabilitarAlmacen
             // 
+            this.btnInhabilitarAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnInhabilitarAlmacen.AutoSize = true;
             this.btnInhabilitarAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnInhabilitarAlmacen.Location = new System.Drawing.Point(359, 38);
             this.btnInhabilitarAlmacen.Name = "btnInhabilitarAlmacen";
@@ -62,12 +66,15 @@
             this.ClientSize = new System.Drawing.Size(611, 156);
             this.Controls.Add(this.btnInhabilitarAlmacen);
             this.Controls.Add(this.btnInsertAlmacen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PantallaActualizarAlmacenes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar Almacenes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaActualizarAlmacenes_FormClosed);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

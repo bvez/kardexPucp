@@ -34,6 +34,9 @@
             this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
             this.btnSelectAlmacenAtras = new System.Windows.Forms.Button();
             this.nombreSelected = new System.Windows.Forms.Label();
+            this.IdAlmacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSelectAlmacen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +50,10 @@
             this.DataGridSelectAlmacen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridSelectAlmacen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DataGridSelectAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridSelectAlmacen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdAlmacen,
+            this.Direccion,
+            this.Telefono});
             this.DataGridSelectAlmacen.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridSelectAlmacen.Location = new System.Drawing.Point(31, 42);
             this.DataGridSelectAlmacen.MultiSelect = false;
@@ -97,6 +104,29 @@
             this.nombreSelected.Size = new System.Drawing.Size(0, 25);
             this.nombreSelected.TabIndex = 4;
             // 
+            // IdAlmacen
+            // 
+            this.IdAlmacen.DataPropertyName = "IdAlmacen";
+            this.IdAlmacen.HeaderText = "Id de Almacen";
+            this.IdAlmacen.Name = "IdAlmacen";
+            this.IdAlmacen.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Dirección";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 77;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 74;
+            // 
             // PantallaSeleccionarAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,7 +137,9 @@
             this.Controls.Add(this.btnSelectAlmacenSgte);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridSelectAlmacen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PantallaSeleccionarAlmacen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccionar Almacen";
@@ -126,5 +158,8 @@
 
         private Entidades.Almacen almacenSeleccionado;
         private System.Windows.Forms.Label nombreSelected;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdAlmacen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
     }
 }

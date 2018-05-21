@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
     public partial class PantallaProductosAlmacen : Form
     {
-        
+        private AlmacenProductosBL almacenProductos;
         public PantallaProductosAlmacen()
         {
             InitializeComponent();
@@ -21,13 +22,13 @@ namespace FormulariosAlmacenes
         }
 
         //inicializacion con lista de productos
-        public PantallaProductosAlmacen(Almacen almacen)
+        public PantallaProductosAlmacen(int idAlmacen)
         {
+            almacenProductos = new AlmacenProductosBL();
             //BindingList<string> enteros = new BindingList<string>();
             InitializeComponent();
             tablaProductosAlmacen.AutoGenerateColumns = false;
-            //tablaProductosAlmacen.DataSource = almacen.Productos;
-            
+            tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
         }
 
         //Lo que sucede cuando se cierra el formulario

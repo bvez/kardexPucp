@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocios;
+using Entidades;
 
 namespace FormulariosAlmacenes
 {
@@ -35,23 +37,39 @@ namespace FormulariosAlmacenes
         {
             //aqui deberia verificarse el usuario y contraseña
             //y deberia obtenerse el nombre real del usuario
-            if(textBoxUsuario.Text == "admin")
+            if (textBoxUsuario.Text != "" && textBoxPassword.Text != "")
             {
-                pantallaAdmin();
+                AlmacenUsuariosBL usuarios = new AlmacenUsuariosBL();
+                if (usuarios.verificarUsuario(textBoxUsuario.Text, textBoxPassword.Text))
+                {
+                    //se esta pensando en hacer que el verificarUsuario devuelva un objeto Usuario que indique si es admin o no
+                    if (textBoxUsuario.Text == "admin")
+                    {
+                        pantallaAdmin();
+                    }
+                    else
+                    {
+                        pantallaUsuario();
+                    }
+                }
             }
             else
             {
-                pantallaUsuario();
+                MessageBox.Show("Debe ingresar un usuario y contraseña válidos");
             }
         }
 
         private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.logueo();
+            if (e.KeyChar == '\r')
+            {
+                this.logueo();
+            }
         }
 
         private void pantallaAdmin()
         {
+            //A esta pantalla y a la pantalla de usuario simple se podria pasar al constructor el objeto Usuario
             PantallaAdministradorAlmacén formAdmin = new PantallaAdministradorAlmacén(textBoxUsuario.Text);
             formAdmin.Owner = this;
             //formAdmin.Visible = true;
@@ -62,6 +80,8 @@ namespace FormulariosAlmacenes
         private void pantallaUsuario()
         {
             PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(textBoxUsuario.Text);
+            //formUsuario.setAlmacen(textBoxUsuario.Text);
+
             formUsuario.Owner = this;
             this.Visible = false;
             formUsuario.ShowDialog();
@@ -70,6 +90,18 @@ namespace FormulariosAlmacenes
         private void FormularioPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Visible = true;
+            
+        }
+
+        private void button1_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
+
+        public void limpiarCampos()
+        {
+            this.textBoxPassword.Text = "";
+            this.textBoxUsuario.Text = "";
         }
     }
 }
