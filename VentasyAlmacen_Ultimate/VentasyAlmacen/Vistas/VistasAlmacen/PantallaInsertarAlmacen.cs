@@ -34,5 +34,10 @@ namespace FormulariosAlmacenes
                 MessageBox.Show("Se registró el almacén correctamente", "Éxito");
             }
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

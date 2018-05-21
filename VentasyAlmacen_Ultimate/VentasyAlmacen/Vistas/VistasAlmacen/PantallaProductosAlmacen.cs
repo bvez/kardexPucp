@@ -34,7 +34,7 @@ namespace FormulariosAlmacenes
         //Lo que sucede cuando se cierra el formulario
         private void PantallaProductosAlmacen_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Visible = true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +56,14 @@ namespace FormulariosAlmacenes
             {
                 numStockMin.Value = numStockMax.Value;
             }
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+            this.Dispose();
+            Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+            padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
         }
     }
 }

@@ -45,8 +45,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tablaProductosAlmacen = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).BeginInit();
@@ -56,12 +59,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.tablaProductosAlmacen);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 421);
+            this.panel1.Size = new System.Drawing.Size(554, 421);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -204,7 +208,9 @@
             this.tablaProductosAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaProductosAlmacen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
+            this.CodigoProducto,
             this.Column1,
+            this.Descripcion,
             this.Column3});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -229,6 +235,14 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 41;
             // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.DataPropertyName = "CodigoProducto";
+            this.CodigoProducto.HeaderText = "Codigo";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Width = 65;
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "Nombre";
@@ -236,6 +250,14 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 69;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 88;
             // 
             // Column3
             // 
@@ -245,11 +267,22 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 60;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Location = new System.Drawing.Point(451, 367);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 41);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Atrás";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            // 
             // PantallaProductosAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 452);
+            this.ClientSize = new System.Drawing.Size(589, 452);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -277,9 +310,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label label3;
@@ -288,5 +318,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numStockMin;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button button2;
     }
 }

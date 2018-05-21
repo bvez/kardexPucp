@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace FormulariosAlmacenes.VistasAlmacen
 {
@@ -35,7 +36,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         private void PantallaReporteFechas_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Visible = true;
+            //this.Owner.Visible = true; DA IGUAL
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
@@ -48,6 +49,14 @@ namespace FormulariosAlmacenes.VistasAlmacen
         {
             PantallaVistaPreviaReporte newPant = new PantallaVistaPreviaReporte();
             newPant.ShowDialog();
+        }
+
+        private void button3_MouseClick(object sender, MouseEventArgs e)
+        {
+            PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+            this.Dispose();
+            Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+            padre.abrirPantallaReporteFechas(almacenSeleccionado);
         }
     }
 }

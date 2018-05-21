@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaSeleccionarAlmacen));
             this.DataGridSelectAlmacen = new System.Windows.Forms.DataGridView();
+            this.IdAlmacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
             this.btnSelectAlmacenAtras = new System.Windows.Forms.Button();
             this.nombreSelected = new System.Windows.Forms.Label();
-            this.IdAlmacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSelectAlmacen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,48 +62,6 @@
             this.DataGridSelectAlmacen.Size = new System.Drawing.Size(718, 301);
             this.DataGridSelectAlmacen.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(28, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Seleccione el almacén:";
-            // 
-            // btnSelectAlmacenSgte
-            // 
-            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(673, 381);
-            this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
-            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(99, 39);
-            this.btnSelectAlmacenSgte.TabIndex = 2;
-            this.btnSelectAlmacenSgte.Text = "Siguiente";
-            this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
-            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
-            // 
-            // btnSelectAlmacenAtras
-            // 
-            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(31, 381);
-            this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";
-            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(56, 39);
-            this.btnSelectAlmacenAtras.TabIndex = 3;
-            this.btnSelectAlmacenAtras.Text = "Atrás";
-            this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
-            this.btnSelectAlmacenAtras.Visible = false;
-            this.btnSelectAlmacenAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenAtras_MouseClick);
-            // 
-            // nombreSelected
-            // 
-            this.nombreSelected.AutoSize = true;
-            this.nombreSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.nombreSelected.Location = new System.Drawing.Point(193, 381);
-            this.nombreSelected.Name = "nombreSelected";
-            this.nombreSelected.Size = new System.Drawing.Size(0, 25);
-            this.nombreSelected.TabIndex = 4;
-            // 
             // IdAlmacen
             // 
             this.IdAlmacen.DataPropertyName = "IdAlmacen";
@@ -126,6 +84,47 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Width = 74;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(28, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Seleccione el almacén:";
+            // 
+            // btnSelectAlmacenSgte
+            // 
+            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(568, 381);
+            this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
+            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(99, 39);
+            this.btnSelectAlmacenSgte.TabIndex = 2;
+            this.btnSelectAlmacenSgte.Text = "Siguiente";
+            this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
+            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
+            // 
+            // btnSelectAlmacenAtras
+            // 
+            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(693, 382);
+            this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";
+            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(56, 39);
+            this.btnSelectAlmacenAtras.TabIndex = 3;
+            this.btnSelectAlmacenAtras.Text = "Atrás";
+            this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
+            this.btnSelectAlmacenAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenAtras_MouseClick);
+            // 
+            // nombreSelected
+            // 
+            this.nombreSelected.AutoSize = true;
+            this.nombreSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.nombreSelected.Location = new System.Drawing.Point(193, 381);
+            this.nombreSelected.Name = "nombreSelected";
+            this.nombreSelected.Size = new System.Drawing.Size(0, 25);
+            this.nombreSelected.TabIndex = 4;
             // 
             // PantallaSeleccionarAlmacen
             // 

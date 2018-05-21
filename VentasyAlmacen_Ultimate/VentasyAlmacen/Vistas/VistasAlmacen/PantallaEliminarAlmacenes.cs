@@ -39,5 +39,14 @@ namespace FormulariosAlmacenes
         {
             this.Owner.Visible = true;
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Desea cerrar y perder los cambios?", "Confirmacion", MessageBoxButtons.YesNo);
+            if(resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

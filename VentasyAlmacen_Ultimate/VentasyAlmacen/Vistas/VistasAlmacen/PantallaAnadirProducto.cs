@@ -70,5 +70,13 @@ namespace FormulariosAlmacenes
             labelNombre.Text = productoSeleccionado.Nombre;
             labelCodigo.Text = productoSeleccionado.Id.ToString() ;
         }
+
+        private void btnAtras_MouseClick(object sender, MouseEventArgs e)
+        {
+            PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+            this.Dispose();
+            Almacen almacenSeleccionado =padre.obtenerAlmacenSeleccionado();
+            padre.abrirPantallaAnadirProducto(almacenSeleccionado);
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace FormulariosAlmacenes
             //nombreSelected.Text = almacenSeleccionado.Direccion;
             almacenSelected = almacenSeleccionado;
             this.Visible = false;
-            //this.Dispose();
+            this.Dispose();
         }
 
         private Almacen almacenSelected = null;
@@ -45,7 +45,7 @@ namespace FormulariosAlmacenes
 
         private void btnSelectAlmacenAtras_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
     }
 }
