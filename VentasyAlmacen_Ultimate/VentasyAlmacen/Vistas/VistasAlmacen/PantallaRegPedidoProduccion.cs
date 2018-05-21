@@ -46,7 +46,12 @@ namespace FormulariosAlmacenes
 
         private void PantallaRegPedidoProduccion_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Visible = true;
+            //this.Owner.Visible = true;
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

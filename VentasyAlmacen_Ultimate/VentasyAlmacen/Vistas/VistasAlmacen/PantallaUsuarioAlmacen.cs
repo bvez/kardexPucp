@@ -35,6 +35,8 @@ namespace FormulariosAlmacenes
         }
         private void PantallaUsuarioAlmacen_FormClosed(object sender, FormClosedEventArgs e)
         {
+            ((FormularioPrincipal)this.Owner).limpiarCampos();
+            MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Owner.Visible = true;
         }
         private void buttonStock_MouseClick(object sender, MouseEventArgs e)
@@ -48,8 +50,6 @@ namespace FormulariosAlmacenes
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            ((FormularioPrincipal)this.Owner).limpiarCampos();
-            MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Close();
         }
 

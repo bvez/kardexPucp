@@ -44,6 +44,7 @@
             this.labelId = new System.Windows.Forms.Label();
             this.labelStock = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStock)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -211,11 +212,23 @@
             this.labelNombre.Size = new System.Drawing.Size(0, 26);
             this.labelNombre.TabIndex = 7;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button2.Location = new System.Drawing.Point(668, 375);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 40);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Atrás";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            // 
             // PantallaRegPedidoProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
@@ -255,5 +268,6 @@
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -60,10 +60,17 @@ namespace FormulariosAlmacenes
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
-            this.Dispose();
-            Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
-            padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
+            try
+            {
+                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+                this.Dispose();
+                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+                padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
+            }
+            catch(Exception excepcion)//entra aqui porque su padre no es administrador
+            {
+                this.Dispose();
+            }
         }
     }
 }

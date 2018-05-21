@@ -41,6 +41,8 @@ namespace FormulariosAlmacenes
         private void PantallaAdministradorAlmacén_FormClosed(object sender, FormClosedEventArgs e)
         {
             //this.Owner.Enabled = true;//el padre se activa
+            ((FormularioPrincipal)this.Owner).limpiarCampos();
+            MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Owner.Visible = true;
         }
 
@@ -102,16 +104,10 @@ namespace FormulariosAlmacenes
                 pantallaStock.ShowDialog();
             }
         }
-        private void buttonCerrarSesion_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            ((FormularioPrincipal)this.Owner).limpiarCampos();
-            MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
-            this.Close();
+            this.Close();//se incluye el cierre de sesion
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
