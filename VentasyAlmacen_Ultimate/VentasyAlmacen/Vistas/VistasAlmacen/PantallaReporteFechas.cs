@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
+
 namespace FormulariosAlmacenes.VistasAlmacen
 {
     public partial class PantallaReporteFechas : Form
@@ -53,6 +54,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         private void button3_MouseClick(object sender, MouseEventArgs e)
         {
+            /*
             try
             {
                 PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
@@ -61,6 +63,19 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 padre.abrirPantallaReporteFechas(almacenSeleccionado);
             }
             catch (Exception exception)//entra porque no es admin
+            {
+                this.Dispose();
+            }
+            */
+
+            if(this.Owner is PantallaAdministradorAlmacén)
+            {
+                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+                this.Dispose();
+                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+                padre.abrirPantallaReporteFechas(almacenSeleccionado);
+            }
+            else
             {
                 this.Dispose();
             }

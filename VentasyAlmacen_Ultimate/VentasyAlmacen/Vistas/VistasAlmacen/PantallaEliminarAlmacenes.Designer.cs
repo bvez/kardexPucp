@@ -36,8 +36,8 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaDeshabilitar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,27 +98,35 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Seleccione los almacenes a deshabilitar:";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(179, 257);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 47);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Confirmar cambios";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back21_tiny;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(378, 257);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 47);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Cerrar";
+            this.button2.Text = "  Atrás";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny_colored;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(160, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 47);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Confirmar cambios";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // PantallaEliminarAlmacenes
             // 

@@ -45,8 +45,8 @@
             this.labelStock = new System.Windows.Forms.Label();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttonAtras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -203,11 +203,15 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.buttonUpdate.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny;
+            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUpdate.Location = new System.Drawing.Point(498, 382);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(150, 45);
             this.buttonUpdate.TabIndex = 9;
-            this.buttonUpdate.Text = "Actualizar";
+            this.buttonUpdate.Text = "Confirmar";
+            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUpdate.UseVisualStyleBackColor = true;
             this.buttonUpdate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonUpdate_MouseClick);
             // 
@@ -220,17 +224,6 @@
             this.label5.Size = new System.Drawing.Size(321, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Seleccione el producto que desea modificar:";
-            // 
-            // buttonAtras
-            // 
-            this.buttonAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonAtras.Location = new System.Drawing.Point(680, 382);
-            this.buttonAtras.Name = "buttonAtras";
-            this.buttonAtras.Size = new System.Drawing.Size(88, 45);
-            this.buttonAtras.TabIndex = 11;
-            this.buttonAtras.Text = "Atrás";
-            this.buttonAtras.UseVisualStyleBackColor = true;
-            this.buttonAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonAtras_MouseClick);
             // 
             // groupBox1
             // 
@@ -247,6 +240,19 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del producto";
+            // 
+            // buttonAtras
+            // 
+            this.buttonAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonAtras.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
+            this.buttonAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAtras.Location = new System.Drawing.Point(680, 382);
+            this.buttonAtras.Name = "buttonAtras";
+            this.buttonAtras.Size = new System.Drawing.Size(97, 45);
+            this.buttonAtras.TabIndex = 11;
+            this.buttonAtras.Text = "     Atrás";
+            this.buttonAtras.UseVisualStyleBackColor = true;
+            this.buttonAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonAtras_MouseClick);
             // 
             // PantallaModificarStock
             // 

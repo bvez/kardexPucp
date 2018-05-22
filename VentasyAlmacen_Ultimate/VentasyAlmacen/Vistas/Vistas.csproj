@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.Designer.cs">
+      <DependentUpon>PantallaSeleccionarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistasAlmacen\PantallaEliminarAlmacenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     <EmbeddedResource Include="VistasAlmacen\PantallaSeleccionarAlmacen.resx">
       <DependentUpon>PantallaSeleccionarAlmacen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaSeleccionarProducto.resx">
+      <DependentUpon>PantallaSeleccionarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaUsuarioAlmacen.resx">
       <DependentUpon>PantallaUsuarioAlmacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +393,21 @@
     <None Include="Resources\btn_trash.png" />
     <None Include="Resources\btn_Chk_tiny.png" />
     <None Include="Resources\btn_cross_tiny.png" />
+    <None Include="Resources\btn_salirTiny.png" />
+    <None Include="Resources\descarga.png" />
+    <None Include="Resources\btn_cross_colored.png" />
+    <None Include="Resources\btn_cross_tiny_colored.png" />
+    <None Include="Resources\btn_Chk_colored.png" />
+    <None Include="Resources\btn_Chk_tiny_colored.png" />
+    <None Include="Resources\btn_back.png" />
+    <None Include="Resources\btn_back_tiny.png" />
+    <None Include="Resources\btn_search_tiny.png" />
+    <None Include="Resources\btn_anadir_tiny.png" />
+    <None Include="Resources\btn_anadir.png" />
+    <None Include="Resources\btn_back2.png" />
+    <None Include="Resources\btn_back2_tiny.png" />
+    <None Include="Resources\btn_back21.png" />
+    <None Include="Resources\btn_back21_tiny.png" />
     <Content Include="Resources\logoPrograma.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

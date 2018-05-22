@@ -63,7 +63,7 @@ namespace FormulariosAlmacenes
 
         private void buttonIngreso_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaIngresosSalidasProducto newPant = new PantallaIngresosSalidasProducto();
+            PantallaIngresosSalidasProducto newPant = new PantallaIngresosSalidasProducto(codAlmacen);
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();

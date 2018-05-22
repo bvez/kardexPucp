@@ -40,7 +40,6 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelCodigo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnInsertarProducto = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,11 +51,12 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnInsertarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductosAlmacen)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -166,16 +166,6 @@
             this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Nombre:";
-            // 
-            // btnInsertarProducto
-            // 
-            this.btnInsertarProducto.Location = new System.Drawing.Point(257, 65);
-            this.btnInsertarProducto.Name = "btnInsertarProducto";
-            this.btnInsertarProducto.Size = new System.Drawing.Size(142, 53);
-            this.btnInsertarProducto.TabIndex = 4;
-            this.btnInsertarProducto.Text = "Insertar Producto";
-            this.btnInsertarProducto.UseVisualStyleBackColor = true;
-            this.btnInsertarProducto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInsertarProducto_MouseClick);
             // 
             // numericUpDown1
             // 
@@ -296,16 +286,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscar Producto";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::FormulariosAlmacenes.Properties.Resources.logoBuscar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(252, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 43);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(82, 65);
@@ -334,13 +314,38 @@
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAtras.Location = new System.Drawing.Point(738, 402);
+            this.btnAtras.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
+            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtras.Location = new System.Drawing.Point(746, 411);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(78, 27);
+            this.btnAtras.Size = new System.Drawing.Size(84, 36);
             this.btnAtras.TabIndex = 8;
-            this.btnAtras.Text = "Atrás";
+            this.btnAtras.Text = "       Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAtras_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::FormulariosAlmacenes.Properties.Resources.logoBuscar;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(252, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 43);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnInsertarProducto
+            // 
+            this.btnInsertarProducto.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
+            this.btnInsertarProducto.Location = new System.Drawing.Point(226, 65);
+            this.btnInsertarProducto.Name = "btnInsertarProducto";
+            this.btnInsertarProducto.Size = new System.Drawing.Size(173, 53);
+            this.btnInsertarProducto.TabIndex = 4;
+            this.btnInsertarProducto.Text = "   Insertar Producto";
+            this.btnInsertarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInsertarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInsertarProducto.UseVisualStyleBackColor = true;
+            this.btnInsertarProducto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInsertarProducto_MouseClick);
             // 
             // PantallaAnadirProducto
             // 

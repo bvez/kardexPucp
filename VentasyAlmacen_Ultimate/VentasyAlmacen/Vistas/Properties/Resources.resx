@@ -118,76 +118,121 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn_dwnld" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_dwnld.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_advertencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_advertencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_mssg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_mssg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_attach" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_attach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_person" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_person.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_Chk_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_Chk_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoCerrarSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoCerrarSesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btn_reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_reload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconoVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoVentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_Chk_tiny_colored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Chk_tiny_colored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoAlmacen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoAlmacen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoAyuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoAyuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoVentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_person" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_person.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Chk_colored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Chk_colored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_search_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_search_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_back2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_back_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_back_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_location" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_location.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_etiqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_etiqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoPrisma" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoPrisma.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_Chk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_Chk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_anadir_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_anadir_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_back2_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_back2_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_mssg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_mssg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_dwnld" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_dwnld.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoCerrarSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoCerrarSesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn_cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Chk_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Chk_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_cross_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_cross_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_salirTiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_salirTiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_cross_tiny_colored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_cross_tiny_colored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoPrisma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoPrisma.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_attach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_attach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoAlmacen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoAlmacen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_cross_colored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_cross_colored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_etiqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_etiqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_cross_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_cross_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_advertencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_advertencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_location" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_location.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_back21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_back21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_back21_tiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_back21_tiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

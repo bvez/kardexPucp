@@ -25,7 +25,7 @@ namespace FormulariosAlmacenes
         public PantallaProductosAlmacen(int idAlmacen)
         {
             almacenProductos = new AlmacenProductosBL();
-            //BindingList<string> enteros = new BindingList<string>();
+            //BindingList<int> enteros = new BindingList<int>();
             InitializeComponent();
             tablaProductosAlmacen.AutoGenerateColumns = false;
             tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
@@ -60,6 +60,7 @@ namespace FormulariosAlmacenes
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
         {
+            /*
             try
             {
                 PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
@@ -68,6 +69,19 @@ namespace FormulariosAlmacenes
                 padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
             }
             catch(Exception excepcion)//entra aqui porque su padre no es administrador
+            {
+                this.Dispose();
+            }
+            */
+
+            if(this.Owner is PantallaAdministradorAlmacén)
+            {
+                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+                this.Dispose();
+                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+                padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
+            }
+            else
             {
                 this.Dispose();
             }

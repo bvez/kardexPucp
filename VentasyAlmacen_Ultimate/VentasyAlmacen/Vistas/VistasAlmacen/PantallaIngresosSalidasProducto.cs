@@ -12,9 +12,16 @@ namespace FormulariosAlmacenes.VistasAlmacen
 {
     public partial class PantallaIngresosSalidasProducto : Form
     {
+        private int idAlmacen;
         public PantallaIngresosSalidasProducto()
         {
             InitializeComponent();
+        }
+
+        public PantallaIngresosSalidasProducto(int idAlmacen)
+        {
+            InitializeComponent();
+            this.idAlmacen = idAlmacen;
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
@@ -72,6 +79,13 @@ namespace FormulariosAlmacenes.VistasAlmacen
         private void radioBtnSalida_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            /*Mostrar los productos */
+            PantallaSeleccionarProducto newPant = new PantallaSeleccionarProducto();
+            newPant.ShowDialog();
         }
     }
 }

@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureHelp = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHelp)).BeginInit();
             this.SuspendLayout();
@@ -46,13 +46,14 @@
             // btnPrincipalIngresar
             // 
             this.btnPrincipalIngresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnPrincipalIngresar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPrincipalIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnPrincipalIngresar.Location = new System.Drawing.Point(59, 224);
+            this.btnPrincipalIngresar.Location = new System.Drawing.Point(77, 230);
             this.btnPrincipalIngresar.Name = "btnPrincipalIngresar";
-            this.btnPrincipalIngresar.Size = new System.Drawing.Size(234, 65);
+            this.btnPrincipalIngresar.Size = new System.Drawing.Size(143, 48);
             this.btnPrincipalIngresar.TabIndex = 1;
             this.btnPrincipalIngresar.Text = "Ingresar";
-            this.btnPrincipalIngresar.UseVisualStyleBackColor = true;
+            this.btnPrincipalIngresar.UseVisualStyleBackColor = false;
             this.btnPrincipalIngresar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // textBoxUsuario
@@ -60,6 +61,7 @@
             this.textBoxUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(210)))));
             this.textBoxUsuario.Location = new System.Drawing.Point(162, 137);
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(144, 20);
@@ -71,6 +73,7 @@
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(210)))));
             this.textBoxPassword.Location = new System.Drawing.Point(162, 175);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
@@ -84,9 +87,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 140);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(98, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(61, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario:";
             // 
@@ -96,9 +102,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 178);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(74, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña:";
             // 
@@ -106,6 +115,20 @@
             // 
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ShowAlways = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_salirTiny;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(223, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 48);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Salir  ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick_1);
             // 
             // pictureBox1
             // 
@@ -131,21 +154,11 @@
             this.pictureHelp.TabIndex = 8;
             this.pictureHelp.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(308, 256);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 33);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick_1);
-            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(412, 309);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
