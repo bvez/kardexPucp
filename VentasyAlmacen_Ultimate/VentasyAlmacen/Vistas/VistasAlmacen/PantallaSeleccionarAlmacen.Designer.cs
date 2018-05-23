@@ -98,11 +98,11 @@
             // btnSelectAlmacenSgte
             // 
             this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(568, 381);
+            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(562, 381);
             this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
-            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(99, 39);
+            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(105, 39);
             this.btnSelectAlmacenSgte.TabIndex = 2;
-            this.btnSelectAlmacenSgte.Text = "Siguiente";
+            this.btnSelectAlmacenSgte.Text = "Seleccionar";
             this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
             this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
             // 

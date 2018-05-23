@@ -15,6 +15,7 @@ namespace FormulariosAlmacenes
     public partial class PantallaSeleccionarAlmacen : Form
     {
         private AlmacenesBL logicaAlmacenes;
+        private Almacen almacenSelected = null;
         public PantallaSeleccionarAlmacen()
         {
             InitializeComponent();
@@ -38,8 +39,6 @@ namespace FormulariosAlmacenes
             this.Visible = false;
             this.Dispose();
         }
-
-        private Almacen almacenSelected = null;
 
         public Almacen AlmacenSeleccionado { get => almacenSelected; }
 

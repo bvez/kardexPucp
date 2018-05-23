@@ -408,6 +408,7 @@
     <None Include="Resources\btn_back2_tiny.png" />
     <None Include="Resources\btn_back21.png" />
     <None Include="Resources\btn_back21_tiny.png" />
+    <None Include="Resources\logoPrismaTransparente.png" />
     <Content Include="Resources\logoPrograma.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

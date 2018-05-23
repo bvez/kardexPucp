@@ -30,5 +30,10 @@ namespace Entidades
             string resp = "";
             return resp;
         }
+
+        override public string ToString()
+        {
+            return "Almacen " + idAlmacen.ToString() + " - " + this.Direccion;
+        }
     }
 }

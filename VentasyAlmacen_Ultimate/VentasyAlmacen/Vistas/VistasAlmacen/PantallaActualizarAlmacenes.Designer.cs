@@ -37,32 +37,35 @@
             // 
             this.btnInsertAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnInsertAlmacen.AutoSize = true;
+            this.btnInsertAlmacen.BackColor = System.Drawing.Color.Transparent;
             this.btnInsertAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnInsertAlmacen.Location = new System.Drawing.Point(50, 38);
             this.btnInsertAlmacen.Name = "btnInsertAlmacen";
             this.btnInsertAlmacen.Size = new System.Drawing.Size(217, 87);
             this.btnInsertAlmacen.TabIndex = 0;
             this.btnInsertAlmacen.Text = "Insertar Almacén";
-            this.btnInsertAlmacen.UseVisualStyleBackColor = true;
+            this.btnInsertAlmacen.UseVisualStyleBackColor = false;
             this.btnInsertAlmacen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInsertAlmacen_MouseClick);
             // 
             // btnInhabilitarAlmacen
             // 
             this.btnInhabilitarAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnInhabilitarAlmacen.AutoSize = true;
+            this.btnInhabilitarAlmacen.BackColor = System.Drawing.Color.Transparent;
             this.btnInhabilitarAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnInhabilitarAlmacen.Location = new System.Drawing.Point(359, 38);
             this.btnInhabilitarAlmacen.Name = "btnInhabilitarAlmacen";
             this.btnInhabilitarAlmacen.Size = new System.Drawing.Size(211, 87);
             this.btnInhabilitarAlmacen.TabIndex = 1;
             this.btnInhabilitarAlmacen.Text = "Inhabilitar Almacén";
-            this.btnInhabilitarAlmacen.UseVisualStyleBackColor = true;
+            this.btnInhabilitarAlmacen.UseVisualStyleBackColor = false;
             this.btnInhabilitarAlmacen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInhabilitarAlmacen_MouseClick);
             // 
             // PantallaActualizarAlmacenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(611, 156);
             this.Controls.Add(this.btnInhabilitarAlmacen);
             this.Controls.Add(this.btnInsertAlmacen);

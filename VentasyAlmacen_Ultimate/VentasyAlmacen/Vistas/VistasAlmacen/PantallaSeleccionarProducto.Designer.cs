@@ -35,6 +35,8 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
+            this.btnSelectAlmacenAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,8 @@
             this.dataGridProductos.MultiSelect = false;
             this.dataGridProductos.Name = "dataGridProductos";
             this.dataGridProductos.ReadOnly = true;
-            this.dataGridProductos.Size = new System.Drawing.Size(559, 373);
+            this.dataGridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridProductos.Size = new System.Drawing.Size(559, 345);
             this.dataGridProductos.TabIndex = 31;
             // 
             // Id
@@ -82,6 +85,7 @@
             // 
             // CodigoProducto
             // 
+            this.CodigoProducto.DataPropertyName = "CodigoProducto";
             this.CodigoProducto.HeaderText = "Codigo";
             this.CodigoProducto.Name = "CodigoProducto";
             this.CodigoProducto.ReadOnly = true;
@@ -98,6 +102,7 @@
             // 
             // DescripcionProducto
             // 
+            this.DescripcionProducto.DataPropertyName = "Descripcion";
             this.DescripcionProducto.HeaderText = "Descripcion";
             this.DescripcionProducto.Name = "DescripcionProducto";
             this.DescripcionProducto.ReadOnly = true;
@@ -111,11 +116,35 @@
             this.Stock.ReadOnly = true;
             this.Stock.Width = 93;
             // 
+            // btnSelectAlmacenSgte
+            // 
+            this.btnSelectAlmacenSgte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(396, 438);
+            this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
+            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(105, 39);
+            this.btnSelectAlmacenSgte.TabIndex = 32;
+            this.btnSelectAlmacenSgte.Text = "Seleccionar";
+            this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
+            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
+            // 
+            // btnSelectAlmacenAtras
+            // 
+            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(515, 438);
+            this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";
+            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(56, 39);
+            this.btnSelectAlmacenAtras.TabIndex = 33;
+            this.btnSelectAlmacenAtras.Text = "Atrás";
+            this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
+            // 
             // PantallaSeleccionarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 536);
+            this.ClientSize = new System.Drawing.Size(583, 489);
+            this.Controls.Add(this.btnSelectAlmacenAtras);
+            this.Controls.Add(this.btnSelectAlmacenSgte);
             this.Controls.Add(this.dataGridProductos);
             this.Controls.Add(this.label1);
             this.Name = "PantallaSeleccionarProducto";
@@ -135,5 +164,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.Button btnSelectAlmacenSgte;
+        private System.Windows.Forms.Button btnSelectAlmacenAtras;
     }
 }

@@ -35,16 +35,16 @@
             this.btnProductosDisponibl = new System.Windows.Forms.Button();
             this.labelBienvenidaAdmin = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnActualizarAlmacenes
             // 
-            this.btnActualizarAlmacenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(131)))), ((int)(((byte)(140)))));
+            this.btnActualizarAlmacenes.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActualizarAlmacenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarAlmacenes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(231)))), ((int)(((byte)(192)))));
+            this.btnActualizarAlmacenes.ForeColor = System.Drawing.Color.Black;
             this.btnActualizarAlmacenes.Location = new System.Drawing.Point(40, 103);
             this.btnActualizarAlmacenes.Name = "btnActualizarAlmacenes";
             this.btnActualizarAlmacenes.Size = new System.Drawing.Size(190, 80);
@@ -55,9 +55,9 @@
             // 
             // btnModificarStock
             // 
-            this.btnModificarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(131)))), ((int)(((byte)(140)))));
+            this.btnModificarStock.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnModificarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(231)))), ((int)(((byte)(192)))));
+            this.btnModificarStock.ForeColor = System.Drawing.Color.Black;
             this.btnModificarStock.Location = new System.Drawing.Point(40, 204);
             this.btnModificarStock.Name = "btnModificarStock";
             this.btnModificarStock.Size = new System.Drawing.Size(190, 80);
@@ -68,9 +68,9 @@
             // 
             // btnAddProducto
             // 
-            this.btnAddProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(131)))), ((int)(((byte)(140)))));
+            this.btnAddProducto.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(231)))), ((int)(((byte)(192)))));
+            this.btnAddProducto.ForeColor = System.Drawing.Color.Black;
             this.btnAddProducto.Location = new System.Drawing.Point(275, 103);
             this.btnAddProducto.Name = "btnAddProducto";
             this.btnAddProducto.Size = new System.Drawing.Size(190, 80);
@@ -81,9 +81,9 @@
             // 
             // btnProductosDisponibl
             // 
-            this.btnProductosDisponibl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(131)))), ((int)(((byte)(140)))));
+            this.btnProductosDisponibl.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProductosDisponibl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnProductosDisponibl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(231)))), ((int)(((byte)(192)))));
+            this.btnProductosDisponibl.ForeColor = System.Drawing.Color.Black;
             this.btnProductosDisponibl.Location = new System.Drawing.Point(275, 204);
             this.btnProductosDisponibl.Name = "btnProductosDisponibl";
             this.btnProductosDisponibl.Size = new System.Drawing.Size(190, 80);
@@ -114,6 +114,19 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Seleccione una opción:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(159, 303);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 83);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Reporte por fechas";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -126,24 +139,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(131)))), ((int)(((byte)(140)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(231)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(159, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 83);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Reporte por fechas";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
-            // 
             // PantallaAdministradorAlmacén
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(165)))), ((int)(((byte)(150)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(179)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(504, 397);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
