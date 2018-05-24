@@ -52,5 +52,25 @@ namespace LogicaNegocios
         {
             return datosAlm.listarProductosIngreso(idIngresoProductos);
         }
+
+        public int registrarSalidaProductos(int idAlmacen, int idLocalDestino, string observaciones)
+        {
+            return datosAlm.insertarSalidaProductos(idAlmacen, idLocalDestino, observaciones);
+        }
+
+        public int registrarLineaSalidaProductos(int idSalidaProductos, int idProducto, int cantidad, string observaciones)
+        {
+            return datosAlm.insertarLineaSalidaProductos(idSalidaProductos, idProducto, cantidad, observaciones);
+        }
+
+        public int registrarIngresoProductos(int idAlmacen, int idLocalEmisor, string observaciones)
+        {
+            return datosAlm.insertarIngresoProductos(idAlmacen, idLocalEmisor, observaciones);
+        }
+
+        public int registrarLineaIngresoProductos(int idIngresoProductos, int idProducto, int cantidad, string observaciones)
+        {
+            return datosAlm.insertarLineaIngresoProductos(idIngresoProductos, idProducto, cantidad, observaciones);
+        }
     }
 }

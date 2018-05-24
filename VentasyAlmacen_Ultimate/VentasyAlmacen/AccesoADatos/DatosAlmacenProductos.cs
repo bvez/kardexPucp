@@ -19,9 +19,23 @@ namespace AccesoADatos
         private String cadenaConexion;
         public DatosAlmacenProductos()
         {
+
+            cadenaConexion = "server=quilla.lab.inf.pucp.edu.pe;" +
+                "user=inf282g2;database=inf282g2;" +
+                "port=3306;password=X7X2HA;SslMode=none;";
+
+            /*
             cadenaConexion = "server=quilla.lab.inf.pucp.edu.pe;" +
                 "user=a20151258;database=a20151258;" +
                 "port=3306;password=HFzu0M;SslMode=none;";
+            */
+            
+            
+            /*
+            cadenaConexion = "server=localhost;" +
+                "user=root;database=a20151258;" +
+                "port=3306;password=;SslMode=none;";
+            */
         }
         public BindingList<Producto> obtenerProductosEmpresa()
         {

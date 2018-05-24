@@ -36,11 +36,11 @@ namespace FormulariosAlmacenes.VistasAlmacen
             dataGridIngresoSalida.AutoGenerateColumns = false;
             dataGridIngresoSalida.DataSource = listaProductos;
 
-            comboBoxAlmacenes.DataSource = logicaAlmacenes.obtenerAlmacenes();
+            comboBoxLocalSalida.DataSource = logicaAlmacenes.obtenerLocales();
 
             Almacen almacenActual = logicaAlmacenes.obtenerAlmacen(idAlmacen);
-            
-            comboBoxEnvios.DataSource = null;
+
+            comboBoxEnvios.DataSource = logicaAlmacenes.obtenerEnviosPendientesAlmacen(idAlmacen);
             comboBoxLocales.DataSource = logicaAlmacenes.obtenerLocales();
         }
 
@@ -76,7 +76,101 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
                 if (res == DialogResult.Yes)
                 {
+                    bool valido = true;
+                    bool resultado = true;
+                    //validar todas las lineas
+                    foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
+                    {
+                        int cantidadPedido;
+                        if (row.Cells["Cantidad"].Value==null || !Int32.TryParse(row.Cells["Cantidad"].Value.ToString(), out cantidadPedido))
+                        {
+                            MessageBox.Show("Ha insertado incorrectamente una cantidad", "Error");
+                            dataGridIngresoSalida.CurrentCell = row.Cells["Cantidad"];
+                            valido = false;
+                            resultado = false;
+                            break;
+                        }
+                    }
+
                     //registrar pedido ingreso o salida
+                    
+                    if (radioBtnIngreso.Checked)
+                    {
+                        Sucursal localSeleccionado = (Sucursal)comboBoxLocales.SelectedItem;
+                        int idIngreso = logicaAlmacenes.registrarIngresoProductos(this.idAlmacen, localSeleccionado.IdLocal, textBoxObservaciones.Text);
+                        if (idIngreso > 0 && valido)
+                        {
+                            //registrar todas las lineas
+                            int idLinea = 0;
+                            foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
+                            {
+                                int cantidadPedido = Int32.Parse(row.Cells["Cantidad"].Value.ToString());
+                                string observaciones;
+                                if (row.Cells["Observaciones"].Value != null)
+                                {
+                                    observaciones = row.Cells["Observaciones"].Value.ToString();
+                                }
+                                else
+                                {
+                                    observaciones = "";
+                                }
+
+                                int idProducto = Int32.Parse(row.Cells["Id"].Value.ToString());
+
+                                idLinea = logicaAlmacenes.registrarLineaIngresoProductos(idIngreso, idProducto, cantidadPedido, observaciones);
+                                if (idLinea < 0)
+                                {
+                                    resultado = false;
+                                    break;
+                                    //ver la forma de regresar, puede ser con un rollback
+                                }
+                            }
+                        }
+                    }
+                    else if (radioBtnSalida.Checked)
+                    {
+                        Sucursal localSeleccionado = (Sucursal)comboBoxLocalSalida.SelectedItem;
+                        int idSalida = logicaAlmacenes.registrarSalidaProductos(this.idAlmacen,localSeleccionado.IdLocal,textBoxObservaciones.Text);
+                        if(idSalida > 0 && valido)
+                        {
+                            //registrar todas las lineas
+                            int idLinea = 0;
+                            foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
+                            {
+                                int cantidadPedido = Int32.Parse(row.Cells["Cantidad"].Value.ToString());
+                                string observaciones;
+                                if (row.Cells["Observaciones"].Value != null)
+                                {
+                                    observaciones = row.Cells["Observaciones"].Value.ToString();
+                                }
+                                else
+                                {
+                                    observaciones = "";
+                                }
+
+                                int idProducto = Int32.Parse(row.Cells["Id"].Value.ToString());
+
+                                idLinea = logicaAlmacenes.registrarLineaSalidaProductos(idSalida, idProducto, cantidadPedido, observaciones);
+                                if (idLinea < 0)
+                                {
+                                    resultado = false;
+                                    break;
+                                    //ver la forma de regresar, puede ser con un rollback
+                                }
+                            }
+                        }
+                    }
+                    if (resultado)
+                    {
+                        MessageBox.Show("Transaccion Exitosa", "Exito");
+                        this.dataGridIngresoSalida.DataSource = null;
+                        dataGridIngresoSalida.Refresh();
+                        dataGridIngresoSalida.Update();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al registrar el ingreso/salida. Reinténtelo en un momento.", "Error");
+                    }
                 }
             }
             else
@@ -90,9 +184,10 @@ namespace FormulariosAlmacenes.VistasAlmacen
         {
             if (radioBtnIngreso.Checked) {
                 labelAlmacen.Visible = false;
-                comboBoxAlmacenes.Visible = false;
+                comboBoxLocalSalida.Visible = false;
 
                 groupBox3.Visible = true;
+                label1.Text = "Observaciones en el ingreso:";
             }
             
         }
@@ -104,7 +199,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 groupBox3.Visible = false;
 
                 labelAlmacen.Visible = true;
-                comboBoxAlmacenes.Visible = true;
+                comboBoxLocalSalida.Visible = true;
+                label1.Text = "Observaciones en la salida:";
             }
 
         }
@@ -162,8 +258,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
                 if(comboBoxEnvios.SelectedItem != null)
                 {
-                    comboBoxEnvios.SelectedItem;
-                    dataGridIngresoSalida.DataSource = logicaAlmacenes.obtenerProductosSalida();
+                    SalidaProducto salida = (SalidaProducto)comboBoxEnvios.SelectedItem;
+                    dataGridIngresoSalida.DataSource = logicaAlmacenes.obtenerProductosSalida(salida.IdSalidaProducto);
                 }
             }
         }

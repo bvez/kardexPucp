@@ -74,6 +74,7 @@
             this.dataGridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridProductos.Size = new System.Drawing.Size(559, 345);
             this.dataGridProductos.TabIndex = 31;
+            this.dataGridProductos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridProductos_MouseDoubleClick);
             // 
             // Id
             // 

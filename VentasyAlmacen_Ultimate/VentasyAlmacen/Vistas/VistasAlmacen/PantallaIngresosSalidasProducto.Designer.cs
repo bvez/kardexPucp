@@ -38,20 +38,22 @@
             this.radioBtnLocal = new System.Windows.Forms.RadioButton();
             this.radioBtnEnvios = new System.Windows.Forms.RadioButton();
             this.comboBoxEnvios = new System.Windows.Forms.ComboBox();
-            this.comboBoxAlmacenes = new System.Windows.Forms.ComboBox();
-            this.labelAlmacen = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridIngresoSalida = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelAlmacen = new System.Windows.Forms.Label();
+            this.comboBoxLocalSalida = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,12 +111,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.comboBoxAlmacenes);
-            this.groupBox1.Controls.Add(this.labelAlmacen);
+            this.groupBox1.Controls.Add(this.textBoxObservaciones);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.comboBoxLocalSalida);
             this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Controls.Add(this.labelAlmacen);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridIngresoSalida);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Location = new System.Drawing.Point(16, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(751, 398);
@@ -176,27 +180,6 @@
             this.comboBoxEnvios.Size = new System.Drawing.Size(207, 21);
             this.comboBoxEnvios.TabIndex = 35;
             this.comboBoxEnvios.Text = "Envios";
-            // 
-            // comboBoxAlmacenes
-            // 
-            this.comboBoxAlmacenes.FormattingEnabled = true;
-            this.comboBoxAlmacenes.Location = new System.Drawing.Point(516, 22);
-            this.comboBoxAlmacenes.Name = "comboBoxAlmacenes";
-            this.comboBoxAlmacenes.Size = new System.Drawing.Size(207, 21);
-            this.comboBoxAlmacenes.TabIndex = 36;
-            this.comboBoxAlmacenes.Text = "Almacenes";
-            this.comboBoxAlmacenes.Visible = false;
-            // 
-            // labelAlmacen
-            // 
-            this.labelAlmacen.AutoSize = true;
-            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelAlmacen.Location = new System.Drawing.Point(372, 22);
-            this.labelAlmacen.Name = "labelAlmacen";
-            this.labelAlmacen.Size = new System.Drawing.Size(138, 20);
-            this.labelAlmacen.TabIndex = 35;
-            this.labelAlmacen.Text = "Almacén Destino: ";
-            this.labelAlmacen.Visible = false;
             // 
             // toolStrip1
             // 
@@ -260,38 +243,8 @@
             this.dataGridIngresoSalida.MultiSelect = false;
             this.dataGridIngresoSalida.Name = "dataGridIngresoSalida";
             this.dataGridIngresoSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridIngresoSalida.Size = new System.Drawing.Size(657, 300);
+            this.dataGridIngresoSalida.Size = new System.Drawing.Size(657, 237);
             this.dataGridIngresoSalida.TabIndex = 30;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(671, 477);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 40);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Salir";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny_colored;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(514, 477);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 40);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Confirmar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // Id
             // 
@@ -328,6 +281,78 @@
             this.Observaciones.HeaderText = "Observaciones";
             this.Observaciones.Name = "Observaciones";
             this.Observaciones.Width = 103;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(671, 477);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 40);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Salir";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny_colored;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(514, 477);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 40);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Confirmar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            // 
+            // labelAlmacen
+            // 
+            this.labelAlmacen.AutoSize = true;
+            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelAlmacen.Location = new System.Drawing.Point(367, 24);
+            this.labelAlmacen.Name = "labelAlmacen";
+            this.labelAlmacen.Size = new System.Drawing.Size(114, 20);
+            this.labelAlmacen.TabIndex = 35;
+            this.labelAlmacen.Text = "Local Destino: ";
+            this.labelAlmacen.Visible = false;
+            // 
+            // comboBoxLocalSalida
+            // 
+            this.comboBoxLocalSalida.FormattingEnabled = true;
+            this.comboBoxLocalSalida.Location = new System.Drawing.Point(492, 26);
+            this.comboBoxLocalSalida.Name = "comboBoxLocalSalida";
+            this.comboBoxLocalSalida.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxLocalSalida.TabIndex = 36;
+            this.comboBoxLocalSalida.Text = "Locales";
+            this.comboBoxLocalSalida.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(24, 338);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 20);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Observaciones en el ingreso: ";
+            // 
+            // textBoxObservaciones
+            // 
+            this.textBoxObservaciones.AcceptsReturn = true;
+            this.textBoxObservaciones.Location = new System.Drawing.Point(235, 329);
+            this.textBoxObservaciones.MaxLength = 256;
+            this.textBoxObservaciones.Multiline = true;
+            this.textBoxObservaciones.Name = "textBoxObservaciones";
+            this.textBoxObservaciones.Size = new System.Drawing.Size(444, 63);
+            this.textBoxObservaciones.TabIndex = 38;
             // 
             // PantallaIngresosSalidasProducto
             // 
@@ -369,8 +394,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridIngresoSalida;
-        private System.Windows.Forms.ComboBox comboBoxAlmacenes;
-        private System.Windows.Forms.Label labelAlmacen;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBoxLocales;
         private System.Windows.Forms.RadioButton radioBtnLocal;
@@ -381,5 +404,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
+        private System.Windows.Forms.ComboBox comboBoxLocalSalida;
+        private System.Windows.Forms.Label labelAlmacen;
+        private System.Windows.Forms.TextBox textBoxObservaciones;
+        private System.Windows.Forms.Label label1;
     }
 }

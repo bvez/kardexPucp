@@ -10,12 +10,12 @@ namespace Entidades
     {
         private int idLineaIngresoSalidaProducto;
         private Producto producto;
-        private int cantidadSalida;
+        private int cantidadIngresoSalida;
         private string observaciones;
 
-        public int IdLineaIngresoSalidaProducto { get => IdLineaIngresoSalidaProducto; set => IdLineaIngresoSalidaProducto = value; }
+        public int IdLineaIngresoSalidaProducto { get => idLineaIngresoSalidaProducto; set => idLineaIngresoSalidaProducto = value; }
         public Producto Producto { get => producto; set => producto = value; }
-        public int CantidadIngresoSalida { get => cantidadSalida; set => cantidadSalida = value; }
+        public int CantidadIngresoSalida { get => cantidadIngresoSalida; set => cantidadIngresoSalida = value; }
         public string Observaciones { get => observaciones; set => observaciones = value; }
     }
 }

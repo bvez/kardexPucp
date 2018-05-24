@@ -19,9 +19,23 @@ namespace AccesoADatos
         private String cadenaConexion;
         public DatosAlmacenes()
         {
+
+            cadenaConexion = "server=quilla.lab.inf.pucp.edu.pe;" +
+                "user=inf282g2;database=inf282g2;" +
+                "port=3306;password=X7X2HA;SslMode=none;";
+
+            /*
             cadenaConexion = "server=quilla.lab.inf.pucp.edu.pe;" +
                 "user=a20151258;database=a20151258;" +
                 "port=3306;password=HFzu0M;SslMode=none;";
+            */
+
+            /*
+            cadenaConexion = "server=localhost;" +
+                "user=root;database=a20151258;" +
+                "port=3306;password=;SslMode=none;";
+
+            */
         }
 
         public Almacen obtenerAlmacen(int idAlmacen)
@@ -40,6 +54,7 @@ namespace AccesoADatos
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
+                reader.Read();
                 int idLocal = reader.GetInt32("LOCAL_idLOCAL");//
                 string telefono = reader.GetString("TELEFONOLOCAL");//
                 string direccion = reader.GetString("DIRECCIONLOCAL");//
@@ -240,6 +255,7 @@ namespace AccesoADatos
                     int cantidadIngreso = reader.GetInt32("cantidadSalida");
                     string observaciones = reader.GetString("observaciones");
 
+                    
                     LineaIngresoSalidaProducto lineaSalidaProducto = new LineaIngresoSalidaProducto();
                     lineaSalidaProducto.IdLineaIngresoSalidaProducto = idLineaSalidaProducto;
                     lineaSalidaProducto.Producto = null;
@@ -247,6 +263,7 @@ namespace AccesoADatos
                     lineaSalidaProducto.Observaciones = observaciones;
 
                     productos.Add(lineaSalidaProducto);
+
                 }
 
                 con.Close();
@@ -297,6 +314,117 @@ namespace AccesoADatos
 
             return productos;
         }
+
+        public int insertarSalidaProductos(int idAlmacen, int idLocalDestino, string observaciones)
+        {
+            int idSalida =-1;
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "REGISTRAR_SALIDA_PRODUCTO_ALMACEN";
+                comando.Connection = con;
+                comando.Parameters.Add("_ID_ALMACEN_ENVIA", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_ID_LOCAL_DEST", MySqlDbType.Int32).Value = idLocalDestino;
+                comando.Parameters.Add("_OBSERVACIONES", MySqlDbType.VarChar).Value = observaciones;
+                comando.Parameters.Add("_ID_SALIDA", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                idSalida = (int)comando.Parameters["_ID_SALIDA"].Value;
+                con.Close();
+            }
+            catch { }
+
+            return idSalida;
+        }
+
+        public int insertarLineaSalidaProductos(int idSalidaProductos,int idProducto,int cantidad,string observaciones)
+        {
+            int idLineaSalida = -1;
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "REGISTRAR_LINEA_SALIDA_PRODUCTO";
+                comando.Connection = con;
+                comando.Parameters.Add("_ID_SALIDA_PRODUCTO", MySqlDbType.Int32).Value = idSalidaProductos;
+                comando.Parameters.Add("_ID_PRODUCTO", MySqlDbType.Int32).Value = idProducto;
+                comando.Parameters.Add("_CANTIDAD", MySqlDbType.Int32).Value = cantidad;
+                comando.Parameters.Add("_OBSERVACIONES", MySqlDbType.VarChar).Value = observaciones;
+                comando.Parameters.Add("_ID_LINEA_SALIDA", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                idLineaSalida = (int)comando.Parameters["_ID_LINEA_SALIDA"].Value;
+                con.Close();
+            }
+            catch { }
+
+            return idLineaSalida;
+        }
+
+        public int insertarIngresoProductos(int idAlmacen, int idLocalEmite, string observaciones)
+        {
+            int idIngreso = -1;
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "REGISTRAR_INGRESO_PRODUCTO_ALMACEN";
+                comando.Connection = con;
+                comando.Parameters.Add("_ID_ALMACEN", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_ID_LOCAL_EMITE", MySqlDbType.Int32).Value = idLocalEmite;
+                comando.Parameters.Add("_OBSERVACIONES", MySqlDbType.VarChar).Value = observaciones;
+                comando.Parameters.Add("_ID_INGRESO", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                idIngreso = (int)comando.Parameters["_ID_INGRESO"].Value;
+                con.Close();
+            }
+            catch { }
+
+            return idIngreso;
+        }
+
+        public int insertarLineaIngresoProductos(int idIngresoProductos, int idProducto, int cantidad, string observaciones)
+        {
+            int idLineaIngreso = -1;
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "REGISTRAR_LINEA_INGRESO_PRODUCTO";
+                comando.Connection = con;
+                comando.Parameters.Add("_ID_INGRESO_PRODUCTO", MySqlDbType.Int32).Value = idIngresoProductos;
+                comando.Parameters.Add("_ID_PRODUCTO", MySqlDbType.Int32).Value = idProducto;
+                comando.Parameters.Add("_CANTIDAD", MySqlDbType.Int32).Value = cantidad;
+                comando.Parameters.Add("_OBSERVACIONES", MySqlDbType.VarChar).Value = observaciones;
+                comando.Parameters.Add("_ID_LINEA_INGRESO", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                idLineaIngreso = (int)comando.Parameters["_ID_LINEA_INGRESO"].Value;
+                con.Close();
+            }
+            catch { }
+
+            return idLineaIngreso;
+        }
+
         /*
             BindingList<ProductoAlmacen> listaProductoAlmacen1 = new BindingList<ProductoAlmacen>();
             BindingList<ProductoAlmacen> listaProductoAlmacen2 = new BindingList<ProductoAlmacen>();

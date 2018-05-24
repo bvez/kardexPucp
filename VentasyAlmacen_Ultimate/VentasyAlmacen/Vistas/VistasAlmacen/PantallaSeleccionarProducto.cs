@@ -49,5 +49,14 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 MessageBox.Show("Debe seleccionar un producto de la lista", "Error");
             }
         }
+
+        private void dataGridProductos_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridProductos.CurrentRow != null)
+            {
+                this.productoSeleccionado = (ProductoAlmacen)dataGridProductos.CurrentRow.DataBoundItem;
+                this.Dispose();
+            }
+        }
     }
 }
