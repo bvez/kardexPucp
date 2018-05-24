@@ -41,6 +41,10 @@ namespace Entidades
             string resp = "";
             return resp;
         }
+        public override string ToString()
+        {
+            return "Local " + idLocal.ToString() + " --- " + Direccion;
+        }
     }
 
 }

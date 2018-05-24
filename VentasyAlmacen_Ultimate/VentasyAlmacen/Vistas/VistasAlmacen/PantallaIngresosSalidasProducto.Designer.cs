@@ -33,27 +33,30 @@
             this.radioBtnSalida = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxLocales = new System.Windows.Forms.ComboBox();
+            this.radioBtnLocal = new System.Windows.Forms.RadioButton();
+            this.radioBtnEnvios = new System.Windows.Forms.RadioButton();
+            this.comboBoxEnvios = new System.Windows.Forms.ComboBox();
+            this.comboBoxAlmacenes = new System.Windows.Forms.ComboBox();
+            this.labelAlmacen = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridPedido = new System.Windows.Forms.DataGridView();
+            this.dataGridIngresoSalida = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxEnvios = new System.Windows.Forms.ComboBox();
-            this.labelEnvio = new System.Windows.Forms.Label();
-            this.labelAlmacen = new System.Windows.Forms.Label();
-            this.comboBoxAlmacenes = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPedido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresoSalida)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -106,18 +109,94 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.comboBoxAlmacenes);
             this.groupBox1.Controls.Add(this.labelAlmacen);
-            this.groupBox1.Controls.Add(this.labelEnvio);
-            this.groupBox1.Controls.Add(this.comboBoxEnvios);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dataGridPedido);
+            this.groupBox1.Controls.Add(this.dataGridIngresoSalida);
             this.groupBox1.Location = new System.Drawing.Point(16, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(751, 386);
+            this.groupBox1.Size = new System.Drawing.Size(751, 398);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.comboBoxLocales);
+            this.groupBox3.Controls.Add(this.radioBtnLocal);
+            this.groupBox3.Controls.Add(this.radioBtnEnvios);
+            this.groupBox3.Controls.Add(this.comboBoxEnvios);
+            this.groupBox3.Location = new System.Drawing.Point(313, 11);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(410, 64);
+            this.groupBox3.TabIndex = 37;
+            this.groupBox3.TabStop = false;
+            // 
+            // comboBoxLocales
+            // 
+            this.comboBoxLocales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxLocales.FormattingEnabled = true;
+            this.comboBoxLocales.Location = new System.Drawing.Point(179, 38);
+            this.comboBoxLocales.Name = "comboBoxLocales";
+            this.comboBoxLocales.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxLocales.TabIndex = 39;
+            this.comboBoxLocales.Text = "Locales";
+            // 
+            // radioBtnLocal
+            // 
+            this.radioBtnLocal.AutoSize = true;
+            this.radioBtnLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radioBtnLocal.Location = new System.Drawing.Point(7, 34);
+            this.radioBtnLocal.Name = "radioBtnLocal";
+            this.radioBtnLocal.Size = new System.Drawing.Size(161, 24);
+            this.radioBtnLocal.TabIndex = 38;
+            this.radioBtnLocal.Text = "Ingreso indefinido: ";
+            this.radioBtnLocal.UseVisualStyleBackColor = true;
+            this.radioBtnLocal.CheckedChanged += new System.EventHandler(this.radioBtnLocal_CheckedChanged);
+            // 
+            // radioBtnEnvios
+            // 
+            this.radioBtnEnvios.AutoSize = true;
+            this.radioBtnEnvios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radioBtnEnvios.Location = new System.Drawing.Point(7, 11);
+            this.radioBtnEnvios.Name = "radioBtnEnvios";
+            this.radioBtnEnvios.Size = new System.Drawing.Size(166, 24);
+            this.radioBtnEnvios.TabIndex = 37;
+            this.radioBtnEnvios.Text = "Envíos Pendientes: ";
+            this.radioBtnEnvios.UseVisualStyleBackColor = true;
+            this.radioBtnEnvios.CheckedChanged += new System.EventHandler(this.radioBtnEnvios_CheckedChanged);
+            // 
+            // comboBoxEnvios
+            // 
+            this.comboBoxEnvios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxEnvios.FormattingEnabled = true;
+            this.comboBoxEnvios.Location = new System.Drawing.Point(179, 15);
+            this.comboBoxEnvios.Name = "comboBoxEnvios";
+            this.comboBoxEnvios.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxEnvios.TabIndex = 35;
+            this.comboBoxEnvios.Text = "Envios";
+            // 
+            // comboBoxAlmacenes
+            // 
+            this.comboBoxAlmacenes.FormattingEnabled = true;
+            this.comboBoxAlmacenes.Location = new System.Drawing.Point(516, 22);
+            this.comboBoxAlmacenes.Name = "comboBoxAlmacenes";
+            this.comboBoxAlmacenes.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxAlmacenes.TabIndex = 36;
+            this.comboBoxAlmacenes.Text = "Almacenes";
+            this.comboBoxAlmacenes.Visible = false;
+            // 
+            // labelAlmacen
+            // 
+            this.labelAlmacen.AutoSize = true;
+            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelAlmacen.Location = new System.Drawing.Point(372, 22);
+            this.labelAlmacen.Name = "labelAlmacen";
+            this.labelAlmacen.Size = new System.Drawing.Size(138, 20);
+            this.labelAlmacen.TabIndex = 35;
+            this.labelAlmacen.Text = "Almacén Destino: ";
+            this.labelAlmacen.Visible = false;
             // 
             // toolStrip1
             // 
@@ -127,89 +206,11 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(66, 43);
+            this.toolStrip1.Location = new System.Drawing.Point(66, 54);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(244, 25);
             this.toolStrip1.TabIndex = 32;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(27, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Productos registrados: ";
-            // 
-            // dataGridPedido
-            // 
-            this.dataGridPedido.AllowUserToAddRows = false;
-            this.dataGridPedido.AllowUserToDeleteRows = false;
-            this.dataGridPedido.AllowUserToResizeColumns = false;
-            this.dataGridPedido.AllowUserToResizeRows = false;
-            this.dataGridPedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.CodigoProducto,
-            this.Nombre,
-            this.Stock,
-            this.Cantidad,
-            this.Observaciones});
-            this.dataGridPedido.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridPedido.Location = new System.Drawing.Point(66, 72);
-            this.dataGridPedido.MultiSelect = false;
-            this.dataGridPedido.Name = "dataGridPedido";
-            this.dataGridPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPedido.Size = new System.Drawing.Size(657, 300);
-            this.dataGridPedido.TabIndex = 30;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Width = 41;
-            // 
-            // CodigoProducto
-            // 
-            this.CodigoProducto.DataPropertyName = "CodigoProducto";
-            this.CodigoProducto.HeaderText = "Codigo";
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.ReadOnly = true;
-            this.CodigoProducto.Width = 65;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 69;
-            // 
-            // Stock
-            // 
-            this.Stock.DataPropertyName = "CantidadAlmacenada";
-            this.Stock.HeaderText = "Stock Actual";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 93;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MaxInputLength = 5;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 74;
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.Width = 103;
             // 
             // toolStripButton1
             // 
@@ -228,6 +229,39 @@
             this.toolStripButton2.Size = new System.Drawing.Size(123, 22);
             this.toolStripButton2.Text = "Eliminar Selección";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(27, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Productos registrados: ";
+            // 
+            // dataGridIngresoSalida
+            // 
+            this.dataGridIngresoSalida.AllowUserToAddRows = false;
+            this.dataGridIngresoSalida.AllowUserToDeleteRows = false;
+            this.dataGridIngresoSalida.AllowUserToResizeColumns = false;
+            this.dataGridIngresoSalida.AllowUserToResizeRows = false;
+            this.dataGridIngresoSalida.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridIngresoSalida.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridIngresoSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridIngresoSalida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.CodigoProducto,
+            this.Nombre,
+            this.Cantidad,
+            this.Observaciones});
+            this.dataGridIngresoSalida.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridIngresoSalida.Location = new System.Drawing.Point(66, 85);
+            this.dataGridIngresoSalida.MultiSelect = false;
+            this.dataGridIngresoSalida.Name = "dataGridIngresoSalida";
+            this.dataGridIngresoSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridIngresoSalida.Size = new System.Drawing.Size(657, 300);
+            this.dataGridIngresoSalida.TabIndex = 30;
             // 
             // button2
             // 
@@ -259,45 +293,41 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
-            // comboBoxEnvios
+            // Id
             // 
-            this.comboBoxEnvios.FormattingEnabled = true;
-            this.comboBoxEnvios.Location = new System.Drawing.Point(516, 22);
-            this.comboBoxEnvios.Name = "comboBoxEnvios";
-            this.comboBoxEnvios.Size = new System.Drawing.Size(207, 21);
-            this.comboBoxEnvios.TabIndex = 33;
-            this.comboBoxEnvios.Text = "Envios";
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Width = 41;
             // 
-            // labelEnvio
+            // CodigoProducto
             // 
-            this.labelEnvio.AutoSize = true;
-            this.labelEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEnvio.Location = new System.Drawing.Point(362, 22);
-            this.labelEnvio.Name = "labelEnvio";
-            this.labelEnvio.Size = new System.Drawing.Size(148, 20);
-            this.labelEnvio.TabIndex = 34;
-            this.labelEnvio.Text = "Envíos Pendientes: ";
+            this.CodigoProducto.DataPropertyName = "CodigoProducto";
+            this.CodigoProducto.HeaderText = "Codigo";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Width = 65;
             // 
-            // labelAlmacen
+            // Nombre
             // 
-            this.labelAlmacen.AutoSize = true;
-            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelAlmacen.Location = new System.Drawing.Point(372, 22);
-            this.labelAlmacen.Name = "labelAlmacen";
-            this.labelAlmacen.Size = new System.Drawing.Size(138, 20);
-            this.labelAlmacen.TabIndex = 35;
-            this.labelAlmacen.Text = "Almacén Destino: ";
-            this.labelAlmacen.Visible = false;
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 69;
             // 
-            // comboBoxAlmacenes
+            // Cantidad
             // 
-            this.comboBoxAlmacenes.FormattingEnabled = true;
-            this.comboBoxAlmacenes.Location = new System.Drawing.Point(516, 22);
-            this.comboBoxAlmacenes.Name = "comboBoxAlmacenes";
-            this.comboBoxAlmacenes.Size = new System.Drawing.Size(207, 21);
-            this.comboBoxAlmacenes.TabIndex = 36;
-            this.comboBoxAlmacenes.Text = "Almacenes";
-            this.comboBoxAlmacenes.Visible = false;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MaxInputLength = 5;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 74;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.Width = 103;
             // 
             // PantallaIngresosSalidasProducto
             // 
@@ -316,9 +346,11 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresoSalida)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,16 +368,18 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridPedido;
+        private System.Windows.Forms.DataGridView dataGridIngresoSalida;
+        private System.Windows.Forms.ComboBox comboBoxAlmacenes;
+        private System.Windows.Forms.Label labelAlmacen;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBoxLocales;
+        private System.Windows.Forms.RadioButton radioBtnLocal;
+        private System.Windows.Forms.RadioButton radioBtnEnvios;
+        private System.Windows.Forms.ComboBox comboBoxEnvios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
-        private System.Windows.Forms.ComboBox comboBoxAlmacenes;
-        private System.Windows.Forms.Label labelAlmacen;
-        private System.Windows.Forms.Label labelEnvio;
-        private System.Windows.Forms.ComboBox comboBoxEnvios;
     }
 }

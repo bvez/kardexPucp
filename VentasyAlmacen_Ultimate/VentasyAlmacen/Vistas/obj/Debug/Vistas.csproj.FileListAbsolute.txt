@@ -346,3 +346,10 @@ C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmace
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\LogicaNegocios.pdb
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaIngresosSalidasProducto.resources
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaSeleccionarProducto.resources
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\LogicaNegocios.dll
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\MySql.Data.dll
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\LogicaNegocios.pdb
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaIngresosSalidasProducto.resources
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaReporteFechas.resources
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaSeleccionarProducto.resources
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaVistaPreviaReporte.resources

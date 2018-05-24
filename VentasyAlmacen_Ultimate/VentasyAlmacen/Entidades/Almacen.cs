@@ -33,7 +33,7 @@ namespace Entidades
 
         override public string ToString()
         {
-            return "Almacen " + idAlmacen.ToString() + " - " + this.Direccion;
+            return "Almacen " + idAlmacen.ToString() + " --- " + this.Direccion;
         }
     }
 }

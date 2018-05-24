@@ -23,6 +23,42 @@ namespace AccesoADatos
                 "user=a20151258;database=a20151258;" +
                 "port=3306;password=HFzu0M;SslMode=none;";
         }
+
+        public Almacen obtenerAlmacen(int idAlmacen)
+        {
+            Almacen almacen = new Almacen();
+            ///*
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT ALM_ALMACEN.IDALMACEN,LOCAL_idLOCAL,LOCAL.DIRECCIONLOCAL,LOCAL.TELEFONOLOCAL " +
+                    "FROM ALM_ALMACEN INNER JOIN LOCAL ON ALM_ALMACEN.LOCAL_IDLOCAL = LOCAL.IDLOCAL " +
+                    "WHERE ALM_ALMACEN.IDALMACEN = " + idAlmacen.ToString();
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                int idLocal = reader.GetInt32("LOCAL_idLOCAL");//
+                string telefono = reader.GetString("TELEFONOLOCAL");//
+                string direccion = reader.GetString("DIRECCIONLOCAL");//
+
+                almacen.IdAlmacen = idAlmacen;
+                almacen.IdLocal = idLocal;
+                almacen.Telefono = telefono;
+                almacen.Direccion = direccion;
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return almacen;
+        }
+
         public BindingList<Almacen> obtenerAlmacenes()
         {
             
@@ -66,6 +102,8 @@ namespace AccesoADatos
 
         public BindingList<Sucursal> listarSucursalesDisponible()
         {
+            //Esta funcion devuelve los locales que están disponibles para ser habilitados como almacenes
+
             BindingList<Sucursal> sucursales = new BindingList<Sucursal>();
             
             try
@@ -102,8 +140,163 @@ namespace AccesoADatos
             return sucursales;
         }
 
+        public BindingList<Sucursal> listarLocales()
+        {
+            //Esta funcion lista todas los locales registrados
 
+            BindingList<Sucursal> locales = new BindingList<Sucursal>();
 
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT * FROM LOCAL";
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int idLocal = reader.GetInt32("IDLOCAL");
+                    string telefono = reader.GetString("TELEFONOLOCAL");
+                    string direccion = reader.GetString("DIRECCIONLOCAL");
+
+                    Sucursal sucursal = new Sucursal();
+                    sucursal.IdLocal = idLocal;
+                    sucursal.Telefono = telefono;
+                    sucursal.Direccion = direccion;
+
+                    locales.Add(sucursal);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return locales;
+        }
+
+        public BindingList<SalidaProducto> listarEnviosPendientesAlmacen(int idLocalAlmacen)
+        {
+            BindingList<SalidaProducto> enviosPendientes = new BindingList<SalidaProducto>();
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT * FROM ALM_SALIDA_PRODUCTO WHERE estadoEnvio = 1 AND idLocalDestino = "+idLocalAlmacen.ToString();
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int idSalidaProducto = reader.GetInt32("idSalidaProducto");
+                    int idAlmacenEnvia = reader.GetInt32("Almacen_idAlmacen");
+                    DateTime fechaSalida = reader.GetDateTime("fechaSalida");
+                    string observaciones = reader.GetString("observaciones");
+
+                    SalidaProducto salida= new SalidaProducto();
+                    salida.IdSalidaProducto = idSalidaProducto;
+                    salida.IdAlmacenEnvia = idAlmacenEnvia;
+                    salida.FechaSalida = fechaSalida;
+                    salida.Observaciones = observaciones;
+
+                    enviosPendientes.Add(salida);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return enviosPendientes;
+        }
+
+        public BindingList<LineaIngresoSalidaProducto> listarProductosSalida(int idSalidaProductos)
+        {
+            BindingList<LineaIngresoSalidaProducto> productos = new BindingList<LineaIngresoSalidaProducto>();
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT * FROM ALM_LINEA_SALIDA_PRODUCTO WHERE SalidaProducto_idSalidaProducto = " + idSalidaProductos.ToString();
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int idLineaSalidaProducto = reader.GetInt32("idLineaSalidaProducto");
+                    int cantidadIngreso = reader.GetInt32("cantidadSalida");
+                    string observaciones = reader.GetString("observaciones");
+
+                    LineaIngresoSalidaProducto lineaSalidaProducto = new LineaIngresoSalidaProducto();
+                    lineaSalidaProducto.IdLineaIngresoSalidaProducto = idLineaSalidaProducto;
+                    lineaSalidaProducto.Producto = null;
+                    lineaSalidaProducto.CantidadIngresoSalida= cantidadIngreso;
+                    lineaSalidaProducto.Observaciones = observaciones;
+
+                    productos.Add(lineaSalidaProducto);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return productos;
+        }
+
+        public BindingList<LineaIngresoSalidaProducto> listarProductosIngreso(int idIngresoProductos)
+        {
+            BindingList<LineaIngresoSalidaProducto> productos = new BindingList<LineaIngresoSalidaProducto>();
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT * FROM ALM_LINEA_INGRESO_PRODUCTO WHERE IngresoProducto_idIngresoProducto = " + idIngresoProductos.ToString();
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int idLineaIngresoProducto = reader.GetInt32("idLineaIngresoProducto");
+                    int cantidadIngreso = reader.GetInt32("cantidadSalida");
+                    string observaciones = reader.GetString("observaciones");
+
+                    LineaIngresoSalidaProducto lineaSalidaProducto = new LineaIngresoSalidaProducto();
+                    lineaSalidaProducto.IdLineaIngresoSalidaProducto = idLineaIngresoProducto;
+                    lineaSalidaProducto.Producto = null;
+                    lineaSalidaProducto.CantidadIngresoSalida = cantidadIngreso;
+                    lineaSalidaProducto.Observaciones = observaciones;
+
+                    productos.Add(lineaSalidaProducto);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return productos;
+        }
         /*
             BindingList<ProductoAlmacen> listaProductoAlmacen1 = new BindingList<ProductoAlmacen>();
             BindingList<ProductoAlmacen> listaProductoAlmacen2 = new BindingList<ProductoAlmacen>();

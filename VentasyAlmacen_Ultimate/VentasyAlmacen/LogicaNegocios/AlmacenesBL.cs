@@ -16,6 +16,11 @@ namespace LogicaNegocios
         {
             datosAlm = new DatosAlmacenes();
         }
+
+        public Almacen obtenerAlmacen(int idAlmacen)
+        {
+            return datosAlm.obtenerAlmacen(idAlmacen);
+        }
         public BindingList<Almacen> obtenerAlmacenes()
         {
             BindingList<Almacen> almacenes = datosAlm.obtenerAlmacenes();
@@ -26,6 +31,26 @@ namespace LogicaNegocios
         public BindingList<Sucursal> obtenerSucursalesDisponibles()
         {
             return datosAlm.listarSucursalesDisponible();
+        }
+
+        public BindingList<Sucursal> obtenerLocales()
+        {
+            return datosAlm.listarLocales();
+        }
+
+        public BindingList<SalidaProducto> obtenerEnviosPendientesAlmacen(int idLocalAlmacen)
+        {
+            return datosAlm.listarEnviosPendientesAlmacen(idLocalAlmacen);
+        }
+
+        public BindingList<LineaIngresoSalidaProducto> obtenerProductosSalida(int idSalidaProductos)
+        {
+            return datosAlm.listarProductosSalida(idSalidaProductos);
+        }
+
+        public BindingList<LineaIngresoSalidaProducto> obtenerProductosIngreso(int idIngresoProductos)
+        {
+            return datosAlm.listarProductosIngreso(idIngresoProductos);
         }
     }
 }

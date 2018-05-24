@@ -21,21 +21,27 @@ namespace FormulariosAlmacenes.VistasAlmacen
         {
             InitializeComponent();
             listaProductos = new BindingList<ProductoAlmacen>();
-            dataGridPedido.AutoGenerateColumns = false;
-            dataGridPedido.DataSource = listaProductos;
+            dataGridIngresoSalida.AutoGenerateColumns = false;
+            dataGridIngresoSalida.DataSource = listaProductos;
         }
 
         public PantallaIngresosSalidasProducto(int idAlmacen)
         {
             InitializeComponent();
+            radioBtnEnvios.Checked = true;
             this.idAlmacen = idAlmacen;
             listaProductos = new BindingList<ProductoAlmacen>();
             logicaAlmacenes = new AlmacenesBL();
 
-            dataGridPedido.AutoGenerateColumns = false;
-            dataGridPedido.DataSource = listaProductos;
+            dataGridIngresoSalida.AutoGenerateColumns = false;
+            dataGridIngresoSalida.DataSource = listaProductos;
 
             comboBoxAlmacenes.DataSource = logicaAlmacenes.obtenerAlmacenes();
+
+            Almacen almacenActual = logicaAlmacenes.obtenerAlmacen(idAlmacen);
+            
+            comboBoxEnvios.DataSource = null;
+            comboBoxLocales.DataSource = logicaAlmacenes.obtenerLocales();
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
@@ -46,7 +52,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            int cantidadPedidos = dataGridPedido.RowCount;
+            int cantidadPedidos = dataGridIngresoSalida.RowCount;
 
             if (cantidadPedidos > 0)
             {
@@ -82,20 +88,25 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         private void radioBtnIngreso_CheckedChanged(object sender, EventArgs e)
         {
-            labelAlmacen.Visible = false;
-            comboBoxAlmacenes.Visible = false;
+            if (radioBtnIngreso.Checked) {
+                labelAlmacen.Visible = false;
+                comboBoxAlmacenes.Visible = false;
 
-            labelEnvio.Visible = true;
-            comboBoxEnvios.Visible = true;
+                groupBox3.Visible = true;
+            }
+            
         }
 
         private void radioBtnSalida_CheckedChanged(object sender, EventArgs e)
         {
-            labelEnvio.Visible = false;
-            comboBoxEnvios.Visible = false;
+            if (radioBtnSalida.Checked)
+            {
+                groupBox3.Visible = false;
 
-            labelAlmacen.Visible = true;
-            comboBoxAlmacenes.Visible = true;
+                labelAlmacen.Visible = true;
+                comboBoxAlmacenes.Visible = true;
+            }
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -107,28 +118,28 @@ namespace FormulariosAlmacenes.VistasAlmacen
             nuevoProducto = newPant.ProductoSeleccionado;
             if (nuevoProducto != null)
             {
-                ((BindingList<ProductoAlmacen>)dataGridPedido.DataSource).Add(nuevoProducto);
-                dataGridPedido.Refresh();
-                dataGridPedido.Update();
+                ((BindingList<ProductoAlmacen>)dataGridIngresoSalida.DataSource).Add(nuevoProducto);
+                dataGridIngresoSalida.Refresh();
+                dataGridIngresoSalida.Update();
             }
             
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if (dataGridPedido.CurrentRow != null)
+            if (dataGridIngresoSalida.CurrentRow != null)
             {
-                ProductoAlmacen productoSeleccionado = (ProductoAlmacen)dataGridPedido.CurrentRow.DataBoundItem;
-                BindingList<ProductoAlmacen> lista = (BindingList<ProductoAlmacen>)dataGridPedido.DataSource;
+                ProductoAlmacen productoSeleccionado = (ProductoAlmacen)dataGridIngresoSalida.CurrentRow.DataBoundItem;
+                BindingList<ProductoAlmacen> lista = (BindingList<ProductoAlmacen>)dataGridIngresoSalida.DataSource;
                 lista.Remove(productoSeleccionado);
-                dataGridPedido.Refresh();
-                dataGridPedido.Update();
+                dataGridIngresoSalida.Refresh();
+                dataGridIngresoSalida.Update();
             }
         }
 
         private void PantallaIngresosSalidasProducto_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (dataGridPedido.RowCount > 0)
+            if (dataGridIngresoSalida.RowCount > 0)
             {
                 DialogResult res = MessageBox.Show("Desea salir y eliminar los cambios?", "Confirmación", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
@@ -142,6 +153,28 @@ namespace FormulariosAlmacenes.VistasAlmacen
             }
         }
 
-        
+        private void radioBtnEnvios_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioBtnEnvios.Checked)
+            {
+                comboBoxLocales.Enabled = false;
+                comboBoxEnvios.Enabled = true;
+
+                if(comboBoxEnvios.SelectedItem != null)
+                {
+                    comboBoxEnvios.SelectedItem;
+                    dataGridIngresoSalida.DataSource = logicaAlmacenes.obtenerProductosSalida();
+                }
+            }
+        }
+
+        private void radioBtnLocal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioBtnLocal.Checked)
+            {
+                comboBoxEnvios.Enabled = false;
+                comboBoxLocales.Enabled = true;
+            }
+        }
     }
 }

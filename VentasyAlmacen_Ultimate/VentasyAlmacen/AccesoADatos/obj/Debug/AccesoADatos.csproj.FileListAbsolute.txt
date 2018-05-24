@@ -43,3 +43,5 @@ C:\Users\alulab14.INF.001\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAl
 C:\Users\alulab14.INF.001\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.dll
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.pdb
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.dll
+C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.pdb
