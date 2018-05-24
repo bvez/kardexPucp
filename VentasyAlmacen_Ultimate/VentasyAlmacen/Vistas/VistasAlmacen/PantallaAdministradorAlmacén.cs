@@ -89,6 +89,13 @@ namespace FormulariosAlmacenes
             pantallaActualizarAlmacenes.ShowDialog();
         }
 
+        private void btnActualizarAlmacenes_Click(object sender, EventArgs e)
+        {
+            PantallaActualizarAlmacenes pantallaActualizarAlmacenes = new PantallaActualizarAlmacenes();
+            pantallaActualizarAlmacenes.Owner = this;
+            pantallaActualizarAlmacenes.ShowDialog();
+        }
+
         private void btnModificarStock_MouseClick(object sender, MouseEventArgs e)
         {
             Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
@@ -124,6 +131,11 @@ namespace FormulariosAlmacenes
                 pantallaReporte.Owner = this;
                 pantallaReporte.ShowDialog();
             }
+        }
+
+        private void btnModificarStock_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,6 +51,7 @@
             this.btnActualizarAlmacenes.TabIndex = 0;
             this.btnActualizarAlmacenes.Text = "Actualizar Almacenes";
             this.btnActualizarAlmacenes.UseVisualStyleBackColor = false;
+            this.btnActualizarAlmacenes.Click += new System.EventHandler(this.btnActualizarAlmacenes_Click);
             this.btnActualizarAlmacenes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnActualizarAlmacenes_MouseClick);
             // 
             // btnModificarStock
@@ -64,6 +65,7 @@
             this.btnModificarStock.TabIndex = 1;
             this.btnModificarStock.Text = "Modificar Stock de Almacén";
             this.btnModificarStock.UseVisualStyleBackColor = false;
+            this.btnModificarStock.Click += new System.EventHandler(this.btnModificarStock_Click);
             this.btnModificarStock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnModificarStock_MouseClick);
             // 
             // btnAddProducto

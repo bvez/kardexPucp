@@ -45,8 +45,10 @@
     <Compile Include="ClienteEmpresa.cs" />
     <Compile Include="ClientePersona.cs" />
     <Compile Include="DetalleProduccion.cs" />
+    <Compile Include="EstadoVenta.cs" />
     <Compile Include="IngresoProducto.cs" />
     <Compile Include="LineaIngresoSalidaProducto.cs" />
+    <Compile Include="LineaProducto.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoAlmacen.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Sucursal.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Vehiculo.cs" />
+    <Compile Include="Venta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

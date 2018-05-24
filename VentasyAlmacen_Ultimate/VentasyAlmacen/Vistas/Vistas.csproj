@@ -46,6 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ventas\Form10EmitirReporteCl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form10EmitirReporteCl.Designer.cs" />
+    <Compile Include="Ventas\Form11BuscaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form11BuscaVenta.Designer.cs" />
+    <Compile Include="Ventas\Form12BuscaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form12BuscaCliente.Designer.cs" />
+    <Compile Include="Ventas\Form13BuscaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form13BuscaProducto.Designer.cs" />
+    <Compile Include="Ventas\Form1RegVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form1RegVentas.Designer.cs" />
+    <Compile Include="Ventas\Form2AsignCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form2AsignCliente.Designer.cs" />
+    <Compile Include="Ventas\Form3EmitirReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form3EmitirReporte.Designer.cs" />
+    <Compile Include="Ventas\Form4ModifVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form4ModifVenta.Designer.cs" />
+    <Compile Include="Ventas\Form5RevisarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form5RevisarVenta.Designer.cs" />
+    <Compile Include="Ventas\Form6EmitirPedAlm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form6EmitirPedAlm.Designer.cs" />
+    <Compile Include="Ventas\Form7RevisarPedAlm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form7RevisarPedAlm.Designer.cs" />
+    <Compile Include="Ventas\Form8RegCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form8RegCliente.Designer.cs" />
+    <Compile Include="Ventas\Form9ModifCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form9ModifCliente.Designer.cs" />
+    <Compile Include="Ventas\MainVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\MainVentas.Designer.cs" />
     <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,90 +206,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ventas\Form10EmitirReporteCl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form10EmitirReporteCl.Designer.cs">
-      <DependentUpon>Form10EmitirReporteCl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form11BuscaVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form11BuscaVenta.Designer.cs">
-      <DependentUpon>Form11BuscaVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form12BuscaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form12BuscaCliente.Designer.cs">
-      <DependentUpon>Form12BuscaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form1RegVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form1RegVentas.Designer.cs">
-      <DependentUpon>Form1RegVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form2AsignCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form2AsignCliente.Designer.cs">
-      <DependentUpon>Form2AsignCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form3EmitirReporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form3EmitirReporte.Designer.cs">
-      <DependentUpon>Form3EmitirReporte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form4ModifVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form4ModifVenta.Designer.cs">
-      <DependentUpon>Form4ModifVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form5RevisarVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form5RevisarVenta.Designer.cs">
-      <DependentUpon>Form5RevisarVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form6EmitirPedAlm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form6EmitirPedAlm.Designer.cs">
-      <DependentUpon>Form6EmitirPedAlm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form7RevisarPedAlm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form7RevisarPedAlm.Designer.cs">
-      <DependentUpon>Form7RevisarPedAlm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form8RegCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form8RegCliente.Designer.cs">
-      <DependentUpon>Form8RegCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Form9ModifCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Form9ModifCliente.Designer.cs">
-      <DependentUpon>Form9ModifCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\MainVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\MainVentas.Designer.cs">
-      <DependentUpon>MainVentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.Designer.cs">
       <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx" />
+    <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx" />
+    <EmbeddedResource Include="Ventas\Form13BuscaProducto.resx" />
+    <EmbeddedResource Include="Ventas\Form1RegVentas.resx" />
+    <EmbeddedResource Include="Ventas\Form2AsignCliente.resx" />
+    <EmbeddedResource Include="Ventas\Form3EmitirReporte.resx" />
+    <EmbeddedResource Include="Ventas\Form4ModifVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form5RevisarVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form6EmitirPedAlm.resx" />
+    <EmbeddedResource Include="Ventas\Form7RevisarPedAlm.resx" />
+    <EmbeddedResource Include="Ventas\Form8RegCliente.resx" />
+    <EmbeddedResource Include="Ventas\Form9ModifCliente.resx" />
+    <EmbeddedResource Include="Ventas\MainVentas.resx" />
     <EmbeddedResource Include="VistasAlmacen\PantallaEliminarAlmacenes.resx">
       <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,45 +287,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx">
-      <DependentUpon>Form10EmitirReporteCl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx">
-      <DependentUpon>Form11BuscaVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx">
-      <DependentUpon>Form12BuscaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form1RegVentas.resx">
-      <DependentUpon>Form1RegVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form2AsignCliente.resx">
-      <DependentUpon>Form2AsignCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form3EmitirReporte.resx">
-      <DependentUpon>Form3EmitirReporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form4ModifVenta.resx">
-      <DependentUpon>Form4ModifVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form5RevisarVenta.resx">
-      <DependentUpon>Form5RevisarVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form6EmitirPedAlm.resx">
-      <DependentUpon>Form6EmitirPedAlm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form7RevisarPedAlm.resx">
-      <DependentUpon>Form7RevisarPedAlm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form8RegCliente.resx">
-      <DependentUpon>Form8RegCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form9ModifCliente.resx">
-      <DependentUpon>Form9ModifCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\MainVentas.resx">
-      <DependentUpon>MainVentas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaVistaPreviaReporte.resx">
       <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
     </EmbeddedResource>
