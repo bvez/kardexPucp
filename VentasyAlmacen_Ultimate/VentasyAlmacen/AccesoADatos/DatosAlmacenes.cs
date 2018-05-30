@@ -74,10 +74,9 @@ namespace AccesoADatos
 
             return almacen;
         }
-
+        
         public BindingList<Almacen> obtenerAlmacenesTodos()
         {
-            
             BindingList<Almacen> almacenes = new BindingList<Almacen>();
             ///*
             try

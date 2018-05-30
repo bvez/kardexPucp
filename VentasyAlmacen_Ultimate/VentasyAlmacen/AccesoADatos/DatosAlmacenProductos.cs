@@ -177,6 +177,8 @@ namespace AccesoADatos
             return resultado;
         }
 
+
+        //UNICO FALTANTE
         public Producto obtenerProducto(int idProducto)
         {
             Producto resultado = null;
