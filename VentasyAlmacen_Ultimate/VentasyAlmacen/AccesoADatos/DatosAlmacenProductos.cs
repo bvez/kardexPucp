@@ -165,6 +165,44 @@ namespace AccesoADatos
             return resultado;
         }
 
+        public Producto obtenerProducto(int idProducto)
+        {
+            Producto resultado = null;
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "SELECT * FROM PRODUCTO " +
+                    "WHERE HABILITADO = 1 AND IDPRODUCTO = " + idProducto.ToString();
+                comando.Connection = con;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                reader.Read();
+                
+                string codigo = reader.GetString("CODPRODUCTO");//
+                string nombre = reader.GetString("NOMBRE");//
+                string descripcion = reader.GetString("DESCRIPCIONPROD");
+
+                resultado = new Producto();
+
+                resultado.Id = idProducto;
+                resultado.Nombre = nombre;
+                resultado.CodigoProducto = codigo;
+                resultado.Descripcion = descripcion;
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("AQUI");
+            }
+           
+
+            return resultado;
+        }
+
         public bool insertarProductoAlmacen(int idAlmacen,int idProducto,int stockInicial)
         {
             bool result = false;

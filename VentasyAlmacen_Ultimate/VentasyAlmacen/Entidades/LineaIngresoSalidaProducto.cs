@@ -15,6 +15,11 @@ namespace Entidades
 
         public int IdLineaIngresoSalidaProducto { get => idLineaIngresoSalidaProducto; set => idLineaIngresoSalidaProducto = value; }
         public Producto Producto { get => producto; set => producto = value; }
+        public string Nombre { get => producto.Nombre; }
+        public string Descripcion { get => producto.Descripcion; }
+        public string CodigoProducto { get => producto.CodigoProducto; }
+        public int Id { get => producto.Id; }
+
         public int CantidadIngresoSalida { get => cantidadIngresoSalida; set => cantidadIngresoSalida = value; }
         public string Observaciones { get => observaciones; set => observaciones = value; }
     }

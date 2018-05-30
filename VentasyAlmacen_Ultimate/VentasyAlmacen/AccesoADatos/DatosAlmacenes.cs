@@ -238,6 +238,7 @@ namespace AccesoADatos
         public BindingList<LineaIngresoSalidaProducto> listarProductosSalida(int idSalidaProductos)
         {
             BindingList<LineaIngresoSalidaProducto> productos = new BindingList<LineaIngresoSalidaProducto>();
+            DatosAlmacenProductos dataAlmacenProd = new DatosAlmacenProductos();
 
             try
             {
@@ -254,11 +255,11 @@ namespace AccesoADatos
                     int idLineaSalidaProducto = reader.GetInt32("idLineaSalidaProducto");
                     int cantidadIngreso = reader.GetInt32("cantidadSalida");
                     string observaciones = reader.GetString("observaciones");
+                    int idProducto = reader.GetInt32("Producto_idProducto");
 
-                    
                     LineaIngresoSalidaProducto lineaSalidaProducto = new LineaIngresoSalidaProducto();
                     lineaSalidaProducto.IdLineaIngresoSalidaProducto = idLineaSalidaProducto;
-                    lineaSalidaProducto.Producto = null;
+                    lineaSalidaProducto.Producto = dataAlmacenProd.obtenerProducto(idProducto);
                     lineaSalidaProducto.CantidadIngresoSalida= cantidadIngreso;
                     lineaSalidaProducto.Observaciones = observaciones;
 
@@ -273,7 +274,9 @@ namespace AccesoADatos
 
             }
 
-            return productos;
+            if (productos.Count > 0)
+                return productos;
+            else return null;
         }
 
         public BindingList<LineaIngresoSalidaProducto> listarProductosIngreso(int idIngresoProductos)

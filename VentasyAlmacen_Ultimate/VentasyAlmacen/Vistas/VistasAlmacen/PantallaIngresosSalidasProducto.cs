@@ -255,12 +255,19 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 comboBoxLocales.Enabled = false;
                 comboBoxEnvios.Enabled = true;
+                
 
                 if(comboBoxEnvios.SelectedItem != null)
                 {
                     SalidaProducto salida = (SalidaProducto)comboBoxEnvios.SelectedItem;
                     dataGridIngresoSalida.DataSource = logicaAlmacenes.obtenerProductosSalida(salida.IdSalidaProducto);
+                    dataGridIngresoSalida.Refresh();
+                    dataGridIngresoSalida.Update();
                 }
+
+                //dataGridIngresoSalida.ClearSelection();
+                bloquearTabla();
+
             }
         }
 
@@ -270,7 +277,18 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 comboBoxEnvios.Enabled = false;
                 comboBoxLocales.Enabled = true;
+                dataGridIngresoSalida.Enabled = true;
             }
+        }
+
+        private void bloquearTabla()
+        {
+            dataGridIngresoSalida.Enabled = false;
+        }
+
+        private void desbloquearTabla()
+        {
+            dataGridIngresoSalida.Enabled = true;
         }
     }
 }
