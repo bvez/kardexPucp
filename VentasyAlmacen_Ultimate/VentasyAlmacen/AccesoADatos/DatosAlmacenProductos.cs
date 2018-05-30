@@ -46,22 +46,27 @@ namespace AccesoADatos
                 MySqlConnection con = new MySqlConnection(this.cadenaConexion);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand();
-                comando.CommandText = "SELECT * FROM PRODUCTO WHERE HABILITADO = 1";
+                comando.CommandText = "listar_productos_habilitados";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.Connection = con;
 
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    int idProducto = reader.GetInt32("IDPRODUCTO");//
-                    string codigo = reader.GetString("CODPRODUCTO");//
-                    string nombre = reader.GetString("NOMBRE");//
-                    string descripcion = reader.GetString("DESCRIPCIONPROD");
+                    int idProducto = reader.GetInt32("id_producto");//
+                    string codigo = reader.GetString("codigo_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    double precio = reader.GetDouble("precio_venta");
+                    bool activo = reader.GetBoolean("activo");
 
                     Producto producto = new Producto();
                     producto.Id = idProducto;
                     producto.Nombre = nombre;
                     producto.CodigoProducto = codigo;
                     producto.Descripcion = descripcion;
+                    producto.Precio = precio;
+                    producto.Habilitado = activo;
 
                     productos.Add(producto);
                 }
@@ -83,25 +88,27 @@ namespace AccesoADatos
                 MySqlConnection con = new MySqlConnection(this.cadenaConexion);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand();
-                comando.CommandText = "SELECT IDPRODUCTO,CODPRODUCTO,NOMBRE,DESCRIPCIONPROD,CANTIDADALMACENADA" +
-                    " FROM ALM_PRODUCTO_ALMACEN INNER JOIN PRODUCTO ON PRODUCTO_IDPRODUCTO = IDPRODUCTO" +
-                    " WHERE ALMACEN_IDALMACEN = " + idAlmacen.ToString();
+                comando.CommandText = "listar_productos_almacen";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.Connection = con;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
 
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    int idProducto = reader.GetInt32("IDPRODUCTO");//
-                    string codigo = reader.GetString("CODPRODUCTO");//
-                    string nombre = reader.GetString("NOMBRE");//
-                    string descripcion = reader.GetString("DESCRIPCIONPROD");
-                    int stock = reader.GetInt32("CANTIDADALMACENADA");
+                    int idProducto = reader.GetInt32("id_producto");//
+                    string codigo = reader.GetString("codigo_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    int stock = reader.GetInt32("cantidadAlmacenada");
+                    double precio = reader.GetDouble("precio_venta");
 
                     Producto producto = new Producto();
                     producto.Id = idProducto;
                     producto.Nombre = nombre;
                     producto.CodigoProducto = codigo;
                     producto.Descripcion = descripcion;
+                    producto.Precio = precio;
 
                     ProductoAlmacen productoAlmacen = new ProductoAlmacen();
                     productoAlmacen.ProductoAlmacenado = producto;
@@ -116,6 +123,7 @@ namespace AccesoADatos
 
             return resultado;
         }
+
         public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen)
         {
             BindingList<Producto> resultado = new BindingList<Producto>();
@@ -129,24 +137,28 @@ namespace AccesoADatos
                     MySqlConnection con = new MySqlConnection(this.cadenaConexion);
                     con.Open();
                     MySqlCommand comando = new MySqlCommand();
-                    comando.CommandText = "SELECT * FROM PRODUCTO " +
-                        "WHERE HABILITADO = 1 AND IDPRODUCTO NOT IN (SELECT PRODUCTO_IDPRODUCTO " +
-                        "FROM ALM_PRODUCTO_ALMACEN WHERE ALMACEN_IDALMACEN = " + idAlmacen.ToString() + ")";
+                    comando.CommandText = "alm_listar_productos_registrables";
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
                     comando.Connection = con;
+                    comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
 
                     MySqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())
                     {
-                        int idProducto = reader.GetInt32("IDPRODUCTO");//
-                        string codigo = reader.GetString("CODPRODUCTO");//
-                        string nombre = reader.GetString("NOMBRE");//
-                        string descripcion = reader.GetString("DESCRIPCIONPROD");
+                        int idProducto = reader.GetInt32("id_producto");//
+                        string codigo = reader.GetString("codigo_producto");//
+                        string nombre = reader.GetString("nombre");//
+                        string descripcion = reader.GetString("descripcion");
+                        double precio = reader.GetDouble("precio_venta");
+                        bool activo = reader.GetBoolean("activo");
 
                         Producto producto = new Producto();
                         producto.Id = idProducto;
                         producto.Nombre = nombre;
                         producto.CodigoProducto = codigo;
                         producto.Descripcion = descripcion;
+                        producto.Precio = precio;
+                        producto.Habilitado = activo;
 
                         productos.Add(producto);
                     }
@@ -213,11 +225,11 @@ namespace AccesoADatos
                 MySqlCommand comando = new MySqlCommand();
 
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.CommandText = "REGISTRAR_PRODUCTO_ALMACEN";
+                comando.CommandText = "alm_registrar_producto_almacen";
                 comando.Connection = con;
-                comando.Parameters.Add("_ID_PRODUCTO", MySqlDbType.Int32).Value = idProducto;
-                comando.Parameters.Add("_ID_ALMACEN", MySqlDbType.Int32).Value = idAlmacen;
-                comando.Parameters.Add("_STOCK_INICIAL", MySqlDbType.Int32).Value = stockInicial;
+                comando.Parameters.Add("_idProducto", MySqlDbType.Int32).Value = idProducto;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_stockInicial", MySqlDbType.Int32).Value = stockInicial;
 
                 comando.ExecuteNonQuery();
                 con.Close();
@@ -239,11 +251,11 @@ namespace AccesoADatos
                 MySqlCommand comando = new MySqlCommand();
 
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.CommandText = "ACTUALIZAR_STOCK";
+                comando.CommandText = "alm_actualizar_stock";
                 comando.Connection = con;
-                comando.Parameters.Add("_ID_ALMACEN", MySqlDbType.Int32).Value = idAlmacen;
-                comando.Parameters.Add("_ID_PRODUCTO", MySqlDbType.Int32).Value = idProducto;
-                comando.Parameters.Add("_NUEVO_STOCK", MySqlDbType.Int32).Value = nuevoStock;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_idProducto", MySqlDbType.Int32).Value = idProducto;
+                comando.Parameters.Add("_nuevoStock", MySqlDbType.Int32).Value = nuevoStock;
 
                 comando.ExecuteNonQuery();
                 con.Close();

@@ -81,14 +81,6 @@ namespace FormulariosAlmacenes
             }
         }
 
-        private void btnActualizarAlmacenes_MouseClick(object sender, MouseEventArgs e)
-        {
-            PantallaActualizarAlmacenes pantallaActualizarAlmacenes = new PantallaActualizarAlmacenes();
-            pantallaActualizarAlmacenes.Owner = this;
-            //this.Visible = false;
-            pantallaActualizarAlmacenes.ShowDialog();
-        }
-
         private void btnActualizarAlmacenes_Click(object sender, EventArgs e)
         {
             PantallaActualizarAlmacenes pantallaActualizarAlmacenes = new PantallaActualizarAlmacenes();

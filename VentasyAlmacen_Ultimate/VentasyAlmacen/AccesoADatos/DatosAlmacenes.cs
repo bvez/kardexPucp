@@ -47,22 +47,23 @@ namespace AccesoADatos
                 MySqlConnection con = new MySqlConnection(this.cadenaConexion);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand();
-                comando.CommandText = "SELECT ALM_ALMACEN.IDALMACEN,LOCAL_idLOCAL,LOCAL.DIRECCIONLOCAL,LOCAL.TELEFONOLOCAL " +
-                    "FROM ALM_ALMACEN INNER JOIN LOCAL ON ALM_ALMACEN.LOCAL_IDLOCAL = LOCAL.IDLOCAL " +
-                    "WHERE ALM_ALMACEN.IDALMACEN = " + idAlmacen.ToString();
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "alm_obtenerAlmacen";
                 comando.Connection = con;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 reader.Read();
                 int idLocal = reader.GetInt32("LOCAL_idLOCAL");//
-                string telefono = reader.GetString("TELEFONOLOCAL");//
-                string direccion = reader.GetString("DIRECCIONLOCAL");//
+                string telefono = reader.GetString("telefono");//
+                string direccion = reader.GetString("direccion");//
+                bool habilitado = reader.GetBoolean("habilitado");
 
                 almacen.IdAlmacen = idAlmacen;
-                almacen.IdLocal = idLocal;
                 almacen.Telefono = telefono;
                 almacen.Direccion = direccion;
+                almacen.Habilitado = habilitado;
 
                 con.Close();
             }
@@ -74,7 +75,7 @@ namespace AccesoADatos
             return almacen;
         }
 
-        public BindingList<Almacen> obtenerAlmacenes()
+        public BindingList<Almacen> obtenerAlmacenesTodos()
         {
             
             BindingList<Almacen> almacenes = new BindingList<Almacen>();
@@ -84,21 +85,23 @@ namespace AccesoADatos
                 MySqlConnection con = new MySqlConnection(this.cadenaConexion);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand();
-                comando.CommandText = "SELECT ALM_ALMACEN.IDALMACEN,LOCAL.DIRECCIONLOCAL,LOCAL.TELEFONOLOCAL " +
-                    "FROM ALM_ALMACEN INNER JOIN LOCAL ON ALM_ALMACEN.LOCAL_IDLOCAL = LOCAL.IDLOCAL";
+                comando.CommandText = "listar_almacenes_todos";
                 comando.Connection = con;
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
 
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    int idAlmacen = reader.GetInt32("IDALMACEN");//
-                    string telefono = reader.GetString("TELEFONOLOCAL");//
-                    string direccion = reader.GetString("DIRECCIONLOCAL");//
+                    int idAlmacen = reader.GetInt32("idAlmacen");//
+                    string telefono = reader.GetString("telefono");//
+                    string direccion = reader.GetString("direccion");//
+                    bool habilitado = reader.GetBoolean("habilitado");
 
                     Almacen almacen= new Almacen();
                     almacen.IdAlmacen = idAlmacen;
                     almacen.Telefono = telefono;
                     almacen.Direccion = direccion;
+                    almacen.Habilitado = habilitado;
 
                     almacenes.Add(almacen);
 
@@ -115,6 +118,51 @@ namespace AccesoADatos
             return almacenes;
         }
 
+        public BindingList<Almacen> obtenerAlmacenesHabilitados()
+        {
+
+            BindingList<Almacen> almacenes = new BindingList<Almacen>();
+            ///*
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "listar_almacenes_habilitados";
+                comando.Connection = con;
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    int idAlmacen = reader.GetInt32("idAlmacen");//
+                    string telefono = reader.GetString("telefono");//
+                    string direccion = reader.GetString("direccion");//
+                    bool habilitado = reader.GetBoolean("habilitado");
+
+                    Almacen almacen = new Almacen();
+                    almacen.IdAlmacen = idAlmacen;
+                    almacen.Telefono = telefono;
+                    almacen.Direccion = direccion;
+                    almacen.Habilitado = habilitado;
+
+                    almacenes.Add(almacen);
+
+
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+            //*/
+            return almacenes;
+        }
+
+
+        //borrable
         public BindingList<Sucursal> listarSucursalesDisponible()
         {
             //Esta funcion devuelve los locales que están disponibles para ser habilitados como almacenes
@@ -155,6 +203,8 @@ namespace AccesoADatos
             return sucursales;
         }
 
+
+        //borrable
         public BindingList<Sucursal> listarLocales()
         {
             //Esta funcion lista todas los locales registrados
@@ -194,6 +244,8 @@ namespace AccesoADatos
 
             return locales;
         }
+
+
 
         public BindingList<SalidaProducto> listarEnviosPendientesAlmacen(int idLocalAlmacen)
         {

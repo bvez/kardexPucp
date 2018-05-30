@@ -19,7 +19,7 @@ namespace FormulariosAlmacenes
             logicaAlmacenes = new AlmacenesBL();
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = logicaAlmacenes.obtenerAlmacenes();
+            dataGridView1.DataSource = logicaAlmacenes.obtenerAlmacenesTodos();
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)

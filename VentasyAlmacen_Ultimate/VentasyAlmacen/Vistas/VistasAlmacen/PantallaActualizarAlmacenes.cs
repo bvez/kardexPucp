@@ -15,11 +15,12 @@ namespace FormulariosAlmacenes
         public PantallaActualizarAlmacenes()
         {
             InitializeComponent();
+            Console.WriteLine("se abre uno");
         }
 
         private void PantallaActualizarAlmacenes_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Visible = true;
+            //this.Owner.Visible = true;
         }
 
         private void btnInsertAlmacen_MouseClick(object sender, MouseEventArgs e)

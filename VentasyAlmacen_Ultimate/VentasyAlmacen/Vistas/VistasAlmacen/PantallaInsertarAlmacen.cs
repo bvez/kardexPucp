@@ -16,8 +16,8 @@ namespace FormulariosAlmacenes
         public PantallaInsertarAlmacen()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = (new AlmacenesBL()).obtenerSucursalesDisponibles();
+            //dataGridView1.AutoGenerateColumns = false;
+            //dataGridView1.DataSource = (new AlmacenesBL()).obtenerSucursalesDisponibles();
         }
 
         private void PantallaInsertarAlmacen_FormClosed(object sender, FormClosedEventArgs e)

@@ -21,16 +21,16 @@ namespace LogicaNegocios
         {
             return datosAlm.obtenerAlmacen(idAlmacen);
         }
-        public BindingList<Almacen> obtenerAlmacenes()
+        public BindingList<Almacen> obtenerAlmacenesTodos()
         {
-            BindingList<Almacen> almacenes = datosAlm.obtenerAlmacenes();
+            BindingList<Almacen> almacenes = datosAlm.obtenerAlmacenesTodos();
 
             return almacenes;
         }
 
-        public BindingList<Sucursal> obtenerSucursalesDisponibles()
+        public BindingList<Almacen> obtenerAlmacenesHabilitados()
         {
-            return datosAlm.listarSucursalesDisponible();
+            return datosAlm.obtenerAlmacenesHabilitados();
         }
 
         public BindingList<Sucursal> obtenerLocales()

@@ -52,7 +52,6 @@
             this.btnActualizarAlmacenes.Text = "Actualizar Almacenes";
             this.btnActualizarAlmacenes.UseVisualStyleBackColor = false;
             this.btnActualizarAlmacenes.Click += new System.EventHandler(this.btnActualizarAlmacenes_Click);
-            this.btnActualizarAlmacenes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnActualizarAlmacenes_MouseClick);
             // 
             // btnModificarStock
             // 

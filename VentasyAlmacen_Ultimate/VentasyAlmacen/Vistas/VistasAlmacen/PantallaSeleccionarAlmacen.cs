@@ -21,7 +21,7 @@ namespace FormulariosAlmacenes
             InitializeComponent();
             DataGridSelectAlmacen.AutoGenerateColumns = false;
             logicaAlmacenes = new AlmacenesBL();
-            DataGridSelectAlmacen.DataSource = logicaAlmacenes.obtenerAlmacenes();
+            DataGridSelectAlmacen.DataSource = logicaAlmacenes.obtenerAlmacenesHabilitados();
         }
         public PantallaSeleccionarAlmacen(BindingList<Almacen> listaAlmacenesIn)
         {
