@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaInicio.Designer.cs" />
     <Compile Include="Ventas\Form10EmitirReporteCl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +66,14 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventas\Form13BuscaProducto.Designer.cs" />
+    <Compile Include="Ventas\Form14AnularVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form14AnularVenta.Designer.cs" />
+    <Compile Include="Ventas\Form15BuscaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form15BuscaPedido.Designer.cs" />
     <Compile Include="Ventas\Form1RegVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,10 +110,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventas\Form9ModifCliente.Designer.cs" />
+    <Compile Include="Ventas\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\LoginForm.Designer.cs" />
     <Compile Include="Ventas\MainVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventas\MainVentas.Designer.cs" />
+    <Compile Include="Ventas\PantallaAdminVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\PantallaAdminVentas.Designer.cs" />
+    <Compile Include="Ventas\PantallaUserVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\PantallaUserVentas.Designer.cs" />
     <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +137,6 @@
     </Compile>
     <Compile Include="VistasAlmacen\PantallaEliminarAlmacenes.Designer.cs">
       <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PantallaInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallaInicio.Designer.cs">
-      <DependentUpon>PantallaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="VistasAlmacen\PantallaIngresosSalidasProducto.cs">
       <SubType>Form</SubType>
@@ -212,10 +230,13 @@
     <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.Designer.cs">
       <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PantallaInicio.resx" />
     <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx" />
     <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx" />
     <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx" />
     <EmbeddedResource Include="Ventas\Form13BuscaProducto.resx" />
+    <EmbeddedResource Include="Ventas\Form14AnularVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form15BuscaPedido.resx" />
     <EmbeddedResource Include="Ventas\Form1RegVentas.resx" />
     <EmbeddedResource Include="Ventas\Form2AsignCliente.resx" />
     <EmbeddedResource Include="Ventas\Form3EmitirReporte.resx" />
@@ -225,12 +246,12 @@
     <EmbeddedResource Include="Ventas\Form7RevisarPedAlm.resx" />
     <EmbeddedResource Include="Ventas\Form8RegCliente.resx" />
     <EmbeddedResource Include="Ventas\Form9ModifCliente.resx" />
+    <EmbeddedResource Include="Ventas\LoginForm.resx" />
     <EmbeddedResource Include="Ventas\MainVentas.resx" />
+    <EmbeddedResource Include="Ventas\PantallaAdminVentas.resx" />
+    <EmbeddedResource Include="Ventas\PantallaUserVentas.resx" />
     <EmbeddedResource Include="VistasAlmacen\PantallaEliminarAlmacenes.resx">
       <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PantallaInicio.resx">
-      <DependentUpon>PantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaIngresosSalidasProducto.resx">
       <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>

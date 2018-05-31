@@ -98,7 +98,6 @@
             this.btn_asignar.TabIndex = 7;
             this.btn_asignar.Text = "Asignar Cliente";
             this.btn_asignar.UseVisualStyleBackColor = true;
-            this.btn_asignar.Click += new System.EventHandler(this.btn_asignar_Click);
             // 
             // btn_cancelar
             // 

@@ -31,6 +31,23 @@ namespace AccesoADatos
                 "port=3306;password=;SslMode=none;";
             */
         }
+
+        public bool verificarUsuario(string usuario, string contrasena)
+        {
+            bool valido = false;
+            try
+            {
+
+                valido = true;
+
+            }
+            catch (Exception e)
+            {
+
+            }
+            return valido;
+        }
+
         public bool verificarUsuario(string usuario, string contrasena, out BindingList<Almacen> _listaAlmacenes, out int _cantidadAlmacenes,out int _rol, out bool usuarioCorrecto)
         {
             bool conexionCorrecta = false;

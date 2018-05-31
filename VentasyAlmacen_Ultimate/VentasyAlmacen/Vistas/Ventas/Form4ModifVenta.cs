@@ -15,6 +15,7 @@ namespace Ventas
         public Form4ModifVenta()
         {
             InitializeComponent();
+            textBox1.Enabled = false;
         }
 
         private void btn_salir_Click(object sender, EventArgs e)

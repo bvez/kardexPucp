@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entidades;
 using MySql.Data.MySqlClient;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace AccesoADatos.Ventas
 {
@@ -16,20 +17,39 @@ namespace AccesoADatos.Ventas
 
         public BindingList<Venta> listarVentas()
         {
-            // variables que tienen datos
+            int id;
+            Cliente cliente;
+            String estado;
+            DateTime fechaRegistro;
+            BindingList<LineaProducto> productos = new BindingList<LineaProducto>();
+            double descuento;
+            string conceptodescuento;
 
             BindingList<Venta> lista = new BindingList<Venta>();
-            MySqlConnection con = new MySqlConnection(cadConn);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT * FROM ven_ventas";
-            cmd.Connection = con;
-            MySqlDataReader rdr = cmd.ExecuteReader();
-            while (rdr.Read())
+            try
             {
-                //lectura de datos
-                Venta ce = new Venta(/*datos*/);
-                lista.Add(ce);
+                MySqlConnection con = new MySqlConnection(cadConn);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = "listar_ventas";
+                cmd.Connection = con;
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    id = rdr.GetInt32("id");
+                    cliente = null;
+                    estado = rdr.GetString("estado");
+                    fechaRegistro = rdr.GetDateTime("fecha_registro");
+                    descuento = rdr.GetDouble("descuento");
+                    conceptodescuento = rdr.GetString("id_concepto_descuento");
+                    productos = null;
+                    Venta ce = new Venta(id, cliente, estado, fechaRegistro, productos, descuento, conceptodescuento);
+                    lista.Add(ce);
+                }
+                con.Close();
+            } catch (Exception e)
+            {
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
             }
             return lista;
         }
@@ -37,31 +57,63 @@ namespace AccesoADatos.Ventas
         public int insertarVenta(Venta obj)
         {
             int id = -1;
-            MySqlConnection con = new MySqlConnection(cadConn);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            
-            
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadConn);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = "_____________";
 
-            cmd.Connection = con;
-            cmd.ExecuteNonQuery();
-            con.Close();
+
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            } catch (Exception e){
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
+            }
             return id;
         }
-        public bool asignarCliente(int idVenta, int idCliente)
+
+        public void modificarEstado(string estado, int id)
         {
-            bool exito = true;
-            MySqlConnection con = new MySqlConnection(cadConn);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "ASIGNAR_CLIENTE";
-            cmd.Parameters.Add("_id_cliente", MySqlDbType.Int32).Value = idCliente;
-            cmd.Parameters.Add("_id_venta", MySqlDbType.Int32).Value = idVenta;
-            cmd.Connection = con;
-            cmd.ExecuteNonQuery();
-            con.Close();
-            return exito;
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadConn);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = "_____________";
+
+
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
+            }
         }
+
+        public void anularVenta(int id)
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadConn);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "anular_venta";
+                cmd.Parameters.Add("_id_venta", MySqlDbType.Int32).Value = id;
+
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
+            }
+        }
+
     }
 }

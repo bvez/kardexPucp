@@ -25,6 +25,7 @@ namespace Ventas
             InitializeComponent();
             logicaNegocios = new VentasVentaBL();
             dG_ModifVentas.AutoGenerateColumns = false;
+            dG_ModifVentas.AllowUserToAddRows = false;
             dG_ModifVentas.DataSource = logicaNegocios.listarVentas();
         }
 
@@ -36,7 +37,7 @@ namespace Ventas
 
         private void btn_conf_busc_Click(object sender, EventArgs e)
         {
-            if (dG_ModifVentas.SelectedCells.Count > 0)
+            if (dG_ModifVentas.SelectedCells.Count <= 0)
             {
                 MessageBox.Show("No se ha seleccionado una venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }

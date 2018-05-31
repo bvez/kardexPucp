@@ -14,6 +14,7 @@ namespace Ventas
 {
     public partial class Form8RegCliente : Form
     {
+        private int idCliente;
         private VentasClientesBL logicaNegocios;
         public Form8RegCliente()
         {
@@ -21,6 +22,8 @@ namespace Ventas
             logicaNegocios = new VentasClientesBL();
 
         }
+
+        public int IdCliente { get => idCliente; set => idCliente = value; }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
@@ -52,6 +55,7 @@ namespace Ventas
                 ClientePersona c = new ClientePersona(-1, nombres, DateTime.Today, direccion, telefono.ToString(), correo, dni.ToString(), apellidoP, apellidoM, sexo);
                 id = logicaNegocios.insertaCliente(c);
             }
+            idCliente = id;
             MessageBox.Show("Se registro el usuario exitosamente");
             DialogResult = DialogResult.OK;
             

@@ -11,7 +11,7 @@ namespace Entidades
     {
         private int id;
         private Cliente cliente;
-        private EstadoVenta estado;
+        private String estado;
         private DateTime fechaRegistro;
         private BindingList<LineaProducto> productos;
         private double descuento;
@@ -20,7 +20,7 @@ namespace Entidades
         public int Id { get => id; set => id = value; }
         public DateTime FechaRegistro { get => fechaRegistro; set => fechaRegistro = value; }
         public Cliente Cliente { get => cliente; set => cliente = value; }
-        public EstadoVenta Estado { get => estado; set => estado = value; }
+        public String Estado { get => estado; set => estado = value; }
         public double Descuento { get => descuento; set => descuento = value; }
         public string Conceptodescuento { get => conceptodescuento; set => conceptodescuento = value; }
         public BindingList<LineaProducto> Productos { get => productos; set => productos = value; }
@@ -40,7 +40,7 @@ namespace Entidades
         {
         }
 
-        public Venta(int id, Cliente cliente, EstadoVenta estado, DateTime fechaRegistro, BindingList<LineaProducto> productos, double descuento, string conceptodescuento)
+        public Venta(int id, Cliente cliente, String estado, DateTime fechaRegistro, BindingList<LineaProducto> productos, double descuento, string conceptodescuento)
         {
             this.id = id;
             this.cliente = cliente;

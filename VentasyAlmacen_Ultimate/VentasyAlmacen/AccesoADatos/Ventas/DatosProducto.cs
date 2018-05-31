@@ -26,7 +26,7 @@ namespace AccesoADatos.Ventas
             MySqlConnection con = new MySqlConnection(cadConn);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT * FROM prod_productos";
+            cmd.CommandText = "listar_productos_habilitados";
             cmd.Connection = con;
             MySqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -35,8 +35,8 @@ namespace AccesoADatos.Ventas
                 codigoProducto = rdr.GetInt32("ID_PRODUCTO").ToString();
                 habilitado = (rdr.GetInt32("ACTIVO") != 0);
                 descripcion = rdr.GetString("DESCRIPCION");
-                nombre = rdr.GetString("DESCRIPCION");
-                precio = 15.0d;
+                nombre = rdr.GetString("NOMBRE");
+                precio = rdr.GetDouble("PRECIO_VENTA");
                 Producto p = new Producto(nombre, id, codigoProducto, habilitado, descripcion, precio);
                 lista.Add(p);
             }

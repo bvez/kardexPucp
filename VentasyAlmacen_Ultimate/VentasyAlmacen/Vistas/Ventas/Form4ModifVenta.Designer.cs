@@ -41,16 +41,14 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_Prods = new System.Windows.Forms.Label();
             this.label_Cliente = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_buscaCl = new System.Windows.Forms.Button();
             this.label_precio = new System.Windows.Forms.Label();
             this.label_precio_final = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label_cpto_dcto = new System.Windows.Forms.Label();
             this.label_dcto = new System.Windows.Forms.Label();
-            this.label_old_price = new System.Windows.Forms.Label();
             this.btn_reg_camb = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dG_ModifVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_Productos)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +64,7 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(363, 593);
+            this.btn_salir.Location = new System.Drawing.Point(368, 576);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(75, 23);
             this.btn_salir.TabIndex = 1;
@@ -164,31 +162,14 @@
             this.label_Cliente.AutoSize = true;
             this.label_Cliente.Location = new System.Drawing.Point(12, 232);
             this.label_Cliente.Name = "label_Cliente";
-            this.label_Cliente.Size = new System.Drawing.Size(122, 17);
+            this.label_Cliente.Size = new System.Drawing.Size(55, 17);
             this.label_Cliente.TabIndex = 5;
-            this.label_Cliente.Text = "Código del Cliente";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(140, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
-            // 
-            // btn_buscaCl
-            // 
-            this.btn_buscaCl.Location = new System.Drawing.Point(246, 225);
-            this.btn_buscaCl.Name = "btn_buscaCl";
-            this.btn_buscaCl.Size = new System.Drawing.Size(75, 30);
-            this.btn_buscaCl.TabIndex = 13;
-            this.btn_buscaCl.Text = "Buscar...";
-            this.btn_buscaCl.UseVisualStyleBackColor = true;
-            this.btn_buscaCl.Click += new System.EventHandler(this.btn_buscaCl_Click);
+            this.label_Cliente.Text = "Cliente:";
             // 
             // label_precio
             // 
             this.label_precio.AutoSize = true;
-            this.label_precio.Location = new System.Drawing.Point(10, 473);
+            this.label_precio.Location = new System.Drawing.Point(9, 441);
             this.label_precio.Name = "label_precio";
             this.label_precio.Size = new System.Drawing.Size(120, 17);
             this.label_precio.TabIndex = 14;
@@ -197,7 +178,7 @@
             // label_precio_final
             // 
             this.label_precio_final.AutoSize = true;
-            this.label_precio_final.Location = new System.Drawing.Point(9, 557);
+            this.label_precio_final.Location = new System.Drawing.Point(9, 528);
             this.label_precio_final.Name = "label_precio_final";
             this.label_precio_final.Size = new System.Drawing.Size(118, 17);
             this.label_precio_final.TabIndex = 19;
@@ -205,14 +186,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 526);
+            this.textBox2.Location = new System.Drawing.Point(185, 497);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(253, 22);
             this.textBox2.TabIndex = 18;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(185, 498);
+            this.maskedTextBox1.Location = new System.Drawing.Point(185, 467);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(86, 22);
             this.maskedTextBox1.TabIndex = 17;
@@ -220,7 +201,7 @@
             // label_cpto_dcto
             // 
             this.label_cpto_dcto.AutoSize = true;
-            this.label_cpto_dcto.Location = new System.Drawing.Point(9, 529);
+            this.label_cpto_dcto.Location = new System.Drawing.Point(9, 497);
             this.label_cpto_dcto.Name = "label_cpto_dcto";
             this.label_cpto_dcto.Size = new System.Drawing.Size(140, 17);
             this.label_cpto_dcto.TabIndex = 16;
@@ -229,24 +210,15 @@
             // label_dcto
             // 
             this.label_dcto.AutoSize = true;
-            this.label_dcto.Location = new System.Drawing.Point(9, 501);
+            this.label_dcto.Location = new System.Drawing.Point(9, 467);
             this.label_dcto.Name = "label_dcto";
             this.label_dcto.Size = new System.Drawing.Size(164, 17);
             this.label_dcto.TabIndex = 15;
             this.label_dcto.Text = "Descuento (del 0 al 100)";
             // 
-            // label_old_price
-            // 
-            this.label_old_price.AutoSize = true;
-            this.label_old_price.Location = new System.Drawing.Point(12, 432);
-            this.label_old_price.Name = "label_old_price";
-            this.label_old_price.Size = new System.Drawing.Size(118, 17);
-            this.label_old_price.TabIndex = 20;
-            this.label_old_price.Text = "Precio Final: 0.00";
-            // 
             // btn_reg_camb
             // 
-            this.btn_reg_camb.Location = new System.Drawing.Point(164, 582);
+            this.btn_reg_camb.Location = new System.Drawing.Point(12, 554);
             this.btn_reg_camb.Name = "btn_reg_camb";
             this.btn_reg_camb.Size = new System.Drawing.Size(125, 45);
             this.btn_reg_camb.TabIndex = 21;
@@ -254,21 +226,26 @@
             this.btn_reg_camb.UseVisualStyleBackColor = true;
             this.btn_reg_camb.Click += new System.EventHandler(this.btn_reg_camb_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(73, 229);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(370, 22);
+            this.textBox1.TabIndex = 22;
+            // 
             // Form4ModifVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 637);
+            this.ClientSize = new System.Drawing.Size(462, 611);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_reg_camb);
-            this.Controls.Add(this.label_old_price);
             this.Controls.Add(this.label_precio_final);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label_cpto_dcto);
             this.Controls.Add(this.label_dcto);
             this.Controls.Add(this.label_precio);
-            this.Controls.Add(this.btn_buscaCl);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label_Cliente);
             this.Controls.Add(this.label_Prods);
             this.Controls.Add(this.dg_Productos);
@@ -297,15 +274,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.Label label_Prods;
         private System.Windows.Forms.Label label_Cliente;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_buscaCl;
         private System.Windows.Forms.Label label_precio;
         private System.Windows.Forms.Label label_precio_final;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label_cpto_dcto;
         private System.Windows.Forms.Label label_dcto;
-        private System.Windows.Forms.Label label_old_price;
         private System.Windows.Forms.Button btn_reg_camb;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

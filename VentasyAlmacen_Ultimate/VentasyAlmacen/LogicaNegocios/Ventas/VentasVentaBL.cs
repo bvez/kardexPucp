@@ -28,9 +28,14 @@ namespace LogicaNegocios.Ventas
             return accesoDatos.insertarVenta(obj);
         }
 
-        public bool asignarCliente (int idVenta, int idCliente)
+        public void modificarEstado (string estado, int id)
         {
-            return accesoDatos.asignarCliente(idVenta, idCliente);
+            accesoDatos.modificarEstado(estado, id);
+        }
+
+        public void anularVenta (int id)
+        {
+            accesoDatos.anularVenta(id);
         }
 
     }

@@ -25,6 +25,7 @@ namespace Ventas
             dg_Productos.AllowUserToAddRows = false;
             dg_Productos.DataSource = listaProductos;
             logicaNegocio = new VentasVentaBL();
+            textBox2.Enabled = false;
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace Ventas
         {
             
             Cliente cliente = buscaVentana.ObjetoSeleccionado;
-            EstadoVenta estadoventa = EstadoVenta.Registrado;
+            string estadoventa = "Registrado";
             DateTime fecharegistro = DateTime.Today;
             BindingList<LineaProducto> productosinsertar = listaProductos;
             double descuento = ((double)numericUpDown1.Value) / 100;
@@ -123,6 +124,16 @@ namespace Ventas
             label_precio.Text = "Precio Total" + sum.ToString();
             double newprecio = sum * (1-((double)numericUpDown1.Value / 100));
             label_precio_final.Text = "Precio Final: " + newprecio.ToString();
+        }
+
+        private void btn_regCliente_Click(object sender, EventArgs e)
+        {
+            Form8RegCliente regCliente = new Form8RegCliente();
+            regCliente.Owner = this;
+            if (regCliente.ShowDialog() == DialogResult.OK)
+            {
+                textBox2.Text = regCliente.IdCliente.ToString();
+            }
         }
     }
 }

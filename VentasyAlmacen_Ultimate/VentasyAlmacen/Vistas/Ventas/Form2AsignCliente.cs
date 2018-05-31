@@ -50,16 +50,5 @@ namespace Ventas
                 mTB_IDCliente.Text = cliente.Id.ToString();
             }
         }
-
-        private void btn_asignar_Click(object sender, EventArgs e)
-        {
-            bool exito = logicaNegocios.asignarCliente(Int32.Parse(mTB_IDVenta.Text),Int32.Parse(mTB_IDCliente.Text));
-            if (exito)
-            {
-                MessageBox.Show("El cliente ha sido asignado con éxito a la venta", "Asignar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                this.DialogResult = DialogResult.OK;
-            }
-            else MessageBox.Show("No se ha podido asignar el cliente a la venta", "Asignar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-        }
     }
 }

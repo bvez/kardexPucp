@@ -20,7 +20,7 @@ namespace FormulariosAlmacenes
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            MainVentas pant = new MainVentas();
+            LoginForm pant = new LoginForm();
             pant.Owner = this;
             this.Visible = false;
             pant.ShowDialog();

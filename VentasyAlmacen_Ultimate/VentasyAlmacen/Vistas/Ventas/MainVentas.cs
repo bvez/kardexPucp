@@ -15,6 +15,7 @@ namespace Ventas
         public MainVentas()
         {
             InitializeComponent();
+            this.btn_AsignarCliente.Enabled = false;
         }
 
         private void MainVentas_Load(object sender, EventArgs e) { }

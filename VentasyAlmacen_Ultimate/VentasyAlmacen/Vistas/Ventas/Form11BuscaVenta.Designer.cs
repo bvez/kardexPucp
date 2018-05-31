@@ -32,6 +32,9 @@
             this.dG_ModifVentas = new System.Windows.Forms.DataGridView();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_conf_busc = new System.Windows.Forms.Button();
+            this.ID_Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dG_ModifVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +50,10 @@
             // dG_ModifVentas
             // 
             this.dG_ModifVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dG_ModifVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Venta,
+            this.Fecha,
+            this.Estado});
             this.dG_ModifVentas.Location = new System.Drawing.Point(12, 29);
             this.dG_ModifVentas.Name = "dG_ModifVentas";
             this.dG_ModifVentas.RowTemplate.Height = 24;
@@ -73,6 +80,27 @@
             this.btn_conf_busc.UseVisualStyleBackColor = true;
             this.btn_conf_busc.Click += new System.EventHandler(this.btn_conf_busc_Click);
             // 
+            // ID_Venta
+            // 
+            this.ID_Venta.DataPropertyName = "id";
+            this.ID_Venta.HeaderText = "ID Venta";
+            this.ID_Venta.Name = "ID_Venta";
+            this.ID_Venta.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "fechaRegistro";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // Form11BuscaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -97,5 +125,8 @@
         private System.Windows.Forms.DataGridView dG_ModifVentas;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button btn_conf_busc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Venta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }
