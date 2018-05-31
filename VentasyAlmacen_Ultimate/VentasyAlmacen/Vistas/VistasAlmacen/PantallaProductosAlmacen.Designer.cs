@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaProductosAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numStockMax = new System.Windows.Forms.NumericUpDown();
@@ -42,14 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tablaProductosAlmacen = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).BeginInit();
@@ -67,6 +66,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(579, 421);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(477, 367);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 41);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Atrás";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // label2
             // 
@@ -190,6 +203,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
+            // button1
+            // 
+            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_search_tiny;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(333, 132);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 41);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Buscar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tablaProductosAlmacen
             // 
             this.tablaProductosAlmacen.AllowUserToAddRows = false;
@@ -198,7 +224,6 @@
             this.tablaProductosAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaProductosAlmacen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
-            this.CodigoProducto,
             this.Column1,
             this.Descripcion,
             this.Column3});
@@ -225,14 +250,6 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 41;
             // 
-            // CodigoProducto
-            // 
-            this.CodigoProducto.DataPropertyName = "CodigoProducto";
-            this.CodigoProducto.HeaderText = "Codigo";
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.ReadOnly = true;
-            this.CodigoProducto.Width = 65;
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "Nombre";
@@ -256,33 +273,6 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 60;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(477, 367);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 41);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Atrás";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
-            // 
-            // button1
-            // 
-            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_search_tiny;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(333, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Buscar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PantallaProductosAlmacen
             // 
@@ -324,11 +314,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numStockMin;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Button button2;
     }
 }

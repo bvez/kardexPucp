@@ -40,22 +40,44 @@ namespace FormulariosAlmacenes
             if (textBoxUsuario.Text != "" && textBoxPassword.Text != "")
             {
                 AlmacenUsuariosBL usuarios = new AlmacenUsuariosBL();
-                if (usuarios.verificarUsuario(textBoxUsuario.Text, textBoxPassword.Text))
+                BindingList<Almacen> almacenesSalida;
+                int cantAlmacenesSalida;
+                int rolSalida;
+                bool usuarioCorrectoSalida;
+
+                if (usuarios.verificarUsuario(textBoxUsuario.Text, textBoxPassword.Text,out almacenesSalida,out cantAlmacenesSalida,out rolSalida,out usuarioCorrectoSalida))
                 {
-                    //se esta pensando en hacer que el verificarUsuario devuelva un objeto Usuario que indique si es admin o no
-                    if (textBoxUsuario.Text == "admin")
+                    //se comprueba el usuario y contraseña
+                    if (usuarioCorrectoSalida)
                     {
-                        pantallaAdmin();
+                        //se esta pensando en hacer que el verificarUsuario devuelva un objeto Usuario que indique si es admin o no
+                        if (rolSalida == 2)
+                        {
+                            pantallaAdmin();
+                        }
+                        else if (rolSalida == 5 && cantAlmacenesSalida>1)
+                        {
+                            pantallaUsuario(almacenesSalida);
+                        }
+                        else if (rolSalida == 5 && cantAlmacenesSalida == 1)
+                        {
+                            pantallaUsuario(almacenesSalida.ElementAt(0).IdAlmacen);
+                        }
                     }
                     else
                     {
-                        pantallaUsuario();
+                        MessageBox.Show("El usuario y/o la contraseña no son válidos.", "Error");
                     }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Error en la conexión","Error");
                 }
             }
             else
             {
-                MessageBox.Show("Debe ingresar un usuario y contraseña válidos");
+                MessageBox.Show("Debe ingresar un usuario y contraseña");
             }
         }
 
@@ -77,10 +99,22 @@ namespace FormulariosAlmacenes
             formAdmin.ShowDialog();
         }
 
-        private void pantallaUsuario()
+        private void pantallaUsuario(int idAlmacen)
         {
-            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(textBoxUsuario.Text);
-            //formUsuario.setAlmacen(textBoxUsuario.Text);
+            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(textBoxUsuario.Text,idAlmacen);
+
+            formUsuario.Owner = this;
+            this.Visible = false;
+            formUsuario.ShowDialog();
+        }
+
+        private void pantallaUsuario(BindingList<Almacen> listaAlmacenes)
+        {
+            //el usuario deberá seleccionar entre varios almacenes en los que está registrado
+            PantallaSeleccionarAlmacen formSelectAlmacen = new PantallaSeleccionarAlmacen(listaAlmacenes);
+            formSelectAlmacen.ShowDialog();
+
+            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(textBoxUsuario.Text,formSelectAlmacen.AlmacenSeleccionado.IdAlmacen);
 
             formUsuario.Owner = this;
             this.Visible = false;

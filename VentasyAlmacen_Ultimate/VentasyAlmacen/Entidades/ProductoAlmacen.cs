@@ -27,6 +27,11 @@ namespace Entidades
         {
             get { return productoAlmacenado.CodigoProducto; }
         }
+
+        public double Precio
+        {
+            get { return productoAlmacenado.Precio; }
+        }
     }
 
 }

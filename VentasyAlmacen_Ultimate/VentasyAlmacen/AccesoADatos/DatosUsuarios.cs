@@ -19,14 +19,27 @@ namespace AccesoADatos
         private string cadenaConexion;
         public DatosUsuarios()
         {
+            
             cadenaConexion = "server=quilla.lab.inf.pucp.edu.pe;" +
                 "user=inf282g2;database=inf282g2;" +
                 "port=3306;password=X7X2HA;SslMode=none;";
+            
+            
+            /*
+            cadenaConexion = "server=127.0.0.1;" +
+                "user=root;database=inf282g2;" +
+                "port=3306;password=;SslMode=none;";
+            */
         }
-        public bool verificarUsuario(string usuario,string contrasena)
+        public bool verificarUsuario(string usuario, string contrasena, out BindingList<Almacen> _listaAlmacenes, out int _cantidadAlmacenes,out int _rol, out bool usuarioCorrecto)
         {
-            bool valido = false;
-            BindingList<Almacen> listaAlmacenes = new BindingList<Almacen>();
+            bool conexionCorrecta = false;
+            int cantidadAlmacenes = -1;
+            int rol = -1;
+            int ingresoCorrecto=0;
+
+            BindingList<Almacen> listaAlmacenes = null;
+
             try
             {
                 MySqlConnection con = new MySqlConnection(this.cadenaConexion);
@@ -44,13 +57,15 @@ namespace AccesoADatos
 
                 comando.ExecuteNonQuery();
 
-                int ingresoCorrecto = (Int32)comando.Parameters["_ingresoCorrecto"].Value;
-                int rol = (Int32)comando.Parameters["_rol"].Value;
-                int cantidadAlmacenes = (Int32)comando.Parameters["_cantidadAlmacenes"].Value;
+                ingresoCorrecto = (Int32)comando.Parameters["_ingresoCorrecto"].Value;
+                rol = (Int32)comando.Parameters["_rol"].Value;
+                cantidadAlmacenes = (Int32)comando.Parameters["_cantidadAlmacenes"].Value;
 
+                //si se trata de un usuario comun(5)
                 if(rol == 5 && cantidadAlmacenes>0)
                 {
                     MySqlDataReader reader = comando.ExecuteReader();
+                    listaAlmacenes = new BindingList<Almacen>();
                     while (reader.Read())
                     {
                         int idAlmacen = reader.GetInt32("idAlmacen");//
@@ -64,19 +79,25 @@ namespace AccesoADatos
 
                         listaAlmacenes.Add(almacen);
                     }
-
-                }
-               
+                }               
 
                 con.Close();
-                valido = true;
+                conexionCorrecta = true;
                 
             }
             catch(Exception e)
             {
 
             }
-            return valido;
+            _cantidadAlmacenes = cantidadAlmacenes;
+            _listaAlmacenes = listaAlmacenes;
+            _rol = rol;
+            if (ingresoCorrecto>0)
+                usuarioCorrecto = true;
+            else
+                usuarioCorrecto = false;
+
+            return conexionCorrecta;
         }
     }
 }

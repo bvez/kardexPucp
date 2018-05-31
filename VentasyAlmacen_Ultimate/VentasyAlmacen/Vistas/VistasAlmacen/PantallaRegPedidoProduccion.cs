@@ -15,16 +15,21 @@ namespace FormulariosAlmacenes
     public partial class PantallaRegPedidoProduccion : Form
     {
         AlmacenProductosBL productosBL;
+        AlmacenesBL almacenBL;
+        int idAlmacen;
         //atributo del objeto Usuario
 
         public PantallaRegPedidoProduccion()
         {
             productosBL = new AlmacenProductosBL();
+            almacenBL = new AlmacenesBL();
             InitializeComponent();
         }
         public PantallaRegPedidoProduccion(int idAlmacen)
         {
             productosBL = new AlmacenProductosBL();
+            almacenBL = new AlmacenesBL();
+            this.idAlmacen = idAlmacen;
             InitializeComponent();
 
             dataGridStock.AutoGenerateColumns = false;
@@ -37,10 +42,15 @@ namespace FormulariosAlmacenes
             
             if (resultado == DialogResult.Yes)
             {
-                //productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(NumBoxStock.Value.ToString());
+                ProductoAlmacen productoAlmacenSeleccionado = (ProductoAlmacen) dataGridStock.CurrentRow.DataBoundItem;
+                int cantidad = (int)numericUpDown1.Value;
+                int idPedido = almacenBL.registrarPedidoProduccion(idAlmacen,productoAlmacenSeleccionado.Id,cantidad);
                 dataGridStock.Update();
                 dataGridStock.Refresh();
-                MessageBox.Show("Se registró el pedido correctamente","Éxito");
+                if(idPedido>0)
+                    MessageBox.Show("Se registró el pedido correctamente","Éxito");
+                else
+                    MessageBox.Show("Ocurrió un error al registrar el pedido, inténtelo nuevamente", "Error");
             }
         }
 

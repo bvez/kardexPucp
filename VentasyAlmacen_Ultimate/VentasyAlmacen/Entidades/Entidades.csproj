@@ -41,12 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Almacen.cs" />
+    <Compile Include="Area.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteEmpresa.cs" />
     <Compile Include="ClientePersona.cs" />
     <Compile Include="DetalleProduccion.cs" />
     <Compile Include="EstadoVenta.cs" />
-    <Compile Include="IngresoProducto.cs" />
     <Compile Include="LineaIngresoSalidaProducto.cs" />
     <Compile Include="LineaProducto.cs" />
     <Compile Include="Pedido.cs" />

@@ -21,12 +21,12 @@ namespace FormulariosAlmacenes
         {
             InitializeComponent();
         }
-        public PantallaUsuarioAlmacen(string nombre)
+        public PantallaUsuarioAlmacen(string nombreUsuario,int idAlmacen)
         {
             InitializeComponent();
             //al loguarse, se debe hacer una asociacion con el almacén
-            labelBienvenidaUsuario.Text = "Bienvenido " + nombre;
-            codAlmacen = Int32.Parse(nombre);
+            labelBienvenidaUsuario.Text = "Bienvenido " + nombreUsuario;
+            codAlmacen = idAlmacen;
         }
 
         public void setAlmacen(string codigo)
@@ -55,7 +55,7 @@ namespace FormulariosAlmacenes
 
         private void buttonRegPedidos_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaRegPedidoProduccion newPant = new PantallaRegPedidoProduccion();
+            PantallaRegPedidoProduccion newPant = new PantallaRegPedidoProduccion(codAlmacen);
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();

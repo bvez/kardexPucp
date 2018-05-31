@@ -26,6 +26,8 @@ namespace FormulariosAlmacenes
         public PantallaSeleccionarAlmacen(BindingList<Almacen> listaAlmacenesIn)
         {
             InitializeComponent();
+            label1.Text = "Antes de continuar, seleccione un almacén:";
+            DataGridSelectAlmacen.AutoGenerateColumns = false;
             DataGridSelectAlmacen.DataSource = listaAlmacenesIn;
         }
 

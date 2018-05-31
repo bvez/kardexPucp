@@ -35,13 +35,13 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
             dataGridIngresoSalida.AutoGenerateColumns = false;
             dataGridIngresoSalida.DataSource = listaProductos;
-
-            comboBoxLocalSalida.DataSource = logicaAlmacenes.obtenerLocales();
+            
 
             Almacen almacenActual = logicaAlmacenes.obtenerAlmacen(idAlmacen);
 
             comboBoxEnvios.DataSource = logicaAlmacenes.obtenerEnviosPendientesAlmacen(idAlmacen);
-            comboBoxLocales.DataSource = logicaAlmacenes.obtenerLocales();
+            comboBoxAreas.DataSource = logicaAlmacenes.obtenerAreas();
+            comboBoxAreas2.DataSource = logicaAlmacenes.obtenerAreas();
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
@@ -82,7 +82,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
                     foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
                     {
                         int cantidadPedido;
-                        if (row.Cells["Cantidad"].Value==null || !Int32.TryParse(row.Cells["Cantidad"].Value.ToString(), out cantidadPedido))
+                        ProductoAlmacen actual = (ProductoAlmacen)row.DataBoundItem;
+                        if (row.Cells["Cantidad"].Value==null || !Int32.TryParse(row.Cells["Cantidad"].Value.ToString(), out cantidadPedido) || cantidadPedido>actual.CantidadAlmacenada)
                         {
                             MessageBox.Show("Ha insertado incorrectamente una cantidad", "Error");
                             dataGridIngresoSalida.CurrentCell = row.Cells["Cantidad"];
@@ -94,11 +95,12 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
                     //registrar pedido ingreso o salida
                     
-                    if (radioBtnIngreso.Checked)
+                    if (valido && radioBtnIngreso.Checked)
                     {
                         Sucursal localSeleccionado = (Sucursal)comboBoxLocales.SelectedItem;
-                        int idIngreso = logicaAlmacenes.registrarIngresoProductos(this.idAlmacen, localSeleccionado.IdLocal, textBoxObservaciones.Text);
-                        if (idIngreso > 0 && valido)
+                        int idAreaSeleccionada = ((Area)comboBoxAreas.SelectedItem).IdArea;
+                        int idIngreso = logicaAlmacenes.registrarIngresoProductos(this.idAlmacen, idAreaSeleccionada,localSeleccionado.IdLocal, textBoxObservaciones.Text);
+                        if (idIngreso > 0)
                         {
                             //registrar todas las lineas
                             int idLinea = 0;
@@ -127,11 +129,12 @@ namespace FormulariosAlmacenes.VistasAlmacen
                             }
                         }
                     }
-                    else if (radioBtnSalida.Checked)
+                    else if (valido && radioBtnSalida.Checked)
                     {
                         Sucursal localSeleccionado = (Sucursal)comboBoxLocalSalida.SelectedItem;
-                        int idSalida = logicaAlmacenes.registrarSalidaProductos(this.idAlmacen,localSeleccionado.IdLocal,textBoxObservaciones.Text);
-                        if(idSalida > 0 && valido)
+                        int idAreaSeleccionada = ((Area)comboBoxAreas2.SelectedItem).IdArea;
+                        int idSalida = logicaAlmacenes.registrarSalidaProductos(this.idAlmacen, idAreaSeleccionada,localSeleccionado.IdLocal,textBoxObservaciones.Text);
+                        if(idSalida > 0)
                         {
                             //registrar todas las lineas
                             int idLinea = 0;
@@ -160,14 +163,14 @@ namespace FormulariosAlmacenes.VistasAlmacen
                             }
                         }
                     }
-                    if (resultado)
+                    if (valido && resultado)
                     {
                         MessageBox.Show("Transaccion Exitosa", "Exito");
                         this.dataGridIngresoSalida.DataSource = null;
                         dataGridIngresoSalida.Refresh();
                         dataGridIngresoSalida.Update();
                     }
-                    else
+                    else if(valido && !resultado)
                     {
                         MessageBox.Show("Hubo un error al registrar el ingreso/salida. Reinténtelo en un momento.", "Error");
                     }
@@ -185,6 +188,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
             if (radioBtnIngreso.Checked) {
                 labelAlmacen.Visible = false;
                 comboBoxLocalSalida.Visible = false;
+                comboBoxAreas2.Visible = false;
 
                 groupBox3.Visible = true;
                 label1.Text = "Observaciones en el ingreso:";
@@ -198,6 +202,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 groupBox3.Visible = false;
 
+                groupBox1.Enabled = true;
+                comboBoxAreas2.Visible = true;
                 labelAlmacen.Visible = true;
                 comboBoxLocalSalida.Visible = true;
                 label1.Text = "Observaciones en la salida:";
@@ -254,13 +260,14 @@ namespace FormulariosAlmacenes.VistasAlmacen
             if (radioBtnEnvios.Checked)
             {
                 comboBoxLocales.Enabled = false;
+                comboBoxAreas.Enabled = false;
                 comboBoxEnvios.Enabled = true;
                 
 
                 if(comboBoxEnvios.SelectedItem != null)
                 {
-                    SalidaProducto salida = (SalidaProducto)comboBoxEnvios.SelectedItem;
-                    dataGridIngresoSalida.DataSource = logicaAlmacenes.obtenerProductosSalida(salida.IdSalidaProducto);
+                    IngresoSalidaProducto salida = (IngresoSalidaProducto)comboBoxEnvios.SelectedItem;
+                    dataGridIngresoSalida.DataSource = logicaAlmacenes.obtenerProductosSalida(salida.IdIngresoSalidaProducto);
                     dataGridIngresoSalida.Refresh();
                     dataGridIngresoSalida.Update();
                 }
@@ -277,18 +284,30 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 comboBoxEnvios.Enabled = false;
                 comboBoxLocales.Enabled = true;
+                comboBoxAreas.Enabled = true;
                 dataGridIngresoSalida.Enabled = true;
             }
+            desbloquearTabla();
         }
 
         private void bloquearTabla()
         {
-            dataGridIngresoSalida.Enabled = false;
+            groupBox1.Enabled = false;
         }
 
         private void desbloquearTabla()
         {
-            dataGridIngresoSalida.Enabled = true;
+            groupBox1.Enabled = true;
+        }
+
+        private void comboBoxAreas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //comboBoxLocales.DataSource = ;
+        }
+
+        private void comboBoxAreas2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //comboBoxLocalSalida.DataSource = ;
         }
     }
 }

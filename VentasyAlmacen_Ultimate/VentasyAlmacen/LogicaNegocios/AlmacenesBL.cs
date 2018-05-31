@@ -33,12 +33,12 @@ namespace LogicaNegocios
             return datosAlm.obtenerAlmacenesHabilitados();
         }
 
-        public BindingList<Sucursal> obtenerLocales()
+        public BindingList<Area> obtenerAreas()
         {
-            return datosAlm.listarLocales();
+            return datosAlm.listarAreas();
         }
 
-        public BindingList<SalidaProducto> obtenerEnviosPendientesAlmacen(int idLocalAlmacen)
+        public BindingList<IngresoSalidaProducto> obtenerEnviosPendientesAlmacen(int idLocalAlmacen)
         {
             return datosAlm.listarEnviosPendientesAlmacen(idLocalAlmacen);
         }
@@ -53,9 +53,9 @@ namespace LogicaNegocios
             return datosAlm.listarProductosIngreso(idIngresoProductos);
         }
 
-        public int registrarSalidaProductos(int idAlmacen, int idLocalDestino, string observaciones)
+        public int registrarSalidaProductos(int idAlmacen, int idAreaDestino, int idSedeDestino, string observaciones)
         {
-            return datosAlm.insertarSalidaProductos(idAlmacen, idLocalDestino, observaciones);
+            return datosAlm.insertarSalidaProductos(idAlmacen, idAreaDestino, idSedeDestino, observaciones);
         }
 
         public int registrarLineaSalidaProductos(int idSalidaProductos, int idProducto, int cantidad, string observaciones)
@@ -63,14 +63,18 @@ namespace LogicaNegocios
             return datosAlm.insertarLineaSalidaProductos(idSalidaProductos, idProducto, cantidad, observaciones);
         }
 
-        public int registrarIngresoProductos(int idAlmacen, int idLocalEmisor, string observaciones)
+        public int registrarIngresoProductos(int idAlmacen, int idAreaOrigen,int idSedeOrigen, string observaciones)
         {
-            return datosAlm.insertarIngresoProductos(idAlmacen, idLocalEmisor, observaciones);
+            return datosAlm.insertarIngresoProductos(idAlmacen, idAreaOrigen, idSedeOrigen, observaciones);
         }
 
         public int registrarLineaIngresoProductos(int idIngresoProductos, int idProducto, int cantidad, string observaciones)
         {
             return datosAlm.insertarLineaIngresoProductos(idIngresoProductos, idProducto, cantidad, observaciones);
+        }
+        public int registrarPedidoProduccion(int idAlmacen,int idProducto,int cantidad)
+        {
+            return datosAlm.insertarPedidoProduccion(idAlmacen,idProducto, cantidad);
         }
     }
 }
