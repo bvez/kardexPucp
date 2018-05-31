@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3072F23-5736-47B5-824B-F63ACBC6B323}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormulariosAlmacenes</RootNamespace>
+    <AssemblyName>FormulariosAlmacenes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ventas\Form10EmitirReporteCl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form10EmitirReporteCl.Designer.cs" />
+    <Compile Include="Ventas\Form11BuscaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form11BuscaVenta.Designer.cs" />
+    <Compile Include="Ventas\Form12BuscaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form12BuscaCliente.Designer.cs" />
+    <Compile Include="Ventas\Form13BuscaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form13BuscaProducto.Designer.cs" />
+    <Compile Include="Ventas\Form14AnularVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form14AnularVenta.Designer.cs" />
+    <Compile Include="Ventas\Form15BuscaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form15BuscaPedido.Designer.cs" />
+    <Compile Include="Ventas\Form1RegVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form1RegVentas.Designer.cs" />
+    <Compile Include="Ventas\Form2AsignCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form2AsignCliente.Designer.cs" />
+    <Compile Include="Ventas\Form3EmitirReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form3EmitirReporte.Designer.cs" />
+    <Compile Include="Ventas\Form4ModifVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form4ModifVenta.Designer.cs" />
+    <Compile Include="Ventas\Form5RevisarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form5RevisarVenta.Designer.cs" />
+    <Compile Include="Ventas\Form6EmitirPedAlm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form6EmitirPedAlm.Designer.cs" />
+    <Compile Include="Ventas\Form7RevisarPedAlm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form7RevisarPedAlm.Designer.cs" />
+    <Compile Include="Ventas\Form8RegCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form8RegCliente.Designer.cs" />
+    <Compile Include="Ventas\Form9ModifCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form9ModifCliente.Designer.cs" />
+    <Compile Include="Ventas\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\LoginForm.Designer.cs" />
+    <Compile Include="Ventas\MainVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\MainVentas.Designer.cs" />
+    <Compile Include="Ventas\PantallaAdminVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\PantallaAdminVentas.Designer.cs" />
+    <Compile Include="Ventas\PantallaUserVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\PantallaUserVentas.Designer.cs" />
+    <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.Designer.cs">
+      <DependentUpon>PantallaSeleccionarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaEliminarAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaEliminarAlmacenes.Designer.cs">
+      <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaInicio.Designer.cs">
+      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaIngresosSalidasProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaIngresosSalidasProducto.Designer.cs">
+      <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.Designer.cs">
+      <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaModificarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaModificarStock.Designer.cs">
+      <DependentUpon>PantallaModificarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaActualizarAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaActualizarAlmacenes.Designer.cs">
+      <DependentUpon>PantallaActualizarAlmacenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaRegIngresosProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaRegIngresosProducto.Designer.cs">
+      <DependentUpon>PantallaRegIngresosProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaRegPedidoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaRegPedidoProduccion.Designer.cs">
+      <DependentUpon>PantallaRegPedidoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaRegSalidaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaRegSalidaProducto.Designer.cs">
+      <DependentUpon>PantallaRegSalidaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaReporteFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaReporteFechas.Designer.cs">
+      <DependentUpon>PantallaReporteFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaSeleccionarAlmacen.Designer.cs">
+      <DependentUpon>PantallaSeleccionarAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaAnadirProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaAnadirProducto.Designer.cs">
+      <DependentUpon>PantallaAnadirProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaProductosAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaProductosAlmacen.Designer.cs">
+      <DependentUpon>PantallaProductosAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaAdministradorAlmacén.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaAdministradorAlmacén.Designer.cs">
+      <DependentUpon>PantallaAdministradorAlmacén.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\FormularioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\FormularioPrincipal.Designer.cs">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaUsuarioAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaUsuarioAlmacen.Designer.cs">
+      <DependentUpon>PantallaUsuarioAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.Designer.cs">
+      <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx" />
+    <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx" />
+    <EmbeddedResource Include="Ventas\Form13BuscaProducto.resx" />
+    <EmbeddedResource Include="Ventas\Form14AnularVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form15BuscaPedido.resx" />
+    <EmbeddedResource Include="Ventas\Form1RegVentas.resx" />
+    <EmbeddedResource Include="Ventas\Form2AsignCliente.resx" />
+    <EmbeddedResource Include="Ventas\Form3EmitirReporte.resx" />
+    <EmbeddedResource Include="Ventas\Form4ModifVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form5RevisarVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form6EmitirPedAlm.resx" />
+    <EmbeddedResource Include="Ventas\Form7RevisarPedAlm.resx" />
+    <EmbeddedResource Include="Ventas\Form8RegCliente.resx" />
+    <EmbeddedResource Include="Ventas\Form9ModifCliente.resx" />
+    <EmbeddedResource Include="Ventas\LoginForm.resx" />
+    <EmbeddedResource Include="Ventas\MainVentas.resx" />
+    <EmbeddedResource Include="Ventas\PantallaAdminVentas.resx" />
+    <EmbeddedResource Include="Ventas\PantallaUserVentas.resx" />
+    <EmbeddedResource Include="VistasAlmacen\PantallaEliminarAlmacenes.resx">
+      <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaInicio.resx">
+      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaIngresosSalidasProducto.resx">
+      <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaInsertarAlmacen.resx">
+      <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaModificarStock.resx">
+      <DependentUpon>PantallaModificarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\FormularioPrincipal.resx">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaActualizarAlmacenes.resx">
+      <DependentUpon>PantallaActualizarAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaAdministradorAlmacén.resx">
+      <DependentUpon>PantallaAdministradorAlmacén.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaAnadirProducto.resx">
+      <DependentUpon>PantallaAnadirProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaProductosAlmacen.resx">
+      <DependentUpon>PantallaProductosAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaRegIngresosProducto.resx">
+      <DependentUpon>PantallaRegIngresosProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaRegPedidoProduccion.resx">
+      <DependentUpon>PantallaRegPedidoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaRegSalidaProducto.resx">
+      <DependentUpon>PantallaRegSalidaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaReporteFechas.resx">
+      <DependentUpon>PantallaReporteFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaSeleccionarAlmacen.resx">
+      <DependentUpon>PantallaSeleccionarAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaSeleccionarProducto.resx">
+      <DependentUpon>PantallaSeleccionarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasAlmacen\PantallaUsuarioAlmacen.resx">
+      <DependentUpon>PantallaUsuarioAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VistasAlmacen\PantallaVistaPreviaReporte.resx">
+      <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{4d894ef6-e461-43cc-8992-e851ea843dd4}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocios\LogicaNegocios.csproj">
+      <Project>{e0f01ce8-efa5-4a88-836e-2582c3981bff}</Project>
+      <Name>LogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoPrisma.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoAyuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoCerrarSesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoVentas.png" />
+    <None Include="Resources\IconoAlmacen.png" />
+    <None Include="Resources\btn_.png" />
+    <None Include="Resources\btn_advertencia.png" />
+    <None Include="Resources\btn_attach.png" />
+    <None Include="Resources\btn_calendar.png" />
+    <None Include="Resources\btn_Chk.png" />
+    <None Include="Resources\btn_cross.png" />
+    <None Include="Resources\btn_dwnld.png" />
+    <None Include="Resources\btn_etiqueta.png" />
+    <None Include="Resources\btn_list.png" />
+    <None Include="Resources\btn_location.png" />
+    <None Include="Resources\btn_mssg.png" />
+    <None Include="Resources\btn_person.png" />
+    <None Include="Resources\btn_reload.png" />
+    <None Include="Resources\btn_search.png" />
+    <None Include="Resources\btn_settings.png" />
+    <None Include="Resources\btn_trash.png" />
+    <None Include="Resources\btn_Chk_tiny.png" />
+    <None Include="Resources\btn_cross_tiny.png" />
+    <None Include="Resources\btn_salirTiny.png" />
+    <None Include="Resources\descarga.png" />
+    <None Include="Resources\btn_cross_colored.png" />
+    <None Include="Resources\btn_cross_tiny_colored.png" />
+    <None Include="Resources\btn_Chk_colored.png" />
+    <None Include="Resources\btn_Chk_tiny_colored.png" />
+    <None Include="Resources\btn_back.png" />
+    <None Include="Resources\btn_back_tiny.png" />
+    <None Include="Resources\btn_search_tiny.png" />
+    <None Include="Resources\btn_anadir_tiny.png" />
+    <None Include="Resources\btn_anadir.png" />
+    <None Include="Resources\btn_back2.png" />
+    <None Include="Resources\btn_back2_tiny.png" />
+    <None Include="Resources\btn_back21.png" />
+    <None Include="Resources\btn_back21_tiny.png" />
+    <None Include="Resources\logoPrismaTransparente.png" />
+    <Content Include="Resources\logoPrograma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
