@@ -39,7 +39,7 @@ namespace Ventas
             //y deberia obtenerse el nombre real del usuario
             if (textBoxUsuario.Text != "" && textBoxPassword.Text != "")
             {
-                AlmacenUsuariosBL usuarios = new AlmacenUsuariosBL();
+                UsuariosBL usuarios = new UsuariosBL();
                 if (usuarios.verificarUsuario(textBoxUsuario.Text, textBoxPassword.Text))
                 {
                     //se esta pensando en hacer que el verificarUsuario devuelva un objeto Usuario que indique si es admin o no

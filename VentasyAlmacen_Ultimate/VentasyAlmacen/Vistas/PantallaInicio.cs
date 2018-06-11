@@ -24,6 +24,7 @@ namespace FormulariosAlmacenes
             pant.Owner = this;
             this.Visible = false;
             pant.ShowDialog();
+            pant.Dispose();
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
@@ -32,6 +33,7 @@ namespace FormulariosAlmacenes
             this.Visible = false;
             pant.Owner = this;
             pant.ShowDialog();
+            pant.Dispose();
         }
     }
 }

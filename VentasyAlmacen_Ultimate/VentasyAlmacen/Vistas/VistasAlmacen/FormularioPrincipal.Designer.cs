@@ -41,6 +41,7 @@
             this.pictureHelp = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtCargando = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHelp)).BeginInit();
             this.SuspendLayout();
@@ -188,12 +189,23 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Si desea ingresar como usuario convencional, Usuario : \'1\'. Contraseña: \'123\'";
             // 
+            // txtCargando
+            // 
+            this.txtCargando.AutoSize = true;
+            this.txtCargando.Location = new System.Drawing.Point(191, 206);
+            this.txtCargando.Name = "txtCargando";
+            this.txtCargando.Size = new System.Drawing.Size(62, 13);
+            this.txtCargando.TabIndex = 12;
+            this.txtCargando.Text = "Cargando...";
+            this.txtCargando.Visible = false;
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(179)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(412, 309);
+            this.Controls.Add(this.txtCargando);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -230,6 +242,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txtCargando;
     }
 }
 

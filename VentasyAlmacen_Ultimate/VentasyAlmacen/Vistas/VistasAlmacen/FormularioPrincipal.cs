@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogicaNegocios;
 using Entidades;
+using Ventas;
 
 namespace FormulariosAlmacenes
 {
@@ -39,29 +40,52 @@ namespace FormulariosAlmacenes
             //y deberia obtenerse el nombre real del usuario
             if (textBoxUsuario.Text != "" && textBoxPassword.Text != "")
             {
-                AlmacenUsuariosBL usuarios = new AlmacenUsuariosBL();
+                Console.WriteLine("Entra logueo");
+                UsuariosBL usuarios = new UsuariosBL();
                 BindingList<Almacen> almacenesSalida;
                 int cantAlmacenesSalida;
                 int rolSalida;
                 bool usuarioCorrectoSalida;
 
-                if (usuarios.verificarUsuario(textBoxUsuario.Text, textBoxPassword.Text,out almacenesSalida,out cantAlmacenesSalida,out rolSalida,out usuarioCorrectoSalida))
+                Usuario user;
+
+                txtCargando.Visible = true;
+                this.Refresh();
+                this.Update();
+                bool verificacionUsuario = usuarios.verificarUsuario(textBoxUsuario.Text, textBoxPassword.Text, out almacenesSalida, out cantAlmacenesSalida, out rolSalida, out usuarioCorrectoSalida, out user);
+                txtCargando.Visible = false;
+
+                if (verificacionUsuario)
                 {
                     //se comprueba el usuario y contraseña
                     if (usuarioCorrectoSalida)
                     {
+                        Console.WriteLine("Usuario correcto");
                         //se esta pensando en hacer que el verificarUsuario devuelva un objeto Usuario que indique si es admin o no
                         if (rolSalida == 2)
                         {
-                            pantallaAdmin();
+                            pantallaAdmin(user.Nombre);
                         }
                         else if (rolSalida == 5 && cantAlmacenesSalida>1)
                         {
-                            pantallaUsuario(almacenesSalida);
+                            pantallaUsuario(almacenesSalida, user.Nombre);
                         }
                         else if (rolSalida == 5 && cantAlmacenesSalida == 1)
                         {
-                            pantallaUsuario(almacenesSalida.ElementAt(0).IdAlmacen);
+                            pantallaUsuario(almacenesSalida.ElementAt(0).IdAlmacen, user.Nombre);
+                        }
+                        else if(rolSalida == 1)
+                        {
+                            pantallaAdminVentas(user.Nombre);
+
+                        }
+                        else if(rolSalida == 6)
+                        {
+                            pantallaEjecutivoVentas(user.Nombre);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No tiene los permisos suficientes para ingresar al área de Almacén o de Ventas.", "Error");
                         }
                     }
                     else
@@ -89,44 +113,67 @@ namespace FormulariosAlmacenes
             }
         }
 
-        private void pantallaAdmin()
+        private void pantallaAdmin(string nombre)
         {
             //A esta pantalla y a la pantalla de usuario simple se podria pasar al constructor el objeto Usuario
-            PantallaAdministradorAlmacén formAdmin = new PantallaAdministradorAlmacén(textBoxUsuario.Text);
+            PantallaAdministradorAlmacén formAdmin = new PantallaAdministradorAlmacén(nombre);
             formAdmin.Owner = this;
             //formAdmin.Visible = true;
             this.Visible = false;
             formAdmin.ShowDialog();
+            formAdmin.Dispose();
         }
 
-        private void pantallaUsuario(int idAlmacen)
+        private void pantallaUsuario(int idAlmacen,string nombre)
         {
-            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(textBoxUsuario.Text,idAlmacen);
+            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(nombre,idAlmacen);
 
             formUsuario.Owner = this;
             this.Visible = false;
             formUsuario.ShowDialog();
+            formUsuario.Dispose();
         }
 
-        private void pantallaUsuario(BindingList<Almacen> listaAlmacenes)
+        private void pantallaUsuario(BindingList<Almacen> listaAlmacenes,string nombre)
         {
             //el usuario deberá seleccionar entre varios almacenes en los que está registrado
             PantallaSeleccionarAlmacen formSelectAlmacen = new PantallaSeleccionarAlmacen(listaAlmacenes);
             formSelectAlmacen.ShowDialog();
 
-            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(textBoxUsuario.Text,formSelectAlmacen.AlmacenSeleccionado.IdAlmacen);
+            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(nombre,formSelectAlmacen.AlmacenSeleccionado.IdAlmacen);
 
             formUsuario.Owner = this;
             this.Visible = false;
             formUsuario.ShowDialog();
+            formUsuario.Dispose();
         }
 
         private void FormularioPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Visible = true;
+            //this.Owner.Visible = true;
+            Application.Exit();
             
         }
+        private void pantallaAdminVentas(string nombre)
+        {
+            //A esta pantalla y a la pantalla de usuario simple se podria pasar al constructor el objeto Usuario
+            PantallaAdminVentas formAdmin = new PantallaAdminVentas(nombre);
+            formAdmin.Owner = this;
+            //formAdmin.Visible = true;
+            this.Visible = false;
+            formAdmin.ShowDialog();
+            formAdmin.Dispose();
+        }
 
+        private void pantallaEjecutivoVentas(string nombre)
+        {
+            PantallaUserVentas formUsuario = new PantallaUserVentas(nombre);
+
+            formUsuario.Owner = this;
+            this.Visible = false;
+            formUsuario.ShowDialog();
+            formUsuario.Dispose();
+        }
         private void button1_MouseClick_1(object sender, MouseEventArgs e)
         {
             this.Close();

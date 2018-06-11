@@ -35,6 +35,7 @@ namespace FormulariosAlmacenes
         }
         private void PantallaUsuarioAlmacen_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Console.WriteLine("Cierra sesion user");
             ((FormularioPrincipal)this.Owner).limpiarCampos();
             MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Owner.Visible = true;
@@ -46,6 +47,7 @@ namespace FormulariosAlmacenes
             pantallaProductosAlmacen.Owner = this;
             //this.Visible = false;
             pantallaProductosAlmacen.ShowDialog();
+            pantallaProductosAlmacen.Dispose();
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
@@ -59,6 +61,7 @@ namespace FormulariosAlmacenes
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();
+            newPant.Dispose();
         }
 
         private void buttonIngreso_MouseClick(object sender, MouseEventArgs e)
@@ -67,6 +70,7 @@ namespace FormulariosAlmacenes
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();
+            newPant.Dispose();
         }
 
 
@@ -76,6 +80,7 @@ namespace FormulariosAlmacenes
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();
+            newPant.Dispose();
         }
     }
 }

@@ -34,16 +34,21 @@ namespace FormulariosAlmacenes
             pantallaAlmacenes.ShowDialog();
 
             almacenSeleccionado = pantallaAlmacenes.AlmacenSeleccionado;
+
+            pantallaAlmacenes.Dispose();
             return almacenSeleccionado;
         }
 
         //lo que sucede cuando la pantalla de administrador se cierra
         private void PantallaAdministradorAlmacén_FormClosed(object sender, FormClosedEventArgs e)
         {
+            FormularioPrincipal form = (FormularioPrincipal)this.Owner;
+            Console.WriteLine("Cierra sesion admin");
             //this.Owner.Enabled = true;//el padre se activa
             ((FormularioPrincipal)this.Owner).limpiarCampos();
             MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
-            this.Owner.Visible = true;
+            form.Visible = true;
+            this.Owner = null;
         }
 
 
@@ -61,6 +66,7 @@ namespace FormulariosAlmacenes
                 pantallaProductos.Owner = this;
                 //this.Visible = false;
                 pantallaProductos.ShowDialog();
+                pantallaProductos.Dispose();
             }
         }
 
@@ -78,6 +84,7 @@ namespace FormulariosAlmacenes
                 pantallaAnadirProducto.Owner = this;
                 //this.Visible = false;
                 pantallaAnadirProducto.ShowDialog();
+                pantallaAnadirProducto.Dispose();
             }
         }
 
@@ -86,6 +93,7 @@ namespace FormulariosAlmacenes
             PantallaActualizarAlmacenes pantallaActualizarAlmacenes = new PantallaActualizarAlmacenes();
             pantallaActualizarAlmacenes.Owner = this;
             pantallaActualizarAlmacenes.ShowDialog();
+            pantallaActualizarAlmacenes.Dispose();
         }
 
         private void btnModificarStock_MouseClick(object sender, MouseEventArgs e)
@@ -101,6 +109,7 @@ namespace FormulariosAlmacenes
                 PantallaModificarStock pantallaStock = new PantallaModificarStock(almacenSeleccionado);
                 pantallaStock.Owner = this;
                 pantallaStock.ShowDialog();
+                pantallaStock.Dispose();
             }
         }
 
@@ -122,6 +131,7 @@ namespace FormulariosAlmacenes
                 PantallaReporteFechas pantallaReporte = new PantallaReporteFechas();
                 pantallaReporte.Owner = this;
                 pantallaReporte.ShowDialog();
+                pantallaReporte.Dispose();
             }
         }
 

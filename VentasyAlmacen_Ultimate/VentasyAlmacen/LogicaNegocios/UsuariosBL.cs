@@ -9,10 +9,10 @@ using Entidades;
 
 namespace LogicaNegocios
 {
-    public class AlmacenUsuariosBL
+    public class UsuariosBL
     {
         DatosUsuarios usuarios;
-        public AlmacenUsuariosBL()
+        public UsuariosBL()
         {
             usuarios = new DatosUsuarios();
         }
@@ -21,9 +21,9 @@ namespace LogicaNegocios
         {
             return usuarios.verificarUsuario(usuario, contrasena);
         }
-        public bool verificarUsuario(string nombreUsuario,string contrasena, out BindingList<Almacen> listaAlmacenes,out int cantidadAlmacenes,out int _rol,out bool usuarioCorrecto)
+        public bool verificarUsuario(string nombreUsuario,string contrasena, out BindingList<Almacen> listaAlmacenes,out int cantidadAlmacenes,out int _rol,out bool usuarioCorrecto,out Usuario usuarioSalida)
         {
-            return usuarios.verificarUsuario(nombreUsuario, contrasena,out listaAlmacenes,out cantidadAlmacenes,out _rol,out usuarioCorrecto);
+            return usuarios.verificarUsuario(nombreUsuario, contrasena,out listaAlmacenes,out cantidadAlmacenes,out _rol,out usuarioCorrecto,out usuarioSalida);
         }
     }
 }
