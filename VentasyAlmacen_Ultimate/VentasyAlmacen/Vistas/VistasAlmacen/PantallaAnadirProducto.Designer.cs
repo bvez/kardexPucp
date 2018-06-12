@@ -47,15 +47,15 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridProductosRegistrables = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductosAlmacen)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -136,7 +136,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(12, 276);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(482, 129);
+            this.groupBox1.Size = new System.Drawing.Size(398, 129);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar Producto";
@@ -170,7 +170,7 @@
             // btnInsertarProducto
             // 
             this.btnInsertarProducto.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
-            this.btnInsertarProducto.Location = new System.Drawing.Point(299, 78);
+            this.btnInsertarProducto.Location = new System.Drawing.Point(209, 78);
             this.btnInsertarProducto.Name = "btnInsertarProducto";
             this.btnInsertarProducto.Size = new System.Drawing.Size(173, 40);
             this.btnInsertarProducto.TabIndex = 4;
@@ -211,7 +211,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(82, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 23);
+            this.textBox1.Size = new System.Drawing.Size(201, 23);
             this.textBox1.TabIndex = 0;
             // 
             // label4
@@ -252,6 +252,30 @@
             this.dataGridProductosRegistrables.TabIndex = 5;
             this.dataGridProductosRegistrables.SelectionChanged += new System.EventHandler(this.dataGridProductosEmpresa_SelectionChanged);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 69;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 88;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button1);
@@ -260,9 +284,9 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(500, 276);
+            this.groupBox3.Location = new System.Drawing.Point(440, 276);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(316, 129);
+            this.groupBox3.Size = new System.Drawing.Size(376, 129);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscar Producto";
@@ -271,7 +295,7 @@
             // 
             this.button1.BackgroundImage = global::FormulariosAlmacenes.Properties.Resources.logoBuscar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(252, 31);
+            this.button1.Location = new System.Drawing.Point(306, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 43);
             this.button1.TabIndex = 9;
@@ -281,7 +305,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(82, 65);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 23);
+            this.textBox2.Size = new System.Drawing.Size(201, 23);
             this.textBox2.TabIndex = 7;
             // 
             // label7
@@ -314,30 +338,6 @@
             this.btnAtras.Text = "       Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAtras_MouseClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 41;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 69;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 88;
             // 
             // PantallaAnadirProducto
             // 
