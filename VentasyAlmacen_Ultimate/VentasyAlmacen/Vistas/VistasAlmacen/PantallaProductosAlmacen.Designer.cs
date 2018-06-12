@@ -32,7 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaProductosAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.NumBoxStock = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnModificarStock = new System.Windows.Forms.Button();
             this.btnInsertarProducto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,24 +57,20 @@
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumBoxStock = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductosAlmacen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.btnInsertarProducto);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.tablaProductosAlmacen);
@@ -85,7 +85,7 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.NumBoxStock);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnModificarStock);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.groupBox2.Location = new System.Drawing.Point(484, 83);
             this.groupBox2.Name = "groupBox2";
@@ -94,19 +94,62 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificar Stock";
             // 
-            // button3
+            // label8
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.button3.Image = global::FormulariosAlmacenes.Properties.Resources.btn_salirTiny;
-            this.button3.Location = new System.Drawing.Point(57, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 40);
-            this.button3.TabIndex = 13;
-            this.button3.Text = " Modificar Stock ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(20, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 17);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Nombre:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(20, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 17);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Stock Actual:";
+            // 
+            // NumBoxStock
+            // 
+            this.NumBoxStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.NumBoxStock.Location = new System.Drawing.Point(189, 115);
+            this.NumBoxStock.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NumBoxStock.Name = "NumBoxStock";
+            this.NumBoxStock.Size = new System.Drawing.Size(98, 29);
+            this.NumBoxStock.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(20, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Nuevo Stock:";
+            // 
+            // btnModificarStock
+            // 
+            this.btnModificarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnModificarStock.Image = global::FormulariosAlmacenes.Properties.Resources.btn_salirTiny;
+            this.btnModificarStock.Location = new System.Drawing.Point(57, 155);
+            this.btnModificarStock.Name = "btnModificarStock";
+            this.btnModificarStock.Size = new System.Drawing.Size(197, 40);
+            this.btnModificarStock.TabIndex = 13;
+            this.btnModificarStock.Text = " Modificar Stock ";
+            this.btnModificarStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificarStock.UseVisualStyleBackColor = true;
+            this.btnModificarStock.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnInsertarProducto
             // 
@@ -126,7 +169,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(676, 374);
+            this.button2.Location = new System.Drawing.Point(352, 433);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 41);
             this.button2.TabIndex = 11;
@@ -337,54 +380,25 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 60;
             // 
-            // NumBoxStock
+            // button3
             // 
-            this.NumBoxStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.NumBoxStock.Location = new System.Drawing.Point(189, 115);
-            this.NumBoxStock.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.NumBoxStock.Name = "NumBoxStock";
-            this.NumBoxStock.Size = new System.Drawing.Size(98, 29);
-            this.NumBoxStock.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(20, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Nuevo Stock:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(20, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 17);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Nombre:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(20, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 17);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Stock Actual:";
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button3.Location = new System.Drawing.Point(57, 155);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(197, 40);
+            this.button3.TabIndex = 13;
+            this.button3.Text = " Modificar Stock ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // PantallaProductosAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 471);
+            this.ClientSize = new System.Drawing.Size(825, 484);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -397,12 +411,12 @@
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductosAlmacen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,7 +439,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnInsertarProducto;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnModificarStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -436,5 +450,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button3;
     }
 }

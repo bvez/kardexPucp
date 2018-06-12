@@ -43,7 +43,7 @@ namespace FormulariosAlmacenes
         private void buttonStock_MouseClick(object sender, MouseEventArgs e)
         {
             //para cada pantalla se debe enviar el objeto Usuario
-            PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(codAlmacen);
+            PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(codAlmacen,'U');
             pantallaProductosAlmacen.Owner = this;
             //this.Visible = false;
             pantallaProductosAlmacen.ShowDialog();

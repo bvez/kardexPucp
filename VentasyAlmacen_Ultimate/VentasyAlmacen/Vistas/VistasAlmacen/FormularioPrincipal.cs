@@ -40,7 +40,7 @@ namespace FormulariosAlmacenes
             //y deberia obtenerse el nombre real del usuario
             if (textBoxUsuario.Text != "" && textBoxPassword.Text != "")
             {
-                Console.WriteLine("Entra logueo");
+                //Console.WriteLine("Entra logueo");
                 UsuariosBL usuarios = new UsuariosBL();
                 BindingList<Almacen> almacenesSalida;
                 int cantAlmacenesSalida;
@@ -60,7 +60,7 @@ namespace FormulariosAlmacenes
                     //se comprueba el usuario y contraseña
                     if (usuarioCorrectoSalida)
                     {
-                        Console.WriteLine("Usuario correcto");
+                        //Console.WriteLine("Usuario correcto");
                         //se esta pensando en hacer que el verificarUsuario devuelva un objeto Usuario que indique si es admin o no
                         if (rolSalida == 2)
                         {

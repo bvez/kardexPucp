@@ -31,6 +31,33 @@ namespace FormulariosAlmacenes
             tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
         }
 
+        public PantallaProductosAlmacen(int idAlmacen,char tipoUser)
+        {
+            almacenProductos = new AlmacenProductosBL();
+            //BindingList<int> enteros = new BindingList<int>();
+            InitializeComponent();
+            if(tipoUser == 'A')
+            {
+                //admin
+                this.Height = 510;
+                this.Width = 841;
+                btnInsertarProducto.Enabled = true;
+                btnModificarStock.Enabled = true;
+                button2.Location = new Point(685, 367);
+            }
+            else if (tipoUser == 'U')
+            {
+                //usuario normal
+                this.Height = 523;
+                this.Width = 510;
+                btnInsertarProducto.Enabled = false;
+                btnModificarStock.Enabled = false;
+                button2.Location = new Point(352, 433);
+            }
+            tablaProductosAlmacen.AutoGenerateColumns = false;
+            tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
+        }
+
         //Lo que sucede cuando se cierra el formulario
         private void PantallaProductosAlmacen_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -229,7 +229,6 @@ C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlm
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\Entidades.pdb
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Vistas.csprojResolveAssemblyReference.cache
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaEliminarAlmacenes.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaInicio.resources
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaInsertarAlmacen.resources
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaModificarStock.resources
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.FormularioPrincipal.resources

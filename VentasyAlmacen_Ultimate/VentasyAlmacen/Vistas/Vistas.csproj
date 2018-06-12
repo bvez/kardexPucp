@@ -46,15 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PantallaInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallaInicio.Designer.cs" />
-    <Compile Include="PantallaInicio1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PantallaInicio.resx</DependentUpon>
-    </Compile>
     <Compile Include="Ventas\Form10EmitirReporteCl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,10 +226,6 @@
     <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.Designer.cs">
       <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PantallaInicio.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>PantallaInicio1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx" />
     <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx" />
     <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx" />

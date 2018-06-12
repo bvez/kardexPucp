@@ -62,7 +62,7 @@ namespace FormulariosAlmacenes
         {
             if (almacenSeleccionado != null)
             {
-                PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado.IdAlmacen);
+                PantallaProductosAlmacen pantallaProductos = new PantallaProductosAlmacen(almacenSeleccionado.IdAlmacen,'A');
                 pantallaProductos.Owner = this;
                 //this.Visible = false;
                 pantallaProductos.ShowDialog();
