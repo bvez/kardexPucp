@@ -15,6 +15,7 @@ namespace FormulariosAlmacenes
     public partial class PantallaProductosAlmacen : Form
     {
         private AlmacenProductosBL almacenProductos;
+        private int idAlmacen;
         public PantallaProductosAlmacen()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace FormulariosAlmacenes
             InitializeComponent();
             tablaProductosAlmacen.AutoGenerateColumns = false;
             tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
+            this.idAlmacen = idAlmacen;
         }
 
         public PantallaProductosAlmacen(int idAlmacen,char tipoUser)
@@ -117,6 +119,13 @@ namespace FormulariosAlmacenes
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInsertarProducto_Click(object sender, EventArgs e)
+        {
+            PantallaAnadirProducto pantalla = new PantallaAnadirProducto(this.idAlmacen);
+            pantalla.ShowDialog();
+            pantalla.Dispose();
         }
     }
 }

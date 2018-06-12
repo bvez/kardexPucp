@@ -163,6 +163,7 @@
             this.btnInsertarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsertarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInsertarProducto.UseVisualStyleBackColor = true;
+            this.btnInsertarProducto.Click += new System.EventHandler(this.btnInsertarProducto_Click);
             // 
             // button2
             // 

@@ -49,11 +49,15 @@
     <Compile Include="Ventas\Form10EmitirReporteCl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Form10EmitirReporteCl.Designer.cs" />
+    <Compile Include="Ventas\Form10EmitirReporteCl.Designer.cs">
+      <DependentUpon>Form10EmitirReporteCl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form11BuscaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Form11BuscaVenta.Designer.cs" />
+    <Compile Include="Ventas\Form11BuscaVenta.Designer.cs">
+      <DependentUpon>Form11BuscaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form12BuscaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,8 +230,12 @@
     <Compile Include="VistasAlmacen\PantallaVistaPreviaReporte.Designer.cs">
       <DependentUpon>PantallaVistaPreviaReporte.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx" />
-    <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx" />
+    <EmbeddedResource Include="Ventas\Form10EmitirReporteCl.resx">
+      <DependentUpon>Form10EmitirReporteCl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx">
+      <DependentUpon>Form11BuscaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx" />
     <EmbeddedResource Include="Ventas\Form13BuscaProducto.resx" />
     <EmbeddedResource Include="Ventas\Form14AnularVenta.resx" />

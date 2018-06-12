@@ -84,10 +84,10 @@ namespace FormulariosAlmacenes
 
         private void btnAtras_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+            //PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
             this.Dispose();
-            Almacen almacenSeleccionado =padre.obtenerAlmacenSeleccionado();
-            padre.abrirPantallaAnadirProducto(almacenSeleccionado);
+            //Almacen almacenSeleccionado =padre.obtenerAlmacenSeleccionado();
+            //padre.abrirPantallaAnadirProducto(almacenSeleccionado);
         }
     }
 }
