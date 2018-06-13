@@ -62,3 +62,13 @@ C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAl
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.dll
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\LogicaNegocios.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\LogicaNegocios.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\AccesoADatos.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\Entidades.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\MySql.Data.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\AccesoADatos.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\Entidades.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.pdb

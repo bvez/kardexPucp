@@ -24,8 +24,16 @@ namespace FormulariosAlmacenes
         {
             this.almacenActual = this.obtenerAlmacenSeleccionado();
             InitializeComponent();
-            labelBienvenidaAdmin.Text = "Bienvenido " + nombre;
-            labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
+            if (almacenActual != null)
+            {
+                
+                labelBienvenidaAdmin.Text = "Bienvenido " + nombre;
+                labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
+            }
+            else
+            {
+                //this.Close();
+            }
         }
 
         public Almacen obtenerAlmacenSeleccionado()
@@ -146,7 +154,8 @@ namespace FormulariosAlmacenes
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.almacenActual = obtenerAlmacenSeleccionado();
-            labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
+            if(almacenActual != null)
+                labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
         }
     }
 }

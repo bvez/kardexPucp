@@ -61,3 +61,10 @@ C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAl
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csprojResolveAssemblyReference.cache
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.dll
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\AccesoADatos.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\AccesoADatos.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\Entidades.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csprojResolveAssemblyReference.cache
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb

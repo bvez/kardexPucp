@@ -55,7 +55,7 @@ namespace AccesoADatos
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 reader.Read();
-                int idLocal = reader.GetInt32("LOCAL_idLOCAL");//
+                //int idLocal = reader.GetInt32("LOCAL_idLOCAL");//
                 string telefono = reader.GetString("telefono");//
                 string direccion = reader.GetString("direccion");//
                 bool habilitado = reader.GetBoolean("habilitado");
@@ -69,7 +69,7 @@ namespace AccesoADatos
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
 
             return almacen;
@@ -191,7 +191,8 @@ namespace AccesoADatos
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
+                //Console.WriteLine("Error en listar");
             }
             //*/
             return areas;
@@ -231,7 +232,7 @@ namespace AccesoADatos
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
 
             return enviosPendientes;
