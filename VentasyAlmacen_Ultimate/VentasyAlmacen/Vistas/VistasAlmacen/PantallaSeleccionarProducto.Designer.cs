@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridProductos = new System.Windows.Forms.DataGridView();
-            this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
-            this.btnSelectAlmacenAtras = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
+            this.btnSelectAlmacenAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,28 +74,6 @@
             this.dataGridProductos.TabIndex = 31;
             this.dataGridProductos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridProductos_MouseDoubleClick);
             // 
-            // btnSelectAlmacenSgte
-            // 
-            this.btnSelectAlmacenSgte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(396, 438);
-            this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
-            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(105, 39);
-            this.btnSelectAlmacenSgte.TabIndex = 32;
-            this.btnSelectAlmacenSgte.Text = "Seleccionar";
-            this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
-            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
-            // 
-            // btnSelectAlmacenAtras
-            // 
-            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(515, 438);
-            this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";
-            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(56, 39);
-            this.btnSelectAlmacenAtras.TabIndex = 33;
-            this.btnSelectAlmacenAtras.Text = "Atrás";
-            this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -128,6 +106,29 @@
             this.Stock.Name = "Stock";
             this.Stock.ReadOnly = true;
             this.Stock.Width = 93;
+            // 
+            // btnSelectAlmacenSgte
+            // 
+            this.btnSelectAlmacenSgte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(330, 438);
+            this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
+            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(138, 39);
+            this.btnSelectAlmacenSgte.TabIndex = 32;
+            this.btnSelectAlmacenSgte.Text = "Seleccionar";
+            this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
+            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
+            // 
+            // btnSelectAlmacenAtras
+            // 
+            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(474, 438);
+            this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";
+            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(97, 39);
+            this.btnSelectAlmacenAtras.TabIndex = 33;
+            this.btnSelectAlmacenAtras.Text = "Atrás";
+            this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
+            this.btnSelectAlmacenAtras.Click += new System.EventHandler(this.btnSelectAlmacenAtras_Click);
             // 
             // PantallaSeleccionarProducto
             // 

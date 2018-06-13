@@ -58,5 +58,10 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 this.Dispose();
             }
         }
+
+        private void btnSelectAlmacenAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

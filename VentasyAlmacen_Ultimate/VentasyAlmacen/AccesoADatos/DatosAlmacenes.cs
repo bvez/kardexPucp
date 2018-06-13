@@ -436,7 +436,7 @@ namespace AccesoADatos
             return idLineaIngreso;
         }
 
-        public int insertarPedidoProduccion(int idAlmacen,int idProducto,int cantidad)
+        public int insertarPedidoProduccion(int idAlmacen)
         {
             int idPedido = -1;
 
@@ -450,6 +450,34 @@ namespace AccesoADatos
                 comando.CommandText = "alm_registrar_pedido_produccion";
                 comando.Connection = con;
                 comando.Parameters.Add("_id_almacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("id_pedido", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                idPedido = (int)comando.Parameters["id_pedido"].Value;
+
+                con.Close();
+            }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+            }
+
+            return idPedido;
+        }
+
+        public int insertarLineaPedidoProduccion(int idPedidoProduccion,int idProducto,int cantidad,string observaciones)
+        {
+            int idLineaPedido=0;
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "alm_registrar_detalle_pedido_produccion";
+                comando.Connection = con;
+                comando.Parameters.Add("_id_pedido_produccion", MySqlDbType.Int32).Value = idPedidoProduccion;
                 comando.Parameters.Add("_id_producto", MySqlDbType.Int32).Value = idProducto;
                 comando.Parameters.Add("_cantidad", MySqlDbType.Int32).Value = cantidad;
                 comando.Parameters.Add("id_pedido", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
@@ -459,9 +487,11 @@ namespace AccesoADatos
 
                 con.Close();
             }
-            catch { }
-
-            return idPedido;
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return idLineaPedido;
         }
     }
 }

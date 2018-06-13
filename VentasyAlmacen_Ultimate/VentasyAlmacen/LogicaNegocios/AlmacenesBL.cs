@@ -72,9 +72,14 @@ namespace LogicaNegocios
         {
             return datosAlm.insertarLineaIngresoProductos(idIngresoProductos, idProducto, cantidad, observaciones);
         }
-        public int registrarPedidoProduccion(int idAlmacen,int idProducto,int cantidad)
+        public int registrarPedidoProduccion(int idAlmacen)
         {
-            return datosAlm.insertarPedidoProduccion(idAlmacen,idProducto, cantidad);
+            return datosAlm.insertarPedidoProduccion(idAlmacen);
+        }
+
+        public int registrarLineaPedido(int idPedido,int idProducto,int cantidad,string observaciones)
+        {
+            return datosAlm.insertarLineaPedidoProduccion(idPedido, idProducto, cantidad, observaciones);
         }
     }
 }

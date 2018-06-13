@@ -350,6 +350,7 @@
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             this.Id.Width = 41;
             // 
             // Nombre
@@ -358,6 +359,7 @@
             this.Nombre.DataPropertyName = "Nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 69;
             // 
             // Stock
@@ -365,6 +367,7 @@
             this.Stock.DataPropertyName = "CantidadAlmacenada";
             this.Stock.HeaderText = "Stock Actual";
             this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
             this.Stock.Width = 93;
             // 
             // Cantidad
