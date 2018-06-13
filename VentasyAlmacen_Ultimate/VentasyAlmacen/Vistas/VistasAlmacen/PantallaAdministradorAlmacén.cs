@@ -15,14 +15,17 @@ namespace FormulariosAlmacenes
 {
     public partial class PantallaAdministradorAlmacén : Form
     {
+        Almacen almacenActual;
         public PantallaAdministradorAlmacén()
         {
             InitializeComponent();
         }
         public PantallaAdministradorAlmacén(string nombre)
         {
+            this.almacenActual = this.obtenerAlmacenSeleccionado();
             InitializeComponent();
             labelBienvenidaAdmin.Text = "Bienvenido " + nombre;
+            labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
         }
 
         public Almacen obtenerAlmacenSeleccionado()
@@ -43,7 +46,7 @@ namespace FormulariosAlmacenes
         private void PantallaAdministradorAlmacén_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormularioPrincipal form = (FormularioPrincipal)this.Owner;
-            Console.WriteLine("Cierra sesion admin");
+            //Console.WriteLine("Cierra sesion admin");
             //this.Owner.Enabled = true;//el padre se activa
             ((FormularioPrincipal)this.Owner).limpiarCampos();
             MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
@@ -54,8 +57,8 @@ namespace FormulariosAlmacenes
 
         private void btnProductosDisponibles_MouseClick(object sender, MouseEventArgs e)
         {
-            Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
-            abrirPantallaProductosAlmacen(almacenSeleccionado);
+            //Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
+            abrirPantallaProductosAlmacen(this.almacenActual);
         }
 
         public void abrirPantallaProductosAlmacen(Almacen almacenSeleccionado)
@@ -120,9 +123,9 @@ namespace FormulariosAlmacenes
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
+            //Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
 
-            abrirPantallaReporteFechas(almacenSeleccionado);
+            abrirPantallaReporteFechas(this.almacenActual);
         }
         public void abrirPantallaReporteFechas(Almacen almacenSeleccionado)
         {
@@ -138,6 +141,12 @@ namespace FormulariosAlmacenes
         private void btnModificarStock_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.almacenActual = obtenerAlmacenSeleccionado();
+            labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
         }
     }
 }

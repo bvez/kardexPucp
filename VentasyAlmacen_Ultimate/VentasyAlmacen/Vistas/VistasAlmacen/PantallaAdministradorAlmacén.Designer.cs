@@ -38,6 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAlmacen = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,12 +150,23 @@
             // 
             this.labelAlmacen.AutoSize = true;
             this.labelAlmacen.BackColor = System.Drawing.Color.Transparent;
-            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelAlmacen.Location = new System.Drawing.Point(152, 43);
+            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelAlmacen.Location = new System.Drawing.Point(391, 358);
             this.labelAlmacen.Name = "labelAlmacen";
-            this.labelAlmacen.Size = new System.Drawing.Size(71, 20);
+            this.labelAlmacen.Size = new System.Drawing.Size(85, 24);
             this.labelAlmacen.TabIndex = 9;
             this.labelAlmacen.Text = "Almacen";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(392, 379);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(89, 13);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Cambiar Almacén";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // PantallaAdministradorAlmacén
             // 
@@ -162,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(179)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(504, 397);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelAlmacen);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelAlmacen;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
