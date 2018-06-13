@@ -50,6 +50,19 @@ namespace FormulariosAlmacenes
             this.Dispose();
         }
 
+        private int buscarProductoAlmacen(ProductoAlmacen productoAlmacen)
+        {
+            BindingList<ProductoAlmacen> lista = (BindingList<ProductoAlmacen>)dataGridStock.DataSource;
+            int index = 0;
+            foreach(ProductoAlmacen prodAlm in lista)
+            {
+                if (prodAlm.Id == productoAlmacen.Id)
+                    return index;
+                index++;
+            }
+            return -1;
+        }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             PantallaSeleccionarProducto newPant = new PantallaSeleccionarProducto(idAlmacen);
@@ -59,7 +72,7 @@ namespace FormulariosAlmacenes
 
             detallesPedido = (BindingList<ProductoAlmacen>)dataGridStock.DataSource;
 
-            if (productoSeleccionado != null)
+            if (productoSeleccionado != null && buscarProductoAlmacen(productoSeleccionado) == -1)
                 detallesPedido.Add(productoSeleccionado);
 
             dataGridStock.Update();
@@ -80,13 +93,49 @@ namespace FormulariosAlmacenes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!verificarCamposLineaPedido())
+                return;
+
             DialogResult resultado = MessageBox.Show("Desea confirmar la solicitud?", "Confirmacion", MessageBoxButtons.YesNo);
 
             if (resultado == DialogResult.Yes)
             {
                 ProductoAlmacen productoAlmacenSeleccionado = (ProductoAlmacen)dataGridStock.CurrentRow.DataBoundItem;
 
-                int idPedido = almacenBL.registrarPedidoProduccion(idAlmacen);
+                bool registroCorrecto;
+                int idPedido = almacenBL.registrarPedidoProduccion(idAlmacen,out registroCorrecto);
+                if (!registroCorrecto)
+                {
+                    MessageBox.Show("Error en la conexion. Inténtelo nuevamente.");
+                    return;
+                }
+                else
+                {
+                    foreach(DataGridViewRow row in dataGridStock.Rows)
+                    {
+                        int idProducto = Int32.Parse(row.Cells["Id"].Value.ToString());
+                        int cantidadPedido = Int32.Parse(row.Cells["CantidadSolicitar"].Value.ToString());
+                        string observaciones;
+                        if (row.Cells["Observaciones"].Value != null)
+                        {
+                            observaciones = row.Cells["Observaciones"].Value.ToString();
+                        }
+                        else
+                        {
+                            observaciones = "";
+                        }
+
+                        almacenBL.registrarLineaPedido(idPedido, idProducto, cantidadPedido, observaciones, out registroCorrecto);
+
+                        if (!registroCorrecto)
+                        {
+                            MessageBox.Show("Error en la conexion. Inténtelo nuevamente.");
+                            //regresar borrando el pedido
+                            return;
+                        }
+                    }
+                }
+                //registrar todos los detalles del pedido
 
 
 
@@ -95,6 +144,21 @@ namespace FormulariosAlmacenes
                 else
                     MessageBox.Show("Ocurrió un error al registrar el pedido, inténtelo nuevamente", "Error");
             }
+        }
+
+        private bool verificarCamposLineaPedido()
+        {
+            foreach(DataGridViewRow row in dataGridStock.Rows)
+            {
+                int cantidadPedido;
+                if(row.Cells["CantidadSolicitar"].Value == null || !Int32.TryParse(row.Cells["CantidadSolicitar"].Value.ToString(),out cantidadPedido) || cantidadPedido < 0)
+                {
+                    MessageBox.Show("Ha insertado incorrectamente una cantidad", "Error");
+                    dataGridStock.CurrentCell = row.Cells["CantidadSolicitar"];
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

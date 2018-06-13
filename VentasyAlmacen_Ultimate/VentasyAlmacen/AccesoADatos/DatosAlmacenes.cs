@@ -436,9 +436,10 @@ namespace AccesoADatos
             return idLineaIngreso;
         }
 
-        public int insertarPedidoProduccion(int idAlmacen)
+        public int insertarPedidoProduccion(int idAlmacen,out bool registroCorrecto)
         {
             int idPedido = -1;
+            bool correcto = false;
 
             try
             {
@@ -456,17 +457,19 @@ namespace AccesoADatos
                 idPedido = (int)comando.Parameters["id_pedido"].Value;
 
                 con.Close();
+                correcto = true;
             }
             catch(Exception e) {
                 Console.WriteLine(e.Message);
             }
-
+            registroCorrecto = correcto;
             return idPedido;
         }
 
-        public int insertarLineaPedidoProduccion(int idPedidoProduccion,int idProducto,int cantidad,string observaciones)
+        public int insertarLineaPedidoProduccion(int idPedidoProduccion,int idProducto,int cantidad,string observaciones,out bool registroCorrecto)
         {
             int idLineaPedido=0;
+            bool correcto = false;
 
             try
             {
@@ -480,17 +483,20 @@ namespace AccesoADatos
                 comando.Parameters.Add("_id_pedido_produccion", MySqlDbType.Int32).Value = idPedidoProduccion;
                 comando.Parameters.Add("_id_producto", MySqlDbType.Int32).Value = idProducto;
                 comando.Parameters.Add("_cantidad", MySqlDbType.Int32).Value = cantidad;
-                comando.Parameters.Add("id_pedido", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+                comando.Parameters.Add("_observaciones", MySqlDbType.VarChar).Value = observaciones;
+                comando.Parameters.Add("_id_detalle_pedido", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
 
                 comando.ExecuteNonQuery();
-                idPedido = (int)comando.Parameters["id_pedido"].Value;
+                idLineaPedido = (int)comando.Parameters["_id_detalle_pedido"].Value;
 
                 con.Close();
+                correcto = true;
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+            registroCorrecto = correcto;
             return idLineaPedido;
         }
     }

@@ -392,28 +392,11 @@ C:\Users\Asus\Documents\2018-1\KardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen
 C:\Users\Asus\Documents\2018-1\KardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Vistas.csproj.CopyComplete
 C:\Users\Asus\Documents\2018-1\KardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.exe
 C:\Users\Asus\Documents\2018-1\KardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.pdb
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form12BuscaCliente.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form13BuscaProducto.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form1RegVentas.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form2AsignCliente.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form3EmitirReporte.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form4ModifVenta.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form5RevisarVenta.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form6EmitirPedAlm.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form7RevisarPedAlm.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form8RegCliente.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form9ModifCliente.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.MainVentas.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form14AnularVenta.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form15BuscaPedido.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.LoginForm.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.PantallaAdminVentas.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.PantallaUserVentas.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form14AnularVenta.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form15BuscaPedido.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.LoginForm.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.PantallaAdminVentas.resources
-C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.PantallaUserVentas.resources
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form10EmitirReporteCl.resources
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form11BuscaVenta.resources
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\Resources\logoPrograma.png
@@ -468,3 +451,20 @@ C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAl
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form7RevisarPedAlm.resources
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form8RegCliente.resources
 C:\Users\alulab14.INF.000\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form9ModifCliente.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form12BuscaCliente.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form13BuscaProducto.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form14AnularVenta.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form15BuscaPedido.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form1RegVentas.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form2AsignCliente.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form3EmitirReporte.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form4ModifVenta.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form5RevisarVenta.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form6EmitirPedAlm.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form7RevisarPedAlm.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form8RegCliente.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form9ModifCliente.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.LoginForm.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.MainVentas.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.PantallaAdminVentas.resources
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.PantallaUserVentas.resources

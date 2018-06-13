@@ -244,10 +244,10 @@
     <Compile Include="VistasAlmacen\PantallaAdministradorAlmacén.Designer.cs">
       <DependentUpon>PantallaAdministradorAlmacén.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistasAlmacen\FormularioPrincipal.cs">
+    <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistasAlmacen\FormularioPrincipal.Designer.cs">
+    <Compile Include="FormularioPrincipal.Designer.cs">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="VistasAlmacen\PantallaUsuarioAlmacen.cs">
@@ -333,7 +333,7 @@
     <EmbeddedResource Include="Deprecated\PantallaModificarStock.resx">
       <DependentUpon>PantallaModificarStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistasAlmacen\FormularioPrincipal.resx">
+    <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaActualizarAlmacenes.resx">
