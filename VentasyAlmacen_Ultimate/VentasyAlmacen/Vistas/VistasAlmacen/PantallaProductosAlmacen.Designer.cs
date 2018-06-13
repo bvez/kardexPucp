@@ -34,11 +34,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.NumBoxStock = new System.Windows.Forms.NumericUpDown();
+            this.nuevoStockNumBox = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.btnModificarStock = new System.Windows.Forms.Button();
             this.btnInsertarProducto = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numStockMax = new System.Windows.Forms.NumericUpDown();
@@ -57,10 +56,13 @@
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.nombreSeleccionado = new System.Windows.Forms.Label();
+            this.stockActualSeleccionado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoStockNumBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMin)).BeginInit();
@@ -81,9 +83,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.stockActualSeleccionado);
+            this.groupBox2.Controls.Add(this.nombreSeleccionado);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.NumBoxStock);
+            this.groupBox2.Controls.Add(this.nuevoStockNumBox);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnModificarStock);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
@@ -114,18 +118,18 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Stock Actual:";
             // 
-            // NumBoxStock
+            // nuevoStockNumBox
             // 
-            this.NumBoxStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.NumBoxStock.Location = new System.Drawing.Point(189, 115);
-            this.NumBoxStock.Maximum = new decimal(new int[] {
+            this.nuevoStockNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.nuevoStockNumBox.Location = new System.Drawing.Point(137, 117);
+            this.nuevoStockNumBox.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.NumBoxStock.Name = "NumBoxStock";
-            this.NumBoxStock.Size = new System.Drawing.Size(98, 29);
-            this.NumBoxStock.TabIndex = 15;
+            this.nuevoStockNumBox.Name = "nuevoStockNumBox";
+            this.nuevoStockNumBox.Size = new System.Drawing.Size(98, 29);
+            this.nuevoStockNumBox.TabIndex = 15;
             // 
             // label7
             // 
@@ -164,20 +168,6 @@
             this.btnInsertarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInsertarProducto.UseVisualStyleBackColor = true;
             this.btnInsertarProducto.Click += new System.EventHandler(this.btnInsertarProducto_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(352, 433);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 41);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Atrás";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // label2
             // 
@@ -340,6 +330,7 @@
             this.tablaProductosAlmacen.ReadOnly = true;
             this.tablaProductosAlmacen.Size = new System.Drawing.Size(432, 192);
             this.tablaProductosAlmacen.TabIndex = 0;
+            this.tablaProductosAlmacen.SelectionChanged += new System.EventHandler(this.tablaProductosAlmacen_SelectionChanged);
             // 
             // Column2
             // 
@@ -381,6 +372,20 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 60;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(352, 433);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 41);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Atrás";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
@@ -393,6 +398,22 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // nombreSeleccionado
+            // 
+            this.nombreSeleccionado.AutoSize = true;
+            this.nombreSeleccionado.Location = new System.Drawing.Point(137, 42);
+            this.nombreSeleccionado.Name = "nombreSeleccionado";
+            this.nombreSeleccionado.Size = new System.Drawing.Size(0, 24);
+            this.nombreSeleccionado.TabIndex = 18;
+            // 
+            // stockActualSeleccionado
+            // 
+            this.stockActualSeleccionado.AutoSize = true;
+            this.stockActualSeleccionado.Location = new System.Drawing.Point(137, 77);
+            this.stockActualSeleccionado.Name = "stockActualSeleccionado";
+            this.stockActualSeleccionado.Size = new System.Drawing.Size(0, 24);
+            this.stockActualSeleccionado.TabIndex = 19;
             // 
             // PantallaProductosAlmacen
             // 
@@ -412,7 +433,7 @@
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoStockNumBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStockMax)).EndInit();
@@ -447,10 +468,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown NumBoxStock;
+        private System.Windows.Forms.NumericUpDown nuevoStockNumBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label stockActualSeleccionado;
+        private System.Windows.Forms.Label nombreSeleccionado;
     }
 }

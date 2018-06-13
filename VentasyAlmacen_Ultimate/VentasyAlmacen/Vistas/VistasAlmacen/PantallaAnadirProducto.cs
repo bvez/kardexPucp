@@ -28,9 +28,7 @@ namespace FormulariosAlmacenes
             InitializeComponent();
             logicaProductos = new AlmacenProductosBL();
             this.idAlmacen = idAlmacen;
-            dataGridProductosAlmacen.AutoGenerateColumns = false;
             dataGridProductosRegistrables.AutoGenerateColumns = false;
-            dataGridProductosAlmacen.DataSource = logicaProductos.obtenerProductosAlmacen(this.idAlmacen);
             dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen);
         }
 
@@ -49,7 +47,6 @@ namespace FormulariosAlmacenes
                     ProductoAlmacen prodAlmReciente = new ProductoAlmacen();
                     prodAlmReciente.ProductoAlmacenado = productoSeleccionado;
                     prodAlmReciente.CantidadAlmacenada = (int)numericUpDown1.Value;
-                    ((BindingList<ProductoAlmacen>)dataGridProductosAlmacen.DataSource).Add(prodAlmReciente);
 
                     productos.Remove(productoSeleccionado);
 
@@ -57,8 +54,6 @@ namespace FormulariosAlmacenes
                     dataGridProductosRegistrables.Update();
                     dataGridProductosRegistrables.Refresh();
 
-                    dataGridProductosAlmacen.Update();
-                    dataGridProductosAlmacen.Refresh();
                     numericUpDown1.Value = 0;
                     MessageBox.Show("El producto se insertó correctamente", "Transaccion Exitosa");
                 }
@@ -79,7 +74,6 @@ namespace FormulariosAlmacenes
         {
             productoSeleccionado = (Producto)dataGridProductosRegistrables.CurrentRow.DataBoundItem;
             labelNombre.Text = productoSeleccionado.Nombre;
-            labelCodigo.Text = productoSeleccionado.Id.ToString() ;
         }
 
         private void btnAtras_MouseClick(object sender, MouseEventArgs e)

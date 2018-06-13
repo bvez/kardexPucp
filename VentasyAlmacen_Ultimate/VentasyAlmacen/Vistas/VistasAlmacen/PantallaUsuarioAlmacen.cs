@@ -27,6 +27,7 @@ namespace FormulariosAlmacenes
             //al loguarse, se debe hacer una asociacion con el almacén
             labelBienvenidaUsuario.Text = "Bienvenido " + nombreUsuario;
             codAlmacen = idAlmacen;
+            labelAlmacen.Text = "Almacén " + idAlmacen.ToString();
         }
 
         public void setAlmacen(string codigo)

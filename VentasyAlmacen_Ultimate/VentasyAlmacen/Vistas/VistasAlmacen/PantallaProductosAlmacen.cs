@@ -16,6 +16,8 @@ namespace FormulariosAlmacenes
     {
         private AlmacenProductosBL almacenProductos;
         private int idAlmacen;
+        private ProductoAlmacen productoAlmacenSeleccionado;
+        private AlmacenProductosBL productosBL;
         public PantallaProductosAlmacen()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace FormulariosAlmacenes
         //inicializacion con lista de productos
         public PantallaProductosAlmacen(int idAlmacen)
         {
+            productosBL = new AlmacenProductosBL();
             almacenProductos = new AlmacenProductosBL();
             //BindingList<int> enteros = new BindingList<int>();
             InitializeComponent();
@@ -35,6 +38,7 @@ namespace FormulariosAlmacenes
 
         public PantallaProductosAlmacen(int idAlmacen,char tipoUser)
         {
+            productosBL = new AlmacenProductosBL();
             almacenProductos = new AlmacenProductosBL();
             //BindingList<int> enteros = new BindingList<int>();
             InitializeComponent();
@@ -118,7 +122,29 @@ namespace FormulariosAlmacenes
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if ((int)nuevoStockNumBox.Value == Int32.Parse(stockActualSeleccionado.Text))
+                return;
+            DialogResult resultado = MessageBox.Show("Desea confirmar la actualización?", "Confirmacion", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                int nuevoStock = (int)nuevoStockNumBox.Value;
+                if (productosBL.actualizarStock(idAlmacen, productoAlmacenSeleccionado.Id, nuevoStock))
+                {
+                    productoAlmacenSeleccionado.CantidadAlmacenada = Int32.Parse(nuevoStock.ToString());
+                    MessageBox.Show("Se actualizó el stock correctamente", "Éxito");
+                    tablaProductosAlmacen.Update();
+                    tablaProductosAlmacen.Refresh();
+                    this.actualizarInfoSeleccionado();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al actualizar", "Error");
+                }
+            }
+            else if (resultado == DialogResult.No)
+            {
+                nuevoStockNumBox.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
+            }
         }
 
         private void btnInsertarProducto_Click(object sender, EventArgs e)
@@ -126,6 +152,19 @@ namespace FormulariosAlmacenes
             PantallaAnadirProducto pantalla = new PantallaAnadirProducto(this.idAlmacen);
             pantalla.ShowDialog();
             pantalla.Dispose();
+        }
+
+        private void tablaProductosAlmacen_SelectionChanged(object sender, EventArgs e)
+        {
+            productoAlmacenSeleccionado = (ProductoAlmacen)tablaProductosAlmacen.CurrentRow.DataBoundItem;
+            this.actualizarInfoSeleccionado();
+        }
+
+        private void actualizarInfoSeleccionado()
+        {
+            nombreSeleccionado.Text = productoAlmacenSeleccionado.Nombre;
+            stockActualSeleccionado.Text = productoAlmacenSeleccionado.CantidadAlmacenada.ToString();
+            nuevoStockNumBox.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
         }
     }
 }

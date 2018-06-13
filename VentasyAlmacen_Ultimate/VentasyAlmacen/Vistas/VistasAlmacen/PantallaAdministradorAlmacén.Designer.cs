@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelAlmacen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,28 +57,32 @@
             // btnModificarStock
             // 
             this.btnModificarStock.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnModificarStock.Enabled = false;
             this.btnModificarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarStock.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarStock.Location = new System.Drawing.Point(40, 204);
+            this.btnModificarStock.Location = new System.Drawing.Point(388, 383);
             this.btnModificarStock.Name = "btnModificarStock";
-            this.btnModificarStock.Size = new System.Drawing.Size(190, 80);
+            this.btnModificarStock.Size = new System.Drawing.Size(157, 39);
             this.btnModificarStock.TabIndex = 1;
             this.btnModificarStock.Text = "Modificar Stock de Almacén";
             this.btnModificarStock.UseVisualStyleBackColor = false;
+            this.btnModificarStock.Visible = false;
             this.btnModificarStock.Click += new System.EventHandler(this.btnModificarStock_Click);
             this.btnModificarStock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnModificarStock_MouseClick);
             // 
             // btnAddProducto
             // 
             this.btnAddProducto.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddProducto.Enabled = false;
             this.btnAddProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnAddProducto.Location = new System.Drawing.Point(275, 103);
+            this.btnAddProducto.Location = new System.Drawing.Point(388, 347);
             this.btnAddProducto.Name = "btnAddProducto";
-            this.btnAddProducto.Size = new System.Drawing.Size(190, 80);
+            this.btnAddProducto.Size = new System.Drawing.Size(157, 39);
             this.btnAddProducto.TabIndex = 2;
             this.btnAddProducto.Text = "Añadir Producto a Almacén";
             this.btnAddProducto.UseVisualStyleBackColor = false;
+            this.btnAddProducto.Visible = false;
             this.btnAddProducto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BtnAnadirProducto_MouseClick);
             // 
             // btnProductosDisponibl
@@ -85,7 +90,7 @@
             this.btnProductosDisponibl.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProductosDisponibl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btnProductosDisponibl.ForeColor = System.Drawing.Color.Black;
-            this.btnProductosDisponibl.Location = new System.Drawing.Point(275, 204);
+            this.btnProductosDisponibl.Location = new System.Drawing.Point(40, 195);
             this.btnProductosDisponibl.Name = "btnProductosDisponibl";
             this.btnProductosDisponibl.Size = new System.Drawing.Size(190, 80);
             this.btnProductosDisponibl.TabIndex = 3;
@@ -107,11 +112,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(13, 62);
+            this.label1.Location = new System.Drawing.Point(13, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 26);
+            this.label1.Size = new System.Drawing.Size(210, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Seleccione una opción:";
             // 
@@ -120,7 +125,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(159, 303);
+            this.button1.Location = new System.Drawing.Point(40, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 83);
             this.button1.TabIndex = 8;
@@ -140,12 +145,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
+            // labelAlmacen
+            // 
+            this.labelAlmacen.AutoSize = true;
+            this.labelAlmacen.BackColor = System.Drawing.Color.Transparent;
+            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelAlmacen.Location = new System.Drawing.Point(152, 43);
+            this.labelAlmacen.Name = "labelAlmacen";
+            this.labelAlmacen.Size = new System.Drawing.Size(71, 20);
+            this.labelAlmacen.TabIndex = 9;
+            this.labelAlmacen.Text = "Almacen";
+            // 
             // PantallaAdministradorAlmacén
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(179)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(504, 397);
+            this.Controls.Add(this.labelAlmacen);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -177,5 +194,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelAlmacen;
     }
 }

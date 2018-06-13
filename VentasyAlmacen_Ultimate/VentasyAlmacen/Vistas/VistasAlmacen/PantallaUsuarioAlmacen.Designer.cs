@@ -36,6 +36,7 @@
             this.buttonRegPedidos = new System.Windows.Forms.Button();
             this.buttonReporteFechas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelAlmacen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,12 +120,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
+            // labelAlmacen
+            // 
+            this.labelAlmacen.AutoSize = true;
+            this.labelAlmacen.BackColor = System.Drawing.Color.Transparent;
+            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.labelAlmacen.Location = new System.Drawing.Point(480, 422);
+            this.labelAlmacen.Name = "labelAlmacen";
+            this.labelAlmacen.Size = new System.Drawing.Size(95, 25);
+            this.labelAlmacen.TabIndex = 13;
+            this.labelAlmacen.Text = "Almacen";
+            // 
             // PantallaUsuarioAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(179)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(602, 450);
+            this.Controls.Add(this.labelAlmacen);
             this.Controls.Add(this.buttonReporteFechas);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonRegPedidos);
@@ -154,5 +167,6 @@
         private System.Windows.Forms.Button buttonRegPedidos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonReporteFechas;
+        private System.Windows.Forms.Label labelAlmacen;
     }
 }

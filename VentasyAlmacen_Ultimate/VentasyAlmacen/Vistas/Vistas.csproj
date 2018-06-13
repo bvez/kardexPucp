@@ -61,19 +61,27 @@
     <Compile Include="Ventas\Form12BuscaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Form12BuscaCliente.Designer.cs" />
+    <Compile Include="Ventas\Form12BuscaCliente.Designer.cs">
+      <DependentUpon>Form12BuscaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form13BuscaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Form13BuscaProducto.Designer.cs" />
+    <Compile Include="Ventas\Form13BuscaProducto.Designer.cs">
+      <DependentUpon>Form13BuscaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form14AnularVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Form14AnularVenta.Designer.cs" />
+    <Compile Include="Ventas\Form14AnularVenta.Designer.cs">
+      <DependentUpon>Form14AnularVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form15BuscaPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Form15BuscaPedido.Designer.cs" />
+    <Compile Include="Ventas\Form15BuscaPedido.Designer.cs">
+      <DependentUpon>Form15BuscaPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form1RegVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,19 +121,27 @@
     <Compile Include="Ventas\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\LoginForm.Designer.cs" />
+    <Compile Include="Ventas\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\MainVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\MainVentas.Designer.cs" />
+    <Compile Include="Ventas\MainVentas.Designer.cs">
+      <DependentUpon>MainVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\PantallaAdminVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\PantallaAdminVentas.Designer.cs" />
+    <Compile Include="Ventas\PantallaAdminVentas.Designer.cs">
+      <DependentUpon>PantallaAdminVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\PantallaUserVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\PantallaUserVentas.Designer.cs" />
+    <Compile Include="Ventas\PantallaUserVentas.Designer.cs">
+      <DependentUpon>PantallaUserVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistasAlmacen\PantallaSeleccionarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,10 +252,18 @@
     <EmbeddedResource Include="Ventas\Form11BuscaVenta.resx">
       <DependentUpon>Form11BuscaVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx" />
-    <EmbeddedResource Include="Ventas\Form13BuscaProducto.resx" />
-    <EmbeddedResource Include="Ventas\Form14AnularVenta.resx" />
-    <EmbeddedResource Include="Ventas\Form15BuscaPedido.resx" />
+    <EmbeddedResource Include="Ventas\Form12BuscaCliente.resx">
+      <DependentUpon>Form12BuscaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Form13BuscaProducto.resx">
+      <DependentUpon>Form13BuscaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Form14AnularVenta.resx">
+      <DependentUpon>Form14AnularVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Form15BuscaPedido.resx">
+      <DependentUpon>Form15BuscaPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Form1RegVentas.resx" />
     <EmbeddedResource Include="Ventas\Form2AsignCliente.resx" />
     <EmbeddedResource Include="Ventas\Form3EmitirReporte.resx" />
@@ -249,10 +273,18 @@
     <EmbeddedResource Include="Ventas\Form7RevisarPedAlm.resx" />
     <EmbeddedResource Include="Ventas\Form8RegCliente.resx" />
     <EmbeddedResource Include="Ventas\Form9ModifCliente.resx" />
-    <EmbeddedResource Include="Ventas\LoginForm.resx" />
-    <EmbeddedResource Include="Ventas\MainVentas.resx" />
-    <EmbeddedResource Include="Ventas\PantallaAdminVentas.resx" />
-    <EmbeddedResource Include="Ventas\PantallaUserVentas.resx" />
+    <EmbeddedResource Include="Ventas\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\MainVentas.resx">
+      <DependentUpon>MainVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\PantallaAdminVentas.resx">
+      <DependentUpon>PantallaAdminVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\PantallaUserVentas.resx">
+      <DependentUpon>PantallaUserVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaEliminarAlmacenes.resx">
       <DependentUpon>PantallaEliminarAlmacenes.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,21 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaAnadirProducto));
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridProductosAlmacen = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelNombre = new System.Windows.Forms.Label();
-            this.labelCodigo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnInsertarProducto = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridProductosRegistrables = new System.Windows.Forms.DataGridView();
@@ -56,87 +48,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductosAlmacen)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductosRegistrables)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(46, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Productos registrados en este almacén:";
-            // 
-            // dataGridProductosAlmacen
-            // 
-            this.dataGridProductosAlmacen.AllowUserToAddRows = false;
-            this.dataGridProductosAlmacen.AllowUserToDeleteRows = false;
-            this.dataGridProductosAlmacen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridProductosAlmacen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridProductosAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProductosAlmacen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column1,
-            this.Column3});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProductosAlmacen.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridProductosAlmacen.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridProductosAlmacen.Location = new System.Drawing.Point(59, 39);
-            this.dataGridProductosAlmacen.MultiSelect = false;
-            this.dataGridProductosAlmacen.Name = "dataGridProductosAlmacen";
-            this.dataGridProductosAlmacen.ReadOnly = true;
-            this.dataGridProductosAlmacen.Size = new System.Drawing.Size(334, 201);
-            this.dataGridProductosAlmacen.TabIndex = 2;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Id";
-            this.Column2.HeaderText = "Id";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 41;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Nombre";
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 69;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "CantidadAlmacenada";
-            this.Column3.HeaderText = "Stock";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 60;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelNombre);
-            this.groupBox1.Controls.Add(this.labelCodigo);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnInsertarProducto);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 276);
+            this.groupBox1.Location = new System.Drawing.Point(424, 162);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 129);
+            this.groupBox1.Size = new System.Drawing.Size(398, 108);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar Producto";
@@ -144,24 +72,15 @@
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(115, 57);
+            this.labelNombre.Location = new System.Drawing.Point(115, 24);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(0, 17);
             this.labelNombre.TabIndex = 7;
             // 
-            // labelCodigo
-            // 
-            this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(115, 31);
-            this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(0, 17);
-            this.labelCodigo.TabIndex = 6;
-            this.labelCodigo.Visible = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 57);
+            this.label5.Location = new System.Drawing.Point(22, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 5;
@@ -169,12 +88,13 @@
             // 
             // btnInsertarProducto
             // 
-            this.btnInsertarProducto.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
-            this.btnInsertarProducto.Location = new System.Drawing.Point(209, 78);
+            this.btnInsertarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnInsertarProducto.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny;
+            this.btnInsertarProducto.Location = new System.Drawing.Point(235, 45);
             this.btnInsertarProducto.Name = "btnInsertarProducto";
-            this.btnInsertarProducto.Size = new System.Drawing.Size(173, 40);
+            this.btnInsertarProducto.Size = new System.Drawing.Size(140, 40);
             this.btnInsertarProducto.TabIndex = 4;
-            this.btnInsertarProducto.Text = "   Insertar Producto";
+            this.btnInsertarProducto.Text = " Confirmar";
             this.btnInsertarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsertarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInsertarProducto.UseVisualStyleBackColor = true;
@@ -182,7 +102,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(115, 87);
+            this.numericUpDown1.Location = new System.Drawing.Point(115, 54);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(67, 23);
             this.numericUpDown1.TabIndex = 3;
@@ -191,21 +111,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 87);
+            this.label3.Location = new System.Drawing.Point(22, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Stock Inicial:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Código:";
-            this.label2.Visible = false;
             // 
             // textBox1
             // 
@@ -218,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(427, 19);
+            this.label4.Location = new System.Drawing.Point(15, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(251, 17);
             this.label4.TabIndex = 4;
@@ -235,20 +145,20 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.Descripcion});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProductosRegistrables.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProductosRegistrables.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridProductosRegistrables.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridProductosRegistrables.Location = new System.Drawing.Point(440, 39);
+            this.dataGridProductosRegistrables.Location = new System.Drawing.Point(28, 31);
             this.dataGridProductosRegistrables.MultiSelect = false;
             this.dataGridProductosRegistrables.Name = "dataGridProductosRegistrables";
             this.dataGridProductosRegistrables.ReadOnly = true;
-            this.dataGridProductosRegistrables.Size = new System.Drawing.Size(366, 201);
+            this.dataGridProductosRegistrables.Size = new System.Drawing.Size(381, 337);
             this.dataGridProductosRegistrables.TabIndex = 5;
             this.dataGridProductosRegistrables.SelectionChanged += new System.EventHandler(this.dataGridProductosEmpresa_SelectionChanged);
             // 
@@ -284,9 +194,9 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(440, 276);
+            this.groupBox3.Location = new System.Drawing.Point(415, 31);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(376, 129);
+            this.groupBox3.Size = new System.Drawing.Size(376, 109);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscar Producto";
@@ -328,12 +238,12 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.btnAtras.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(746, 411);
+            this.btnAtras.Location = new System.Drawing.Point(721, 332);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(84, 36);
+            this.btnAtras.Size = new System.Drawing.Size(109, 36);
             this.btnAtras.TabIndex = 8;
             this.btnAtras.Text = "       Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -344,14 +254,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(842, 450);
+            this.ClientSize = new System.Drawing.Size(842, 387);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridProductosRegistrables);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridProductosAlmacen);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -359,7 +267,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir Producto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaAnadirProducto_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductosAlmacen)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -372,17 +279,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridProductosAlmacen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnInsertarProducto;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridProductosRegistrables;
@@ -392,7 +292,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.Label labelCodigo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
