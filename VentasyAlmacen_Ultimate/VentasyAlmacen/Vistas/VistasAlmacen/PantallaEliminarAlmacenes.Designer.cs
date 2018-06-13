@@ -56,6 +56,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(443, 199);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // label1
             // 
@@ -125,6 +126,7 @@
             dataGridViewCellStyle1.NullValue = false;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumnaDeshabilitar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnaDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ColumnaDeshabilitar.HeaderText = "Deshabilitar";
             this.ColumnaDeshabilitar.Name = "ColumnaDeshabilitar";
             this.ColumnaDeshabilitar.ReadOnly = true;

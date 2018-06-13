@@ -281,13 +281,14 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 mensajeConf += "s?";
             }
+            //fin mensaje confirmacion
 
             DialogResult res = MessageBox.Show(mensajeConf, "Confirmacion", MessageBoxButtons.YesNo);
-            //fin mensaje confirmacion
             if (res == DialogResult.No)
                 return;
 
             bool resultado = true;
+
             //validar todas las lineas
             foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
             {
@@ -301,6 +302,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
                     return;//debe ir esto en vez de un break con trabajo de variable valido
                 }
             }
+            //fin validacion
+
 
             //registrar pedido ingreso o salida
             if (radioBtnIngreso.Checked)
@@ -380,7 +383,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
             if (resultado)
             {
                 MessageBox.Show("Transaccion Exitosa", "Exito");
-                this.dataGridIngresoSalida.DataSource = null;
+                this.dataGridIngresoSalida.DataSource = new BindingList<ProductoAlmacen>();
                 dataGridIngresoSalida.Refresh();
                 dataGridIngresoSalida.Update();
             }

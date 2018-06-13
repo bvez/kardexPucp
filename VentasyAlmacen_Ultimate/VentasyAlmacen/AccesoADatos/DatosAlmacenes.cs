@@ -345,7 +345,9 @@ namespace AccesoADatos
 
                 con.Close();
             }
-            catch { }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+            }
 
             return idSalida;
         }
@@ -374,7 +376,9 @@ namespace AccesoADatos
 
                 con.Close();
             }
-            catch { }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+            }
 
             return idLineaSalida;
         }
@@ -403,7 +407,9 @@ namespace AccesoADatos
 
                 con.Close();
             }
-            catch { }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+            }
 
             return idIngreso;
         }
@@ -432,7 +438,9 @@ namespace AccesoADatos
 
                 con.Close();
             }
-            catch { }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+            }
 
             return idLineaIngreso;
         }

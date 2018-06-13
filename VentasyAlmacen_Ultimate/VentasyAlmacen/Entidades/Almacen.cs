@@ -15,6 +15,7 @@ namespace Entidades
 
         public int IdAlmacen { get => idAlmacen; set => idAlmacen = value; }
         public bool Habilitado { get => habilitado; set => habilitado = value; }
+        public bool Deshabilitado { get => !habilitado;}
 
         //public string IdAlmacenS { get => idAlmacen.ToString();}
 
