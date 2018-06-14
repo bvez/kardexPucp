@@ -21,7 +21,7 @@ namespace AccesoADatos
         {
             
             cadenaConexion = "server=quilla.lab.inf.pucp.edu.pe;" +
-                "user=inf282g2;database=inf282g2;" +
+                "user=inf282g2;database=inf282g2b;" +
                 "port=3306;password=X7X2HA;SslMode=none;";
             
 
@@ -160,7 +160,31 @@ namespace AccesoADatos
             return almacenes;
         }
         
+        public bool actualizarAlmacenHabilitado(int id,bool habilitado)
+        {
+            bool exito = false;
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "alm_actualizar_habilitado";
+                comando.Connection = con;
+                comando.Parameters.Add("_id_almacen", MySqlDbType.Int32).Value = id;
+                comando.Parameters.Add("_nuevo_habilitado", MySqlDbType.Int32).Value = Convert.ToInt32(habilitado);
 
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                con.Close();
+                exito = true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return exito;
+        }
         public BindingList<Area> listarAreas()
         {
             BindingList<Area> areas = new BindingList<Area>();

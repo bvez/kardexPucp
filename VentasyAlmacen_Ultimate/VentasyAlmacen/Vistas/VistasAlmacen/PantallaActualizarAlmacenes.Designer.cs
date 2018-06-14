@@ -50,14 +50,13 @@
             // btnInhabilitarAlmacen
             // 
             this.btnInhabilitarAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnInhabilitarAlmacen.AutoSize = true;
             this.btnInhabilitarAlmacen.BackColor = System.Drawing.Color.Transparent;
             this.btnInhabilitarAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnInhabilitarAlmacen.Location = new System.Drawing.Point(359, 38);
             this.btnInhabilitarAlmacen.Name = "btnInhabilitarAlmacen";
             this.btnInhabilitarAlmacen.Size = new System.Drawing.Size(211, 87);
             this.btnInhabilitarAlmacen.TabIndex = 1;
-            this.btnInhabilitarAlmacen.Text = "Inhabilitar Almacén";
+            this.btnInhabilitarAlmacen.Text = "Habilitar / Inhabilitar Almacén";
             this.btnInhabilitarAlmacen.UseVisualStyleBackColor = false;
             this.btnInhabilitarAlmacen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInhabilitarAlmacen_MouseClick);
             // 

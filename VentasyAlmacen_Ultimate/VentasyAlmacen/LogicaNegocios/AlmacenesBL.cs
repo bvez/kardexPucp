@@ -33,6 +33,11 @@ namespace LogicaNegocios
             return datosAlm.obtenerAlmacenesHabilitados();
         }
 
+        public bool actualizarAlmacenHabilitado(int idAlmacen,bool nuevoHabilitado)
+        {
+            return datosAlm.actualizarAlmacenHabilitado(idAlmacen, nuevoHabilitado);
+        }
+
         public BindingList<Area> obtenerAreas()
         {
             return datosAlm.listarAreas();
