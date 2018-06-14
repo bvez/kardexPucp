@@ -72,3 +72,5 @@ C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Deb
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.csprojResolveAssemblyReference.cache
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.dll
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\itextsharp.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\itextsharp.xml

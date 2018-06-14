@@ -32,6 +32,7 @@
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_ok = new System.Windows.Forms.Button();
             this.ID_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +42,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Pedido,
+            this._estado,
             this.ID_Venta});
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
@@ -75,6 +77,13 @@
             this.ID_Pedido.Name = "ID_Pedido";
             this.ID_Pedido.ReadOnly = true;
             // 
+            // _estado
+            // 
+            this._estado.DataPropertyName = "estado";
+            this._estado.HeaderText = "Estado";
+            this._estado.Name = "_estado";
+            this._estado.ReadOnly = true;
+            // 
             // ID_Venta
             // 
             this.ID_Venta.DataPropertyName = "idVenta";
@@ -103,6 +112,7 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Pedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Venta;
     }
 }

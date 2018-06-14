@@ -12,7 +12,7 @@ namespace AccesoADatos.Ventas
 {
     public class DatosClientes
     {
-        string cadConn = "server=quilla.lab.inf.pucp.edu.pe;" + "user=inf282g2;" + "database=inf282g2;"
+        string cadConn = "server=quilla.lab.inf.pucp.edu.pe;" + "user=inf282g2;" + "database=inf282g2b;"
                 + "port=3306;" + "password=X7X2HA;" + "SslMode=none;";
         public BindingList<ClientePersona> listarClientesNaturales()
         {
@@ -53,7 +53,7 @@ namespace AccesoADatos.Ventas
                 }
             } catch (Exception e)
             {
-                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL: " + e.Message);
             }
             return lista;
         }
@@ -94,7 +94,7 @@ namespace AccesoADatos.Ventas
                 }
             } catch (Exception e)
             {
-                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL: " + e.Message);
             }
             return lista;
         }
@@ -112,8 +112,8 @@ namespace AccesoADatos.Ventas
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.CommandText = "insertar_cliente_natural";
                     cmd.Parameters.Add("_nombre", MySqlDbType.VarChar).Value = ((ClientePersona)obj).nombre;
-                    cmd.Parameters.Add("_apellido_paterno", MySqlDbType.VarChar).Value = ((ClientePersona)obj).Apellido_P;
-                    cmd.Parameters.Add("_apellido_materno", MySqlDbType.VarChar).Value = ((ClientePersona)obj).Apellido_M;
+                    cmd.Parameters.Add("_apellido_p", MySqlDbType.VarChar).Value = ((ClientePersona)obj).Apellido_P;
+                    cmd.Parameters.Add("_apellido_m", MySqlDbType.VarChar).Value = ((ClientePersona)obj).Apellido_M;
                     cmd.Parameters.Add("_dni", MySqlDbType.Int32).Value = Int32.Parse(((ClientePersona)obj).dni);
                     if (((ClientePersona)obj).sexo == Sexo.Hombre) cmd.Parameters.Add("_sexo", MySqlDbType.Int32).Value = 1;
                     else cmd.Parameters.Add("_sexo", MySqlDbType.Int32).Value = 0;
@@ -124,7 +124,6 @@ namespace AccesoADatos.Ventas
                     cmd.Parameters.Add("_activo", MySqlDbType.Int32).Value = 1;
                     cmd.Parameters.Add("_usuario_registro", MySqlDbType.VarChar).Value = "admin";
                     cmd.Parameters.Add("_id_cliente", MySqlDbType.DateTime).Direction = System.Data.ParameterDirection.Output;
-
                 }
                 else if (obj is ClienteEmpresa)
                 {
@@ -139,7 +138,7 @@ namespace AccesoADatos.Ventas
                     cmd.Parameters.Add("_activo", MySqlDbType.Int32).Value = 1;
                     cmd.Parameters.Add("_usuario_registro", MySqlDbType.VarChar).Value = "admin";
                     cmd.Parameters.Add("_fecha_registro", MySqlDbType.DateTime).Value = ((ClienteEmpresa)obj).fechaRegistro;
-                    cmd.Parameters.Add("_id_cliente", MySqlDbType.DateTime).Direction = System.Data.ParameterDirection.Output;
+                    cmd.Parameters.Add("_id_cliente", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
                 }
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
@@ -147,7 +146,6 @@ namespace AccesoADatos.Ventas
                 con.Close();
             } catch (Exception e)
             {
-                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
             }
             
             return id;
@@ -163,7 +161,7 @@ namespace AccesoADatos.Ventas
                 if (obj is ClientePersona)
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.CommandText = "______________";
+                    cmd.CommandText = "modificar_cliente_natural";
                     cmd.Parameters.Add("_nombre", MySqlDbType.VarChar).Value = ((ClientePersona)obj).nombre;
                     cmd.Parameters.Add("_apellido_paterno", MySqlDbType.VarChar).Value = ((ClientePersona)obj).Apellido_P;
                     cmd.Parameters.Add("_apellido_materno", MySqlDbType.VarChar).Value = ((ClientePersona)obj).Apellido_M;
@@ -181,7 +179,7 @@ namespace AccesoADatos.Ventas
                 else if (obj is ClienteEmpresa)
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.CommandText = "______________";
+                    cmd.CommandText = "modificar_cliente_juridico";
                     cmd.Parameters.Add("_razon_social", MySqlDbType.VarChar).Value = ((ClienteEmpresa)obj).nombre;
                     cmd.Parameters.Add("_ruc", MySqlDbType.Int32).Value = Int32.Parse(((ClienteEmpresa)obj).ruc);
                     cmd.Parameters.Add("_giro_negocio", MySqlDbType.VarChar).Value = ((ClienteEmpresa)obj).giroNegocio;
@@ -199,7 +197,7 @@ namespace AccesoADatos.Ventas
                 con.Close();
             } catch (Exception e)
             {
-                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL.");
+                MessageBox.Show("Ha ocurrido una excepción durante la ejecución de la accion SQL: " + e.Message);
             }
         }
     }

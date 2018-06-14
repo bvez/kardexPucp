@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using LogicaNegocios.Ventas;
+using LogicaNegocios;
 
 namespace Ventas
 {
@@ -17,6 +18,8 @@ namespace Ventas
         private BindingList<LineaProducto> listaProductos = new BindingList<LineaProducto>();
         private Form12BuscaCliente buscaVentana = null;
         private VentasVentaBL logicaNegocio;
+        private DocumentoDePagoBL logicaDocPago;
+        private double precioDoc;
 
         public Form1RegVentas()
         {
@@ -24,6 +27,8 @@ namespace Ventas
             dg_Productos.AutoGenerateColumns = false;
             dg_Productos.AllowUserToAddRows = false;
             dg_Productos.DataSource = listaProductos;
+
+            logicaDocPago = new DocumentoDePagoBL();
             logicaNegocio = new VentasVentaBL();
             textBox2.Enabled = false;
         }
@@ -80,6 +85,7 @@ namespace Ventas
                 label_precio.Text = "Precio Total: " + sum.ToString();
                 double newprecio = sum * (1 - ((double)numericUpDown1.Value / 100));
                 label_precio_final.Text = "Precio Final: " + newprecio.ToString();
+                precioDoc = newprecio;
             }
         }
 
@@ -97,6 +103,7 @@ namespace Ventas
                 label_precio.Text = "Precio Total" + sum.ToString();
                 double newprecio = sum * (1 - ((double)numericUpDown1.Value / 100));
                 label_precio_final.Text = "Precio Final: " + newprecio.ToString();
+                precioDoc = newprecio;
             }
             else
             {
@@ -133,6 +140,53 @@ namespace Ventas
             if (regCliente.ShowDialog() == DialogResult.OK)
             {
                 textBox2.Text = regCliente.IdCliente.ToString();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = buscaVentana.ObjetoSeleccionado;
+            if (cliente is ClientePersona)
+            {
+                //generar boleta
+                Boleta boleta = new Boleta((ClientePersona)cliente);
+                boleta.Fecha = DateTime.Now;
+                boleta.Items = listaProductos;
+                boleta.Total = precioDoc;
+                //generar pdf
+                if (logicaDocPago.ImprimirBoleta(boleta, "prueba_boleta.pdf"))
+                {
+                    MessageBox.Show("Boleta generada correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al generar la boleta.");
+                }
+                if (logicaDocPago.insertarBoleta(boleta))
+                {
+                    MessageBox.Show("Boleta insertada en BD correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al insertar la boleta en BD");
+                }
+            }
+            else
+            {
+                //generar factura
+                Factura factura = new Factura((ClienteEmpresa)cliente);
+                factura.Fecha = DateTime.Now;
+                factura.Items = listaProductos;
+                factura.Total = precioDoc;
+                //generar pdf
+                if (logicaDocPago.ImprimirFactura(factura, "prueba_factura.pdf"))
+                {
+                    MessageBox.Show("Factura generada correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al generar la factura.");
+                }
             }
         }
     }

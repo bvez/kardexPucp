@@ -27,5 +27,10 @@ namespace LogicaNegocios.Ventas
         {
             accesoDatos.modificarEstado(estado, id);
         }
+
+        public void insertarPedido(Pedido p, BindingList<Producto> prods)
+        {
+            accesoDatos.insertarPedido(p, prods);
+        }
     }
 }

@@ -68,3 +68,7 @@ C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.csprojResolveAssemblyReference.cache
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.dll
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\obj\Debug\AccesoADatos.pdb
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.pdfa.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.xtra.dll
+C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.xml
