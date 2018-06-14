@@ -35,11 +35,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridIngresoSalida = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxLocalSalida = new System.Windows.Forms.ComboBox();
             this.labelAlmacen = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,16 +53,15 @@
             this.comboBoxLocales = new System.Windows.Forms.ComboBox();
             this.comboBoxAreas = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelOrigen = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresoSalida)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -114,12 +115,12 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.textBoxObservaciones);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridIngresoSalida);
-            this.groupBox1.Location = new System.Drawing.Point(16, 126);
+            this.groupBox1.Location = new System.Drawing.Point(16, 105);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(751, 379);
             this.groupBox1.TabIndex = 31;
@@ -146,38 +147,6 @@
             this.label1.Size = new System.Drawing.Size(216, 20);
             this.label1.TabIndex = 27;
             this.label1.Text = "Observaciones en el ingreso: ";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(448, 19);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(244, 25);
-            this.toolStrip1.TabIndex = 32;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(118, 22);
-            this.toolStripButton1.Text = "Insertar Producto";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(123, 22);
-            this.toolStripButton2.Text = "Eliminar Selección";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // label5
             // 
@@ -211,141 +180,6 @@
             this.dataGridIngresoSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridIngresoSalida.Size = new System.Drawing.Size(657, 237);
             this.dataGridIngresoSalida.TabIndex = 30;
-            // 
-            // comboBoxLocalSalida
-            // 
-            this.comboBoxLocalSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxLocalSalida.FormattingEnabled = true;
-            this.comboBoxLocalSalida.Location = new System.Drawing.Point(304, 100);
-            this.comboBoxLocalSalida.Name = "comboBoxLocalSalida";
-            this.comboBoxLocalSalida.Size = new System.Drawing.Size(205, 21);
-            this.comboBoxLocalSalida.TabIndex = 36;
-            this.comboBoxLocalSalida.Text = "Locales";
-            this.comboBoxLocalSalida.Visible = false;
-            this.comboBoxLocalSalida.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocalSalida_SelectedIndexChanged);
-            // 
-            // labelAlmacen
-            // 
-            this.labelAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelAlmacen.AutoSize = true;
-            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelAlmacen.Location = new System.Drawing.Point(42, 98);
-            this.labelAlmacen.Name = "labelAlmacen";
-            this.labelAlmacen.Size = new System.Drawing.Size(114, 20);
-            this.labelAlmacen.TabIndex = 35;
-            this.labelAlmacen.Text = "Sede Destino: ";
-            this.labelAlmacen.Visible = false;
-            this.labelAlmacen.Click += new System.EventHandler(this.labelAlmacen_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(671, 522);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 40);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Salir";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny_colored;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(514, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 40);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Confirmar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBoxAreas2
-            // 
-            this.comboBoxAreas2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxAreas2.FormattingEnabled = true;
-            this.comboBoxAreas2.Location = new System.Drawing.Point(195, 100);
-            this.comboBoxAreas2.Name = "comboBoxAreas2";
-            this.comboBoxAreas2.Size = new System.Drawing.Size(103, 21);
-            this.comboBoxAreas2.TabIndex = 41;
-            this.comboBoxAreas2.Text = "Area";
-            this.comboBoxAreas2.Visible = false;
-            this.comboBoxAreas2.SelectedIndexChanged += new System.EventHandler(this.comboBoxAreas2_SelectedIndexChanged);
-            // 
-            // comboBoxEnvios
-            // 
-            this.comboBoxEnvios.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBoxEnvios.FormattingEnabled = true;
-            this.comboBoxEnvios.Location = new System.Drawing.Point(179, 15);
-            this.comboBoxEnvios.Name = "comboBoxEnvios";
-            this.comboBoxEnvios.Size = new System.Drawing.Size(314, 21);
-            this.comboBoxEnvios.TabIndex = 35;
-            this.comboBoxEnvios.Text = "Envios";
-            // 
-            // radioBtnEnvios
-            // 
-            this.radioBtnEnvios.AutoSize = true;
-            this.radioBtnEnvios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioBtnEnvios.Location = new System.Drawing.Point(7, 11);
-            this.radioBtnEnvios.Name = "radioBtnEnvios";
-            this.radioBtnEnvios.Size = new System.Drawing.Size(166, 24);
-            this.radioBtnEnvios.TabIndex = 37;
-            this.radioBtnEnvios.Text = "Envíos Pendientes: ";
-            this.radioBtnEnvios.UseVisualStyleBackColor = true;
-            this.radioBtnEnvios.CheckedChanged += new System.EventHandler(this.radioBtnEnvios_CheckedChanged);
-            // 
-            // radioBtnLocal
-            // 
-            this.radioBtnLocal.AutoSize = true;
-            this.radioBtnLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioBtnLocal.Location = new System.Drawing.Point(7, 34);
-            this.radioBtnLocal.Name = "radioBtnLocal";
-            this.radioBtnLocal.Size = new System.Drawing.Size(161, 24);
-            this.radioBtnLocal.TabIndex = 38;
-            this.radioBtnLocal.Text = "Ingreso indefinido: ";
-            this.radioBtnLocal.UseVisualStyleBackColor = true;
-            this.radioBtnLocal.CheckedChanged += new System.EventHandler(this.radioBtnLocal_CheckedChanged);
-            // 
-            // comboBoxLocales
-            // 
-            this.comboBoxLocales.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBoxLocales.FormattingEnabled = true;
-            this.comboBoxLocales.Location = new System.Drawing.Point(288, 38);
-            this.comboBoxLocales.Name = "comboBoxLocales";
-            this.comboBoxLocales.Size = new System.Drawing.Size(205, 21);
-            this.comboBoxLocales.TabIndex = 39;
-            this.comboBoxLocales.Text = "Locales";
-            // 
-            // comboBoxAreas
-            // 
-            this.comboBoxAreas.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBoxAreas.FormattingEnabled = true;
-            this.comboBoxAreas.Location = new System.Drawing.Point(179, 38);
-            this.comboBoxAreas.Name = "comboBoxAreas";
-            this.comboBoxAreas.Size = new System.Drawing.Size(103, 21);
-            this.comboBoxAreas.TabIndex = 40;
-            this.comboBoxAreas.Text = "Area";
-            this.comboBoxAreas.SelectedIndexChanged += new System.EventHandler(this.comboBoxAreas_SelectedIndexChanged);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.comboBoxAreas);
-            this.groupBox3.Controls.Add(this.comboBoxLocales);
-            this.groupBox3.Controls.Add(this.radioBtnLocal);
-            this.groupBox3.Controls.Add(this.radioBtnEnvios);
-            this.groupBox3.Controls.Add(this.comboBoxEnvios);
-            this.groupBox3.Location = new System.Drawing.Point(16, 63);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(499, 64);
-            this.groupBox3.TabIndex = 37;
-            this.groupBox3.TabStop = false;
             // 
             // Id
             // 
@@ -389,11 +223,192 @@
             this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Observaciones.Width = 300;
             // 
+            // comboBoxLocalSalida
+            // 
+            this.comboBoxLocalSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxLocalSalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLocalSalida.FormattingEnabled = true;
+            this.comboBoxLocalSalida.Location = new System.Drawing.Point(305, 73);
+            this.comboBoxLocalSalida.Name = "comboBoxLocalSalida";
+            this.comboBoxLocalSalida.Size = new System.Drawing.Size(294, 21);
+            this.comboBoxLocalSalida.TabIndex = 36;
+            this.comboBoxLocalSalida.Visible = false;
+            this.comboBoxLocalSalida.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocalSalida_SelectedIndexChanged);
+            // 
+            // labelAlmacen
+            // 
+            this.labelAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelAlmacen.AutoSize = true;
+            this.labelAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelAlmacen.Location = new System.Drawing.Point(43, 71);
+            this.labelAlmacen.Name = "labelAlmacen";
+            this.labelAlmacen.Size = new System.Drawing.Size(114, 20);
+            this.labelAlmacen.TabIndex = 35;
+            this.labelAlmacen.Text = "Sede Destino: ";
+            this.labelAlmacen.Visible = false;
+            this.labelAlmacen.Click += new System.EventHandler(this.labelAlmacen_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(671, 490);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 40);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Salir";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny_colored;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(514, 490);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 40);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Confirmar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxAreas2
+            // 
+            this.comboBoxAreas2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxAreas2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAreas2.FormattingEnabled = true;
+            this.comboBoxAreas2.Location = new System.Drawing.Point(196, 73);
+            this.comboBoxAreas2.Name = "comboBoxAreas2";
+            this.comboBoxAreas2.Size = new System.Drawing.Size(103, 21);
+            this.comboBoxAreas2.TabIndex = 41;
+            this.comboBoxAreas2.Visible = false;
+            this.comboBoxAreas2.SelectedIndexChanged += new System.EventHandler(this.comboBoxAreas2_SelectedIndexChanged);
+            // 
+            // comboBoxEnvios
+            // 
+            this.comboBoxEnvios.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBoxEnvios.FormattingEnabled = true;
+            this.comboBoxEnvios.Location = new System.Drawing.Point(179, 15);
+            this.comboBoxEnvios.Name = "comboBoxEnvios";
+            this.comboBoxEnvios.Size = new System.Drawing.Size(314, 21);
+            this.comboBoxEnvios.TabIndex = 35;
+            this.comboBoxEnvios.Text = "Envios";
+            this.comboBoxEnvios.Visible = false;
+            // 
+            // radioBtnEnvios
+            // 
+            this.radioBtnEnvios.AutoSize = true;
+            this.radioBtnEnvios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radioBtnEnvios.Location = new System.Drawing.Point(7, 11);
+            this.radioBtnEnvios.Name = "radioBtnEnvios";
+            this.radioBtnEnvios.Size = new System.Drawing.Size(166, 24);
+            this.radioBtnEnvios.TabIndex = 37;
+            this.radioBtnEnvios.Text = "Envíos Pendientes: ";
+            this.radioBtnEnvios.UseVisualStyleBackColor = true;
+            this.radioBtnEnvios.Visible = false;
+            this.radioBtnEnvios.CheckedChanged += new System.EventHandler(this.radioBtnEnvios_CheckedChanged);
+            // 
+            // radioBtnLocal
+            // 
+            this.radioBtnLocal.AutoSize = true;
+            this.radioBtnLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radioBtnLocal.Location = new System.Drawing.Point(7, 34);
+            this.radioBtnLocal.Name = "radioBtnLocal";
+            this.radioBtnLocal.Size = new System.Drawing.Size(161, 24);
+            this.radioBtnLocal.TabIndex = 38;
+            this.radioBtnLocal.Text = "Ingreso indefinido: ";
+            this.radioBtnLocal.UseVisualStyleBackColor = true;
+            this.radioBtnLocal.CheckedChanged += new System.EventHandler(this.radioBtnLocal_CheckedChanged);
+            // 
+            // comboBoxLocales
+            // 
+            this.comboBoxLocales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLocales.FormattingEnabled = true;
+            this.comboBoxLocales.Location = new System.Drawing.Point(305, 73);
+            this.comboBoxLocales.Name = "comboBoxLocales";
+            this.comboBoxLocales.Size = new System.Drawing.Size(294, 21);
+            this.comboBoxLocales.TabIndex = 39;
+            // 
+            // comboBoxAreas
+            // 
+            this.comboBoxAreas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxAreas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAreas.FormattingEnabled = true;
+            this.comboBoxAreas.Location = new System.Drawing.Point(196, 73);
+            this.comboBoxAreas.Name = "comboBoxAreas";
+            this.comboBoxAreas.Size = new System.Drawing.Size(103, 21);
+            this.comboBoxAreas.TabIndex = 40;
+            this.comboBoxAreas.SelectedIndexChanged += new System.EventHandler(this.comboBoxAreas_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioBtnLocal);
+            this.groupBox3.Controls.Add(this.radioBtnEnvios);
+            this.groupBox3.Controls.Add(this.comboBoxEnvios);
+            this.groupBox3.Location = new System.Drawing.Point(443, 63);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(499, 64);
+            this.groupBox3.TabIndex = 37;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Visible = false;
+            // 
+            // labelOrigen
+            // 
+            this.labelOrigen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelOrigen.AutoSize = true;
+            this.labelOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelOrigen.Location = new System.Drawing.Point(43, 71);
+            this.labelOrigen.Name = "labelOrigen";
+            this.labelOrigen.Size = new System.Drawing.Size(106, 20);
+            this.labelOrigen.TabIndex = 42;
+            this.labelOrigen.Text = "Sede Origen: ";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(448, 28);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(275, 25);
+            this.toolStrip1.TabIndex = 39;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(118, 22);
+            this.toolStripButton1.Text = "Insertar Producto";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(123, 22);
+            this.toolStripButton2.Text = "Eliminar Selección";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
+            // 
             // PantallaIngresosSalidasProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 571);
+            this.ClientSize = new System.Drawing.Size(800, 539);
+            this.Controls.Add(this.labelOrigen);
+            this.Controls.Add(this.comboBoxAreas);
+            this.Controls.Add(this.comboBoxLocales);
             this.Controls.Add(this.comboBoxAreas2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -410,11 +425,11 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresoSalida)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,9 +450,6 @@
         private System.Windows.Forms.Label labelAlmacen;
         private System.Windows.Forms.TextBox textBoxObservaciones;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ComboBox comboBoxAreas2;
         private System.Windows.Forms.ComboBox comboBoxEnvios;
         private System.Windows.Forms.RadioButton radioBtnEnvios;
@@ -450,5 +462,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
+        private System.Windows.Forms.Label labelOrigen;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

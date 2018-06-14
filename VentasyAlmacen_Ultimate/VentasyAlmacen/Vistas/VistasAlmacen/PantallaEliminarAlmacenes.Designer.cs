@@ -33,17 +33,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaHabilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaHabilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,7 +53,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -63,7 +62,7 @@
             this.ColumnaHabilitado});
             this.dataGridView1.Location = new System.Drawing.Point(6, 29);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 199);
+            this.dataGridView1.Size = new System.Drawing.Size(664, 199);
             this.dataGridView1.TabIndex = 2;
             // 
             // button2
@@ -86,7 +85,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny_colored;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(491, 181);
+            this.button1.Location = new System.Drawing.Point(491, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 47);
             this.button1.TabIndex = 4;
@@ -96,46 +95,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "IdAlmacen";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // ColumnaHabilitado
-            // 
-            this.ColumnaHabilitado.DataPropertyName = "Habilitado";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnaHabilitado.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnaHabilitado.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ColumnaHabilitado.HeaderText = "Habilitado";
-            this.ColumnaHabilitado.Name = "ColumnaHabilitado";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(30, 205);
+            this.groupBox1.Location = new System.Drawing.Point(30, 170);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(676, 258);
+            this.groupBox1.Size = new System.Drawing.Size(676, 293);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Habilitar / Deshabilitar Almacenes";
@@ -155,18 +122,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Insertar Almacén";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button3.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(491, 49);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(179, 49);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "  Crear Almacén";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(218, 87);
+            this.textBoxTelefono.Location = new System.Drawing.Point(191, 87);
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(148, 23);
+            this.textBoxTelefono.Size = new System.Drawing.Size(171, 23);
             this.textBoxTelefono.TabIndex = 10;
             // 
             // textBoxDireccion
             // 
-            this.textBoxDireccion.Location = new System.Drawing.Point(218, 37);
+            this.textBoxDireccion.Location = new System.Drawing.Point(191, 37);
             this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(148, 23);
+            this.textBoxDireccion.Size = new System.Drawing.Size(258, 23);
             this.textBoxDireccion.TabIndex = 9;
             // 
             // label3
@@ -189,15 +170,43 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Dirección del almacén:";
             // 
-            // button3
+            // ID
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(491, 49);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 49);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Habilitar Almacén";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ID.DataPropertyName = "IdAlmacen";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 46;
+            // 
+            // Direccion
+            // 
+            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 92;
+            // 
+            // Telefono
+            // 
+            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 89;
+            // 
+            // ColumnaHabilitado
+            // 
+            this.ColumnaHabilitado.DataPropertyName = "Habilitado";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnaHabilitado.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnaHabilitado.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ColumnaHabilitado.HeaderText = "Habilitado";
+            this.ColumnaHabilitado.Name = "ColumnaHabilitado";
             // 
             // PantallaEliminarAlmacenes
             // 
@@ -228,10 +237,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnaHabilitado;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBoxTelefono;
@@ -239,5 +244,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnaHabilitado;
     }
 }

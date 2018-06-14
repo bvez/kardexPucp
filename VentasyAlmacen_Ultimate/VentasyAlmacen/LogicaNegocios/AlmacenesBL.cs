@@ -38,6 +38,11 @@ namespace LogicaNegocios
             return datosAlm.actualizarAlmacenHabilitado(idAlmacen, nuevoHabilitado);
         }
 
+        public int crearAlmacen(string direccion, string telefono)
+        {
+            return datosAlm.crearAlmacen(direccion, telefono);
+        }
+
         public BindingList<Area> obtenerAreas()
         {
             return datosAlm.listarAreas();

@@ -154,12 +154,39 @@ namespace AccesoADatos
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
             //*/
             return almacenes;
         }
         
+        public int crearAlmacen(string direccion, string telefono)
+        {
+            int salida = -1;
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "alm_registrar_almacen";
+                comando.Connection = con;
+                comando.Parameters.Add("_direccion", MySqlDbType.VarChar).Value = direccion;
+                comando.Parameters.Add("_telefono", MySqlDbType.VarChar).Value = telefono;
+                comando.Parameters.Add("_id_salida", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                salida = (int)comando.Parameters["_id_salida"].Value;
+
+                con.Close();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return salida;
+        }
+
         public bool actualizarAlmacenHabilitado(int id,bool habilitado)
         {
             bool exito = false;

@@ -42,6 +42,7 @@ namespace FormulariosAlmacenes
             almacenProductos = new AlmacenProductosBL();
             //BindingList<int> enteros = new BindingList<int>();
             InitializeComponent();
+            this.idAlmacen = idAlmacen;
             if(tipoUser == 'A')
             {
                 //admin
@@ -107,6 +108,7 @@ namespace FormulariosAlmacenes
             }
             */
 
+            /*
             if(this.Owner is PantallaAdministradorAlmacén)
             {
                 PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
@@ -117,7 +119,8 @@ namespace FormulariosAlmacenes
             else
             {
                 this.Dispose();
-            }
+            }*/
+            this.Dispose();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -151,6 +154,12 @@ namespace FormulariosAlmacenes
         {
             PantallaAnadirProducto pantalla = new PantallaAnadirProducto(this.idAlmacen);
             pantalla.ShowDialog();
+            if (pantalla.prodAlmReciente != null)
+            {
+                ((BindingList<ProductoAlmacen>)tablaProductosAlmacen.DataSource).Add(pantalla.prodAlmReciente);
+                tablaProductosAlmacen.Refresh();
+                tablaProductosAlmacen.Update();
+            }
             pantalla.Dispose();
         }
 

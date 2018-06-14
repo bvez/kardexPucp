@@ -18,7 +18,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
         private BindingList<ProductoAlmacen> listaProductos = null;
         private AlmacenesBL logicaAlmacenes = null;
         private BindingList<Almacen> listaAlmacenes = null;
-        private bool posibleEnvioPendiente = false;
+        //private bool posibleEnvioPendiente = false;
         //faltan locales de venta y produccion
 
         public PantallaIngresosSalidasProducto()
@@ -31,10 +31,10 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         public PantallaIngresosSalidasProducto(int idAlmacen)
         {
-            BindingList<IngresoSalidaProducto> listaEnviosPendientes;
+            //BindingList<IngresoSalidaProducto> listaEnviosPendientes;
 
             InitializeComponent();
-            radioBtnEnvios.Checked = true;
+            //radioBtnEnvios.Checked = true;
             this.idAlmacen = idAlmacen;
             listaProductos = new BindingList<ProductoAlmacen>();
             logicaAlmacenes = new AlmacenesBL();
@@ -44,6 +44,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             
 
             Almacen almacenActual = logicaAlmacenes.obtenerAlmacen(idAlmacen);
+
+            /*
 
             listaEnviosPendientes = logicaAlmacenes.obtenerEnviosPendientesAlmacen(idAlmacen);
             
@@ -60,23 +62,36 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 radioBtnLocal.Checked = true;
                 posibleEnvioPendiente = false;
             }
+            */
 
             listaAlmacenes = logicaAlmacenes.obtenerAlmacenesHabilitados();
 
             comboBoxAreas.DataSource = logicaAlmacenes.obtenerAreas();
             comboBoxAreas2.DataSource = logicaAlmacenes.obtenerAreas();
             comboBoxLocales.DataSource = listaAlmacenes;
-            
+            comboBoxLocalSalida.DataSource = logicaAlmacenes.obtenerAlmacenesHabilitados();
+
+            comboBoxLocales.SelectedIndex = 0;
+            comboBoxLocalSalida.SelectedIndex = 0;
         }
 
         private void radioBtnIngreso_CheckedChanged(object sender, EventArgs e)
         {
             if (radioBtnIngreso.Checked) {
+                /*
                 labelAlmacen.Visible = false;
                 comboBoxLocalSalida.Visible = false;
                 comboBoxAreas2.Visible = false;
 
                 groupBox3.Visible = true;
+                */
+                labelAlmacen.Visible = false;
+                comboBoxAreas2.Visible = false;
+                comboBoxLocalSalida.Visible = false;
+
+                labelOrigen.Visible = true;
+                comboBoxAreas.Visible = true;
+                comboBoxLocales.Visible = true;
                 label1.Text = "Observaciones en el ingreso:";
             }
             
@@ -86,43 +101,25 @@ namespace FormulariosAlmacenes.VistasAlmacen
         {
             if (radioBtnSalida.Checked)
             {
+                /*
                 groupBox3.Visible = false;
 
                 groupBox1.Enabled = true;
                 comboBoxAreas2.Visible = true;
                 labelAlmacen.Visible = true;
                 comboBoxLocalSalida.Visible = true;
+                */
+
+                labelAlmacen.Visible = true;
+                comboBoxAreas2.Visible = true;
+                comboBoxLocalSalida.Visible = true;
+
+                labelOrigen.Visible = false;
+                comboBoxAreas.Visible = false;
+                comboBoxLocales.Visible = false;
                 label1.Text = "Observaciones en la salida:";
             }
 
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            /*Mostrar los productos */
-            ProductoAlmacen nuevoProducto;
-            PantallaSeleccionarProducto newPant = new PantallaSeleccionarProducto(this.idAlmacen);
-            newPant.ShowDialog();
-            nuevoProducto = newPant.ProductoSeleccionado;
-            if (nuevoProducto != null)
-            {
-                ((BindingList<ProductoAlmacen>)dataGridIngresoSalida.DataSource).Add(nuevoProducto);
-                dataGridIngresoSalida.Refresh();
-                dataGridIngresoSalida.Update();
-            }
-            
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            if (dataGridIngresoSalida.CurrentRow != null)
-            {
-                ProductoAlmacen productoSeleccionado = (ProductoAlmacen)dataGridIngresoSalida.CurrentRow.DataBoundItem;
-                BindingList<ProductoAlmacen> lista = (BindingList<ProductoAlmacen>)dataGridIngresoSalida.DataSource;
-                lista.Remove(productoSeleccionado);
-                dataGridIngresoSalida.Refresh();
-                dataGridIngresoSalida.Update();
-            }
         }
 
         private void PantallaIngresosSalidasProducto_FormClosed(object sender, FormClosedEventArgs e)
@@ -192,12 +189,17 @@ namespace FormulariosAlmacenes.VistasAlmacen
             if (comboBoxAreas.SelectedItem != null && ((Area)comboBoxAreas.SelectedItem).Nombre == "Almacen")
             {
                 comboBoxLocales.DataSource = listaAlmacenes;
-                comboBoxLocalSalida.SelectedIndex = -1;
+                comboBoxLocales.SelectedIndex = -1;
                 if (listaAlmacenes != null && listaAlmacenes.Count == 0)
                 {
                     comboBoxLocales.Text = "No hay locales de Almacen disponibles";
                 }
-                comboBoxLocales.Text = "Almacenes";
+                else if(listaAlmacenes != null && listaAlmacenes.Count >= 1)
+                {
+                    Console.WriteLine("Debe cambiar");
+                    comboBoxLocales.SelectedIndex = 0;
+                }
+                //comboBoxLocales.Text = "Almacenes";
                 comboBoxLocales.Update();
                 comboBoxLocales.Refresh();
             }
@@ -205,6 +207,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 //lista de locales de ventas
                 comboBoxLocales.Text = "No hay locales de Ventas disponibles";
+                comboBoxLocales.SelectedIndex = -1;
+                comboBoxLocales.DataSource = null;
                 comboBoxLocales.Update();
                 comboBoxLocales.Refresh();
             }
@@ -212,6 +216,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 //lista de locales de Produccion
                 comboBoxLocales.Text = "No hay locales de Produccion disponibles";
+                comboBoxLocales.SelectedIndex = -1;
+                comboBoxLocales.DataSource = null;
                 comboBoxLocales.Update();
                 comboBoxLocales.Refresh();
             }
@@ -224,7 +230,14 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 comboBoxLocalSalida.DataSource = listaAlmacenes;
                 comboBoxLocalSalida.SelectedIndex = -1;
-                comboBoxLocales.Text = "Almacenes";
+                if (listaAlmacenes != null && listaAlmacenes.Count == 0)
+                {
+                    comboBoxLocalSalida.Text = "No hay locales de Almacen disponibles";
+                }
+                else if (listaAlmacenes != null && listaAlmacenes.Count >= 1)
+                {
+                    comboBoxLocalSalida.SelectedIndex = 0;
+                }
                 comboBoxLocalSalida.Update();
                 comboBoxLocalSalida.Refresh();
             }
@@ -232,6 +245,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 //lista de locales de ventas
                 comboBoxLocalSalida.Text = "No hay locales de Ventas disponibles";
+                comboBoxLocalSalida.SelectedIndex = -1;
+                comboBoxLocalSalida.DataSource = null;
                 comboBoxLocalSalida.Update();
                 comboBoxLocalSalida.Refresh();
             }
@@ -239,6 +254,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 //lista de locales de Produccion
                 comboBoxLocalSalida.Text = "No hay locales de Produccion disponibles";
+                comboBoxLocalSalida.SelectedIndex = -1;
+                comboBoxLocalSalida.DataSource = null;
                 comboBoxLocalSalida.Update();
                 comboBoxLocalSalida.Refresh();
             }
@@ -308,9 +325,16 @@ namespace FormulariosAlmacenes.VistasAlmacen
             //registrar pedido ingreso o salida
             if (radioBtnIngreso.Checked)
             {
-                Sucursal localSeleccionado = (Sucursal)comboBoxLocales.SelectedItem;
+                //Sucursal localSeleccionado = (Sucursal)comboBoxLocales.SelectedItem;
                 int idAreaSeleccionada = ((Area)comboBoxAreas.SelectedItem).IdArea;
-                int idIngreso = logicaAlmacenes.registrarIngresoProductos(this.idAlmacen, idAreaSeleccionada, localSeleccionado.IdLocal, textBoxObservaciones.Text);
+                int sedeOrigen = -1;
+                if(idAreaSeleccionada == 1)
+                {
+                    Almacen localSeleccionado = (Almacen)comboBoxLocales.SelectedItem;
+                    sedeOrigen = localSeleccionado.IdAlmacen;
+                }
+                Console.WriteLine("Se va a insertar " + this.idAlmacen.ToString() + " " +idAreaSeleccionada.ToString() + " " + sedeOrigen.ToString());
+                int idIngreso = logicaAlmacenes.registrarIngresoProductos(this.idAlmacen, idAreaSeleccionada, sedeOrigen, textBoxObservaciones.Text);
                 if (idIngreso > 0)
                 {
                     //registrar todas las lineas
@@ -347,9 +371,15 @@ namespace FormulariosAlmacenes.VistasAlmacen
             }
             else if (radioBtnSalida.Checked)
             {
-                Sucursal localSeleccionado = (Sucursal)comboBoxLocalSalida.SelectedItem;
+                //Sucursal localSeleccionado = (Sucursal)comboBoxLocalSalida.SelectedItem;
                 int idAreaSeleccionada = ((Area)comboBoxAreas2.SelectedItem).IdArea;
-                int idSalida = logicaAlmacenes.registrarSalidaProductos(this.idAlmacen, idAreaSeleccionada, localSeleccionado.IdLocal, textBoxObservaciones.Text);
+                int idSedeDestino = -1;
+                if(idAreaSeleccionada == 1)
+                {
+                    Almacen almacenDestino = (Almacen)comboBoxLocalSalida.SelectedItem;
+                    idSedeDestino = almacenDestino.IdAlmacen;
+                }
+                int idSalida = logicaAlmacenes.registrarSalidaProductos(this.idAlmacen, idAreaSeleccionada, idSedeDestino, textBoxObservaciones.Text);
                 if (idSalida > 0)
                 {
                     //registrar todas las lineas
@@ -384,6 +414,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 MessageBox.Show("Transaccion Exitosa", "Exito");
                 this.dataGridIngresoSalida.DataSource = new BindingList<ProductoAlmacen>();
+                this.textBoxObservaciones.Text = "";
                 dataGridIngresoSalida.Refresh();
                 dataGridIngresoSalida.Update();
             }
@@ -398,6 +429,33 @@ namespace FormulariosAlmacenes.VistasAlmacen
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            /*Mostrar los productos */
+            ProductoAlmacen nuevoProducto;
+            PantallaSeleccionarProducto newPant = new PantallaSeleccionarProducto(this.idAlmacen);
+            newPant.ShowDialog();
+            nuevoProducto = newPant.ProductoSeleccionado;
+            if (nuevoProducto != null)
+            {
+                ((BindingList<ProductoAlmacen>)dataGridIngresoSalida.DataSource).Add(nuevoProducto);
+                dataGridIngresoSalida.Refresh();
+                dataGridIngresoSalida.Update();
+            }
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridIngresoSalida.CurrentRow != null)
+            {
+                ProductoAlmacen productoSeleccionado = (ProductoAlmacen)dataGridIngresoSalida.CurrentRow.DataBoundItem;
+                BindingList<ProductoAlmacen> lista = (BindingList<ProductoAlmacen>)dataGridIngresoSalida.DataSource;
+                lista.Remove(productoSeleccionado);
+                dataGridIngresoSalida.Refresh();
+                dataGridIngresoSalida.Update();
+            }
         }
     }
 }

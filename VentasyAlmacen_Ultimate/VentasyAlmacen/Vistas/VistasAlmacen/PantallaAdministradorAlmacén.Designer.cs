@@ -47,9 +47,9 @@
             this.btnActualizarAlmacenes.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActualizarAlmacenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarAlmacenes.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarAlmacenes.Location = new System.Drawing.Point(40, 103);
+            this.btnActualizarAlmacenes.Location = new System.Drawing.Point(134, 103);
             this.btnActualizarAlmacenes.Name = "btnActualizarAlmacenes";
-            this.btnActualizarAlmacenes.Size = new System.Drawing.Size(190, 80);
+            this.btnActualizarAlmacenes.Size = new System.Drawing.Size(254, 80);
             this.btnActualizarAlmacenes.TabIndex = 0;
             this.btnActualizarAlmacenes.Text = "Actualizar Almacenes";
             this.btnActualizarAlmacenes.UseVisualStyleBackColor = false;
@@ -91,11 +91,11 @@
             this.btnProductosDisponibl.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProductosDisponibl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btnProductosDisponibl.ForeColor = System.Drawing.Color.Black;
-            this.btnProductosDisponibl.Location = new System.Drawing.Point(40, 195);
+            this.btnProductosDisponibl.Location = new System.Drawing.Point(134, 192);
             this.btnProductosDisponibl.Name = "btnProductosDisponibl";
-            this.btnProductosDisponibl.Size = new System.Drawing.Size(190, 80);
+            this.btnProductosDisponibl.Size = new System.Drawing.Size(254, 89);
             this.btnProductosDisponibl.TabIndex = 3;
-            this.btnProductosDisponibl.Text = "Disponibilidad de Productos";
+            this.btnProductosDisponibl.Text = "Modificar Disponibilidad de Productos";
             this.btnProductosDisponibl.UseVisualStyleBackColor = false;
             this.btnProductosDisponibl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnProductosDisponibles_MouseClick);
             // 
@@ -126,9 +126,9 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(40, 290);
+            this.button1.Location = new System.Drawing.Point(134, 290);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 83);
+            this.button1.Size = new System.Drawing.Size(254, 83);
             this.button1.TabIndex = 8;
             this.button1.Text = "Reporte por fechas";
             this.button1.UseVisualStyleBackColor = false;

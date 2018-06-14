@@ -178,10 +178,10 @@
     <Compile Include="VistasAlmacen\PantallaIngresosSalidasProducto.Designer.cs">
       <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.cs">
+    <Compile Include="Deprecated\PantallaInsertarAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistasAlmacen\PantallaInsertarAlmacen.Designer.cs">
+    <Compile Include="Deprecated\PantallaInsertarAlmacen.Designer.cs">
       <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
     </Compile>
     <Compile Include="Deprecated\PantallaModificarStock.cs">
@@ -190,10 +190,10 @@
     <Compile Include="Deprecated\PantallaModificarStock.Designer.cs">
       <DependentUpon>PantallaModificarStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistasAlmacen\PantallaActualizarAlmacenes.cs">
+    <Compile Include="Deprecated\PantallaActualizarAlmacenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistasAlmacen\PantallaActualizarAlmacenes.Designer.cs">
+    <Compile Include="Deprecated\PantallaActualizarAlmacenes.Designer.cs">
       <DependentUpon>PantallaActualizarAlmacenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Deprecated\PantallaRegIngresosProducto.cs">
@@ -327,7 +327,7 @@
     <EmbeddedResource Include="VistasAlmacen\PantallaIngresosSalidasProducto.resx">
       <DependentUpon>PantallaIngresosSalidasProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistasAlmacen\PantallaInsertarAlmacen.resx">
+    <EmbeddedResource Include="Deprecated\PantallaInsertarAlmacen.resx">
       <DependentUpon>PantallaInsertarAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deprecated\PantallaModificarStock.resx">
@@ -336,7 +336,7 @@
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistasAlmacen\PantallaActualizarAlmacenes.resx">
+    <EmbeddedResource Include="Deprecated\PantallaActualizarAlmacenes.resx">
       <DependentUpon>PantallaActualizarAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistasAlmacen\PantallaAdministradorAlmacén.resx">

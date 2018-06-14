@@ -17,6 +17,7 @@ namespace FormulariosAlmacenes
         private Producto productoSeleccionado;
         private AlmacenProductosBL logicaProductos;
         private int idAlmacen;
+        public ProductoAlmacen prodAlmReciente;
         public PantallaAnadirProducto()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace FormulariosAlmacenes
             InitializeComponent();
             logicaProductos = new AlmacenProductosBL();
             this.idAlmacen = idAlmacen;
+            this.prodAlmReciente = null;
             dataGridProductosRegistrables.AutoGenerateColumns = false;
             dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen);
         }
@@ -38,13 +40,15 @@ namespace FormulariosAlmacenes
             DialogResult res = MessageBox.Show("Desea confirmar el registro del producto : \n" + productoSeleccionado.Id +
                 "   "+productoSeleccionado.CodigoProducto+" "+productoSeleccionado.Nombre + " con stock inicial "+
                 numericUpDown1.Value.ToString() +"?" ,"Confirmacion", MessageBoxButtons.YesNo);
+
+
             if (res == DialogResult.Yes)
             {
                 if (logicaProductos.registrarProductoAlmacen(this.idAlmacen, productoSeleccionado.Id, (int)numericUpDown1.Value))
                 {
                     BindingList<Producto> productos = (BindingList<Producto>)dataGridProductosRegistrables.DataSource;
 
-                    ProductoAlmacen prodAlmReciente = new ProductoAlmacen();
+                    prodAlmReciente = new ProductoAlmacen();
                     prodAlmReciente.ProductoAlmacenado = productoSeleccionado;
                     prodAlmReciente.CantidadAlmacenada = (int)numericUpDown1.Value;
 

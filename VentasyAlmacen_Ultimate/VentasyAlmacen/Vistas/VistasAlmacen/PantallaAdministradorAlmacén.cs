@@ -101,10 +101,10 @@ namespace FormulariosAlmacenes
 
         private void btnActualizarAlmacenes_Click(object sender, EventArgs e)
         {
-            PantallaActualizarAlmacenes pantallaActualizarAlmacenes = new PantallaActualizarAlmacenes();
-            pantallaActualizarAlmacenes.Owner = this;
-            pantallaActualizarAlmacenes.ShowDialog();
-            pantallaActualizarAlmacenes.Dispose();
+            PantallaEliminarAlmacenes newPant = new PantallaEliminarAlmacenes();
+            newPant.Owner = this;
+            newPant.ShowDialog();
+            newPant.Dispose();
         }
 
         private void btnModificarStock_MouseClick(object sender, MouseEventArgs e)
