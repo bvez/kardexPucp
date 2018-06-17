@@ -160,5 +160,26 @@ namespace FormulariosAlmacenes
             }
             return true;
         }
+
+        private void dataGridStock_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Column3_KeyPress);
+            if (dataGridStock.CurrentCell.ColumnIndex == 3)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Column3_KeyPress);
+                }
+            }
+        }
+
+        private void Column3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -92,6 +92,7 @@
             this.dataGridStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridStock.Size = new System.Drawing.Size(607, 253);
             this.dataGridStock.TabIndex = 20;
+            this.dataGridStock.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridStock_EditingControlShowing);
             // 
             // Id
             // 
