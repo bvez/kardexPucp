@@ -33,6 +33,9 @@
             this.radioBtnSalida = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,14 +57,11 @@
             this.comboBoxAreas = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelOrigen = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresoSalida)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -126,6 +126,38 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(448, 28);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(244, 25);
+            this.toolStrip1.TabIndex = 39;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(118, 22);
+            this.toolStripButton1.Text = "Insertar Producto";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(123, 22);
+            this.toolStripButton2.Text = "Eliminar Selección";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
+            // 
             // textBoxObservaciones
             // 
             this.textBoxObservaciones.AcceptsReturn = true;
@@ -180,6 +212,7 @@
             this.dataGridIngresoSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridIngresoSalida.Size = new System.Drawing.Size(657, 237);
             this.dataGridIngresoSalida.TabIndex = 30;
+            this.dataGridIngresoSalida.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridIngresoSalida_EditingControlShowing);
             // 
             // Id
             // 
@@ -369,38 +402,6 @@
             this.labelOrigen.TabIndex = 42;
             this.labelOrigen.Text = "Sede Origen: ";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(448, 28);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(275, 25);
-            this.toolStrip1.TabIndex = 39;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(118, 22);
-            this.toolStripButton1.Text = "Insertar Producto";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::FormulariosAlmacenes.Properties.Resources.btn_cross_tiny_colored;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(123, 22);
-            this.toolStripButton2.Text = "Eliminar Selección";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
-            // 
             // PantallaIngresosSalidasProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,11 +426,11 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresoSalida)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

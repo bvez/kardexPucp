@@ -15,16 +15,21 @@ namespace FormulariosAlmacenes
     public partial class PantallaSeleccionarAlmacen : Form
     {
         private AlmacenesBL logicaAlmacenes;
+        private BindingList<Almacen> listaAlmacenes;
         private Almacen almacenSelected = null;
         public PantallaSeleccionarAlmacen()
         {
+            almacenSelected = null;
             InitializeComponent();
             DataGridSelectAlmacen.AutoGenerateColumns = false;
             logicaAlmacenes = new AlmacenesBL();
-            DataGridSelectAlmacen.DataSource = logicaAlmacenes.obtenerAlmacenesHabilitados();
+            listaAlmacenes = logicaAlmacenes.obtenerAlmacenesHabilitados();
+            DataGridSelectAlmacen.DataSource = listaAlmacenes;
         }
         public PantallaSeleccionarAlmacen(BindingList<Almacen> listaAlmacenesIn)
         {
+            almacenSelected = null;
+            listaAlmacenes = listaAlmacenesIn;
             InitializeComponent();
             label1.Text = "Antes de continuar, seleccione un almacén:";
             DataGridSelectAlmacen.AutoGenerateColumns = false;
@@ -47,6 +52,18 @@ namespace FormulariosAlmacenes
         private void btnSelectAlmacenAtras_MouseClick(object sender, MouseEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnActualizarAlmacenes_Click(object sender, EventArgs e)
+        {
+            PantallaEliminarAlmacenes newPant = new PantallaEliminarAlmacenes();
+            newPant.Owner = this;
+            newPant.ShowDialog();
+            newPant.Dispose();
+            listaAlmacenes = logicaAlmacenes.obtenerAlmacenesHabilitados();
+            DataGridSelectAlmacen.DataSource = listaAlmacenes;
+            DataGridSelectAlmacen.Refresh();
+            DataGridSelectAlmacen.Update();
         }
     }
 }

@@ -64,7 +64,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(424, 162);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 108);
+            this.groupBox1.Size = new System.Drawing.Size(367, 108);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar Producto";
@@ -90,7 +90,7 @@
             // 
             this.btnInsertarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.btnInsertarProducto.Image = global::FormulariosAlmacenes.Properties.Resources.btn_Chk_tiny;
-            this.btnInsertarProducto.Location = new System.Drawing.Point(235, 45);
+            this.btnInsertarProducto.Location = new System.Drawing.Point(221, 42);
             this.btnInsertarProducto.Name = "btnInsertarProducto";
             this.btnInsertarProducto.Size = new System.Drawing.Size(140, 40);
             this.btnInsertarProducto.TabIndex = 4;
@@ -107,6 +107,7 @@
             this.numericUpDown1.Size = new System.Drawing.Size(67, 23);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDown1_KeyPress);
             // 
             // label3
             // 
@@ -194,9 +195,9 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(415, 31);
+            this.groupBox3.Location = new System.Drawing.Point(424, 31);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(376, 109);
+            this.groupBox3.Size = new System.Drawing.Size(367, 109);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscar Producto";
@@ -241,7 +242,7 @@
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.btnAtras.Image = global::FormulariosAlmacenes.Properties.Resources.btn_back_tiny;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(721, 332);
+            this.btnAtras.Location = new System.Drawing.Point(682, 332);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(109, 36);
             this.btnAtras.TabIndex = 8;
@@ -254,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(842, 387);
+            this.ClientSize = new System.Drawing.Size(807, 387);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridProductosRegistrables);

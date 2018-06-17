@@ -50,7 +50,7 @@ namespace FormulariosAlmacenes
 
                     prodAlmReciente = new ProductoAlmacen();
                     prodAlmReciente.ProductoAlmacenado = productoSeleccionado;
-                    prodAlmReciente.CantidadAlmacenada = (int)numericUpDown1.Value;
+                    prodAlmReciente.CantidadAlmacenada = (int)Math.Round(numericUpDown1.Value);
 
                     productos.Remove(productoSeleccionado);
 
@@ -86,6 +86,14 @@ namespace FormulariosAlmacenes
             this.Dispose();
             //Almacen almacenSeleccionado =padre.obtenerAlmacenSeleccionado();
             //padre.abrirPantallaAnadirProducto(almacenSeleccionado);
+        }
+
+        private void numericUpDown1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

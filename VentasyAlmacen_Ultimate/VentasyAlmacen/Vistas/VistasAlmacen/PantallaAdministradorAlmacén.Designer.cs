@@ -45,14 +45,16 @@
             // btnActualizarAlmacenes
             // 
             this.btnActualizarAlmacenes.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnActualizarAlmacenes.Enabled = false;
             this.btnActualizarAlmacenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarAlmacenes.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarAlmacenes.Location = new System.Drawing.Point(134, 103);
+            this.btnActualizarAlmacenes.Location = new System.Drawing.Point(395, 143);
             this.btnActualizarAlmacenes.Name = "btnActualizarAlmacenes";
             this.btnActualizarAlmacenes.Size = new System.Drawing.Size(254, 80);
             this.btnActualizarAlmacenes.TabIndex = 0;
             this.btnActualizarAlmacenes.Text = "Actualizar Almacenes";
             this.btnActualizarAlmacenes.UseVisualStyleBackColor = false;
+            this.btnActualizarAlmacenes.Visible = false;
             this.btnActualizarAlmacenes.Click += new System.EventHandler(this.btnActualizarAlmacenes_Click);
             // 
             // btnModificarStock
@@ -91,10 +93,10 @@
             this.btnProductosDisponibl.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProductosDisponibl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btnProductosDisponibl.ForeColor = System.Drawing.Color.Black;
-            this.btnProductosDisponibl.Location = new System.Drawing.Point(134, 192);
+            this.btnProductosDisponibl.Location = new System.Drawing.Point(134, 134);
             this.btnProductosDisponibl.Name = "btnProductosDisponibl";
             this.btnProductosDisponibl.Size = new System.Drawing.Size(254, 89);
-            this.btnProductosDisponibl.TabIndex = 3;
+            this.btnProductosDisponibl.TabIndex = 1;
             this.btnProductosDisponibl.Text = "Modificar Disponibilidad de Productos";
             this.btnProductosDisponibl.UseVisualStyleBackColor = false;
             this.btnProductosDisponibl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnProductosDisponibles_MouseClick);
@@ -126,10 +128,10 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(134, 290);
+            this.button1.Location = new System.Drawing.Point(134, 252);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 83);
-            this.button1.TabIndex = 8;
+            this.button1.Size = new System.Drawing.Size(254, 89);
+            this.button1.TabIndex = 2;
             this.button1.Text = "Reporte por fechas";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
@@ -163,7 +165,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(392, 379);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(89, 13);
-            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Cambiar Almacén";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

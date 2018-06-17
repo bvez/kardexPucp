@@ -15,7 +15,7 @@ namespace FormulariosAlmacenes
 {
     public partial class PantallaAdministradorAlmacén : Form
     {
-        Almacen almacenActual;
+        public Almacen almacenActual;
         public PantallaAdministradorAlmacén()
         {
             InitializeComponent();
@@ -23,10 +23,10 @@ namespace FormulariosAlmacenes
         public PantallaAdministradorAlmacén(string nombre)
         {
             this.almacenActual = this.obtenerAlmacenSeleccionado();
-            InitializeComponent();
+            
             if (almacenActual != null)
             {
-                
+                InitializeComponent();
                 labelBienvenidaAdmin.Text = "Bienvenido " + nombre;
                 labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
             }

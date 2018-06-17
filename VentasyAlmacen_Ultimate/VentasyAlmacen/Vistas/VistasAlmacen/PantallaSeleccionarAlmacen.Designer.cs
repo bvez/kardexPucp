@@ -37,6 +37,7 @@
             this.btnSelectAlmacenSgte = new System.Windows.Forms.Button();
             this.btnSelectAlmacenAtras = new System.Windows.Forms.Button();
             this.nombreSelected = new System.Windows.Forms.Label();
+            this.btnActualizarAlmacenes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSelectAlmacen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.DataGridSelectAlmacen.MultiSelect = false;
             this.DataGridSelectAlmacen.Name = "DataGridSelectAlmacen";
             this.DataGridSelectAlmacen.ReadOnly = true;
-            this.DataGridSelectAlmacen.Size = new System.Drawing.Size(718, 301);
+            this.DataGridSelectAlmacen.Size = new System.Drawing.Size(728, 321);
             this.DataGridSelectAlmacen.TabIndex = 0;
             // 
             // IdAlmacen
@@ -92,15 +93,15 @@
             this.label1.Location = new System.Drawing.Point(28, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 17);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 100;
             this.label1.Text = "Seleccione el almacén:";
             // 
             // btnSelectAlmacenSgte
             // 
-            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(562, 381);
+            this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(486, 369);
             this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
-            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(105, 39);
+            this.btnSelectAlmacenSgte.Size = new System.Drawing.Size(149, 61);
             this.btnSelectAlmacenSgte.TabIndex = 2;
             this.btnSelectAlmacenSgte.Text = "Seleccionar";
             this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
@@ -108,10 +109,10 @@
             // 
             // btnSelectAlmacenAtras
             // 
-            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(693, 382);
+            this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(654, 369);
             this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";
-            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(56, 39);
+            this.btnSelectAlmacenAtras.Size = new System.Drawing.Size(105, 61);
             this.btnSelectAlmacenAtras.TabIndex = 3;
             this.btnSelectAlmacenAtras.Text = "Atrás";
             this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
@@ -126,11 +127,25 @@
             this.nombreSelected.Size = new System.Drawing.Size(0, 25);
             this.nombreSelected.TabIndex = 4;
             // 
+            // btnActualizarAlmacenes
+            // 
+            this.btnActualizarAlmacenes.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarAlmacenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarAlmacenes.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizarAlmacenes.Location = new System.Drawing.Point(31, 369);
+            this.btnActualizarAlmacenes.Name = "btnActualizarAlmacenes";
+            this.btnActualizarAlmacenes.Size = new System.Drawing.Size(239, 61);
+            this.btnActualizarAlmacenes.TabIndex = 1;
+            this.btnActualizarAlmacenes.Text = "Actualizar Almacenes";
+            this.btnActualizarAlmacenes.UseVisualStyleBackColor = false;
+            this.btnActualizarAlmacenes.Click += new System.EventHandler(this.btnActualizarAlmacenes_Click);
+            // 
             // PantallaSeleccionarAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnActualizarAlmacenes);
             this.Controls.Add(this.nombreSelected);
             this.Controls.Add(this.btnSelectAlmacenAtras);
             this.Controls.Add(this.btnSelectAlmacenSgte);
@@ -160,5 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAlmacen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.Button btnActualizarAlmacenes;
     }
 }

@@ -74,3 +74,5 @@ C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Deb
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\obj\Debug\LogicaNegocios.pdb
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\itextsharp.dll
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\itextsharp.xml
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\itextsharp.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\LogicaNegocios\bin\Debug\itextsharp.xml

@@ -31,6 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaEliminarAlmacenes));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaHabilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -40,10 +44,6 @@
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaHabilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,6 +64,44 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(664, 199);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ID.DataPropertyName = "IdAlmacen";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 46;
+            // 
+            // Direccion
+            // 
+            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 92;
+            // 
+            // Telefono
+            // 
+            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 89;
+            // 
+            // ColumnaHabilitado
+            // 
+            this.ColumnaHabilitado.DataPropertyName = "Habilitado";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnaHabilitado.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnaHabilitado.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ColumnaHabilitado.HeaderText = "Habilitado";
+            this.ColumnaHabilitado.Name = "ColumnaHabilitado";
             // 
             // button2
             // 
@@ -142,6 +180,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(171, 23);
             this.textBoxTelefono.TabIndex = 10;
+            this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
             // textBoxDireccion
             // 
@@ -156,9 +195,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(21, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 20);
+            this.label3.Size = new System.Drawing.Size(164, 40);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Teléfono del almacén:";
+            this.label3.Text = "Teléfono del almacén:\r\n     (Solo numeros)";
             // 
             // label2
             // 
@@ -169,44 +208,6 @@
             this.label2.Size = new System.Drawing.Size(168, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Dirección del almacén:";
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ID.DataPropertyName = "IdAlmacen";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 46;
-            // 
-            // Direccion
-            // 
-            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            this.Direccion.Width = 92;
-            // 
-            // Telefono
-            // 
-            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 89;
-            // 
-            // ColumnaHabilitado
-            // 
-            this.ColumnaHabilitado.DataPropertyName = "Habilitado";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnaHabilitado.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnaHabilitado.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ColumnaHabilitado.HeaderText = "Habilitado";
-            this.ColumnaHabilitado.Name = "ColumnaHabilitado";
             // 
             // PantallaEliminarAlmacenes
             // 

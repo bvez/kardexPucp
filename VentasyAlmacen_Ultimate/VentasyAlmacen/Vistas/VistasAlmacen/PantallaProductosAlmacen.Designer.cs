@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaProductosAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.stockActualSeleccionado = new System.Windows.Forms.Label();
+            this.nombreSeleccionado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.nuevoStockNumBox = new System.Windows.Forms.NumericUpDown();
@@ -58,8 +60,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.nombreSeleccionado = new System.Windows.Forms.Label();
-            this.stockActualSeleccionado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoStockNumBox)).BeginInit();
@@ -98,6 +98,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificar Stock";
             // 
+            // stockActualSeleccionado
+            // 
+            this.stockActualSeleccionado.AutoSize = true;
+            this.stockActualSeleccionado.Location = new System.Drawing.Point(137, 77);
+            this.stockActualSeleccionado.Name = "stockActualSeleccionado";
+            this.stockActualSeleccionado.Size = new System.Drawing.Size(0, 24);
+            this.stockActualSeleccionado.TabIndex = 19;
+            // 
+            // nombreSeleccionado
+            // 
+            this.nombreSeleccionado.AutoSize = true;
+            this.nombreSeleccionado.Location = new System.Drawing.Point(137, 42);
+            this.nombreSeleccionado.Name = "nombreSeleccionado";
+            this.nombreSeleccionado.Size = new System.Drawing.Size(0, 24);
+            this.nombreSeleccionado.TabIndex = 18;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -130,6 +146,7 @@
             this.nuevoStockNumBox.Name = "nuevoStockNumBox";
             this.nuevoStockNumBox.Size = new System.Drawing.Size(98, 29);
             this.nuevoStockNumBox.TabIndex = 15;
+            this.nuevoStockNumBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nuevoStockNumBox_KeyPress);
             // 
             // label7
             // 
@@ -147,9 +164,9 @@
             this.btnModificarStock.Image = global::FormulariosAlmacenes.Properties.Resources.btn_salirTiny;
             this.btnModificarStock.Location = new System.Drawing.Point(57, 155);
             this.btnModificarStock.Name = "btnModificarStock";
-            this.btnModificarStock.Size = new System.Drawing.Size(197, 40);
+            this.btnModificarStock.Size = new System.Drawing.Size(211, 40);
             this.btnModificarStock.TabIndex = 13;
-            this.btnModificarStock.Text = " Modificar Stock ";
+            this.btnModificarStock.Text = "   Modificar Stock ";
             this.btnModificarStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificarStock.UseVisualStyleBackColor = true;
@@ -159,7 +176,7 @@
             // 
             this.btnInsertarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.btnInsertarProducto.Image = global::FormulariosAlmacenes.Properties.Resources.btn_anadir_tiny;
-            this.btnInsertarProducto.Location = new System.Drawing.Point(484, 25);
+            this.btnInsertarProducto.Location = new System.Drawing.Point(541, 25);
             this.btnInsertarProducto.Name = "btnInsertarProducto";
             this.btnInsertarProducto.Size = new System.Drawing.Size(211, 40);
             this.btnInsertarProducto.TabIndex = 12;
@@ -295,7 +312,7 @@
             // 
             this.button1.Image = global::FormulariosAlmacenes.Properties.Resources.btn_search_tiny;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(320, 132);
+            this.button1.Location = new System.Drawing.Point(320, 120);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 41);
             this.button1.TabIndex = 0;
@@ -398,22 +415,6 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // nombreSeleccionado
-            // 
-            this.nombreSeleccionado.AutoSize = true;
-            this.nombreSeleccionado.Location = new System.Drawing.Point(137, 42);
-            this.nombreSeleccionado.Name = "nombreSeleccionado";
-            this.nombreSeleccionado.Size = new System.Drawing.Size(0, 24);
-            this.nombreSeleccionado.TabIndex = 18;
-            // 
-            // stockActualSeleccionado
-            // 
-            this.stockActualSeleccionado.AutoSize = true;
-            this.stockActualSeleccionado.Location = new System.Drawing.Point(137, 77);
-            this.stockActualSeleccionado.Name = "stockActualSeleccionado";
-            this.stockActualSeleccionado.Size = new System.Drawing.Size(0, 24);
-            this.stockActualSeleccionado.TabIndex = 19;
             // 
             // PantallaProductosAlmacen
             // 

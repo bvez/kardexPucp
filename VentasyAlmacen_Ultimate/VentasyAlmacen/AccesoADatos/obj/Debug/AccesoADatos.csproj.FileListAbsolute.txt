@@ -72,3 +72,7 @@ C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.pdfa.dll
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.xtra.dll
 C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.xml
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.xtra.dll
+C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\AccesoADatos\bin\Debug\itextsharp.xml

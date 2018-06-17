@@ -125,7 +125,7 @@ namespace FormulariosAlmacenes
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if ((int)nuevoStockNumBox.Value == Int32.Parse(stockActualSeleccionado.Text))
+            if (Math.Round(nuevoStockNumBox.Value) == Int32.Parse(stockActualSeleccionado.Text))
                 return;
             DialogResult resultado = MessageBox.Show("Desea confirmar la actualización?", "Confirmacion", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.Yes)
@@ -174,6 +174,14 @@ namespace FormulariosAlmacenes
             nombreSeleccionado.Text = productoAlmacenSeleccionado.Nombre;
             stockActualSeleccionado.Text = productoAlmacenSeleccionado.CantidadAlmacenada.ToString();
             nuevoStockNumBox.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
+        }
+
+        private void nuevoStockNumBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

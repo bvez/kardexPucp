@@ -117,11 +117,14 @@ namespace FormulariosAlmacenes
         {
             //A esta pantalla y a la pantalla de usuario simple se podria pasar al constructor el objeto Usuario
             PantallaAdministradorAlmacén formAdmin = new PantallaAdministradorAlmacén(nombre);
-            formAdmin.Owner = this;
-            //formAdmin.Visible = true;
-            this.Visible = false;
-            formAdmin.ShowDialog();
-            formAdmin.Dispose();
+            if(formAdmin.almacenActual != null)
+            {
+                formAdmin.Owner = this;
+                this.Visible = false;
+                formAdmin.ShowDialog();
+                formAdmin.Dispose();
+            }
+            
         }
 
         private void pantallaUsuario(int idAlmacen,string nombre)
