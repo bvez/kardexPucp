@@ -82,6 +82,12 @@
     <Compile Include="Ventas\Form15BuscaPedido.Designer.cs">
       <DependentUpon>Form15BuscaPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventas\Form16SelectLineaProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Form16SelectLineaProd.Designer.cs">
+      <DependentUpon>Form16SelectLineaProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Form1RegVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Form15BuscaPedido.resx">
       <DependentUpon>Form15BuscaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Form16SelectLineaProd.resx">
+      <DependentUpon>Form16SelectLineaProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Form1RegVentas.resx">
       <DependentUpon>Form1RegVentas.cs</DependentUpon>

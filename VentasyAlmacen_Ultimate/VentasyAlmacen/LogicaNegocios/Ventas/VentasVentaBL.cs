@@ -38,5 +38,10 @@ namespace LogicaNegocios.Ventas
             accesoDatos.anularVenta(id);
         }
 
+        public BindingList<LineaProducto> lineasVenta(int id_venta)
+        {
+            return accesoDatos.lineasVenta(id_venta);
+        }
+
     }
 }

@@ -11,7 +11,7 @@ namespace AccesoADatos.Ventas
 {
     public class DatosProducto
     {
-        string cadConn = "server=quilla.lab.inf.pucp.edu.pe;" + "user=inf282g2;" + "database=inf282g2;"
+        string cadConn = "server=quilla.lab.inf.pucp.edu.pe;" + "user=inf282g2;" + "database=inf282g2b;"
                 + "port=3306;" + "password=X7X2HA;" + "SslMode=none;";
         public BindingList<Producto> listarProductos()
         {

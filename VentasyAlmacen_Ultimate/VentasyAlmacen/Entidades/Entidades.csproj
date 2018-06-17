@@ -42,11 +42,14 @@
   <ItemGroup>
     <Compile Include="Almacen.cs" />
     <Compile Include="Area.cs" />
+    <Compile Include="Boleta.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteEmpresa.cs" />
     <Compile Include="ClientePersona.cs" />
     <Compile Include="DetalleProduccion.cs" />
+    <Compile Include="DocumentoDePago.cs" />
     <Compile Include="EstadoVenta.cs" />
+    <Compile Include="Factura.cs" />
     <Compile Include="LineaIngresoSalidaProducto.cs" />
     <Compile Include="LineaProducto.cs" />
     <Compile Include="Pedido.cs" />

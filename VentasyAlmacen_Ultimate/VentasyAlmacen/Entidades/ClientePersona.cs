@@ -28,6 +28,10 @@ namespace Entidades
             {
                 return this._nombre + ' ' + this._apellido_P + ' ' + this._apellido_M;
             }
+            set
+            {
+                this._nombre = value;
+            }
         }
 
         public string dni

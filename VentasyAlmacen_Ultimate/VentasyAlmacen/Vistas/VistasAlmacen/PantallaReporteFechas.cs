@@ -68,6 +68,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
             }
             */
 
+            /*
             if(this.Owner is PantallaAdministradorAlmacén)
             {
                 PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
@@ -79,6 +80,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             {
                 this.Dispose();
             }
+            */
+            this.Dispose();
         }
     }
 }
