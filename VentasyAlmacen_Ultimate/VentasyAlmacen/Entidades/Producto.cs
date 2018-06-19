@@ -27,7 +27,19 @@ namespace Entidades
         public int Id { get => id; set => id = value; }
         public string CodigoProducto { get => codigoProducto; set => codigoProducto = value; }
         public bool Habilitado { get => habilitado; set => habilitado = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Descripcion {
+            get
+            {
+                if (this.descripcion == null || this.descripcion.Trim() == "")
+                    return "--Sin descripcion--";
+                else
+                    return descripcion;
+            }
+            set
+            {
+                this.descripcion = value;
+            }
+        }
 
         public override string ToString()
         {

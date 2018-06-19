@@ -110,10 +110,7 @@ namespace FormulariosAlmacenes
                 this.codAlmacen = pantallaAlmacenes.AlmacenSeleccionado.IdAlmacen;
                 this.labelAlmacen.Text = "Almacen " + this.codAlmacen.ToString();
             }
-            else if(resp == DialogResult.Cancel)
-            {
 
-            }
         }
     }
 }

@@ -1,0 +1,10 @@
+Cuenta de usuario:	Contraseña:	Nombre personal:	Rol(es):
+bvez			bruno		Bruno Espezúa		Administrador
+usrAlm1			123		Bruno Espezúa		Almacén 1, Almacén 2
+usr1			123		Bruno Espezúa		Almacén 1
+user2			123		Bruno Espezúa		Almacén 2
+user3			123		Bruno Espezúa		Almacén 3
+user4			123		Bruno Espezúa		Almacén 4
+user5			123		Bruno Espezúa		Almacén 5
+user6			123		Bruno Espezúa		Almacén 6
+pawpaw			paw		Paulo Tuya		Almacén 1, Almacén 2, Almacén 3

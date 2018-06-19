@@ -120,10 +120,12 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(82, 25);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(201, 23);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Visible = false;
             // 
             // label4
             // 
@@ -231,11 +233,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Enabled = false;
             this.label6.Location = new System.Drawing.Point(6, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 17);
+            this.label6.Size = new System.Drawing.Size(25, 17);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Código:";
+            this.label6.Text = "ID:";
+            this.label6.Visible = false;
             // 
             // btnAtras
             // 

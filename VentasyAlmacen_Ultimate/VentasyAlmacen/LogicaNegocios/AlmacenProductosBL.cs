@@ -32,6 +32,10 @@ namespace LogicaNegocios
         {
             return accesoDatosProductos.obtenerProductosAlmacen(idAlmacen);
         }
+        public BindingList<ProductoAlmacen> obtenerProductosAlmacen(int idAlmacen, string nombreBuscar, int limInferior, int limSuperior)
+        {
+            return accesoDatosProductos.obtenerProductosAlmacen(idAlmacen, nombreBuscar, limInferior, limSuperior);
+        }
         public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen)
         {
             return accesoDatosProductos.obtenerProductosRegistrables(idAlmacen);

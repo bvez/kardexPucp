@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LogicaNegocios;
 using Entidades;
 using Ventas;
+using System.Diagnostics;
 
 namespace FormulariosAlmacenes
 {
@@ -18,7 +19,6 @@ namespace FormulariosAlmacenes
         public FormularioPrincipal()
         {
             InitializeComponent();
-            this.toolTip1.SetToolTip(pictureHelp, "Introduzca 'admin' si desea ingresar como administrador");
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
@@ -189,6 +189,11 @@ namespace FormulariosAlmacenes
         {
             this.textBoxPassword.Text = "";
             this.textBoxUsuario.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           Process.Start(@"cuentas.txt");
         }
     }
 }

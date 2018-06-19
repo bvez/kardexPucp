@@ -126,6 +126,57 @@ namespace AccesoADatos
             return resultado;
         }
 
+        public BindingList<ProductoAlmacen> obtenerProductosAlmacen(int idAlmacen,string nombreBuscar,int limInferior, int limSuperior)
+        {
+            BindingList<ProductoAlmacen> resultado = new BindingList<ProductoAlmacen>();
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "alm_buscar_productosAlmacen";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Connection = con;
+                comando.Parameters.Add("_id_almacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_nombreBuscar", MySqlDbType.VarChar).Value = nombreBuscar;
+                comando.Parameters.Add("_limInferior", MySqlDbType.Int32).Value = limInferior;
+                comando.Parameters.Add("_limSuperior", MySqlDbType.Int32).Value = limSuperior;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    int idProducto = reader.GetInt32("id_producto");//
+                    //string codigo = reader.GetString("codigo_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    int stock = reader.GetInt32("cantidadAlmacenada");
+                    decimal precio = reader.GetDecimal("precio_venta");
+
+                    Producto producto = new Producto();
+                    producto.Id = idProducto;
+                    producto.Nombre = nombre;
+                    //producto.CodigoProducto = codigo;
+                    producto.Descripcion = descripcion;
+                    producto.Precio = (double)precio;
+
+                    ProductoAlmacen productoAlmacen = new ProductoAlmacen();
+                    productoAlmacen.ProductoAlmacenado = producto;
+                    productoAlmacen.CantidadAlmacenada = stock;
+
+                    resultado.Add(productoAlmacen);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error en obtenerProductosAlmacen");
+                Console.WriteLine(e.Message);
+            }
+
+            return resultado;
+        }
+
         public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen)
         {
             BindingList<Producto> resultado = new BindingList<Producto>();

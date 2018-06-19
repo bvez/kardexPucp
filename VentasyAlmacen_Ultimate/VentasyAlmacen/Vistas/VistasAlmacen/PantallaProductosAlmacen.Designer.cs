@@ -60,6 +60,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoStockNumBox)).BeginInit();
@@ -198,6 +199,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.numStockMax);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -227,6 +229,11 @@
             this.numStockMax.Name = "numStockMax";
             this.numStockMax.Size = new System.Drawing.Size(68, 29);
             this.numStockMax.TabIndex = 10;
+            this.numStockMax.Value = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numStockMax.ValueChanged += new System.EventHandler(this.numStockMax_ValueChanged);
             // 
             // label6
@@ -279,6 +286,7 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(177, 29);
             this.textBoxId.TabIndex = 5;
+            this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxId_KeyPress);
             // 
             // label3
             // 
@@ -292,7 +300,6 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxNombre.Location = new System.Drawing.Point(129, 77);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(177, 29);
@@ -416,6 +423,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label10.Location = new System.Drawing.Point(61, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "(Solo números)";
+            // 
             // PantallaProductosAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,5 +493,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label stockActualSeleccionado;
         private System.Windows.Forms.Label nombreSeleccionado;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -73,7 +73,17 @@ namespace FormulariosAlmacenes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBoxId.Text != "")
+            {
+                int idBuscar = Int32.Parse(textBoxId.Text);
 
+            }
+            else
+            {
+                tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(this.idAlmacen, textBoxNombre.Text, (int)Math.Round(numStockMin.Value), (int)Math.Round(numStockMax.Value));
+                tablaProductosAlmacen.Refresh();
+                tablaProductosAlmacen.Update();
+            }
         }
 
         private void numStockMin_ValueChanged(object sender, EventArgs e)
@@ -179,6 +189,14 @@ namespace FormulariosAlmacenes
         private void nuevoStockNumBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
