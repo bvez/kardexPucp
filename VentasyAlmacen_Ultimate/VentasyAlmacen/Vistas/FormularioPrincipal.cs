@@ -141,14 +141,17 @@ namespace FormulariosAlmacenes
         {
             //el usuario deberá seleccionar entre varios almacenes en los que está registrado
             PantallaSeleccionarAlmacen formSelectAlmacen = new PantallaSeleccionarAlmacen(listaAlmacenes);
-            formSelectAlmacen.ShowDialog();
+            DialogResult resp = formSelectAlmacen.ShowDialog();
 
-            PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(nombre,formSelectAlmacen.AlmacenSeleccionado.IdAlmacen);
-
-            formUsuario.Owner = this;
-            this.Visible = false;
-            formUsuario.ShowDialog();
-            formUsuario.Dispose();
+            if(resp == DialogResult.OK)
+            {
+                PantallaUsuarioAlmacen formUsuario = new PantallaUsuarioAlmacen(nombre, formSelectAlmacen.AlmacenSeleccionado.IdAlmacen, listaAlmacenes);
+                formUsuario.Owner = this;
+                this.Visible = false;
+                formUsuario.ShowDialog();
+                formUsuario.Dispose();
+            }
+            
         }
 
         private void FormularioPrincipal_FormClosed(object sender, FormClosedEventArgs e)

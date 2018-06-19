@@ -158,7 +158,6 @@ C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmace
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\Entidades.pdb
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Vistas.csprojResolveAssemblyReference.cache
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaEliminarAlmacenes.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaInicio.resources
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaInsertarAlmacen.resources
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.PantallaModificarStock.resources
 C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.FormularioPrincipal.resources
@@ -314,20 +313,6 @@ C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vi
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaSeleccionarProducto.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaVistaPreviaReporte.resources
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.VistasAlmacen.PantallaSeleccionarProducto.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form10EmitirReporteCl.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form11BuscaVenta.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form12BuscaCliente.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form13BuscaProducto.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form1RegVentas.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form2AsignCliente.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form3EmitirReporte.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form4ModifVenta.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form5RevisarVenta.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form6EmitirPedAlm.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form7RevisarPedAlm.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form8RegCliente.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form9ModifCliente.resources
-C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.MainVentas.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form10EmitirReporteCl.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form11BuscaVenta.resources
 C:\Users\alulab14\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form12BuscaCliente.resources
@@ -526,3 +511,25 @@ C:\temp\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\itext
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\itextsharp.dll
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\itextsharp.xml
 C:\Users\Asus\Documents\2018-1\Lenguaje de Programación 2\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form16SelectLineaProd.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\itextsharp.dll
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\bin\Debug\itextsharp.xml
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form10EmitirReporteCl.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form11BuscaVenta.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form12BuscaCliente.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form13BuscaProducto.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form14AnularVenta.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form15BuscaPedido.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\FormulariosAlmacenes.Ventas.Form16SelectLineaProd.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form1RegVentas.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form2AsignCliente.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form3EmitirReporte.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form4ModifVenta.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form5RevisarVenta.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form6EmitirPedAlm.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form7RevisarPedAlm.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form8RegCliente.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.Form9ModifCliente.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.LoginForm.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.MainVentas.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.PantallaAdminVentas.resources
+C:\Users\alulab14.INF\Downloads\kardexPucp\VentasyAlmacen_Ultimate\VentasyAlmacen\Vistas\obj\Debug\Ventas.PantallaUserVentas.resources

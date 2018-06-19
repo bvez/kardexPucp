@@ -98,6 +98,7 @@
             // 
             // btnSelectAlmacenSgte
             // 
+            this.btnSelectAlmacenSgte.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSelectAlmacenSgte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btnSelectAlmacenSgte.Location = new System.Drawing.Point(486, 369);
             this.btnSelectAlmacenSgte.Name = "btnSelectAlmacenSgte";
@@ -109,6 +110,7 @@
             // 
             // btnSelectAlmacenAtras
             // 
+            this.btnSelectAlmacenAtras.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSelectAlmacenAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btnSelectAlmacenAtras.Location = new System.Drawing.Point(654, 369);
             this.btnSelectAlmacenAtras.Name = "btnSelectAlmacenAtras";

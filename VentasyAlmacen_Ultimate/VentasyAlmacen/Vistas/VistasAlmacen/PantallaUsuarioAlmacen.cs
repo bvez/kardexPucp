@@ -15,6 +15,7 @@ namespace FormulariosAlmacenes
     public partial class PantallaUsuarioAlmacen : Form
     {
         private int codAlmacen;
+        BindingList<Almacen> listaAlmacenesPermitidos;
         //atributo objeto Usuario
         //private Almacen almacenUsuario;
         public PantallaUsuarioAlmacen()
@@ -28,6 +29,21 @@ namespace FormulariosAlmacenes
             labelBienvenidaUsuario.Text = "Bienvenido " + nombreUsuario;
             codAlmacen = idAlmacen;
             labelAlmacen.Text = "Almacén " + idAlmacen.ToString();
+            this.listaAlmacenesPermitidos = null;
+            linkLabel1.Visible = false;
+            linkLabel1.Enabled = false;
+        }
+
+        public PantallaUsuarioAlmacen(string nombreUsuario, int idAlmacen, BindingList<Almacen> listaAlmacenesPermitidos)
+        {
+            InitializeComponent();
+            //al loguarse, se debe hacer una asociacion con el almacén
+            labelBienvenidaUsuario.Text = "Bienvenido " + nombreUsuario;
+            codAlmacen = idAlmacen;
+            labelAlmacen.Text = "Almacén " + idAlmacen.ToString();
+            this.listaAlmacenesPermitidos = listaAlmacenesPermitidos;
+            linkLabel1.Visible = true;
+            linkLabel1.Enabled = true;
         }
 
         public void setAlmacen(string codigo)
@@ -82,6 +98,22 @@ namespace FormulariosAlmacenes
             //this.Visible = false;
             newPant.ShowDialog();
             newPant.Dispose();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PantallaSeleccionarAlmacen pantallaAlmacenes = new PantallaSeleccionarAlmacen(this.listaAlmacenesPermitidos);
+            DialogResult resp = pantallaAlmacenes.ShowDialog();
+
+            if(resp == DialogResult.OK)
+            {
+                this.codAlmacen = pantallaAlmacenes.AlmacenSeleccionado.IdAlmacen;
+                this.labelAlmacen.Text = "Almacen " + this.codAlmacen.ToString();
+            }
+            else if(resp == DialogResult.Cancel)
+            {
+
+            }
         }
     }
 }

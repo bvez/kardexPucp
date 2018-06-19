@@ -31,6 +31,8 @@ namespace FormulariosAlmacenes
             almacenSelected = null;
             listaAlmacenes = listaAlmacenesIn;
             InitializeComponent();
+            btnActualizarAlmacenes.Visible = false;
+            btnActualizarAlmacenes.Enabled = false;
             label1.Text = "Antes de continuar, seleccione un almacén:";
             DataGridSelectAlmacen.AutoGenerateColumns = false;
             DataGridSelectAlmacen.DataSource = listaAlmacenesIn;
