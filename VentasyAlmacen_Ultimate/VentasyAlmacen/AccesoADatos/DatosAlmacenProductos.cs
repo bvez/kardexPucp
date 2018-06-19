@@ -230,6 +230,51 @@ namespace AccesoADatos
             return resultado;
         }
 
+        public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen,string nombreBuscar)
+        {
+            BindingList<Producto> productos = new BindingList<Producto>();
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "alm_buscarProductoNombre";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Connection = con;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_nombre", MySqlDbType.VarChar).Value = nombreBuscar;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    int idProducto = reader.GetInt32("id_producto");//
+                    //string codigo = reader.GetString("codigo_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    double precio = (double)reader.GetDecimal("precio_venta");
+                    bool activo = reader.GetBoolean("activo");
+
+                    Producto producto = new Producto();
+                    producto.Id = idProducto;
+                    producto.Nombre = nombre;
+                    //producto.CodigoProducto = codigo;
+                    producto.Descripcion = descripcion;
+                    producto.Precio = precio;
+                    producto.Habilitado = activo;
+
+                    productos.Add(producto);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return productos;
+        }
 
         //UNICO FALTANTE
         public Producto obtenerProducto(int idProducto)

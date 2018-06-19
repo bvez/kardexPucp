@@ -41,6 +41,11 @@ namespace LogicaNegocios
             return accesoDatosProductos.obtenerProductosRegistrables(idAlmacen);
         }
 
+        public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen,string nombreBuscar)
+        {
+            return accesoDatosProductos.obtenerProductosRegistrables(idAlmacen,nombreBuscar);
+        }
+
         public bool registrarProductoAlmacen(int idAlmacen,int idProducto,int stockInicial)
         {
             return accesoDatosProductos.insertarProductoAlmacen(idAlmacen, idProducto, stockInicial);

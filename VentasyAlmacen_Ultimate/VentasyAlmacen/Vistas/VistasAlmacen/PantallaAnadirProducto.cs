@@ -32,6 +32,9 @@ namespace FormulariosAlmacenes
             this.prodAlmReciente = null;
             dataGridProductosRegistrables.AutoGenerateColumns = false;
             dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen);
+
+            txtNumResultados.Text = ((BindingList<Producto>)dataGridProductosRegistrables.DataSource).Count.ToString() + " Resultado(s)";
+            txtNumResultados.Visible = true;
         }
 
         private void btnInsertarProducto_MouseClick(object sender, MouseEventArgs e)
@@ -93,6 +96,70 @@ namespace FormulariosAlmacenes
             if(e.KeyChar == '.')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '\r')
+            {
+                button1.PerformClick();
+            }
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text != null && textBox1.Text != "")
+            {
+                //busqueda en la lista
+            }
+            else if(textBox2.Text != null && textBox2.Text != "")
+            {
+                txtCargando.Visible = true;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen,textBox2.Text);
+                dataGridProductosRegistrables.Refresh();
+                dataGridProductosRegistrables.Update();
+
+                txtCargando.Visible = false;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                txtNumResultados.Text = ((BindingList<Producto>)dataGridProductosRegistrables.DataSource).Count.ToString() + " Resultado(s)";
+                txtNumResultados.Refresh();
+                txtNumResultados.Update();
+            }
+            else if(textBox2.Text == null || textBox2.Text == "")
+            {
+                txtCargando.Visible = true;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen);
+                dataGridProductosRegistrables.Refresh();
+                dataGridProductosRegistrables.Update();
+
+                txtCargando.Visible = false;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                txtNumResultados.Text = ((BindingList<Producto>)dataGridProductosRegistrables.DataSource).Count.ToString() + " Resultado(s)";
+                txtNumResultados.Refresh();
+                txtNumResultados.Update();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                button1.PerformClick();
             }
         }
     }

@@ -63,6 +63,9 @@ namespace FormulariosAlmacenes
             }
             tablaProductosAlmacen.AutoGenerateColumns = false;
             tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
+
+            txtNumResultados.Text = ((BindingList<ProductoAlmacen>)tablaProductosAlmacen.DataSource).Count.ToString() + " Resultado(s)";
+            txtNumResultados.Visible = true;
         }
 
         //Lo que sucede cuando se cierra el formulario
@@ -80,9 +83,21 @@ namespace FormulariosAlmacenes
             }
             else
             {
+                txtCargando.Visible = true;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
                 tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(this.idAlmacen, textBoxNombre.Text, (int)Math.Round(numStockMin.Value), (int)Math.Round(numStockMax.Value));
                 tablaProductosAlmacen.Refresh();
                 tablaProductosAlmacen.Update();
+
+                txtCargando.Visible = false;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                txtNumResultados.Text = ((BindingList<ProductoAlmacen>)tablaProductosAlmacen.DataSource).Count.ToString() + " Resultado(s)";
+                txtNumResultados.Refresh();
+                txtNumResultados.Update();
             }
         }
 
@@ -196,9 +211,21 @@ namespace FormulariosAlmacenes
 
         private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(e.KeyChar == '\r')
+            {
+                button1.PerformClick();
+            }
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                button1.PerformClick();
             }
         }
     }

@@ -42,6 +42,8 @@
             this.btnInsertarProducto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCargando = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.numStockMax = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +62,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtNumResultados = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoStockNumBox)).BeginInit();
@@ -72,6 +74,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtNumResultados);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.btnInsertarProducto);
             this.panel1.Controls.Add(this.label2);
@@ -146,7 +149,7 @@
             0});
             this.nuevoStockNumBox.Name = "nuevoStockNumBox";
             this.nuevoStockNumBox.Size = new System.Drawing.Size(98, 29);
-            this.nuevoStockNumBox.TabIndex = 15;
+            this.nuevoStockNumBox.TabIndex = 11;
             this.nuevoStockNumBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nuevoStockNumBox_KeyPress);
             // 
             // label7
@@ -166,7 +169,7 @@
             this.btnModificarStock.Location = new System.Drawing.Point(57, 155);
             this.btnModificarStock.Name = "btnModificarStock";
             this.btnModificarStock.Size = new System.Drawing.Size(211, 40);
-            this.btnModificarStock.TabIndex = 13;
+            this.btnModificarStock.TabIndex = 12;
             this.btnModificarStock.Text = "   Modificar Stock ";
             this.btnModificarStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +183,7 @@
             this.btnInsertarProducto.Location = new System.Drawing.Point(541, 25);
             this.btnInsertarProducto.Name = "btnInsertarProducto";
             this.btnInsertarProducto.Size = new System.Drawing.Size(211, 40);
-            this.btnInsertarProducto.TabIndex = 12;
+            this.btnInsertarProducto.TabIndex = 10;
             this.btnInsertarProducto.Text = "   Insertar Producto";
             this.btnInsertarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsertarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -199,6 +202,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCargando);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.numStockMax);
             this.groupBox1.Controls.Add(this.label6);
@@ -218,6 +222,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Producto";
             // 
+            // txtCargando
+            // 
+            this.txtCargando.AutoSize = true;
+            this.txtCargando.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtCargando.Location = new System.Drawing.Point(347, 162);
+            this.txtCargando.Name = "txtCargando";
+            this.txtCargando.Size = new System.Drawing.Size(62, 13);
+            this.txtCargando.TabIndex = 15;
+            this.txtCargando.Text = "Cargando...";
+            this.txtCargando.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label10.Location = new System.Drawing.Point(61, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "(Solo números)";
+            // 
             // numStockMax
             // 
             this.numStockMax.Location = new System.Drawing.Point(246, 124);
@@ -228,7 +253,7 @@
             0});
             this.numStockMax.Name = "numStockMax";
             this.numStockMax.Size = new System.Drawing.Size(68, 29);
-            this.numStockMax.TabIndex = 10;
+            this.numStockMax.TabIndex = 8;
             this.numStockMax.Value = new decimal(new int[] {
             9999,
             0,
@@ -303,7 +328,8 @@
             this.textBoxNombre.Location = new System.Drawing.Point(129, 77);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(177, 29);
-            this.textBoxNombre.TabIndex = 3;
+            this.textBoxNombre.TabIndex = 6;
+            this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             // 
             // label1
             // 
@@ -322,7 +348,7 @@
             this.button1.Location = new System.Drawing.Point(320, 120);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 41);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Buscar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -404,7 +430,7 @@
             this.button2.Location = new System.Drawing.Point(352, 433);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 41);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Atrás";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -423,15 +449,17 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label10
+            // txtNumResultados
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label10.Location = new System.Drawing.Point(61, 60);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "(Solo números)";
+            this.txtNumResultados.AutoSize = true;
+            this.txtNumResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtNumResultados.Location = new System.Drawing.Point(368, 21);
+            this.txtNumResultados.Name = "txtNumResultados";
+            this.txtNumResultados.Size = new System.Drawing.Size(60, 13);
+            this.txtNumResultados.TabIndex = 16;
+            this.txtNumResultados.Text = "Resultados";
+            this.txtNumResultados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtNumResultados.Visible = false;
             // 
             // PantallaProductosAlmacen
             // 
@@ -494,5 +522,7 @@
         private System.Windows.Forms.Label stockActualSeleccionado;
         private System.Windows.Forms.Label nombreSeleccionado;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label txtCargando;
+        private System.Windows.Forms.Label txtNumResultados;
     }
 }
