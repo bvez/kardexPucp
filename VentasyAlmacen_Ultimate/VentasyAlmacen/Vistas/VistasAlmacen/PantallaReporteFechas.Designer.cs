@@ -84,6 +84,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Generar Reporte";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // label3
@@ -105,7 +106,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Vista Previa";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 

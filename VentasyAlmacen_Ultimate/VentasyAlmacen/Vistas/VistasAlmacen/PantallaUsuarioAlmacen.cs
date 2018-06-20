@@ -121,7 +121,7 @@ namespace FormulariosAlmacenes
 
         private void buttonReporteFechas_Click(object sender, EventArgs e)
         {
-            PantallaReporteFechas newPant = new PantallaReporteFechas();
+            PantallaReporteFechas newPant = new PantallaReporteFechas(this.codAlmacen);
             newPant.Owner = this;
             //this.Visible = false;
             newPant.ShowDialog();

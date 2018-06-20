@@ -40,6 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridIngresoSalida = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxLocalSalida = new System.Windows.Forms.ComboBox();
             this.labelAlmacen = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -52,11 +57,6 @@
             this.comboBoxAreas = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelOrigen = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -214,6 +214,49 @@
             this.dataGridIngresoSalida.TabIndex = 30;
             this.dataGridIngresoSalida.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridIngresoSalida_EditingControlShowing);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 41;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // Stock
+            // 
+            this.Stock.DataPropertyName = "CantidadAlmacenada";
+            this.Stock.HeaderText = "Stock Actual";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 93;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "CantidadIngresoSalida";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MaxInputLength = 5;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 74;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Observaciones";
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.MaxInputLength = 256;
+            this.Observaciones.MinimumWidth = 103;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Observaciones.Width = 300;
+            // 
             // comboBoxLocalSalida
             // 
             this.comboBoxLocalSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -330,11 +373,13 @@
             // 
             this.comboBoxAreas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxAreas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAreas.Enabled = false;
             this.comboBoxAreas.FormattingEnabled = true;
             this.comboBoxAreas.Location = new System.Drawing.Point(196, 73);
             this.comboBoxAreas.Name = "comboBoxAreas";
             this.comboBoxAreas.Size = new System.Drawing.Size(103, 21);
             this.comboBoxAreas.TabIndex = 40;
+            this.comboBoxAreas.Visible = false;
             this.comboBoxAreas.SelectedIndexChanged += new System.EventHandler(this.comboBoxAreas_SelectedIndexChanged);
             // 
             // groupBox3
@@ -359,49 +404,6 @@
             this.labelOrigen.Size = new System.Drawing.Size(106, 20);
             this.labelOrigen.TabIndex = 42;
             this.labelOrigen.Text = "Sede Origen: ";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 41;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 69;
-            // 
-            // Stock
-            // 
-            this.Stock.DataPropertyName = "CantidadAlmacenada";
-            this.Stock.HeaderText = "Stock Actual";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 93;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "CantidadIngresoSalida";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MaxInputLength = 5;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 74;
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.DataPropertyName = "Observaciones";
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.MaxInputLength = 256;
-            this.Observaciones.MinimumWidth = 103;
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Observaciones.Width = 300;
             // 
             // PantallaIngresosSalidasProducto
             // 

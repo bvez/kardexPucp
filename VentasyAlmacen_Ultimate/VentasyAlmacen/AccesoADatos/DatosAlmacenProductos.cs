@@ -35,7 +35,7 @@ namespace AccesoADatos
             cadenaConexion = "server=127.0.0.1;" +
                 "user=root;database=inf282g2;" +
                 "port=3306;password=;SslMode=none;";
-                */
+            */
         }
         public BindingList<Producto> obtenerProductosEmpresa()
         {
@@ -484,6 +484,51 @@ namespace AccesoADatos
                 result = true;
             }
             catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return result;
+        }
+
+        public BindingList<LineaIngresoSalidaProducto> reporteSalidasProducto(int idAlmacen,DateTime fechaIni, DateTime fechaFin)
+        {
+            BindingList<LineaIngresoSalidaProducto> result = null;
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "alm_reporte_salidas_producto";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Connection = con;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_fechaIni", MySqlDbType.Date).Value = fechaIni;
+                comando.Parameters.Add("_fechaFin", MySqlDbType.Date).Value = fechaFin;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                result = new BindingList<LineaIngresoSalidaProducto>();
+                while (reader.Read())
+                {
+                    int idProducto = reader.GetInt32("id_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    int cantidad = reader.GetInt32("sum(cantidad)");
+
+                    Producto producto = new Producto();
+                    producto.Id = idProducto;
+                    producto.Nombre = nombre;
+                    producto.Descripcion = descripcion;
+
+                    LineaIngresoSalidaProducto lineaNueva = new LineaIngresoSalidaProducto();
+                    lineaNueva.Producto = producto;
+                    lineaNueva.CantidadIngresoSalida = cantidad;
+                    result.Add(lineaNueva);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }

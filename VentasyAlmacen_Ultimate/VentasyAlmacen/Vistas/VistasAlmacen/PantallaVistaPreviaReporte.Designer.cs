@@ -31,7 +31,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,21 +44,52 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(32, 32);
+            this.chart1.Location = new System.Drawing.Point(31, 65);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
-            series1.Name = "Tipo";
+            series1.Name = "Cantidad";
+            series1.XValueMember = "Nombre";
+            series1.YValueMembers = "CantidadIngresoSalida";
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(505, 398);
+            this.chart1.Size = new System.Drawing.Size(591, 386);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title1.Name = "Title1";
+            title1.Text = "Reporte de salidas";
+            this.chart1.Titles.Add(title1);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(555, 457);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(383, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Reporte de salidas de productos por fecha:";
             // 
             // PantallaVistaPreviaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 477);
+            this.ClientSize = new System.Drawing.Size(664, 502);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -64,11 +98,14 @@
             this.Text = "Vista Previa";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

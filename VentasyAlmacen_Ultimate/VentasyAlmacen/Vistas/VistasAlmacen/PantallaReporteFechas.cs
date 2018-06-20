@@ -14,8 +14,12 @@ namespace FormulariosAlmacenes.VistasAlmacen
 {
     public partial class PantallaReporteFechas : Form
     {
-        public PantallaReporteFechas()
+        private int idAlmacen;
+        private AlmacenProductosBL logica;
+        public PantallaReporteFechas(int idAlmacen)
         {
+            logica = new AlmacenProductosBL();
+            this.idAlmacen = idAlmacen;
             InitializeComponent();
             (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
@@ -43,14 +47,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("El reporte se generó satisfactoriamente", "Reporte generado");
-            this.Close();
-        }
-
-        private void button2_MouseClick(object sender, MouseEventArgs e)
-        {
-            PantallaVistaPreviaReporte newPant = new PantallaVistaPreviaReporte();
-            newPant.ShowDialog();
+            //MessageBox.Show("El reporte se generó satisfactoriamente", "Reporte generado");
+            //this.Close();
         }
 
         private void button3_MouseClick(object sender, MouseEventArgs e)
@@ -83,6 +81,36 @@ namespace FormulariosAlmacenes.VistasAlmacen
             }
             */
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BindingList<LineaIngresoSalidaProducto> lista = logica.reporteSalidasProducto(this.idAlmacen,dateTimePickerInicial.Value,dateTimePickerFinal.Value);
+            if(lista != null)
+            {
+                PantallaVistaPreviaReporte newPant = new PantallaVistaPreviaReporte(lista);
+                newPant.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Error en la conexion con la base de datos. Intentelo nuevamente", "Error");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BindingList<LineaIngresoSalidaProducto> lista = logica.reporteSalidasProducto(this.idAlmacen, dateTimePickerInicial.Value, dateTimePickerFinal.Value);
+            if (lista != null)
+            {
+                PantallaVistaPreviaReporte newPant = new PantallaVistaPreviaReporte(lista);
+                newPant.chart.SaveImage("Reporte.jpeg",System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Jpeg);
+                MessageBox.Show("Guardado exitoso");
+                newPant.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Error en la conexion con la base de datos. Intentelo nuevamente", "Error");
+            }
         }
     }
 }

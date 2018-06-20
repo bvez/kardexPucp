@@ -127,7 +127,7 @@ namespace FormulariosAlmacenes
         {
             if (almacenSeleccionado != null)
             {
-                PantallaReporteFechas pantallaReporte = new PantallaReporteFechas();
+                PantallaReporteFechas pantallaReporte = new PantallaReporteFechas(this.almacenActual.IdAlmacen);
                 pantallaReporte.Owner = this;
                 pantallaReporte.ShowDialog();
                 pantallaReporte.Dispose();

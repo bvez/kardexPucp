@@ -65,9 +65,9 @@
             // 
             this.buttonStock.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonStock.Location = new System.Drawing.Point(51, 116);
+            this.buttonStock.Location = new System.Drawing.Point(33, 115);
             this.buttonStock.Name = "buttonStock";
-            this.buttonStock.Size = new System.Drawing.Size(189, 74);
+            this.buttonStock.Size = new System.Drawing.Size(210, 74);
             this.buttonStock.TabIndex = 1;
             this.buttonStock.Text = "Revisar Stock";
             this.buttonStock.UseVisualStyleBackColor = false;
@@ -77,9 +77,9 @@
             // 
             this.buttonIngreso.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonIngreso.Location = new System.Drawing.Point(272, 116);
+            this.buttonIngreso.Location = new System.Drawing.Point(264, 115);
             this.buttonIngreso.Name = "buttonIngreso";
-            this.buttonIngreso.Size = new System.Drawing.Size(189, 74);
+            this.buttonIngreso.Size = new System.Drawing.Size(210, 74);
             this.buttonIngreso.TabIndex = 2;
             this.buttonIngreso.Text = "Registrar Ingresos/Salidas";
             this.buttonIngreso.UseVisualStyleBackColor = false;
@@ -89,9 +89,9 @@
             // 
             this.buttonRegPedidos.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonRegPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonRegPedidos.Location = new System.Drawing.Point(272, 247);
+            this.buttonRegPedidos.Location = new System.Drawing.Point(264, 246);
             this.buttonRegPedidos.Name = "buttonRegPedidos";
-            this.buttonRegPedidos.Size = new System.Drawing.Size(189, 74);
+            this.buttonRegPedidos.Size = new System.Drawing.Size(210, 74);
             this.buttonRegPedidos.TabIndex = 4;
             this.buttonRegPedidos.Text = "Registrar Pedido a Producción";
             this.buttonRegPedidos.UseVisualStyleBackColor = false;
@@ -101,11 +101,11 @@
             // 
             this.buttonReporteFechas.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReporteFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.buttonReporteFechas.Location = new System.Drawing.Point(51, 247);
+            this.buttonReporteFechas.Location = new System.Drawing.Point(33, 246);
             this.buttonReporteFechas.Name = "buttonReporteFechas";
-            this.buttonReporteFechas.Size = new System.Drawing.Size(189, 74);
+            this.buttonReporteFechas.Size = new System.Drawing.Size(210, 74);
             this.buttonReporteFechas.TabIndex = 3;
-            this.buttonReporteFechas.Text = "Reporte por Fechas";
+            this.buttonReporteFechas.Text = "Reporte de salidas por Fechas";
             this.buttonReporteFechas.UseVisualStyleBackColor = false;
             this.buttonReporteFechas.Click += new System.EventHandler(this.buttonReporteFechas_Click);
             // 

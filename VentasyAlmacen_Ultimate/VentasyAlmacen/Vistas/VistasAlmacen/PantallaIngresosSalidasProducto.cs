@@ -88,11 +88,11 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 groupBox3.Visible = true;
                 */
                 labelAlmacen.Visible = false;
-                comboBoxAreas2.Visible = false;
+                //comboBoxAreas2.Visible = false;
                 comboBoxLocalSalida.Visible = false;
 
                 labelOrigen.Visible = true;
-                comboBoxAreas.Visible = true;
+                //comboBoxAreas.Visible = true;
                 comboBoxLocales.Visible = true;
                 label1.Text = "Observaciones en el ingreso:";
             }
@@ -113,11 +113,11 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 */
 
                 labelAlmacen.Visible = true;
-                comboBoxAreas2.Visible = true;
+                //comboBoxAreas2.Visible = true;
                 comboBoxLocalSalida.Visible = true;
 
                 labelOrigen.Visible = false;
-                comboBoxAreas.Visible = false;
+                //comboBoxAreas.Visible = false;
                 comboBoxLocales.Visible = false;
                 label1.Text = "Observaciones en la salida:";
             }

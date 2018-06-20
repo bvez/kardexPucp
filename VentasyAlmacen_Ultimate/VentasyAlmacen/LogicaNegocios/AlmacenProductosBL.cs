@@ -67,5 +67,10 @@ namespace LogicaNegocios
         {
             return accesoDatosProductos.actualizarAlmacenPedidoProduccion();
         }
+
+        public BindingList<LineaIngresoSalidaProducto> reporteSalidasProducto(int idAlmacen, DateTime fechaIni, DateTime fechaFin)
+        {
+            return accesoDatosProductos.reporteSalidasProducto(idAlmacen, fechaIni, fechaFin);
+        }
     }
 }
