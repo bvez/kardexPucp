@@ -45,11 +45,6 @@ namespace FormulariosAlmacenes
             //this.Owner.Visible = true;
         }
 
-        private void button2_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.Dispose();
-        }
-
         private int buscarProductoAlmacen(ProductoAlmacen productoAlmacen)
         {
             BindingList<ProductoAlmacen> lista = (BindingList<ProductoAlmacen>)dataGridStock.DataSource;
@@ -95,7 +90,11 @@ namespace FormulariosAlmacenes
         {
             if (!verificarCamposLineaPedido())
                 return;
-
+            if(dataGridStock.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una fila para continuar", "Error");
+                return;
+            }
             DialogResult resultado = MessageBox.Show("Desea confirmar la solicitud?", "Confirmacion", MessageBoxButtons.YesNo);
 
             if (resultado == DialogResult.Yes)
@@ -106,7 +105,7 @@ namespace FormulariosAlmacenes
                 int idPedido = almacenBL.registrarPedidoProduccion(idAlmacen,out registroCorrecto);
                 if (!registroCorrecto)
                 {
-                    MessageBox.Show("Error en la conexion. Inténtelo nuevamente.");
+                    MessageBox.Show("Error en la conexion. Inténtelo nuevamente.","Error");
                     return;
                 }
                 else
@@ -137,7 +136,9 @@ namespace FormulariosAlmacenes
                 }
                 //registrar todos los detalles del pedido
 
-
+                dataGridStock.DataSource = null;
+                dataGridStock.Refresh();
+                dataGridStock.Update();
 
                 if (idPedido > 0)
                     MessageBox.Show("Se registró el pedido correctamente", "Éxito");
@@ -180,6 +181,11 @@ namespace FormulariosAlmacenes
             {
                 e.Handled = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -39,7 +39,17 @@ namespace FormulariosAlmacenes
 
         private void btnInsertarProducto_MouseClick(object sender, MouseEventArgs e)
         {
-            Producto productoSeleccionado = (Producto)dataGridProductosRegistrables.CurrentRow.DataBoundItem;
+            Producto productoSeleccionado;
+            if (dataGridProductosRegistrables.CurrentRow != null)
+            {
+                productoSeleccionado = (Producto)dataGridProductosRegistrables.CurrentRow.DataBoundItem;
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un producto de la lista", "Error");
+                return;
+            }
+
             DialogResult res = MessageBox.Show("Desea confirmar el registro del producto : \n" + productoSeleccionado.Id +
                 "   "+productoSeleccionado.CodigoProducto+" "+productoSeleccionado.Nombre + " con stock inicial "+
                 numericUpDown1.Value.ToString() +"?" ,"Confirmacion", MessageBoxButtons.YesNo);
@@ -115,7 +125,21 @@ namespace FormulariosAlmacenes
         {
             if(textBox1.Text != null && textBox1.Text != "")
             {
-                //busqueda en la lista
+                txtCargando.Visible = true;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                dataGridProductosRegistrables.DataSource = logicaProductos.obtenerProductosRegistrables(this.idAlmacen,Int32.Parse(textBox1.Text), textBox2.Text);
+                dataGridProductosRegistrables.Refresh();
+                dataGridProductosRegistrables.Update();
+
+                txtCargando.Visible = false;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                txtNumResultados.Text = ((BindingList<Producto>)dataGridProductosRegistrables.DataSource).Count.ToString() + " Resultado(s)";
+                txtNumResultados.Refresh();
+                txtNumResultados.Update();
             }
             else if(textBox2.Text != null && textBox2.Text != "")
             {
@@ -152,6 +176,15 @@ namespace FormulariosAlmacenes
                 txtNumResultados.Text = ((BindingList<Producto>)dataGridProductosRegistrables.DataSource).Count.ToString() + " Resultado(s)";
                 txtNumResultados.Refresh();
                 txtNumResultados.Update();
+            }
+            //actualizar las etiquetas
+            if(dataGridProductosRegistrables.CurrentRow != null)
+            {
+                labelNombre.Text = ((Producto)dataGridProductosRegistrables.CurrentRow.DataBoundItem).Nombre;
+            }
+            else
+            {
+                labelNombre.Text = "";
             }
         }
 

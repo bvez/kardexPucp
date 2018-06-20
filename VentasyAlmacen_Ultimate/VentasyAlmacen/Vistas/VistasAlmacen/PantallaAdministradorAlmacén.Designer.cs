@@ -99,7 +99,7 @@
             this.btnProductosDisponibl.TabIndex = 1;
             this.btnProductosDisponibl.Text = "Modificar Disponibilidad de Productos";
             this.btnProductosDisponibl.UseVisualStyleBackColor = false;
-            this.btnProductosDisponibl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnProductosDisponibles_MouseClick);
+            this.btnProductosDisponibl.Click += new System.EventHandler(this.btnProductosDisponibl_Click);
             // 
             // labelBienvenidaAdmin
             // 
@@ -134,7 +134,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Reporte por fechas";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 

@@ -32,15 +32,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridStock = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadSolicitar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStock)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -94,42 +94,6 @@
             this.dataGridStock.TabIndex = 20;
             this.dataGridStock.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridStock_EditingControlShowing);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 41;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 69;
-            // 
-            // Stock
-            // 
-            this.Stock.DataPropertyName = "CantidadAlmacenada";
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 60;
-            // 
-            // CantidadSolicitar
-            // 
-            this.CantidadSolicitar.HeaderText = "Cantidad a Solicitar";
-            this.CantidadSolicitar.Name = "CantidadSolicitar";
-            this.CantidadSolicitar.Width = 79;
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.Width = 103;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -139,7 +103,7 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "Atrás";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toolStrip1
             // 
@@ -172,6 +136,44 @@
             this.toolStripButton2.Size = new System.Drawing.Size(123, 22);
             this.toolStripButton2.Text = "Eliminar Selección";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 41;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // Stock
+            // 
+            this.Stock.DataPropertyName = "CantidadAlmacenada";
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 60;
+            // 
+            // CantidadSolicitar
+            // 
+            this.CantidadSolicitar.HeaderText = "Cantidad a Solicitar";
+            this.CantidadSolicitar.MaxInputLength = 5;
+            this.CantidadSolicitar.Name = "CantidadSolicitar";
+            this.CantidadSolicitar.Width = 79;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.MaxInputLength = 256;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.Width = 103;
             // 
             // PantallaRegPedidoProduccion
             // 

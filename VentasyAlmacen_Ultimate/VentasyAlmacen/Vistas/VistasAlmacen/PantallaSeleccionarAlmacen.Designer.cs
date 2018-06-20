@@ -106,7 +106,7 @@
             this.btnSelectAlmacenSgte.TabIndex = 2;
             this.btnSelectAlmacenSgte.Text = "Seleccionar";
             this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
-            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
+            this.btnSelectAlmacenSgte.Click += new System.EventHandler(this.btnSelectAlmacenSgte_Click);
             // 
             // btnSelectAlmacenAtras
             // 
@@ -118,7 +118,7 @@
             this.btnSelectAlmacenAtras.TabIndex = 3;
             this.btnSelectAlmacenAtras.Text = "Atrás";
             this.btnSelectAlmacenAtras.UseVisualStyleBackColor = true;
-            this.btnSelectAlmacenAtras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenAtras_MouseClick);
+            this.btnSelectAlmacenAtras.Click += new System.EventHandler(this.btnSelectAlmacenAtras_Click);
             // 
             // nombreSelected
             // 

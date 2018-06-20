@@ -40,20 +40,14 @@ namespace FormulariosAlmacenes
 
         private void btnSelectAlmacenSgte_MouseClick(object sender, MouseEventArgs e)
         {
-            //DataGridSelectAlmacen
-            Almacen almacenSeleccionado = (Almacen)DataGridSelectAlmacen.CurrentRow.DataBoundItem;
-                
-            //nombreSelected.Text = almacenSeleccionado.Direccion;
-            almacenSelected = almacenSeleccionado;
-            this.Visible = false;
-            this.Dispose();
+            
         }
 
         public Almacen AlmacenSeleccionado { get => almacenSelected; }
 
         private void btnSelectAlmacenAtras_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Dispose();
+            
         }
 
         private void btnActualizarAlmacenes_Click(object sender, EventArgs e)
@@ -66,6 +60,22 @@ namespace FormulariosAlmacenes
             DataGridSelectAlmacen.DataSource = listaAlmacenes;
             DataGridSelectAlmacen.Refresh();
             DataGridSelectAlmacen.Update();
+        }
+
+        private void btnSelectAlmacenAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnSelectAlmacenSgte_Click(object sender, EventArgs e)
+        {
+            //DataGridSelectAlmacen
+            Almacen almacenSeleccionado = (Almacen)DataGridSelectAlmacen.CurrentRow.DataBoundItem;
+
+            //nombreSelected.Text = almacenSeleccionado.Direccion;
+            almacenSelected = almacenSeleccionado;
+            this.Visible = false;
+            this.Dispose();
         }
     }
 }

@@ -37,19 +37,6 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
         public ProductoAlmacen ProductoSeleccionado { get => productoSeleccionado;}
 
-        private void btnSelectAlmacenSgte_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (dataGridProductos.CurrentRow != null)
-            {
-                this.productoSeleccionado = (ProductoAlmacen)dataGridProductos.CurrentRow.DataBoundItem;
-                this.Dispose();
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un producto de la lista", "Error");
-            }
-        }
-
         private void dataGridProductos_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (dataGridProductos.CurrentRow != null)
@@ -62,6 +49,19 @@ namespace FormulariosAlmacenes.VistasAlmacen
         private void btnSelectAlmacenAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSelectAlmacenSgte_Click(object sender, EventArgs e)
+        {
+            if (dataGridProductos.CurrentRow != null)
+            {
+                this.productoSeleccionado = (ProductoAlmacen)dataGridProductos.CurrentRow.DataBoundItem;
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un producto de la lista", "Error");
+            }
         }
     }
 }

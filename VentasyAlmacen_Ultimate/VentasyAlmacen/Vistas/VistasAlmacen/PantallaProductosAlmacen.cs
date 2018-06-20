@@ -80,6 +80,21 @@ namespace FormulariosAlmacenes
             {
                 int idBuscar = Int32.Parse(textBoxId.Text);
 
+                txtCargando.Visible = true;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(this.idAlmacen, idBuscar, textBoxNombre.Text, (int)Math.Round(numStockMin.Value), (int)Math.Round(numStockMax.Value));
+                tablaProductosAlmacen.Refresh();
+                tablaProductosAlmacen.Update();
+
+                txtCargando.Visible = false;
+                txtCargando.Refresh();
+                txtCargando.Update();
+
+                txtNumResultados.Text = ((BindingList<ProductoAlmacen>)tablaProductosAlmacen.DataSource).Count.ToString() + " Resultado(s)";
+                txtNumResultados.Refresh();
+                txtNumResultados.Update();
             }
             else
             {
@@ -99,6 +114,19 @@ namespace FormulariosAlmacenes
                 txtNumResultados.Refresh();
                 txtNumResultados.Update();
             }
+
+            if (tablaProductosAlmacen.CurrentRow != null)
+            {
+                nombreSeleccionado.Text = ((ProductoAlmacen)tablaProductosAlmacen.CurrentRow.DataBoundItem).Nombre;
+                stockActualSeleccionado.Text = ((ProductoAlmacen)tablaProductosAlmacen.CurrentRow.DataBoundItem).CantidadAlmacenada.ToString();
+                nuevoStockNumBox.Value = ((ProductoAlmacen)tablaProductosAlmacen.CurrentRow.DataBoundItem).CantidadAlmacenada;
+            }
+            else
+            {
+                stockActualSeleccionado.Text = nombreSeleccionado.Text = "";
+                nuevoStockNumBox.Value = 0;
+            }
+            
         }
 
         private void numStockMin_ValueChanged(object sender, EventArgs e)
@@ -117,41 +145,17 @@ namespace FormulariosAlmacenes
             }
         }
 
-        private void button2_MouseClick(object sender, MouseEventArgs e)
-        {
-            /*
-            try
-            {
-                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
-                this.Dispose();
-                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
-                padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
-            }
-            catch(Exception excepcion)//entra aqui porque su padre no es administrador
-            {
-                this.Dispose();
-            }
-            */
-
-            /*
-            if(this.Owner is PantallaAdministradorAlmacén)
-            {
-                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
-                this.Dispose();
-                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
-                padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
-            }
-            else
-            {
-                this.Dispose();
-            }*/
-            this.Dispose();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
+            if (tablaProductosAlmacen.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un producto de la lista", "Error");
+                return;
+            }
+
             if (Math.Round(nuevoStockNumBox.Value) == Int32.Parse(stockActualSeleccionado.Text))
                 return;
+            
             DialogResult resultado = MessageBox.Show("Desea confirmar la actualización?", "Confirmacion", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.Yes)
             {
@@ -198,6 +202,7 @@ namespace FormulariosAlmacenes
         {
             nombreSeleccionado.Text = productoAlmacenSeleccionado.Nombre;
             stockActualSeleccionado.Text = productoAlmacenSeleccionado.CantidadAlmacenada.ToString();
+            //Console.WriteLine(productoAlmacenSeleccionado.CantidadAlmacenada);
             nuevoStockNumBox.Value = productoAlmacenSeleccionado.CantidadAlmacenada;
         }
 
@@ -227,6 +232,37 @@ namespace FormulariosAlmacenes
             {
                 button1.PerformClick();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /*
+            try
+            {
+                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+                this.Dispose();
+                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+                padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
+            }
+            catch(Exception excepcion)//entra aqui porque su padre no es administrador
+            {
+                this.Dispose();
+            }
+            */
+
+            /*
+            if(this.Owner is PantallaAdministradorAlmacén)
+            {
+                PantallaAdministradorAlmacén padre = (PantallaAdministradorAlmacén)this.Owner;
+                this.Dispose();
+                Almacen almacenSeleccionado = padre.obtenerAlmacenSeleccionado();
+                padre.abrirPantallaProductosAlmacen(almacenSeleccionado);
+            }
+            else
+            {
+                this.Dispose();
+            }*/
+            this.Dispose();
         }
     }
 }

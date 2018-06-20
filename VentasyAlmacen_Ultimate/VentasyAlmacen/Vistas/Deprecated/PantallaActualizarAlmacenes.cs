@@ -15,7 +15,6 @@ namespace FormulariosAlmacenes
         public PantallaActualizarAlmacenes()
         {
             InitializeComponent();
-            Console.WriteLine("se abre uno");
         }
 
         private void PantallaActualizarAlmacenes_FormClosed(object sender, FormClosedEventArgs e)

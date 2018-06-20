@@ -117,7 +117,7 @@
             this.btnSelectAlmacenSgte.TabIndex = 32;
             this.btnSelectAlmacenSgte.Text = "Seleccionar";
             this.btnSelectAlmacenSgte.UseVisualStyleBackColor = true;
-            this.btnSelectAlmacenSgte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSelectAlmacenSgte_MouseClick);
+            this.btnSelectAlmacenSgte.Click += new System.EventHandler(this.btnSelectAlmacenSgte_Click);
             // 
             // btnSelectAlmacenAtras
             // 

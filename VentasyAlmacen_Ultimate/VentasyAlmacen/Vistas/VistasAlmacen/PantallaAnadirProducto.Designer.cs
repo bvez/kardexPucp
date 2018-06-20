@@ -106,10 +106,20 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(115, 54);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(67, 23);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             this.numericUpDown1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDown1_KeyPress);
             // 
             // label3
@@ -124,6 +134,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(82, 25);
+            this.textBox1.MaxLength = 9;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(201, 23);
             this.textBox1.TabIndex = 0;
@@ -163,6 +174,7 @@
             this.dataGridProductosRegistrables.MultiSelect = false;
             this.dataGridProductosRegistrables.Name = "dataGridProductosRegistrables";
             this.dataGridProductosRegistrables.ReadOnly = true;
+            this.dataGridProductosRegistrables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridProductosRegistrables.Size = new System.Drawing.Size(381, 337);
             this.dataGridProductosRegistrables.TabIndex = 5;
             this.dataGridProductosRegistrables.SelectionChanged += new System.EventHandler(this.dataGridProductosEmpresa_SelectionChanged);
@@ -243,6 +255,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(82, 65);
+            this.textBox2.MaxLength = 256;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(201, 23);
             this.textBox2.TabIndex = 1;

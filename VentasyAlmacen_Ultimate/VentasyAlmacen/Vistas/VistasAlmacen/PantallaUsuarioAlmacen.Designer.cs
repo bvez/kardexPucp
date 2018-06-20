@@ -71,7 +71,7 @@
             this.buttonStock.TabIndex = 1;
             this.buttonStock.Text = "Revisar Stock";
             this.buttonStock.UseVisualStyleBackColor = false;
-            this.buttonStock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonStock_MouseClick);
+            this.buttonStock.Click += new System.EventHandler(this.buttonStock_Click);
             // 
             // buttonIngreso
             // 
@@ -83,7 +83,7 @@
             this.buttonIngreso.TabIndex = 2;
             this.buttonIngreso.Text = "Registrar Ingresos/Salidas";
             this.buttonIngreso.UseVisualStyleBackColor = false;
-            this.buttonIngreso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonIngreso_MouseClick);
+            this.buttonIngreso.Click += new System.EventHandler(this.buttonIngreso_Click);
             // 
             // buttonRegPedidos
             // 
@@ -95,7 +95,7 @@
             this.buttonRegPedidos.TabIndex = 4;
             this.buttonRegPedidos.Text = "Registrar Pedido a Producción";
             this.buttonRegPedidos.UseVisualStyleBackColor = false;
-            this.buttonRegPedidos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonRegPedidos_MouseClick);
+            this.buttonRegPedidos.Click += new System.EventHandler(this.buttonRegPedidos_Click);
             // 
             // buttonReporteFechas
             // 
@@ -107,7 +107,7 @@
             this.buttonReporteFechas.TabIndex = 3;
             this.buttonReporteFechas.Text = "Reporte por Fechas";
             this.buttonReporteFechas.UseVisualStyleBackColor = false;
-            this.buttonReporteFechas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonReporteFechas_MouseClick);
+            this.buttonReporteFechas.Click += new System.EventHandler(this.buttonReporteFechas_Click);
             // 
             // pictureBox1
             // 

@@ -52,19 +52,13 @@ namespace FormulariosAlmacenes
         }
         private void PantallaUsuarioAlmacen_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Console.WriteLine("Cierra sesion user");
             ((FormularioPrincipal)this.Owner).limpiarCampos();
             MessageBox.Show("Su sesión se cerró correctamente", "Éxito");
             this.Owner.Visible = true;
         }
         private void buttonStock_MouseClick(object sender, MouseEventArgs e)
         {
-            //para cada pantalla se debe enviar el objeto Usuario
-            PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(codAlmacen,'U');
-            pantallaProductosAlmacen.Owner = this;
-            //this.Visible = false;
-            pantallaProductosAlmacen.ShowDialog();
-            pantallaProductosAlmacen.Dispose();
+            
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
@@ -74,30 +68,18 @@ namespace FormulariosAlmacenes
 
         private void buttonRegPedidos_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaRegPedidoProduccion newPant = new PantallaRegPedidoProduccion(codAlmacen);
-            newPant.Owner = this;
-            //this.Visible = false;
-            newPant.ShowDialog();
-            newPant.Dispose();
+            
         }
 
         private void buttonIngreso_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaIngresosSalidasProducto newPant = new PantallaIngresosSalidasProducto(codAlmacen);
-            newPant.Owner = this;
-            //this.Visible = false;
-            newPant.ShowDialog();
-            newPant.Dispose();
+            
         }
 
 
         private void buttonReporteFechas_MouseClick(object sender, MouseEventArgs e)
         {
-            PantallaReporteFechas newPant = new PantallaReporteFechas();
-            newPant.Owner = this;
-            //this.Visible = false;
-            newPant.ShowDialog();
-            newPant.Dispose();
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -111,6 +93,43 @@ namespace FormulariosAlmacenes
                 this.labelAlmacen.Text = "Almacen " + this.codAlmacen.ToString();
             }
 
+        }
+
+        private void buttonIngreso_Click(object sender, EventArgs e)
+        {
+            PantallaIngresosSalidasProducto newPant = new PantallaIngresosSalidasProducto(codAlmacen);
+            newPant.Owner = this;
+            //this.Visible = false;
+            newPant.ShowDialog();
+            newPant.Dispose();
+        }
+
+        private void buttonStock_Click(object sender, EventArgs e)
+        {
+            //para cada pantalla se debe enviar el objeto Usuario
+            PantallaProductosAlmacen pantallaProductosAlmacen = new PantallaProductosAlmacen(codAlmacen, 'U');
+            pantallaProductosAlmacen.Owner = this;
+            //this.Visible = false;
+            pantallaProductosAlmacen.ShowDialog();
+            pantallaProductosAlmacen.Dispose();
+        }
+
+        private void buttonReporteFechas_Click(object sender, EventArgs e)
+        {
+            PantallaReporteFechas newPant = new PantallaReporteFechas();
+            newPant.Owner = this;
+            //this.Visible = false;
+            newPant.ShowDialog();
+            newPant.Dispose();
+        }
+
+        private void buttonRegPedidos_Click(object sender, EventArgs e)
+        {
+            PantallaRegPedidoProduccion newPant = new PantallaRegPedidoProduccion(codAlmacen);
+            newPant.Owner = this;
+            //this.Visible = false;
+            newPant.ShowDialog();
+            newPant.Dispose();
         }
     }
 }

@@ -196,7 +196,6 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 }
                 else if(listaAlmacenes != null && listaAlmacenes.Count >= 1)
                 {
-                    Console.WriteLine("Debe cambiar");
                     comboBoxLocales.SelectedIndex = 0;
                 }
                 //comboBoxLocales.Text = "Almacenes";
@@ -281,6 +280,31 @@ namespace FormulariosAlmacenes.VistasAlmacen
                 return;
             }
 
+            bool resultado = true;
+
+            //validar todas las lineas
+            foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
+            {
+                int cantidadPedido;
+                ProductoAlmacen actual = (ProductoAlmacen)row.DataBoundItem;
+                if (row.Cells["Cantidad"].Value == null || !Int32.TryParse(row.Cells["Cantidad"].Value.ToString(), out cantidadPedido) )
+                {
+                    MessageBox.Show("Ha insertado incorrectamente una cantidad", "Error");
+                    dataGridIngresoSalida.CurrentCell = row.Cells["Cantidad"];
+                    resultado = false;
+                    return;//debe ir esto en vez de un break con trabajo de variable valido
+                }
+                else if (radioBtnSalida.Checked && cantidadPedido > actual.CantidadAlmacenada)
+                {
+                    MessageBox.Show("Está registrando una salida con cantidad mayor al stock actual", "Error");
+                    dataGridIngresoSalida.CurrentCell = row.Cells["Cantidad"];
+                    resultado = false;
+                    return;//debe ir esto en vez de un break con trabajo de variable valido
+                }
+            }
+            //fin validacion
+
+
 
             //inicio mensaje confirmacion
             string mensajeConf = "Desea confirmar ";
@@ -296,30 +320,15 @@ namespace FormulariosAlmacenes.VistasAlmacen
             mensajeConf += cantidadPedidos.ToString() + " producto";
             if (cantidadPedidos > 1)
             {
-                mensajeConf += "s?";
+                mensajeConf += "s";
             }
+            mensajeConf += "?";
             //fin mensaje confirmacion
 
             DialogResult res = MessageBox.Show(mensajeConf, "Confirmacion", MessageBoxButtons.YesNo);
             if (res == DialogResult.No)
                 return;
 
-            bool resultado = true;
-
-            //validar todas las lineas
-            foreach (DataGridViewRow row in dataGridIngresoSalida.Rows)
-            {
-                int cantidadPedido;
-                ProductoAlmacen actual = (ProductoAlmacen)row.DataBoundItem;
-                if (row.Cells["Cantidad"].Value == null || !Int32.TryParse(row.Cells["Cantidad"].Value.ToString(), out cantidadPedido) || cantidadPedido > actual.CantidadAlmacenada)
-                {
-                    MessageBox.Show("Ha insertado incorrectamente una cantidad", "Error");
-                    dataGridIngresoSalida.CurrentCell = row.Cells["Cantidad"];
-                    resultado = false;
-                    return;//debe ir esto en vez de un break con trabajo de variable valido
-                }
-            }
-            //fin validacion
 
 
             //registrar pedido ingreso o salida
@@ -333,7 +342,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
                     Almacen localSeleccionado = (Almacen)comboBoxLocales.SelectedItem;
                     sedeOrigen = localSeleccionado.IdAlmacen;
                 }
-                Console.WriteLine("Se va a insertar " + this.idAlmacen.ToString() + " " +idAreaSeleccionada.ToString() + " " + sedeOrigen.ToString());
+                //Console.WriteLine("Se va a insertar " + this.idAlmacen.ToString() + " " +idAreaSeleccionada.ToString() + " " + sedeOrigen.ToString());
                 int idIngreso = logicaAlmacenes.registrarIngresoProductos(this.idAlmacen, idAreaSeleccionada, sedeOrigen, textBoxObservaciones.Text);
                 if (idIngreso > 0)
                 {

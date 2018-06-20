@@ -63,12 +63,6 @@ namespace FormulariosAlmacenes
         }
 
 
-        private void btnProductosDisponibles_MouseClick(object sender, MouseEventArgs e)
-        {
-            //Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
-            abrirPantallaProductosAlmacen(this.almacenActual);
-        }
-
         public void abrirPantallaProductosAlmacen(Almacen almacenSeleccionado)
         {
             if (almacenSeleccionado != null)
@@ -128,13 +122,6 @@ namespace FormulariosAlmacenes
         {
             this.Close();//se incluye el cierre de sesion
         }
-
-        private void button1_MouseClick(object sender, MouseEventArgs e)
-        {
-            //Almacen almacenSeleccionado = obtenerAlmacenSeleccionado();
-
-            abrirPantallaReporteFechas(this.almacenActual);
-        }
         public void abrirPantallaReporteFechas(Almacen almacenSeleccionado)
         {
             if (almacenSeleccionado != null)
@@ -156,6 +143,16 @@ namespace FormulariosAlmacenes
             this.almacenActual = obtenerAlmacenSeleccionado();
             if(almacenActual != null)
                 labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
+        }
+
+        private void btnProductosDisponibl_Click(object sender, EventArgs e)
+        {
+            abrirPantallaProductosAlmacen(this.almacenActual);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            abrirPantallaReporteFechas(this.almacenActual);
         }
     }
 }

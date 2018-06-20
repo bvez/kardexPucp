@@ -40,11 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridIngresoSalida = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxLocalSalida = new System.Windows.Forms.ComboBox();
             this.labelAlmacen = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -57,6 +52,11 @@
             this.comboBoxAreas = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelOrigen = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -214,48 +214,6 @@
             this.dataGridIngresoSalida.TabIndex = 30;
             this.dataGridIngresoSalida.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridIngresoSalida_EditingControlShowing);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 41;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 69;
-            // 
-            // Stock
-            // 
-            this.Stock.DataPropertyName = "CantidadAlmacenada";
-            this.Stock.HeaderText = "Stock Actual";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 93;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "CantidadIngresoSalida";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MaxInputLength = 5;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 74;
-            // 
-            // Observaciones
-            // 
-            this.Observaciones.DataPropertyName = "Observaciones";
-            this.Observaciones.HeaderText = "Observaciones";
-            this.Observaciones.MinimumWidth = 103;
-            this.Observaciones.Name = "Observaciones";
-            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Observaciones.Width = 300;
-            // 
             // comboBoxLocalSalida
             // 
             this.comboBoxLocalSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -402,6 +360,49 @@
             this.labelOrigen.TabIndex = 42;
             this.labelOrigen.Text = "Sede Origen: ";
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 41;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // Stock
+            // 
+            this.Stock.DataPropertyName = "CantidadAlmacenada";
+            this.Stock.HeaderText = "Stock Actual";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 93;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "CantidadIngresoSalida";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MaxInputLength = 5;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 74;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Observaciones";
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.MaxInputLength = 256;
+            this.Observaciones.MinimumWidth = 103;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Observaciones.Width = 300;
+            // 
             // PantallaIngresosSalidasProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,14 +459,14 @@
         private System.Windows.Forms.ComboBox comboBoxLocales;
         private System.Windows.Forms.ComboBox comboBoxAreas;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label labelOrigen;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
-        private System.Windows.Forms.Label labelOrigen;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

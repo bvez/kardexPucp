@@ -76,6 +76,7 @@ namespace AccesoADatos
             catch (Exception e)
             {
                 Console.WriteLine("Error en productos Empresa");
+                Console.WriteLine(e.Message);
             }
 
             return productos;
@@ -171,6 +172,57 @@ namespace AccesoADatos
             catch (Exception e)
             {
                 Console.WriteLine("Error en obtenerProductosAlmacen");
+                Console.WriteLine(e.Message);
+            }
+
+            return resultado;
+        }
+        public BindingList<ProductoAlmacen> obtenerProductosAlmacen(int idAlmacen,int idProd, string nombreBuscar, int limInferior, int limSuperior)
+        {
+            BindingList<ProductoAlmacen> resultado = new BindingList<ProductoAlmacen>();
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "alm_buscar_productosAlmacenId";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Connection = con;
+                comando.Parameters.Add("_idProd", MySqlDbType.Int32).Value = idProd;
+                comando.Parameters.Add("_id_almacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_nombreBuscar", MySqlDbType.VarChar).Value = nombreBuscar;
+                comando.Parameters.Add("_limInferior", MySqlDbType.Int32).Value = limInferior;
+                comando.Parameters.Add("_limSuperior", MySqlDbType.Int32).Value = limSuperior;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    int idProducto = reader.GetInt32("id_producto");//
+                    //string codigo = reader.GetString("codigo_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    int stock = reader.GetInt32("cantidadAlmacenada");
+                    decimal precio = reader.GetDecimal("precio_venta");
+
+                    Producto producto = new Producto();
+                    producto.Id = idProducto;
+                    producto.Nombre = nombre;
+                    //producto.CodigoProducto = codigo;
+                    producto.Descripcion = descripcion;
+                    producto.Precio = (double)precio;
+
+                    ProductoAlmacen productoAlmacen = new ProductoAlmacen();
+                    productoAlmacen.ProductoAlmacenado = producto;
+                    productoAlmacen.CantidadAlmacenada = stock;
+
+                    resultado.Add(productoAlmacen);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error en obtenerProductosAlmacenId");
                 Console.WriteLine(e.Message);
             }
 
@@ -276,6 +328,53 @@ namespace AccesoADatos
             return productos;
         }
 
+        public BindingList<Producto> obtenerProductosRegistrables(int idAlmacen,int idProd, string nombreBuscar)
+        {
+            BindingList<Producto> productos = new BindingList<Producto>();
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(this.cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = "alm_buscarProductoIdNombre";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Connection = con;
+                comando.Parameters.Add("_idAlmacen", MySqlDbType.Int32).Value = idAlmacen;
+                comando.Parameters.Add("_idProd", MySqlDbType.Int32).Value = idProd;
+                comando.Parameters.Add("_nombre", MySqlDbType.VarChar).Value = nombreBuscar;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    int idProducto = reader.GetInt32("id_producto");//
+                    //string codigo = reader.GetString("codigo_producto");//
+                    string nombre = reader.GetString("nombre");//
+                    string descripcion = reader.GetString("descripcion");
+                    double precio = (double)reader.GetDecimal("precio_venta");
+                    bool activo = reader.GetBoolean("activo");
+
+                    Producto producto = new Producto();
+                    producto.Id = idProducto;
+                    producto.Nombre = nombre;
+                    //producto.CodigoProducto = codigo;
+                    producto.Descripcion = descripcion;
+                    producto.Precio = precio;
+                    producto.Habilitado = activo;
+
+                    productos.Add(producto);
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return productos;
+        }
+
         //UNICO FALTANTE
         public Producto obtenerProducto(int idProducto)
         {
@@ -308,7 +407,7 @@ namespace AccesoADatos
             }
             catch (Exception e)
             {
-                Console.WriteLine("AQUI");
+                Console.WriteLine(e.Message);
             }
            
 

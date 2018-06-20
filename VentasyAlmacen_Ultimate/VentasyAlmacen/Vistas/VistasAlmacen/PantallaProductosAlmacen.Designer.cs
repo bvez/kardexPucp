@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaProductosAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNumResultados = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.stockActualSeleccionado = new System.Windows.Forms.Label();
             this.nombreSeleccionado = new System.Windows.Forms.Label();
@@ -57,12 +58,11 @@
             this.tablaProductosAlmacen = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtNumResultados = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoStockNumBox)).BeginInit();
@@ -84,6 +84,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 435);
             this.panel1.TabIndex = 0;
+            // 
+            // txtNumResultados
+            // 
+            this.txtNumResultados.AutoSize = true;
+            this.txtNumResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtNumResultados.Location = new System.Drawing.Point(368, 21);
+            this.txtNumResultados.Name = "txtNumResultados";
+            this.txtNumResultados.Size = new System.Drawing.Size(60, 13);
+            this.txtNumResultados.TabIndex = 16;
+            this.txtNumResultados.Text = "Resultados";
+            this.txtNumResultados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtNumResultados.Visible = false;
             // 
             // groupBox2
             // 
@@ -143,7 +155,7 @@
             this.nuevoStockNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.nuevoStockNumBox.Location = new System.Drawing.Point(137, 117);
             this.nuevoStockNumBox.Maximum = new decimal(new int[] {
-            1000,
+            99999,
             0,
             0,
             0});
@@ -247,7 +259,7 @@
             // 
             this.numStockMax.Location = new System.Drawing.Point(246, 124);
             this.numStockMax.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -285,7 +297,7 @@
             // 
             this.numStockMin.Location = new System.Drawing.Point(155, 124);
             this.numStockMin.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -308,6 +320,7 @@
             // 
             this.textBoxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxId.Location = new System.Drawing.Point(129, 31);
+            this.textBoxId.MaxLength = 5;
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(177, 29);
             this.textBoxId.TabIndex = 5;
@@ -326,6 +339,7 @@
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(129, 77);
+            this.textBoxNombre.MaxLength = 102;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(177, 29);
             this.textBoxNombre.TabIndex = 6;
@@ -363,9 +377,9 @@
             this.tablaProductosAlmacen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column1,
-            this.Descripcion,
+            this.Column3,
             this.Precio,
-            this.Column3});
+            this.Descripcion});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -378,6 +392,7 @@
             this.tablaProductosAlmacen.Location = new System.Drawing.Point(13, 37);
             this.tablaProductosAlmacen.Name = "tablaProductosAlmacen";
             this.tablaProductosAlmacen.ReadOnly = true;
+            this.tablaProductosAlmacen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaProductosAlmacen.Size = new System.Drawing.Size(432, 192);
             this.tablaProductosAlmacen.TabIndex = 0;
             this.tablaProductosAlmacen.SelectionChanged += new System.EventHandler(this.tablaProductosAlmacen_SelectionChanged);
@@ -398,13 +413,13 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 69;
             // 
-            // Descripcion
+            // Column3
             // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 88;
+            this.Column3.DataPropertyName = "CantidadAlmacenada";
+            this.Column3.HeaderText = "Stock";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 60;
             // 
             // Precio
             // 
@@ -414,13 +429,13 @@
             this.Precio.ReadOnly = true;
             this.Precio.Width = 99;
             // 
-            // Column3
+            // Descripcion
             // 
-            this.Column3.DataPropertyName = "CantidadAlmacenada";
-            this.Column3.HeaderText = "Stock";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 60;
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 88;
             // 
             // button2
             // 
@@ -434,7 +449,7 @@
             this.button2.Text = "Atrás";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -448,18 +463,6 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // txtNumResultados
-            // 
-            this.txtNumResultados.AutoSize = true;
-            this.txtNumResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtNumResultados.Location = new System.Drawing.Point(368, 21);
-            this.txtNumResultados.Name = "txtNumResultados";
-            this.txtNumResultados.Size = new System.Drawing.Size(60, 13);
-            this.txtNumResultados.TabIndex = 16;
-            this.txtNumResultados.Text = "Resultados";
-            this.txtNumResultados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.txtNumResultados.Visible = false;
             // 
             // PantallaProductosAlmacen
             // 
@@ -508,11 +511,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnInsertarProducto;
         private System.Windows.Forms.Button btnModificarStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.NumericUpDown nuevoStockNumBox;
         private System.Windows.Forms.Label label7;
@@ -524,5 +522,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label txtCargando;
         private System.Windows.Forms.Label txtNumResultados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
