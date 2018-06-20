@@ -33,6 +33,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
             InitializeComponent();
             dataGridProductos.AutoGenerateColumns = false;
             dataGridProductos.DataSource = productosBL.obtenerProductosAlmacen(idAlmacen);
+
+            productosBL.actualizarAlmacenPedidoProd();
         }
 
         public ProductoAlmacen ProductoSeleccionado { get => productoSeleccionado;}

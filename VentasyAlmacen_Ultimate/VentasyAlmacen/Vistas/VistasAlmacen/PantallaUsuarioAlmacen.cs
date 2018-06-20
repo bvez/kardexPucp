@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using FormulariosAlmacenes.VistasAlmacen;
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes
 {
@@ -32,6 +33,8 @@ namespace FormulariosAlmacenes
             this.listaAlmacenesPermitidos = null;
             linkLabel1.Visible = false;
             linkLabel1.Enabled = false;
+
+            (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
 
         public PantallaUsuarioAlmacen(string nombreUsuario, int idAlmacen, BindingList<Almacen> listaAlmacenesPermitidos)
@@ -44,6 +47,8 @@ namespace FormulariosAlmacenes
             this.listaAlmacenesPermitidos = listaAlmacenesPermitidos;
             linkLabel1.Visible = true;
             linkLabel1.Enabled = true;
+
+            (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
 
         public void setAlmacen(string codigo)

@@ -29,6 +29,7 @@ namespace FormulariosAlmacenes
                 InitializeComponent();
                 labelBienvenidaAdmin.Text = "Bienvenido " + nombre;
                 labelAlmacen.Text = "Almacén " + this.almacenActual.IdAlmacen.ToString();
+                (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
             }
             else
             {

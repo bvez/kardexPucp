@@ -35,6 +35,8 @@ namespace FormulariosAlmacenes
 
             txtNumResultados.Text = ((BindingList<Producto>)dataGridProductosRegistrables.DataSource).Count.ToString() + " Resultado(s)";
             txtNumResultados.Visible = true;
+
+            logicaProductos.actualizarAlmacenPedidoProd();
         }
 
         private void btnInsertarProducto_MouseClick(object sender, MouseEventArgs e)

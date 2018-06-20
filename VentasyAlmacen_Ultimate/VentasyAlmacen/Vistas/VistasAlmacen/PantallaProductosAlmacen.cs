@@ -34,6 +34,7 @@ namespace FormulariosAlmacenes
             tablaProductosAlmacen.AutoGenerateColumns = false;
             tablaProductosAlmacen.DataSource = almacenProductos.obtenerProductosAlmacen(idAlmacen);
             this.idAlmacen = idAlmacen;
+            
         }
 
         public PantallaProductosAlmacen(int idAlmacen,char tipoUser)
@@ -66,6 +67,8 @@ namespace FormulariosAlmacenes
 
             txtNumResultados.Text = ((BindingList<ProductoAlmacen>)tablaProductosAlmacen.DataSource).Count.ToString() + " Resultado(s)";
             txtNumResultados.Visible = true;
+
+            almacenProductos.actualizarAlmacenPedidoProd();
         }
 
         //Lo que sucede cuando se cierra el formulario

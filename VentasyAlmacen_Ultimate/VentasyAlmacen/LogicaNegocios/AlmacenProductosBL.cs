@@ -63,5 +63,9 @@ namespace LogicaNegocios
         {
             return accesoDatosProductos.actualizarStock(idAlmacen, idProducto, nuevoStock);
         }
+        public bool actualizarAlmacenPedidoProd()
+        {
+            return accesoDatosProductos.actualizarAlmacenPedidoProduccion();
+        }
     }
 }

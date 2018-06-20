@@ -25,6 +25,7 @@ namespace FormulariosAlmacenes
             logicaAlmacenes = new AlmacenesBL();
             listaAlmacenes = logicaAlmacenes.obtenerAlmacenesHabilitados();
             DataGridSelectAlmacen.DataSource = listaAlmacenes;
+            (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
         public PantallaSeleccionarAlmacen(BindingList<Almacen> listaAlmacenesIn)
         {
@@ -36,6 +37,7 @@ namespace FormulariosAlmacenes
             label1.Text = "Antes de continuar, seleccione un almacén:";
             DataGridSelectAlmacen.AutoGenerateColumns = false;
             DataGridSelectAlmacen.DataSource = listaAlmacenesIn;
+            (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
 
         private void btnSelectAlmacenSgte_MouseClick(object sender, MouseEventArgs e)

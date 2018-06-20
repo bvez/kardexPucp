@@ -11,10 +11,14 @@ using System.Windows.Forms;
 namespace FormulariosAlmacenes.VistasAlmacen
 {
     public partial class PantallaVistaPreviaReporte : Form
-    {
+    {        
+
         public PantallaVistaPreviaReporte()
         {
             InitializeComponent();
+            int[] arrNum = new int[] { 10,21,3,45};
+            chart1.DataSource = arrNum;
+            chart1.Series[0].Points.DataBindY(arrNum);
         }
     }
 }

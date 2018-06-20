@@ -38,6 +38,8 @@ namespace FormulariosAlmacenes
 
             dataGridStock.AutoGenerateColumns = false;
             dataGridStock.DataSource = detallesPedido;
+
+            productosBL.actualizarAlmacenPedidoProd();
         }
 
         private void PantallaRegPedidoProduccion_FormClosed(object sender, FormClosedEventArgs e)

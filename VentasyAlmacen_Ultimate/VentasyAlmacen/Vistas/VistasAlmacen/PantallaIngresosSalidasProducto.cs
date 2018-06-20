@@ -73,6 +73,8 @@ namespace FormulariosAlmacenes.VistasAlmacen
 
             comboBoxLocales.SelectedIndex = 0;
             comboBoxLocalSalida.SelectedIndex = 0;
+
+            (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
 
         private void radioBtnIngreso_CheckedChanged(object sender, EventArgs e)

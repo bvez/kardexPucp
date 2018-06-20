@@ -464,5 +464,30 @@ namespace AccesoADatos
             catch { }
             return result;
         }
+
+        public bool actualizarAlmacenPedidoProduccion()
+        {
+            bool result = false;
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cadenaConexion);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand();
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = "alm_obtener_act_pedido_prod";
+                comando.Connection = con;
+
+                comando.ExecuteNonQuery();
+
+                con.Close();
+                result = true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return result;
+        }
     }
 }

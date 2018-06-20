@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+using LogicaNegocios;
 
 namespace FormulariosAlmacenes.VistasAlmacen
 {
@@ -17,6 +17,7 @@ namespace FormulariosAlmacenes.VistasAlmacen
         public PantallaReporteFechas()
         {
             InitializeComponent();
+            (new AlmacenProductosBL()).actualizarAlmacenPedidoProd();
         }
 
         private void dateTimePickerInicial_ValueChanged(object sender, EventArgs e)
